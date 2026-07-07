@@ -1,0 +1,1273 @@
+{
+  "$schema": "dePS-metadata",
+  "version": "1.0.0",
+  "updated": "2026-06-23",
+  "source": "MakaiForge/Makaitricks v1.0.0",
+  "description": "Catálogo de dependências Windows para Wine/Proton. Contém URLs, SHA256, versões e endpoints de auto-descoberta para todas as DLLs e redistribuíveis usados pelo Makaitricks.",
+  "auto_update_endpoints": [
+    {
+      "id": "dotnet_releases_8",
+      "name": "Microsoft .NET Releases API (8.0)",
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/8.0/releases.json",
+      "type": "microsoft_releases_json"
+    },
+    {
+      "id": "dotnet_releases_9",
+      "name": "Microsoft .NET Releases API (9.0)",
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/9.0/releases.json",
+      "type": "microsoft_releases_json"
+    },
+    {
+      "id": "dxvk_releases",
+      "name": "DXVK GitHub Releases",
+      "url": "https://api.github.com/repos/doitsujin/dxvk/releases/latest",
+      "type": "github_releases"
+    },
+    {
+      "id": "vkd3d_releases",
+      "name": "VKD3D-Proton GitHub Releases",
+      "url": "https://api.github.com/repos/HansKristian-Work/vkd3d-proton/releases/latest",
+      "type": "github_releases"
+    },
+    {
+      "id": "dxvk_nvapi_releases",
+      "name": "DXVK-NVAPI GitHub Releases",
+      "url": "https://api.github.com/repos/jp7677/dxvk-nvapi/releases/latest",
+      "type": "github_releases"
+    },
+    {
+      "id": "faudio_releases",
+      "name": "FAudio-Builds GitHub Releases",
+      "url": "https://api.github.com/repos/Kron4ek/FAudio-Builds/releases/latest",
+      "type": "github_releases"
+    },
+    {
+      "id": "vcrun_aka_ms",
+      "name": "Microsoft aka.ms redirects (VC++ latest)",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+      "type": "aka_ms_redirect"
+    }
+  ],
+  "items": [
+    {
+      "id": "dotnetdesktop8",
+      "name": ".NET Desktop Runtime 8.0",
+      "category": "dotnet",
+      "verb": "dotnetdesktop8",
+      "description": "Windows Desktop Runtime .NET 8.0",
+      "discovery": {
+        "channel": "8.0",
+        "endpoint": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/8.0/releases.json",
+        "section": "windowsdesktop"
+      },
+      "current_version": "8.0.28",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "windowsdesktop-runtime-8.0.28-win-x64.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.28/windowsdesktop-runtime-8.0.28-win-x64.exe",
+          "sha256": "e68e3e07f935951f842ad28cdcd108bccde7541b92cc4b41dcc2a06e49d777f9",
+          "size_bytes": 72225960
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "windowsdesktop-runtime-8.0.28-win-x86.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.28/windowsdesktop-runtime-8.0.28-win-x86.exe",
+          "sha256": "4410ccf9c51606982fb7d53cde41642cc376adb8444e413c6ba89be361ab4c08",
+          "size_bytes": 60984976
+        },
+        {
+          "rid": "win-arm64",
+          "arch": "aarch64",
+          "filename": "windowsdesktop-runtime-8.0.28-win-arm64.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.28/windowsdesktop-runtime-8.0.28-win-arm64.exe",
+          "sha256": "f3a29bee325d63bd4cf80f8a23edb6ad8c0af3e430c9ddc59b2c8e2c26e81cf6",
+          "size_bytes": 74461160
+        }
+      ],
+      "registry_keys": [
+        "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment\\DOTNET_ROOT",
+        "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment\\DOTNET_ROOT(x86)"
+      ]
+    },
+    {
+      "id": "dotnetdesktop9",
+      "name": ".NET Desktop Runtime 9.0",
+      "category": "dotnet",
+      "verb": "dotnetdesktop9",
+      "description": "Windows Desktop Runtime .NET 9.0",
+      "discovery": {
+        "channel": "9.0",
+        "endpoint": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/9.0/releases.json",
+        "section": "windowsdesktop"
+      },
+      "current_version": "9.0.7",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "windowsdesktop-runtime-9.0.7-win-x64.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.7/windowsdesktop-runtime-9.0.7-win-x64.exe",
+          "sha256": "e4af5c8ca01a5b9af0971ae238cb9742b76de3eae5ff1ac3b0e93ec018a0d08b",
+          "size_bytes": 69738584
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "windowsdesktop-runtime-9.0.7-win-x86.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.7/windowsdesktop-runtime-9.0.7-win-x86.exe",
+          "sha256": "3e5c3181836cc55e7fc4feb6378bba3d7ed11a322e22e8b4ad91bf9ba7a1a63a",
+          "size_bytes": 58672704
+        }
+      ]
+    },
+    {
+      "id": "dotnet9",
+      "name": ".NET Runtime 9.0",
+      "category": "dotnet",
+      "verb": "dotnet9",
+      "description": ".NET Runtime 9.0 (sem Desktop)",
+      "discovery": {
+        "channel": "9.0",
+        "endpoint": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/9.0/releases.json",
+        "section": "runtime"
+      },
+      "current_version": "9.0.7",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "dotnet-runtime-9.0.7-win-x64.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.7/dotnet-runtime-9.0.7-win-x64.exe",
+          "sha256": "cfb7ae960d2322bf65eb21e2016fce76e35fdd1ecfe8e485e808c3e07532b4dd",
+          "size_bytes": 15051824
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "dotnet-runtime-9.0.7-win-x86.exe",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.7/dotnet-runtime-9.0.7-win-x86.exe",
+          "sha256": "a4d077890c9820d9968a3c310973dceeae6ce949f4af3dae50611c0457196c82",
+          "size_bytes": 11451680
+        }
+      ]
+    },
+    {
+      "id": "dotnet8",
+      "name": ".NET Runtime 8.0",
+      "category": "dotnet",
+      "verb": "dotnet8",
+      "description": ".NET Runtime 8.0 (sem Desktop)",
+      "discovery": {
+        "channel": "8.0",
+        "endpoint": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/8.0/releases.json",
+        "section": "runtime"
+      },
+      "current_version": "8.0.12",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "dotnet-runtime-8.0.12-win-x64.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/3210417e-ab32-4d14-a152-1ad9a2fcfdd2/da097cee5aa85bd79b6d593e3866fb7f/dotnet-runtime-8.0.12-win-x64.exe",
+          "sha256": "eb0d8f39fa2dbb4ff3ff72ad325b6030773df875ab509824ea18c87a368985fa",
+          "size_bytes": 15344312
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "dotnet-runtime-8.0.12-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/3210417e-ab32-4d14-a152-1ad9a2fcfdd2/da097cee5aa85bd79b6d593e3866fb7f/dotnet-runtime-8.0.12-win-x86.exe",
+          "sha256": "eb0d8f39fa2dbb4ff3ff72ad325b6030773df875ab509824ea18c87a368985fa",
+          "size_bytes": 11594568
+        }
+      ]
+    },
+    {
+      "id": "dotnet7",
+      "name": ".NET Runtime 7.0",
+      "category": "dotnet",
+      "verb": "dotnet7",
+      "description": ".NET Runtime 7.0 (EOL)",
+      "current_version": "7.0.20",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "dotnet-runtime-7.0.20-win-x64.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/b2e820bd-b591-43df-ab10-1eeb7998cc18/661ca79db4934c6247f5c7a809a62238/dotnet-runtime-7.0.20-win-x64.exe",
+          "sha256": "9bf79c94ab014b555167e61f3ce653fdf54c70bda6d6c74ab9f6f44652947a89",
+          "size_bytes": 15674200
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "dotnet-runtime-7.0.20-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/b2e820bd-b591-43df-ab10-1eeb7998cc18/661ca79db4934c6247f5c7a809a62238/dotnet-runtime-7.0.20-win-x86.exe",
+          "sha256": "9bf79c94ab014b555167e61f3ce653fdf54c70bda6d6c74ab9f6f44652947a89",
+          "size_bytes": 11701384
+        }
+      ]
+    },
+    {
+      "id": "dotnetdesktop7",
+      "name": ".NET Desktop Runtime 7.0",
+      "category": "dotnet",
+      "verb": "dotnetdesktop7",
+      "description": "Windows Desktop Runtime .NET 7.0 (EOL)",
+      "current_version": "7.0.20",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "windowsdesktop-runtime-7.0.20-win-x64.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/b840017b-c69f-4724-a152-11020a0039e6/b74aa12e4ee765a3387a7dcd4ba56187/windowsdesktop-runtime-7.0.20-win-x64.exe",
+          "sha256": "58d32d9857bda5da99afc217669aedacdffb20aed61f15315718eeb3a455b273",
+          "size_bytes": 69374024
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "windowsdesktop-runtime-7.0.20-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/b840017b-c69f-4724-a152-11020a0039e6/b74aa12e4ee765a3387a7dcd4ba56187/windowsdesktop-runtime-7.0.20-win-x86.exe",
+          "sha256": "58d32d9857bda5da99afc217669aedacdffb20aed61f15315718eeb3a455b273",
+          "size_bytes": 58734368
+        }
+      ]
+    },
+    {
+      "id": "dotnet6",
+      "name": ".NET Runtime 6.0",
+      "category": "dotnet",
+      "verb": "dotnet6",
+      "description": ".NET Runtime 6.0 (EOL)",
+      "current_version": "6.0.36",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "dotnet-runtime-6.0.36-win-x64.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/727d79cb-6a4c-4a6b-bd9e-af99ad62de0b/5cd3550f1589a2f1b3a240c745dd1023/dotnet-runtime-6.0.36-win-x64.exe",
+          "sha256": "3b3cb4636251a582158f4b6b340f20b3861e6793eb9a3e64bda29cbf32da3604",
+          "size_bytes": 15705272
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "dotnet-runtime-6.0.36-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/727d79cb-6a4c-4a6b-bd9e-af99ad62de0b/5cd3550f1589a2f1b3a240c745dd1023/dotnet-runtime-6.0.36-win-x86.exe",
+          "sha256": "3b3cb4636251a582158f4b6b340f20b3861e6793eb9a3e64bda29cbf32da3604",
+          "size_bytes": 12191784
+        }
+      ]
+    },
+    {
+      "id": "dotnetdesktop6",
+      "name": ".NET Desktop Runtime 6.0",
+      "category": "dotnet",
+      "verb": "dotnetdesktop6",
+      "description": "Windows Desktop Runtime .NET 6.0 (EOL)",
+      "current_version": "6.0.36",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "windowsdesktop-runtime-6.0.36-win-x64.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/cdc314df-4a4c-4709-868d-b974f336f77f/acd5ab7637e456c8a3aa667661324f6d/windowsdesktop-runtime-6.0.36-win-x64.exe",
+          "sha256": "4e77bd970df0a06528ee88d33e4a8c9fb85beedbdd7219b017083acf0c3aa39e",
+          "size_bytes": 69499264
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "windowsdesktop-runtime-6.0.36-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/cdc314df-4a4c-4709-868d-b974f336f77f/acd5ab7637e456c8a3aa667661324f6d/windowsdesktop-runtime-6.0.36-win-x86.exe",
+          "sha256": "4e77bd970df0a06528ee88d33e4a8c9fb85beedbdd7219b017083acf0c3aa39e",
+          "size_bytes": 58689200
+        }
+      ]
+    },
+    {
+      "id": "dotnet48",
+      "name": ".NET Framework 4.8",
+      "category": "dotnetfx",
+      "verb": "dotnet48",
+      "description": "Microsoft .NET Framework 4.8",
+      "current_version": "4.8.04084",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "ndp48-x86-x64-allos-enu.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/7afca223-55d2-470a-8edc-6a1739ae3252/abd170b4b0ec15ad0222a809b761a036/ndp48-x86-x64-allos-enu.exe",
+          "sha256": "95889d6de3f2070c07790ad6cf2000d33d9a1bdfc6a381725ab82ab1c314fd53",
+          "size_bytes": 138018680
+        }
+      ]
+    },
+    {
+      "id": "dotnet472",
+      "name": ".NET Framework 4.7.2",
+      "category": "dotnetfx",
+      "verb": "dotnet472",
+      "description": "Microsoft .NET Framework 4.7.2",
+      "current_version": "4.7.2",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP472-KB4054530-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/1f5af042-d0e4-4002-9c59-9ba66bcf15f6/089f837de42708daacaae7c04b7494db/NDP472-KB4054530-x86-x64-AllOS-ENU.exe",
+          "sha256": "5cb624b97f9fd6d3895644c52231c9471cd88aacb57d6e198d3024a1839139f6",
+          "size_bytes": 127860312
+        }
+      ]
+    },
+    {
+      "id": "dotnet471",
+      "name": ".NET Framework 4.7.1",
+      "category": "dotnetfx",
+      "verb": "dotnet471",
+      "description": "Microsoft .NET Framework 4.7.1",
+      "current_version": "4.7.1",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP471-KB4033342-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/4312fa21-59b0-4451-9482-a1376f7f3ba4/9947fce13c11105b48cba170494e787f/NDP471-KB4033342-x86-x64-AllOS-ENU.exe",
+          "sha256": "df6e700d37ff416e2e1d8463dededdf76522ceaf5bb4cc3f197a7f2b9eccc4ad",
+          "size_bytes": 116235440
+        }
+      ]
+    },
+    {
+      "id": "dotnet462",
+      "name": ".NET Framework 4.6.2",
+      "category": "dotnetfx",
+      "verb": "dotnet462",
+      "description": "Microsoft .NET Framework 4.6.2",
+      "current_version": "4.6.2",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP462-KB3151800-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/8e396c75-4d0d-41d3-aea8-848babc2736a/80b431456d8866ebe053eb8b81a168b3/NDP462-KB3151800-x86-x64-AllOS-ENU.exe",
+          "sha256": "b4cbb4bc9a3983ec3be9f80447e0d619d15256a9ce66ff414ae6e3856705e237",
+          "size_bytes": 95622120
+        }
+      ]
+    },
+    {
+      "id": "dotnet461",
+      "name": ".NET Framework 4.6.1",
+      "category": "dotnetfx",
+      "verb": "dotnet461",
+      "description": "Microsoft .NET Framework 4.6.1",
+      "current_version": "4.6.1",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP461-KB3102436-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP461-KB3102436-x86-x64-AllOS-ENU.exe",
+          "sha256": "beaa901e07347d056efe04e8961d5546c7518fab9246892178505a7ba631c301",
+          "size_bytes": 92013936
+        }
+      ]
+    },
+    {
+      "id": "dotnet46",
+      "name": ".NET Framework 4.6",
+      "category": "dotnetfx",
+      "verb": "dotnet46",
+      "description": "Microsoft .NET Framework 4.6",
+      "current_version": "4.6",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP46-KB3045557-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.microsoft.com/download/6/F/9/6F9673B1-87D1-46C4-BF04-95F24C3EB9DA/NDP46-KB3045557-x86-x64-AllOS-ENU.exe",
+          "sha256": "b21d33135e67e3486b154b11f7961d8e1cfd7a603267fb60febb4a6feab5cf87",
+          "size_bytes": 77338512
+        }
+      ]
+    },
+    {
+      "id": "dotnet452",
+      "name": ".NET Framework 4.5.2",
+      "category": "dotnetfx",
+      "verb": "dotnet452",
+      "description": "Microsoft .NET Framework 4.5.2",
+      "current_version": "4.5.2",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "NDP452-KB2901907-x86-x64-AllOS-ENU.exe",
+          "url": "https://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe",
+          "sha256": "6c2c589132e830a185c5f40f82042bee3022e721a216680bd9b3995ba86f3781",
+          "size_bytes": 70033680
+        }
+      ]
+    },
+    {
+      "id": "dotnet45",
+      "name": ".NET Framework 4.5",
+      "category": "dotnetfx",
+      "verb": "dotnet45",
+      "description": "Microsoft .NET Framework 4.5",
+      "current_version": "4.5",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dotnetfx45_full_x86_x64.exe",
+          "url": "https://download.microsoft.com/download/b/a/4/ba4a7e71-2906-4b2d-a0e1-80cf16844f5f/dotnetfx45_full_x86_x64.exe",
+          "sha256": "a04d40e217b97326d46117d961ec4eda455e087b90637cb33dd6cc4a2c228d83",
+          "size_bytes": 61274576
+        }
+      ]
+    },
+    {
+      "id": "dotnet40",
+      "name": ".NET Framework 4.0",
+      "category": "dotnetfx",
+      "verb": "dotnet40",
+      "description": "Microsoft .NET Framework 4.0",
+      "current_version": "4.0.30319",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dotNetFx40_Full_x86_x64.exe",
+          "url": "https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe",
+          "sha256": "65e064258f2e418816b304f646ff9e87af101e4c9552ab064bb74d281c38659f",
+          "size_bytes": 55643944
+        }
+      ]
+    },
+    {
+      "id": "dotnet35sp1",
+      "name": ".NET Framework 3.5 SP1",
+      "category": "dotnetfx",
+      "verb": "dotnet35sp1",
+      "description": "Microsoft .NET Framework 3.5 SP1",
+      "current_version": "3.5.30729.01",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dotnetfx35.exe",
+          "url": "https://download.microsoft.com/download/2/0/e/20e90413-712f-438c-988e-fdaa79a8ac3d/dotnetfx35.exe",
+          "sha256": "0582515bde321e072f8673e829e175ed2e7a53e803127c50253af76528e66bc1",
+          "size_bytes": 238075144
+        }
+      ]
+    },
+    {
+      "id": "vcrun2022",
+      "name": "Visual C++ 2015-2022 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2022",
+      "description": "Microsoft Visual C++ Redistributable 2015-2022 (14.30+)",
+      "current_version": "14.42.34433.0",
+      "install_args": "/install /quiet /norestart",
+      "discovery": {
+        "type": "aka_ms_redirect",
+        "x64_url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+        "x86_url": "https://aka.ms/vs/17/release/vc_redist.x86.exe"
+      },
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vc_redist.x64.exe",
+          "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+          "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+          "sha256_volatile": true,
+          "size_bytes": 27375504
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vc_redist.x86.exe",
+          "url": "https://aka.ms/vs/17/release/vc_redist.x86.exe",
+          "sha256": "0c09f2611660441084ce0df425c51c11e147e6447963c3690f97e0b25c55ed64",
+          "sha256_volatile": true,
+          "size_bytes": 16938816
+        }
+      ]
+    },
+    {
+      "id": "vcrun2019",
+      "name": "Visual C++ 2015-2019 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2019",
+      "description": "Microsoft Visual C++ Redistributable 2015-2019 (14.20-14.29)",
+      "current_version": "14.29.30139.0",
+      "install_args": "/install /quiet /norestart",
+      "discovery": {
+        "type": "aka_ms_redirect",
+        "x64_url": "https://aka.ms/vs/16/release/vc_redist.x64.exe",
+        "x86_url": "https://aka.ms/vs/16/release/vc_redist.x86.exe"
+      },
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vc_redist.x64.exe",
+          "url": "https://aka.ms/vs/16/release/vc_redist.x64.exe",
+          "sha256": "5d9999036f2b3a930f83b7fe3e2186b12e79ae7c007d538f52e3582e986a37c3",
+          "sha256_volatile": true,
+          "size_bytes": 27578128
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vc_redist.x86.exe",
+          "url": "https://aka.ms/vs/16/release/vc_redist.x86.exe",
+          "sha256": "49545cb0f6499c4a65e1e8d5033441eeeb4edfae465a68489a70832c6a4f6399",
+          "sha256_volatile": true,
+          "size_bytes": 17113112
+        }
+      ]
+    },
+    {
+      "id": "vcrun2017",
+      "name": "Visual C++ 2015-2017 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2017",
+      "description": "Microsoft Visual C++ Redistributable 2015-2017 (14.10-14.16)",
+      "current_version": "14.16.27033.0",
+      "install_args": "/install /quiet /norestart",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vc_redist.x64.exe",
+          "url": "https://aka.ms/vs/15/release/vc_redist.x64.exe",
+          "sha256": "7cf24eba2bd67ea6229b7dd131e06f4e92ebefc06e36fe401cdd227d7ed78264",
+          "sha256_volatile": true,
+          "size_bytes": 13769776
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vc_redist.x86.exe",
+          "url": "https://aka.ms/vs/15/release/vc_redist.x86.exe",
+          "sha256": "251640e8039d34290133b2c6e3e6fe098e61e2756d5a4c45fdcec9e4dee6c187",
+          "sha256_volatile": true,
+          "size_bytes": 13593040
+        }
+      ]
+    },
+    {
+      "id": "vcrun2015",
+      "name": "Visual C++ 2015 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2015",
+      "description": "Microsoft Visual C++ Redistributable 2015",
+      "current_version": "14.0.24215.1",
+      "install_args": "/install /quiet /norestart",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vc_redist.x64.exe",
+          "url": "https://download.microsoft.com/download/6/D/F/6DF3FF94-F7F9-4F0B-838C-A328D1A7D0EE/vc_redist.x64.exe",
+          "sha256": "d7257265dbc0635c96dd67ddf938a09abe0866cb2d4fa05f8b758c8644e724e4",
+          "size_bytes": 12563024
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vc_redist.x86.exe",
+          "url": "https://download.microsoft.com/download/6/D/F/6DF3FF94-F7F9-4F0B-838C-A328D1A7D0EE/vc_redist.x86.exe",
+          "sha256": "dafb8b5f4b46bfaf7faa1d0ad05211f5c9855f0005cd603f8b5037b6a708d6b6",
+          "size_bytes": 10302496
+        }
+      ]
+    },
+    {
+      "id": "vcrun2013",
+      "name": "Visual C++ 2013 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2013",
+      "description": "Microsoft Visual C++ Redistributable 2013 (12.0)",
+      "current_version": "12.0.40664.0",
+      "install_args": "/install /quiet /norestart",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vcredist_x64.exe",
+          "url": "https://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe",
+          "sha256": "20e2645b7cd5873b1fa3462b99a665ac8d6e14aae83ded9d875fea35ffdd7d7e",
+          "size_bytes": 6272064
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vcredist_x86.exe",
+          "url": "https://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe",
+          "sha256": "89f4e593ea5541d1c53f983923124f9fd061a1c0c967339109e375c661573c17",
+          "size_bytes": 6262840
+        }
+      ]
+    },
+    {
+      "id": "vcrun2012",
+      "name": "Visual C++ 2012 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2012",
+      "description": "Microsoft Visual C++ Redistributable 2012 (11.0)",
+      "current_version": "11.0.61030.0",
+      "install_args": "/install /quiet /norestart",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vcredist_x64.exe",
+          "url": "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe",
+          "sha256": "681be3e5ba9fd3da02c09d7e565adfa078640ed66a0d58583efad2c1e3cc4064",
+          "size_bytes": 6378648
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vcredist_x86.exe",
+          "url": "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe",
+          "sha256": "b924ad8062eaf4e70437c8be50fa612162795ff0839479546ce907ffa8d6e386",
+          "size_bytes": 6372848
+        }
+      ]
+    },
+    {
+      "id": "vcrun2010",
+      "name": "Visual C++ 2010 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2010",
+      "description": "Microsoft Visual C++ Redistributable 2010 (10.0)",
+      "current_version": "10.0.40219.473",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vcredist_x64.exe",
+          "url": "https://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe",
+          "sha256": "2fddbc3aaaab784c16bc673c3bae5f80929d5b372810dbc28649283566d33255",
+          "size_bytes": 4726288
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vcredist_x86.exe",
+          "url": "https://download.microsoft.com/download/5/B/C/5BC5DBB3-652D-4DCE-B14A-475AB85EEF6E/vcredist_x86.exe",
+          "sha256": "31d32fa39d52cac9a765a43660431f7a127eee784b54b2f5e2af3e2b763a1af8",
+          "size_bytes": 4719768
+        }
+      ]
+    },
+    {
+      "id": "vcrun2008",
+      "name": "Visual C++ 2008 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2008",
+      "description": "Microsoft Visual C++ Redistributable 2008 (9.0)",
+      "current_version": "9.0.30729.6161",
+      "install_args": "/q",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vcredist_x64.exe",
+          "url": "https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x64.exe",
+          "sha256": "c5e273a4a16ab4d5471e91c7477719a2f45ddadb76c7f98a38fa5074a6838654",
+          "size_bytes": 4987648
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vcredist_x86.exe",
+          "url": "https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x86.exe",
+          "sha256": "8742bcbf24ef328a72d2a27b693cc7071e38d3bb4b9b44dec42aa3d2c8d61d92",
+          "size_bytes": 4678536
+        }
+      ]
+    },
+    {
+      "id": "vcrun2005",
+      "name": "Visual C++ 2005 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2005",
+      "description": "Microsoft Visual C++ Redistributable 2005 (8.0)",
+      "current_version": "8.0.50727.6195",
+      "install_args": "/q",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "vcredist_x64.EXE",
+          "url": "https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x64.EXE",
+          "sha256": "4487570bd86e2e1aac29db2a1d0a91eb63361fcaac570808eb327cd4e0e2240d",
+          "size_bytes": 5549328
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "vcredist_x86.EXE",
+          "url": "https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x86.EXE",
+          "sha256": "8648c5fc29c44b9112fe52f9a33f80e7fc42d10f3b5b42b2121542a13e44adfd",
+          "size_bytes": 5542232
+        }
+      ]
+    },
+    {
+      "id": "vcrun6sp6",
+      "name": "Visual C++ 6.0 SP6 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun6sp6",
+      "description": "Microsoft Visual C++ 6.0 Service Pack 6",
+      "current_version": "6.0.9782.0",
+      "install_args": "/q",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "VS6SP6.EXE",
+          "url": "https://www.ddsystem.com.br/update/setup/vb6+sp6/VS6SP6.EXE",
+          "sha256": "7fa1d1778824b55a5fceb02f45c399b5d4e4dce7403661e67e587b5f455edbf3",
+          "size_bytes": 126407560
+        }
+      ]
+    },
+    {
+      "id": "webview2",
+      "name": "Microsoft Edge WebView2 Runtime",
+      "category": "runtime",
+      "verb": "webview2",
+      "description": "Microsoft Edge WebView2 Runtime (fixa Evergreen)",
+      "current_version": "evergreen",
+      "install_args": "/silent /install",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "MicrosoftEdgeWebview2Setup.exe",
+          "url": "https://go.microsoft.com/fwlink/p/?LinkId=2124703",
+          "sha256": "f91077e2c116dcf6377e555d0d4a3a564d242351ad6718b6954658d4f74819c1",
+          "sha256_volatile": true,
+          "size_bytes": 1905144
+        }
+      ]
+    },
+    {
+      "id": "dxvk",
+      "name": "DXVK (Vulkan-based D3D9/10/11)",
+      "category": "translation",
+      "verb": "dxvk",
+      "description": "DXVK - DirectX 9/10/11 over Vulkan",
+      "current_version": "2.7.1",
+      "discovery": {
+        "type": "github_releases",
+        "repo": "doitsujin/dxvk",
+        "pattern": "dxvk-${version}.tar.gz",
+        "url_template": "https://github.com/doitsujin/dxvk/releases/download/v${version}/dxvk-${version}.tar.gz"
+      },
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dxvk-2.7.1.tar.gz",
+          "url": "https://github.com/doitsujin/dxvk/releases/download/v2.7.1/dxvk-2.7.1.tar.gz",
+          "sha256": "d85ce7c79f57ecd765aaa1b9e7007cb875e6fde9f6d331df799bce73d513ce87",
+          "sha256_volatile": true,
+          "size_bytes": 3304090
+        }
+      ]
+    },
+    {
+      "id": "vkd3d",
+      "name": "VKD3D-Proton (Vulkan-based D3D12)",
+      "category": "translation",
+      "verb": "vkd3d",
+      "description": "VKD3D-Proton - DirectX 12 over Vulkan",
+      "current_version": "2.14",
+      "discovery": {
+        "type": "github_releases",
+        "repo": "HansKristian-Work/vkd3d-proton",
+        "pattern": "vkd3d-proton-${version}.tar.zst",
+        "url_template": "https://github.com/HansKristian-Work/vkd3d-proton/releases/download/v${version}/vkd3d-proton-${version}.tar.zst"
+      },
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "vkd3d-proton-2.14.tar.zst",
+          "url": "https://github.com/HansKristian-Work/vkd3d-proton/releases/download/v2.14/vkd3d-proton-2.14.tar.zst",
+          "sha256": null,
+          "sha256_volatile": true,
+          "size_bytes": null
+        }
+      ]
+    },
+    {
+      "id": "dxvk_nvapi",
+      "name": "DXVK-NVAPI (NVAPI over Vulkan)",
+      "category": "translation",
+      "verb": "dxvk_nvapi",
+      "description": "DXVK-NVAPI - NVAPI implementation over Vulkan",
+      "current_version": "0.7.1",
+      "discovery": {
+        "type": "github_releases",
+        "repo": "jp7677/dxvk-nvapi",
+        "pattern": "dxvk-nvapi-v${version}.tar.gz",
+        "url_template": "https://github.com/jp7677/dxvk-nvapi/releases/download/v${version}/dxvk-nvapi-v${version}.tar.gz"
+      },
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dxvk-nvapi-v0.7.1.tar.gz",
+          "url": "https://github.com/jp7677/dxvk-nvapi/releases/download/v0.7.1/dxvk-nvapi-v0.7.1.tar.gz",
+          "sha256": null,
+          "sha256_volatile": true,
+          "size_bytes": null
+        }
+      ]
+    },
+    {
+      "id": "faudio",
+      "name": "FAudio (XAudio reimplementation)",
+      "category": "audio",
+      "verb": "faudio",
+      "description": "FAudio - XAudio/XACT reimplementation for Wine",
+      "current_version": "20.07",
+      "discovery": {
+        "type": "github_releases",
+        "repo": "Kron4ek/FAudio-Builds",
+        "pattern": "faudio-${version}.tar.xz",
+        "url_template": "https://github.com/Kron4ek/FAudio-Builds/releases/download/${version}/faudio-${version}.tar.xz"
+      },
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "faudio-20.07.tar.xz",
+          "url": "https://github.com/Kron4ek/FAudio-Builds/releases/download/20.07/faudio-20.07.tar.xz",
+          "sha256": null,
+          "sha256_volatile": true,
+          "size_bytes": null
+        }
+      ]
+    },
+    {
+      "id": "d3dcompiler_47",
+      "name": "D3DCompiler 47",
+      "category": "directx",
+      "verb": "d3dcompiler_47",
+      "description": "Direct3D HLSL Compiler 47 (from Mozilla fxc2)",
+      "current_version": "fxc2",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "d3dcompiler_47.dll",
+          "url": "https://raw.githubusercontent.com/mozilla/fxc2/master/dll/d3dcompiler_47.dll",
+          "sha256": "4432bbd1a390874f3f0a503d45cc48d346abc3a8c0213c289f4b615bf0ee84f3",
+          "size_bytes": 3819008
+        },
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "d3dcompiler_47_32.dll",
+          "url": "https://raw.githubusercontent.com/mozilla/fxc2/master/dll/d3dcompiler_47_32.dll",
+          "sha256": "2ad0d4987fc4624566b190e747c9d95038443956ed816abfd1e2d389b5ec0851",
+          "size_bytes": 3199488
+        }
+      ]
+    },
+    {
+      "id": "directx9",
+      "name": "DirectX 9.0c Redistributable",
+      "category": "directx",
+      "verb": "directx9",
+      "description": "Microsoft DirectX 9.0c End-User Runtime (Jun 2010)",
+      "current_version": "9.29.1974.1",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "directx_Jun2010_redist.exe",
+          "url": "https://files.holarse-linuxgaming.de/mirrors/microsoft/directx_Jun2010_redist.exe",
+          "sha256": "8746ee1a84a083a90e37899d71d50d5c7c015e69688a466aa80447f011780c0d",
+          "size_bytes": 94536904
+        }
+      ]
+    },
+    {
+      "id": "gdiplus",
+      "name": "GDI+ (XP Update)",
+      "category": "system",
+      "verb": "gdiplus",
+      "description": "GDI+ update for Windows XP (KB975337)",
+      "current_version": "5.2.6002.23089",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "WindowsXP-KB975337-x86-ENU.exe",
+          "url": "https://web.archive.org/web/20140615000000/http://download.microsoft.com/download/a/b/c/abc45517-97a0-4cee-a362-1957be2f24e1/WindowsXP-KB975337-x86-ENU.exe",
+          "sha256": "699e76e9f100db3d50da8762c484a369df4698d4b84f7821d4df0e37ce68bcbe",
+          "size_bytes": 4908976
+        }
+      ]
+    },
+    {
+      "id": "xact",
+      "name": "XACT Engine",
+      "category": "audio",
+      "verb": "xact",
+      "description": "Cross-Platform Audio Creation Tool (from DirectX SDK)",
+      "current_version": "jun2010",
+      "note": "Extraído do DirectX Jun 2010 SDK",
+      "source_verb": "directx9"
+    },
+    {
+      "id": "xinput",
+      "name": "XInput (Xbox Controller)",
+      "category": "input",
+      "verb": "xinput",
+      "description": "XInput API for Xbox 360/One controllers",
+      "current_version": "jun2010",
+      "note": "Extraído do DirectX Jun 2010 SDK",
+      "source_verb": "directx9"
+    },
+    {
+      "id": "physx",
+      "name": "NVIDIA PhysX System Software",
+      "category": "physics",
+      "verb": "physx",
+      "description": "NVIDIA PhysX Legacy Runtime (9.13.0604)",
+      "current_version": "9.13.0604",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "PhysX-9.13.0604-SystemSoftware.exe",
+          "url": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.exe",
+          "sha256": null,
+          "size_bytes": 52622992
+        }
+      ]
+    },
+    {
+      "id": "msxml3",
+      "name": "MSXML 3.0",
+      "category": "system",
+      "verb": "msxml3",
+      "description": "Microsoft XML Core Services 3.0",
+      "current_version": "3.0 SP11",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "msxml3.msi",
+          "url": "https://media.codeweavers.com/pub/other/msxml3.msi",
+          "sha256": "f9c678f8217e9d4f9647e8a1f6d89a7c26a57b9e9e00d39f7487493dd7b4e36c",
+          "size_bytes": 1114624
+        }
+      ]
+    },
+    {
+      "id": "msxml6",
+      "name": "MSXML 6.0",
+      "category": "system",
+      "verb": "msxml6",
+      "description": "Microsoft XML Core Services 6.0",
+      "current_version": "6.30.10527.0",
+      "downloads": [
+        {
+          "rid": "win-x64",
+          "arch": "x86_64",
+          "filename": "msxml6-KB2957482-enu-amd64.exe",
+          "url": "https://download.microsoft.com/download/2/7/7/277681BE-4048-4A58-ABBA-259C465B1699/msxml6-KB2957482-enu-amd64.exe",
+          "sha256": "260cd870851ffc3c6d10b71691f134e20d8d03ac26073bb36951eacb7aa85897",
+          "size_bytes": 6093040
+        }
+      ]
+    },
+    {
+      "id": "riched20",
+      "name": "RichEdit 2.0",
+      "category": "system",
+      "verb": "riched20",
+      "description": "Rich Text Editor Control 2.0",
+      "note": "Extraído do DirectX Feb 2010",
+      "source_verb": "directx9"
+    },
+    {
+      "id": "riched30",
+      "name": "RichEdit 3.0",
+      "category": "system",
+      "verb": "riched30",
+      "description": "Rich Text Editor Control 3.0",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "InstMsiA.exe",
+          "url": "https://web.archive.org/web/20060720160141/https://download.microsoft.com/download/WindowsInstaller/Install/2.0/W9XMe/EN-US/InstMsiA.exe",
+          "sha256": "536e4c8385d7d250fd5702a6868d1ed004692136eefad22252d0dac15f02563a",
+          "size_bytes": 1687168
+        }
+      ]
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz (DirectShow)",
+      "category": "media",
+      "verb": "quartz",
+      "description": "DirectShow Quartz.dll",
+      "note": "Extraído do DirectX Feb 2010",
+      "source_verb": "directx9"
+    },
+    {
+      "id": "wmp11",
+      "name": "Windows Media Player 11",
+      "category": "media",
+      "verb": "wmp11",
+      "description": "Windows Media Player 11 Runtime",
+      "note": "Instalado via wine_wmp11 no Makaitricks"
+    },
+    {
+      "id": "uiautomationcore",
+      "name": "UI Automation Core",
+      "category": "system",
+      "verb": "uiautomationcore",
+      "description": "Microsoft UI Automation Core library",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "uiautomationcore.zip",
+          "url": "https://github.com/Winetricks/winetricks/raw/master/files/uiautomationcore.zip",
+          "sha256": "40422584b6083c092dcdcbf8b2d911ae6506cb938afda5c8a0ab57aad1db167c",
+          "size_bytes": 579446
+        }
+      ]
+    },
+    {
+      "id": "xaudio29",
+      "name": "XAudio 2.9 Redistributable",
+      "category": "audio",
+      "verb": "xaudio29",
+      "description": "Microsoft XAudio 2.9 (NuGet package)",
+      "current_version": "1.2.11",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "microsoft.xaudio2.redist.1.2.11.nupkg",
+          "url": "https://globalcdn.nuget.org/packages/microsoft.xaudio2.redist.1.2.11.nupkg",
+          "sha256": "4552e0b5b59de0cdbc6c217261c45f5968f7bbf1e8ab5f208e4bca6fd8fc5780",
+          "size_bytes": 318564
+        }
+      ]
+    },
+    {
+      "id": "vcrun2003",
+      "name": "Visual C++ 2003 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun2003",
+      "description": "Microsoft Visual C++ 2003 (7.1) - via BZEdit bundle",
+      "note": "Fonte indireta (bundle BZEdit)"
+    },
+    {
+      "id": "vcrun6",
+      "name": "Visual C++ 6.0 Redistributable",
+      "category": "vcrun",
+      "verb": "vcrun6",
+      "description": "Microsoft Visual C++ 6.0 SP4",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "VC6RedistSetup_deu.exe",
+          "url": "https://download.microsoft.com/download/vc60pro/Update/2/W9XNT4/EN-US/VC6RedistSetup_deu.exe",
+          "sha256": "c2eb91d9c4448d50e46a32fecbcc3b418706d002beab9b5f4981de552098cee7",
+          "size_bytes": 733184
+        }
+      ]
+    },
+    {
+      "id": "lavfilters",
+      "name": "LAV Filters",
+      "category": "media",
+      "verb": "lavfilters",
+      "description": "DirectShow Media Splitter/Decoder",
+      "current_version": "0.74.1",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "LAVFilters-0.74.1-Installer.exe",
+          "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe",
+          "sha256": "181e24428eaa34d0121cd53ec829c18e52d028689e12a7326f952989daa44ddb",
+          "size_bytes": 10876448
+        }
+      ]
+    },
+    {
+      "id": "openal",
+      "name": "OpenAL Soft",
+      "category": "audio",
+      "verb": "openal",
+      "description": "OpenAL Soft Runtime",
+      "current_version": "2.0.7.0",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "oalinst.zip",
+          "url": "https://www.openal.org/downloads/oalinst.zip",
+          "sha256": "d165bcb7628fd950d14847585468cc11943b2a1da92a59a839d397c68f9d4b06",
+          "size_bytes": 654640
+        }
+      ]
+    },
+    {
+      "id": "dinputto8",
+      "name": "DInputTo8 (DirectInput bridge)",
+      "category": "input",
+      "verb": "dinputto8",
+      "description": "Converts DirectInput to DirectInput 8",
+      "current_version": "1.0.92.0",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "dinput.dll",
+          "url": "https://github.com/elishacloud/dinputto8/releases/download/v1.0.92.0/dinput.dll",
+          "sha256": "8f1e53a55c66f870b91c1e43a39c02a4a87900cf453776de41643863bdfa00e6",
+          "size_bytes": 292352
+        }
+      ]
+    },
+    {
+      "id": "cnc_ddraw",
+      "name": "CNC-DDraw (DirectDraw wrapper)",
+      "category": "translation",
+      "verb": "cnc_ddraw",
+      "description": "DirectDraw wrapper for classic games",
+      "current_version": "7.0.0.0",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "cnc-ddraw.zip",
+          "url": "https://github.com/FunkyFr3sh/cnc-ddraw/releases/download/v7.0.0.0/cnc-ddraw.zip",
+          "sha256": "f9640f69c2b8c012b97720ce0a9aac483989563908fc19446b9d1ba16e7239d6",
+          "size_bytes": 2496652
+        }
+      ]
+    },
+    {
+      "id": "dotnet35",
+      "name": ".NET Framework 3.5",
+      "category": "dotnetfx",
+      "verb": "dotnet35",
+      "description": "Microsoft .NET Framework 3.5",
+      "current_version": "3.5.21022.8",
+      "install_args": "/q /norestart",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "dotnetfx35.exe",
+          "url": "https://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe",
+          "sha256": "3e3a4104bad9a0c270ed5cbe8abb986de9afaf0281a98998bdbdc8eaab85c3b6",
+          "size_bytes": 190039376
+        }
+      ]
+    },
+    {
+      "id": "dotnetcoredesktop3",
+      "name": ".NET Core 3.1 Desktop Runtime",
+      "category": "dotnet",
+      "verb": "dotnetcoredesktop3",
+      "description": ".NET Core 3.1 Desktop Runtime (EOL)",
+      "current_version": "3.1.10",
+      "install_args": "/quiet",
+      "downloads": [
+        {
+          "rid": "win-x86",
+          "arch": "i386",
+          "filename": "windowsdesktop-runtime-3.1.10-win-x86.exe",
+          "url": "https://download.visualstudio.microsoft.com/download/pr/865d0be5-16e2-4b3d-a990-f4c45acd280c/ec867d0a4793c0b180bae85bc3a4f329/windowsdesktop-runtime-3.1.10-win-x86.exe",
+          "sha256": "4da245d9048642ed3f25c04e8fa0156e1d2966b4d257c12a9a3d3a0c929102aa",
+          "size_bytes": 59565088
+        }
+      ]
+    },
+    {
+      "id": "xna40",
+      "name": "XNA Framework 4.0",
+      "category": "runtime",
+      "verb": "xna40",
+      "description": "Microsoft XNA Framework Redistributable 4.0",
+      "downloads": [
+        {
+          "rid": "neutral",
+          "arch": "any",
+          "filename": "xnafx40_redist.msi",
+          "url": "https://web.archive.org/web/20120325002813/https://download.microsoft.com/download/A/C/2/AC2C903B-E6E8-42C2-9FD7-BEBAC362A930/xnafx40_redist.msi",
+          "sha256": "e6c41d692ebcba854dad4b1c52bb7ddd05926bad3105595d6596b8bab01c25e7",
+          "size_bytes": 6401536
+        }
+      ]
+    },
+    {
+      "id": "win10",
+      "name": "Windows 10 Version Setting",
+      "category": "wine_settings",
+      "verb": "win10",
+      "description": "Define versão do Windows para Win10 no Wine Registry",
+      "note": "Apenas registry: winetricks_settings.wine_winver",
+      "type": "registry_only"
+    },
+    {
+      "id": "win7",
+      "name": "Windows 7 Version Setting",
+      "category": "wine_settings",
+      "verb": "win7",
+      "description": "Define versão do Windows para Win7 no Wine Registry",
+      "note": "Apenas registry: winetricks_settings.wine_winver",
+      "type": "registry_only"
+    }
+  ]
+}
