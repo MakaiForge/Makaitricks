@@ -41,12 +41,12 @@ function steamCompatDataPath(libraryPath: string, steamAppId: string): string | 
 
 function defaultStagingDir(gameId: string): string {
   const slug = gameId.toLowerCase().replace(/[\s:/\\]+/g, "-").replace(/[^a-z0-9-]/g, "");
-  return path.join(os.homedir(), "Mods", slug, "staging");
+  return path.join(os.homedir(), "Games", "Mods", slug, "staging");
 }
 
 export function defaultPrefixDir(gameId: string): string {
   const slug = gameId.toLowerCase().replace(/[\s:/\\]+/g, "-").replace(/[^a-z0-9-]/g, "");
-  return path.join(os.homedir(), "Mods", slug, "prefix");
+  return path.join(os.homedir(), "Games", "Prefix", slug);
 }
 
 export async function detectGame(

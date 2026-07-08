@@ -95,7 +95,7 @@ export function useGameConfig() {
         if (cfg) {
           setConfigGamePath(cfg.gamePath || "");
           setConfigStagingDir(cfg.stagingDir || defaultStagingDir(selectedGame, name));
-          setConfigPrefixPath(cfg.protonPrefix || "");
+          setConfigPrefixPath(cfg.protonPrefix || defaultPrefixDir(selectedGame, name));
           setConfigProtonPath(cfg.protonVersion || "");
         } else {
           setConfigGamePath("");
@@ -131,10 +131,11 @@ export function useGameConfig() {
       if (result.ok && Array.isArray(result.data)) {
         for (const g of result.data) {
           const sd = defaultStagingDir(g.game_id, g.name);
+          const pp = defaultPrefixDir(g.game_id, g.name);
           await window.electron.saveGameConfig(g.game_id, {
             gamePath: g.path,
             stagingDir: sd,
-            protonPrefix: "",
+            protonPrefix: pp,
           });
           setGames(prev => {
             if (prev.find(x => gameIdFor(x) === g.game_id)) return prev;

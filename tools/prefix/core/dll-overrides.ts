@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { logger } from "@main/services";
 import { logCall } from "../activity-logger";
+import { normalizePrefixPath } from "./validate";
 
 export type DllOverridesMap = Record<string, string>;
 
@@ -23,6 +24,7 @@ export function applyWineDllOverrides(
   overrides: DllOverridesMap,
 ): void {
   const _start = Date.now();
+  prefixPath = normalizePrefixPath(prefixPath);
   if (!prefixPath || Object.keys(overrides).length === 0) {
     logCall("dll-overrides", "applyWineDllOverrides", { prefixPath, overrides }, { skipped: true }, 0);
     return;

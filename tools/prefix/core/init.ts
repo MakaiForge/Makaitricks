@@ -4,6 +4,7 @@ import { spawn } from "node:child_process";
 import { logger, Umu } from "@main/services";
 import { findProtonPath, findSteamClientPath, parseLibraryFolders } from "./steam-paths";
 import { clearCompatData, ensureCompatData } from "./clear";
+import { normalizePrefixPath } from "./validate";
 import { logOperation, logCall, logError as auditLogError } from "../activity-logger";
 
 export interface CreatePrefixOptions {
@@ -74,7 +75,7 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
     umuBinary: umuOverride,
   } = options;
 
-  const pfxDir = prefixPath;
+  const pfxDir = normalizePrefixPath(prefixPath);
   const protonBin = path.join(protonPath, "proton");
 
   return new Promise((resolve) => {

@@ -1,7 +1,20 @@
 import fs from "node:fs";
 import path from "node:path";
+import os from "node:os";
 import { logger } from "@main/services";
 import { logCall } from "../activity-logger";
+
+/**
+ * Expands ~/ and ~user/ in a path to the full home directory path.
+ * Also normalizes the path (resolves . and ..).
+ */
+export function normalizePrefixPath(p: string): string {
+  if (!p) return p;
+  if (p.startsWith("~" + path.sep) || p === "~") {
+    return path.resolve(path.join(os.homedir(), p.slice(1)));
+  }
+  return path.resolve(p);
+}
 
 export interface ValidationResult {
   valid: boolean
@@ -16,6 +29,7 @@ export interface ValidationResult {
  */
 export function validatePrefix(prefixPath: string): ValidationResult {
   const _start = Date.now();
+  prefixPath = normalizePrefixPath(prefixPath);
   const result: ValidationResult = {
     valid: false,
     hasDriveC: false,
@@ -45,6 +59,7 @@ export function validatePrefix(prefixPath: string): ValidationResult {
  */
 export function ensurePrefixDir(prefixPath: string): string | null {
   const _start = Date.now();
+  prefixPath = normalizePrefixPath(prefixPath);
   if (!prefixPath) {
     logCall("validate", "ensurePrefixDir", { prefixPath }, { result: null }, 0);
     return null;
