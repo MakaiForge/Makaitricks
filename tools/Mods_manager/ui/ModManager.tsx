@@ -207,7 +207,8 @@ export default function ModManager() {
     setSelectedGame(gameId);
     setConfigGamePath(gamePath);
     const slug = gameId.toLowerCase().replace(/[\s:/\\]+/g, "-").replace(/[^a-z0-9-]/g, "");
-    const home = process.env.HOME || "~";
+    const homeDir = await window.electron.getHomeDir();
+    const home = homeDir || "/home/" + (process.env.USER || "user");
     const staging = home + "/Games/Mods/" + slug + "/staging";
     const prefix = home + "/Games/Prefix/" + slug;
     setConfigStagingDir(staging);
@@ -273,7 +274,8 @@ export default function ModManager() {
       setPrefixSetupLog(prev => [...prev, line]);
     });
     try {
-      const result = await window.electron.setupProtonEnvironment(gameName, protonPath, "", true);
+      const prefixPath = configPrefixPath || "";
+      const result = await window.electron.setupProtonEnvironment(gameName, protonPath, prefixPath, true);
       if (result.success) {
         setPrefixSetupLog(prev => [...prev, "", "✅ Ambiente Proton configurado com sucesso!"]);
         setPrefixSetupResult({ ok: true, msg: "✅ Configuração concluída!" });

@@ -103,8 +103,9 @@ export function useProtonConfig() {
 
     try {
       // clean is always true (handled by backend)
+      const prefixPath = info?.prefixPath || "";
       const result = await window.electron.setupProtonEnvironment(
-        gameName, selectedProtonPath, "", true
+        gameName, selectedProtonPath, prefixPath, true
       );
       if (!result.success) {
         setSetupLog(prev => [...prev, "", "✗ CONFIGURAÇÃO FALHOU"]);

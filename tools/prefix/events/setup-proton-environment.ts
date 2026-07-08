@@ -1,11 +1,24 @@
 import { registerEvent } from "@main/events/register-event";
+import { logOperation, logError as auditLogError } from "../activity-logger";
 
 registerEvent("preparePrefix", async (_event, gameName: string) => {
+  logOperation("preparePrefix", "started", { gameName });
   const { ProtonfixService } = await import("@main/services/protonfix-service");
-  return ProtonfixService.preparePrefix(gameName);
+  const result = await ProtonfixService.preparePrefix(gameName);
+  logOperation("preparePrefix", result.success ? "success" : "error", { gameName });
+  return result;
 });
 
-registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonPath: string, _prefixPathParam: string, _clean?: boolean) => {
+registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonPath: string, prefixPathParam: string, clean?: boolean) => {
+  const _startAll = Date.now();
+  logOperation("setupProtonEnvironment", "started", {
+    gameName,
+    protonPath,
+    prefixPathParam: prefixPathParam || "(empty)",
+    clean: !!clean,
+    caller: "ModManager",
+  });
+
   const fs = await import("node:fs");
   const p = await import("node:path");
   const { getSteamLocation } = await import("@main/services/steam");
@@ -18,6 +31,16 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
 
   const addLog = (msg: string) => { try { _event.sender.send("proton-setup-log", msg); } catch {} };
 
+  const _finish = (success: boolean, extra: Record<string, unknown> = {}) => {
+    logOperation("setupProtonEnvironment", success ? "success" : "error", {
+      gameName,
+      protonPath,
+      prefixPathParam: prefixPathParam || "(empty)",
+      duration_ms: Date.now() - _startAll,
+      ...extra,
+    });
+  };
+
   const gameNameLower = gameName.toLowerCase();
   const protonName = p.basename(protonPath);
 
@@ -28,7 +51,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
   const steamPath = await getSteamLocation().catch(() => null);
   if (!steamPath) {
     addLog("   ❌ Steam não encontrado");
-    return { success: false };
+    return _finish(false, { error: "Steam not found" });
   }
   addLog(`   Steam: ${steamPath}`);
 
@@ -126,7 +149,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
   if (!fs.existsSync(protonBin)) {
     addLog(`   ❌ Proton não encontrado em: ${protonBin}`);
     addLog("   💡 Use a aba Proton Tools para baixar");
-    return { success: false };
+    return _finish(false, { error: "Proton not found" });
   }
   addLog(`   ✅ ${protonName} encontrado`);
   addLog(`   Path: ${protonPath}`);
@@ -220,7 +243,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
               if (newPath && fs.existsSync(p.join(newPath, "proton"))) {
                 addLog(`   ✅ ${release.tag_name} instalado!`);
                 addLog("   Clique em CONFIGURAR novamente para usar o novo Proton.");
-                return { success: true, needsRestart: true, newProtonPath: newPath };
+                return _finish(true, { needsRestart: true, newProtonPath: newPath });
               }
             }
           }
@@ -232,7 +255,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
     } else {
       addLog("❌ FALHA NA CONFIGURAÇÃO — Erro ao criar prefixo");
     }
-    return { success: false };
+    return _finish(false, { error: "Prefix creation failed", winebootError: winebootResult.error });
   }
 
   addLog("   ✅ Prefixo pronto");
@@ -350,5 +373,5 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
   addLog(`     Prefixo: ${prefixPath}`);
   addLog("═══════════════════════════════════════");
 
-  return { success: true };
+  return _finish(true, { appId, prefixPath, foundGameName });
 });
