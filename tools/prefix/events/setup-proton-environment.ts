@@ -27,6 +27,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
   const { getReleases, downloadTool } = await import("@proton/main/services/index");
   const { findToolIdByForkName, PROTON_TOOLS } = await import("@proton/main/services/tools");
   const { applyWineDllOverrides } = await import("@prefix/core/dll-overrides");
+  const { normalizePrefixPath } = await import("@prefix/core/validate");
   const { clearSteamPrefixCore, createPrefix } = await import("@prefix/core/init");
 
   const addLog = (msg: string) => { try { _event.sender.send("proton-setup-log", msg); } catch {} };
@@ -46,101 +47,115 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
 
   addLog(`▶ Configurando Proton para ${gameName}`);
 
-  // 1. Find Steam game
-  addLog("🔍 Analisando configurações Steam...");
-  const steamPath = await getSteamLocation().catch(() => null);
-  if (!steamPath) {
-    addLog("   ❌ Steam não encontrado");
-    return _finish(false, { error: "Steam not found" });
-  }
-  addLog(`   Steam: ${steamPath}`);
-
-  const libraryPaths: string[] = [steamPath];
-  const libraryFoldersPath = p.join(steamPath, "steamapps", "libraryfolders.vdf");
-  if (fs.existsSync(libraryFoldersPath)) {
-    try {
-      const vdfRaw = fs.readFileSync(libraryFoldersPath, "utf-8");
-      const libMatch = vdfRaw.match(/"\d+"\s*\{[^}]*?"path"\s*"([^"]+)"/g);
-      if (libMatch) {
-        for (const entry of libMatch) {
-          const pathMatch = entry.match(/"path"\s*"([^"]+)"/);
-          if (pathMatch && fs.existsSync(pathMatch[1]) && !libraryPaths.includes(pathMatch[1])) {
-            libraryPaths.push(pathMatch[1]);
-          }
-        }
-      }
-    } catch {}
-  }
-
   let appId: string | null = null;
   let foundGameName: string | null = null;
   let foundGamePath: string | null = null;
+  let prefixPath: string;
+  let steamPath: string | null = null;
 
-  const manifests: { appid: string; name: string; installdir?: string }[] = [];
-  for (const libPath of libraryPaths) {
-    const appsDir = p.join(libPath, "steamapps");
-    if (!fs.existsSync(appsDir)) continue;
-    let files: string[];
-    try { files = fs.readdirSync(appsDir); } catch { continue; }
-    for (const file of files) {
-      const m = file.match(/^appmanifest_(\d+)\.acf$/i);
-      if (!m) continue;
+  // Check if a custom prefix path was provided
+  if (prefixPathParam && prefixPathParam.trim()) {
+    prefixPath = normalizePrefixPath(prefixPathParam);
+    addLog(`📁 Usando prefixo personalizado: ${prefixPath}`);
+    steamPath = await getSteamLocation().catch(() => null);
+  } else {
+    // 1. Find Steam game (auto-detect)
+    addLog("🔍 Analisando configurações Steam...");
+    steamPath = await getSteamLocation().catch(() => null);
+    if (!steamPath) {
+      addLog("   ❌ Steam não encontrado");
+      return _finish(false, { error: "Steam not found" });
+    }
+    addLog(`   Steam: ${steamPath}`);
+
+    const libraryPaths: string[] = [steamPath];
+    const libraryFoldersPath = p.join(steamPath, "steamapps", "libraryfolders.vdf");
+    if (fs.existsSync(libraryFoldersPath)) {
       try {
-        const acfContent = fs.readFileSync(p.join(appsDir, file), "utf-8");
-        const nameMatch = acfContent.match(/"name"\s*"([^"]+)"/);
-        const installMatch = acfContent.match(/"installdir"\s*"([^"]+)"/);
-        if (nameMatch) {
-          const entry: { appid: string; name: string; installdir?: string } = { appid: m[1], name: nameMatch[1] };
-          if (installMatch) {
-            entry.installdir = installMatch[1];
-          }
-          manifests.push(entry);
-          if (nameMatch[1].toLowerCase() === gameNameLower) {
-            appId = m[1];
-            foundGameName = nameMatch[1];
-            foundGamePath = installMatch ? p.join(libPath, "steamapps", "common", installMatch[1]) : null;
-            break;
+        const vdfRaw = fs.readFileSync(libraryFoldersPath, "utf-8");
+        const libMatch = vdfRaw.match(/"\d+"\s*\{[^}]*?"path"\s*"([^"]+)"/g);
+        if (libMatch) {
+          for (const entry of libMatch) {
+            const pathMatch = entry.match(/"path"\s*"([^"]+)"/);
+            if (pathMatch && fs.existsSync(pathMatch[1]) && !libraryPaths.includes(pathMatch[1])) {
+              libraryPaths.push(pathMatch[1]);
+            }
           }
         }
       } catch {}
     }
-    if (appId) break;
-  }
 
-  if (!appId) {
-    for (const manifest of manifests) {
-      if (manifest.name.toLowerCase().includes(gameNameLower)) {
-        appId = manifest.appid;
-        foundGameName = manifest.name;
-        foundGamePath = (() => {
-          for (const libPath of libraryPaths) {
-            const candidate = p.join(libPath, "steamapps", "common", manifest.installdir || "");
-            if (fs.existsSync(candidate)) return candidate;
+    const manifests: { appid: string; name: string; installdir?: string }[] = [];
+    for (const libPath of libraryPaths) {
+      const appsDir = p.join(libPath, "steamapps");
+      if (!fs.existsSync(appsDir)) continue;
+      let files: string[];
+      try { files = fs.readdirSync(appsDir); } catch { continue; }
+      for (const file of files) {
+        const m = file.match(/^appmanifest_(\d+)\.acf$/i);
+        if (!m) continue;
+        try {
+          const acfContent = fs.readFileSync(p.join(appsDir, file), "utf-8");
+          const nameMatch = acfContent.match(/"name"\s*"([^"]+)"/);
+          const installMatch = acfContent.match(/"installdir"\s*"([^"]+)"/);
+          if (nameMatch) {
+            const entry: { appid: string; name: string; installdir?: string } = { appid: m[1], name: nameMatch[1] };
+            if (installMatch) {
+              entry.installdir = installMatch[1];
+            }
+            manifests.push(entry);
+            if (nameMatch[1].toLowerCase() === gameNameLower) {
+              appId = m[1];
+              foundGameName = nameMatch[1];
+              foundGamePath = installMatch ? p.join(libPath, "steamapps", "common", installMatch[1]) : null;
+              break;
+            }
           }
-          return null;
-        })();
-        break;
+        } catch {}
+      }
+      if (appId) break;
+    }
+
+    if (!appId) {
+      for (const manifest of manifests) {
+        if (manifest.name.toLowerCase().includes(gameNameLower)) {
+          appId = manifest.appid;
+          foundGameName = manifest.name;
+          foundGamePath = (() => {
+            for (const libPath of libraryPaths) {
+              const candidate = p.join(libPath, "steamapps", "common", manifest.installdir || "");
+              if (fs.existsSync(candidate)) return candidate;
+            }
+            return null;
+          })();
+          break;
+        }
       }
     }
-  }
 
-  if (appId) {
-    addLog(`   ✅ Jogo "${foundGameName}" encontrado!`);
-    addLog(`   ✅ Steam App ID: ${appId}`);
-  } else {
-    addLog("   ⚠ Jogo não encontrado na biblioteca Steam");
-  }
+    if (appId) {
+      addLog(`   ✅ Jogo "${foundGameName}" encontrado!`);
+      addLog(`   ✅ Steam App ID: ${appId}`);
+    } else {
+      addLog("   ⚠ Jogo não encontrado na biblioteca Steam");
+    }
 
-  // 2. Always clear the old prefix (clean is now mandatory)
-  addLog("🧹 Removendo prefixo antigo...");
-  let compatDataPath: string | null = null;
-  if (appId) {
-    compatDataPath = await clearSteamPrefixCore(appId);
-  }
-  if (!compatDataPath) {
-    addLog("   ⚠ Não foi possível localizar compatdata do jogo");
-  } else {
-    addLog(`   ✅ Prefixo antigo removido em: ${compatDataPath}`);
+    // 2. Clear the old Steam compatdata prefix
+    addLog("🧹 Removendo prefixo antigo...");
+    let compatDataPath: string | null = null;
+    if (appId) {
+      compatDataPath = await clearSteamPrefixCore(appId);
+    }
+    if (!compatDataPath) {
+      addLog("   ⚠ Não foi possível localizar compatdata do jogo");
+    } else {
+      addLog(`   ✅ Prefixo antigo removido em: ${compatDataPath}`);
+    }
+
+    // 5. Resolve prefix path (Steam compatdata)
+    prefixPath = compatDataPath
+      ? p.join(compatDataPath, "pfx")
+      : p.join(steamPath, "steamapps", "compatdata", appId || "unknown", "pfx");
   }
 
   // 3. Verify Proton
@@ -154,8 +169,8 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
   addLog(`   ✅ ${protonName} encontrado`);
   addLog(`   Path: ${protonPath}`);
 
-  // 4. Set Proton in Steam config.vdf
-  if (appId) {
+  // 4. Set Proton in Steam config.vdf (only for Steam games)
+  if (appId && steamPath) {
     addLog("⚙ Atualizando config Steam...");
     try {
       const wrote = await setSteamGameProton(appId, protonName);
@@ -168,11 +183,6 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
       addLog(`   ⚠ Erro ao atualizar Steam: ${String(err).slice(0, 100)}`);
     }
   }
-
-  // 5. Resolve prefix path
-  const prefixPath = compatDataPath
-    ? p.join(compatDataPath, "pfx")
-    : p.join(steamPath, "steamapps", "compatdata", appId || "unknown", "pfx");
 
   addLog(`📁 Prefixo: ${prefixPath}`);
 
