@@ -206,9 +206,20 @@ export default function ModManager() {
   const handleDetectionWizardGame = useCallback(async (gameId: string, gamePath: string) => {
     setSelectedGame(gameId);
     setConfigGamePath(gamePath);
-    saveGameConfig(gameId, gamePath, configStagingDir);
+    const slug = gameId.toLowerCase().replace(/[\s:/\\]+/g, "-").replace(/[^a-z0-9-]/g, "");
+    const home = process.env.HOME || "~";
+    const staging = home + "/Games/Mods/" + slug + "/staging";
+    const prefix = home + "/Games/Prefix/" + slug;
+    setConfigStagingDir(staging);
+    setConfigPrefixPath(prefix);
+    await window.electron.saveGameConfig(gameId, {
+      gamePath,
+      stagingDir: staging,
+      protonPrefix: prefix,
+      protonVersion: "",
+    });
     addLog(`Jogo detectado: ${gameId} em ${gamePath}`);
-  }, [saveGameConfig, configStagingDir, setSelectedGame, setConfigGamePath, addLog]);
+  }, [setSelectedGame, setConfigGamePath, setConfigStagingDir, setConfigPrefixPath, addLog]);
 
   useEffect(() => {
     if (!selectedGame || !configGamePath) return;
