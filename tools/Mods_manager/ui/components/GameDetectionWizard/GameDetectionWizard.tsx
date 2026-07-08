@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@renderer/components";
 import "./GameDetectionWizard.scss";
 
@@ -9,6 +9,8 @@ interface GameDetectionWizardProps {
   selectedGameId?: string;
 }
 
+type WizardStep = "detecting" | "result" | "saved";
+
 interface DetectionAttempt {
   gameId: string;
   name: string;
@@ -17,17 +19,15 @@ interface DetectionAttempt {
 }
 
 export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGameId: initialGameId }: GameDetectionWizardProps) {
-  const [step, setStep] = useState<"detecting" | "result" | "saved">("detecting");
+  const [step, setStep] = useState<WizardStep>("detecting");
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
   const [chosenGameId, setChosenGameId] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
-  const autoClosed = useRef(false);
 
   const startDetection = useCallback(async (targetGameId?: string) => {
     setStep("detecting");
     setError(null);
     setDetected([]);
-    autoClosed.current = false;
     try {
       const catalogResult = await window.electron.getGameDllCatalog();
       if (!catalogResult.ok || !catalogResult.data?.games) {
@@ -50,23 +50,13 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       }
       setDetected(found);
       const firstFound = found.find((g) => g.found);
-
-      if (targetGameId && firstFound) {
-        const path = await window.electron.modDetectGamePath(firstFound.gameId);
-        if (path) {
-          onGameDetected(firstFound.gameId, path);
-        }
-        onClose();
-        return;
-      }
-
       if (firstFound) setChosenGameId(firstFound.gameId);
       setStep("result");
     } catch (e: any) {
       setError(e.message || "Erro na detecção");
       setStep("result");
     }
-  }, [onGameDetected, onClose]);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -100,17 +90,18 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
     if (path) {
       onGameDetected(gameId, path);
     }
-    onClose();
+    setStep("saved");
   };
 
   const foundCount = detected.filter((g) => g.found).length;
+  const alreadyFound = foundCount > 0 && detected.find((g) => g.found && g.gameId === initialGameId);
 
   return (
     <div className={`detection-wizard-overlay ${open ? "detection-wizard-overlay--open" : ""}`} onClick={onClose}>
       <div className="detection-wizard" onClick={(e) => e.stopPropagation()}>
         {step === "detecting" && (
           <div className="detection-wizard__step">
-            <h2>Detectando {initialGameId ? "..." : "jogos instalados..."}</h2>
+            <h2>Detectando jogos instalados...</h2>
             <div className="detection-wizard__spinner" />
             <p>Procurando em bibliotecas Steam, GOG e diretórios comuns...</p>
           </div>
@@ -121,9 +112,9 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
             <h2>Jogos Detectados</h2>
             {error && <p className="detection-wizard__error">⚠️ {error}</p>}
             {foundCount > 0 ? (
-              <p>{foundCount} jogo(s) encontrado(s). Clique em um para configurar.</p>
+              <p>{foundCount} jogo(s) encontrado(s) automaticamente.</p>
             ) : (
-              <p>Nenhum jogo encontrado.</p>
+              <p>Nenhum jogo encontrado automaticamente.</p>
             )}
             <div className="detection-wizard__game-list">
               {detected.map((g) => (
@@ -142,15 +133,27 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
               ))}
             </div>
             <div className="detection-wizard__actions">
-              <Button onClick={handleSelectManual}>Selecionar Pasta Manualmente</Button>
+              <Button onClick={handleSelectManual}>Selecionar Manualmente</Button>
+              <Button disabled={!alreadyFound} onClick={() => startDetection(initialGameId)}>
+                Buscar Novamente
+              </Button>
               <Button
                 theme="primary"
                 disabled={!chosenGameId || !detected.find((g) => g.gameId === chosenGameId)?.found}
                 onClick={() => handleConfirm(chosenGameId)}
               >
-                Configurar
+                Configurar Selecionado
               </Button>
             </div>
+          </div>
+        )}
+
+        {step === "saved" && (
+          <div className="detection-wizard__step">
+            <h2>✅ Jogo Configurado!</h2>
+            <p>O jogo foi configurado com paths padrão.</p>
+            <p>Você pode ajustar as configurações no painel de Configurações do Jogo.</p>
+            <Button theme="primary" onClick={onClose}>Concluir</Button>
           </div>
         )}
       </div>
