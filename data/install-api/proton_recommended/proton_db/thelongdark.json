@@ -1,0 +1,74 @@
+{
+  "gameId": "thelongdark",
+  "steamAppId": "305620",
+  "totalReports": 17,
+  "versions": [
+    {
+      "version": "5.0-10",
+      "total": 7,
+      "positive": 0,
+      "negative": 7,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "GE-Proton5.21-1",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0-6",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "5.0-9",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.13-5",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-8",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-4",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0-5",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "4.11-13",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "GE-Proton5.21-1",
+    "7.0-6"
+  ]
+}

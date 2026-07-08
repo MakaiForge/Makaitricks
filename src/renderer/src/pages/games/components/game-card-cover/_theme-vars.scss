@@ -1,0 +1,11 @@
+.games-card-cover {
+  background: var(--surface);
+
+  &__background {
+    background-color: var(--surface);
+  }
+
+  &__cover-placeholder {
+    background: var(--surface-hover);
+  }
+}

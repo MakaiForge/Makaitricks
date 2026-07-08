@@ -1,0 +1,161 @@
+.download-now {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgb(5, 5, 5) 70%,
+      rgb(26, 26, 26) 100%
+    );
+    z-index: 0;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: scale 0.2s ease;
+      outline: none;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
+    img {
+      max-width: 180px;
+      max-height: 60px;
+      object-fit: contain;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+      margin: 0;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &--paused {
+    .download-now__overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgb(5, 5, 5) 70%,
+        rgb(26, 26, 26) 100%
+      );
+    }
+
+    .download-now__progress-fill {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .download-now__progress-bar {
+      opacity: 0.4;
+    }
+
+    .download-now__stats,
+    .download-now__stat-label,
+    .download-now__stat-value,
+    .download-now__progress-status,
+    .download-now__progress-pct,
+    .download-now__progress-eta {
+      opacity: 0.5;
+    }
+  }
+}
+
+@container app-container (min-width: 700px) {
+  .download-now__logo img { max-width: 220px; max-height: 75px; }
+  .download-now__logo h1 { font-size: 26px; }
+}
+
+@container app-container (min-width: 900px) {
+  .download-now__logo img { max-width: 280px; max-height: 95px; }
+  .download-now__logo h1 { font-size: 32px; }
+}
+
+@container app-container (min-width: 1200px) {
+  .download-now__logo img { max-width: 340px; max-height: 115px; }
+  .download-now__logo h1 { font-size: 38px; }
+}
+
+@container app-container (min-width: 1500px) {
+  .download-now__logo img { max-width: 400px; max-height: 130px; }
+  .download-now__logo h1 { font-size: 44px; }
+}

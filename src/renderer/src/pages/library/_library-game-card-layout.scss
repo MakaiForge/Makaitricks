@@ -1,0 +1,71 @@
+.library-game-card__wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+  padding: 0;
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--accent, #6366f1) 30%, transparent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.library-game-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.library-game-card__top-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.library-game-card__playtime {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.library-game-card__manual-playtime {
+  color: #f59e0b;
+}
+
+.library-game-card__playtime-long {
+  display: inline;
+}
+
+.library-game-card__playtime-short {
+  display: none;
+}
+
+.library-game-card__game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.library-game-card__cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.15);
+}

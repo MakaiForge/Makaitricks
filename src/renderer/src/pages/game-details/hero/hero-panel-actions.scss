@@ -1,0 +1,37 @@
+@use "_partials/actions-utility";
+@use "_partials/actions-text";
+
+.hero-panel-actions {
+  &__action {
+    &--disabled {
+      opacity: 0.5;
+    }
+
+    &--add.button--outline {
+      color: var(--accent, #5865f2);
+
+      svg, svg path {
+        color: var(--accent, #5865f2);
+        fill: var(--accent, #5865f2);
+      }
+
+      &:hover {
+        color: var(--accent-hover, #4752c4);
+
+        svg, svg path {
+          color: var(--accent-hover, #4752c4);
+          fill: var(--accent-hover, #4752c4);
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__separator {
+    width: 1px;
+    opacity: 0.2;
+  }
+}

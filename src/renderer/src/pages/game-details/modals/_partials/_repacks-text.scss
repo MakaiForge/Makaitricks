@@ -1,0 +1,19 @@
+@use "../../../../scss/tokens/text" as token;
+
+.repacks-modal {
+  &__repack-button {
+    color: token.$body-color;
+  }
+
+  &__repack-title {
+    color: token.$muted-color;
+  }
+
+  &__no-results {
+    color: token.$muted-color;
+  }
+
+  &__no-results-text {
+    color: token.$muted-color;
+  }
+}

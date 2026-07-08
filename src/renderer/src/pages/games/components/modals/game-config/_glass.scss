@@ -1,0 +1,30 @@
+@use "../../../../../scss/tokens/glass" as token;
+@use "../../../../../scss/tokens/border" as border;
+
+.game-config-modal {
+  @include token.glass-strong;
+
+  &__section {
+    @include token.glass;
+    border-radius: 10px;
+    padding: 1rem;
+
+    h3 {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+  }
+
+  &__progress-card {
+    @include token.glass-strong;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-width: 340px;
+    max-width: 420px;
+    text-align: center;
+  }
+}

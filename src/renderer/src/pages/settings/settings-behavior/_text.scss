@@ -1,0 +1,7 @@
+@use "../../../scss/tokens/text";
+
+.settings-behavior {
+  &__proton-description {
+    color: text.$muted-color;
+  }
+}

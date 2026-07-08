@@ -1,0 +1,9 @@
+@use "../../../../../scss/tokens/border" as token;
+
+.check-dlls-modal__header {
+  border-bottom: 1px solid token.$border-color;
+}
+
+.check-dlls-modal__footer {
+  border-top: 1px solid token.$border-color;
+}

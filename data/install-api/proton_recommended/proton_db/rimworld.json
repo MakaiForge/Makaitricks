@@ -1,0 +1,45 @@
+{
+  "gameId": "rimworld",
+  "steamAppId": "294100",
+  "totalReports": 6,
+  "versions": [
+    {
+      "version": "8.0-5",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "GE-Proton6.10-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.12-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "4.11-13",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.21-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    }
+  ],
+  "recommended": [
+    "8.0-5"
+  ]
+}

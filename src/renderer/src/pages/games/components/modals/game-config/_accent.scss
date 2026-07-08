@@ -1,0 +1,9 @@
+@use "../../../../../scss/tokens/accent" as token;
+
+.game-config-modal {
+  &__tab--active {
+    background: token.$brand-gradient;
+    color: #fff;
+    font-weight: 600;
+  }
+}

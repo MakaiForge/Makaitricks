@@ -1,0 +1,35 @@
+@use "_partials/files-utility";
+@use "_partials/files-text";
+
+.cloud-sync-files-modal {
+  &__mapping-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__file-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__file-item {
+    flex: 1;
+    text-decoration: underline;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mapping-label {
+  }
+
+  &__custom-path {
+  }
+}

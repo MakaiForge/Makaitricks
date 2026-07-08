@@ -1,0 +1,74 @@
+.theme-card {
+  width: 243px;
+  min-height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.2s ease;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+
+    &--empty {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__name {
+    padding: 10px 12px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 4px;
+    padding: 0 8px 8px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+
+    &__label {
+      display: none;
+    }
+  }
+
+  &:hover &__actions {
+    opacity: 1;
+
+    &__label {
+      display: inline;
+    }
+  }
+
+  &__actions__btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}

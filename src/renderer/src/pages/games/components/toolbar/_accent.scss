@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.games__toolbar-add:hover {
+  background: token.$brand-gradient;
+  color: #fff;
+  border-color: transparent;
+}

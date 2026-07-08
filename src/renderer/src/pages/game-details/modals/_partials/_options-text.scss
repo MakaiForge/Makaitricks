@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/text" as token;
+
+.game-options-modal {
+  &__sidebar-button {
+    color: token.$muted-color;
+  }
+
+  &__category-note {
+    color: token.$muted-color;
+  }
+}

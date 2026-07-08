@@ -1,0 +1,77 @@
+@use "../../../scss/tokens/utility" as token;
+@use "../../../scss/tokens/border" as border;
+@use "../../../scss/tokens/text" as text;
+
+.modal-header {
+  padding: calc(token.$spacing-unit * 2);
+  border-bottom: 1px solid border.$border-color;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: text.$body-color;
+    margin: 0;
+  }
+}
+
+.modal-body {
+  padding: calc(token.$spacing-unit * 3) calc(token.$spacing-unit * 2);
+
+  p {
+    color: text.$body-color;
+    margin-bottom: calc(token.$spacing-unit * 2);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+}
+
+.delete-options {
+  display: flex;
+  flex-direction: column;
+  gap: calc(token.$spacing-unit * 1.5);
+}
+
+.delete-option {
+  display: flex;
+  align-items: center;
+  gap: calc(token.$spacing-unit * 1.5);
+  padding: calc(token.$spacing-unit * 1.5);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  width: 100%;
+
+  span:first-child {
+    font-size: 1.3rem;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      color: text.$body-color;
+      font-size: 0.875rem;
+    }
+
+    span:last-child {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.75rem;
+    }
+  }
+
+  &:hover {
+    border-color: rgba(124, 77, 255, 0.4);
+    background: rgba(124, 77, 255, 0.08);
+  }
+
+  &.delete-option-danger:hover {
+    border-color: rgba(255, 68, 68, 0.5);
+    background: rgba(255, 68, 68, 0.1);
+  }
+}

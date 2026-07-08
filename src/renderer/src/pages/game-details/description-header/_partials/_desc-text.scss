@@ -1,0 +1,13 @@
+@use "../../../../scss/tokens/text" as token;
+
+.description-header {
+  &__info {
+    p {
+      color: token.$muted-color;
+    }
+  }
+
+  &__store-name {
+    color: token.$body-color;
+  }
+}

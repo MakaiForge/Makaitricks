@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/text" as token;
+
+.gallery-slider {
+  &__button {
+    color: token.$muted-color;
+  }
+}

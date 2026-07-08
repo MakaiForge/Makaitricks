@@ -1,0 +1,14 @@
+@use "../../../scss/tokens/utility";
+
+.settings-general {
+  gap: calc(utility.$spacing-unit * 2);
+
+  &__section-title {
+    margin-top: calc(utility.$spacing-unit * 2);
+    margin-bottom: utility.$spacing-unit;
+  }
+
+  &__disabled-hint {
+    margin-top: calc(utility.$spacing-unit * -1);
+  }
+}

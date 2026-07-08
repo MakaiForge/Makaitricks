@@ -1,0 +1,14 @@
+.library-filter-options__container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.library-filter-options__label {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.library-filter-options__select {
+  min-width: 150px;
+}

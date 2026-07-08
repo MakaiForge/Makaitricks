@@ -1,0 +1,146 @@
+import { registerEvent } from "@main/events/register-event";
+import { ModStorageService } from "@main/services";
+import { getGameInfo } from "@games/registry";
+import { getStagingDir, findStagingDir } from "@games/_shared/filemap";
+import { undeployMod } from "@mods/services/mod-deploy/core";
+import { findAllSteamLibraries } from "@prefix/core/steam-paths";
+import { findGogGamePath } from "@mods/services/gog-detection";
+import { gameDllCatalog } from "@mods/services/game-dlls-service";
+import { detectGame } from "@mods/services/detection";
+import { defaultStagingDir, defaultPrefixDir } from "@mods/services/steam-library";
+import { checkPrefixHealth, autoFixPrefix } from "@mods/services/health-check";
+import { setBridgeContext, getBridgeContext, clearBridgeContext } from "@mods/services/bridge-context";
+import fs from "node:fs";
+import path from "node:path";
+
+const mkMlKey = (g: string, p: string) => `game:${g}:profile:${p}:modlist`;
+
+registerEvent("saveGameConfig", async (_event, gameName: string, config: { gamePath: string; stagingDir: string; protonPrefix: string; protonVersion?: string }) => {
+  ModStorageService.put(`game:${gameName}:config`, config);
+  return { ok: true };
+});
+
+registerEvent("getGameConfig", async (_event, gameName: string) => {
+  return ModStorageService.get(`game:${gameName}:config`) || null;
+});
+
+registerEvent("removeMod", async (_event, gameId: string, profile: string, modName: string) => {
+  const modlistKey = mkMlKey(gameId, profile);
+  const existing: any[] = ModStorageService.get(modlistKey) || [];
+  const updated = existing.filter((m: any) => m.name !== modName);
+  ModStorageService.put(modlistKey, updated);
+
+  const config = ModStorageService.get<any>(`game:${gameId}:config`);
+  const gamePath = config?.gamePath;
+  if (gamePath) {
+    await undeployMod(gameId, modName, gamePath);
+  }
+  return { ok: true };
+});
+
+registerEvent("deleteMod", async (_event, gameId: string, profile: string, modName: string) => {
+  const modlistKey = mkMlKey(gameId, profile);
+  const existing: any[] = ModStorageService.get(modlistKey) || [];
+  const updated = existing.filter((m: any) => m.name !== modName);
+  ModStorageService.put(modlistKey, updated);
+
+  const config = ModStorageService.get<any>(`game:${gameId}:config`);
+  const gamePath = config?.gamePath;
+  if (gamePath) {
+    await undeployMod(gameId, modName, gamePath);
+  }
+
+  // Also delete staging files
+  const stagingDir = config?.stagingDir || getStagingDir(gameId);
+  const modStaging = findStagingDir(stagingDir, modName);
+  if (modStaging && fs.existsSync(modStaging)) {
+    fs.rmSync(modStaging, { recursive: true, force: true });
+  }
+
+  return { ok: true };
+});
+
+registerEvent("getModGameInfo", async (_event, gameId: string) => {
+  return getGameInfo(gameId);
+});
+
+registerEvent("modDetectGamePath", async (_event, gameId: string) => {
+  const detected = detectGame(gameId);
+  if (detected.source) return detected.gamePath;
+  return null;
+});
+
+registerEvent("detectGameManual", async (_event, gameId: string, selectedPath: string) => {
+  const gameInfo = gameDllCatalog.getGame(gameId);
+  if (!gameInfo) return { ok: false, error: "Jogo não encontrado no catálogo" };
+
+  const exes = [gameInfo.detectExe, ...(gameInfo.detectExeAlts || [])];
+  const foundExe = exes.find((exe) => fs.existsSync(path.join(selectedPath, exe)));
+  if (!foundExe) {
+    return { ok: false, error: `Nenhum executável encontrado em ${selectedPath}. Esperado: ${exes.join(" ou ")}` };
+  }
+
+  const staging = defaultStagingDir(gameId);
+  const prefix = defaultPrefixDir(gameId);
+  ModStorageService.put(`game:${gameId}:config`, {
+    gamePath: selectedPath,
+    stagingDir: staging,
+    protonPrefix: prefix,
+    protonVersion: "",
+  });
+
+  return { ok: true, data: { gamePath: selectedPath, stagingDir: staging, protonPrefix: prefix } };
+});
+
+registerEvent("listGameConfigs", async () => {
+  const entries = ModStorageService.entries<any>("game:");
+  return entries
+    .filter((e) => e.key.endsWith(":config"))
+    .map((e) => ({
+      name: e.key.slice("game:".length, -":config".length),
+      config: e.value,
+    }));
+});
+
+registerEvent("getGameDllCatalog", async () => {
+  return { ok: true, data: gameDllCatalog.getAll() };
+});
+
+registerEvent("getGameDllInfo", async (_event, gameId: string) => {
+  const entry = gameDllCatalog.getGame(gameId);
+  return entry || null;
+});
+
+registerEvent("prefixHealthCheck", async (_event, gameId: string) => {
+  const config = ModStorageService.get<any>(`game:${gameId}:config`);
+  if (!config?.gamePath || !config?.protonPrefix) {
+    return { ok: false, error: "Jogo não configurado. Detecte ou configure manualmente primeiro." };
+  }
+  const report = checkPrefixHealth(gameId, config.gamePath, config.protonPrefix);
+  return { ok: true, data: report };
+});
+
+registerEvent("prefixAutoFix", async (_event, gameId: string) => {
+  const config = ModStorageService.get<any>(`game:${gameId}:config`);
+  if (!config?.gamePath || !config?.protonPrefix) {
+    return { ok: false, error: "Jogo não configurado." };
+  }
+  const result = await autoFixPrefix(gameId, config.gamePath, config.protonPrefix);
+  return { ok: true, data: result };
+});
+
+registerEvent("modBridgeSetContext", async (_event, ctx: { source: string; gameId: string; prefixPath: string; gamePath?: string }) => {
+  setBridgeContext(ctx);
+  return { ok: true, data: getBridgeContext() };
+});
+
+registerEvent("modBridgeGetContext", async () => {
+  return { ok: true, data: getBridgeContext() };
+});
+
+registerEvent("modBridgeClearContext", async () => {
+  clearBridgeContext();
+  return { ok: true };
+});
+
+

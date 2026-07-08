@@ -1,0 +1,51 @@
+appId: com.makaiforger.app
+productName: Makai forger
+directories:
+  buildResources: build
+extraResources:
+  - ludusavi
+  - protonforge-python-rpc
+  - protonforge-native
+  - seeds
+  - from: resources/achievement.wav
+  - from: resources/pirate.json
+  - from: data/releases
+  - from: data/sources
+  - from: data/Bootstrap
+files:
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!native/protonforge-native/target"
+  - "!native/protonforge-native/target/**"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+  - "!{.env,.env.*,.npmrc,pnpm-lock.yaml}"
+  - "!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}"
+asarUnpack:
+  - resources/**
+  - node_modules/sharp/**
+  - node_modules/@img/sharp-libvips-*/**
+linux:
+  extraResources:
+    - from: binaries/7zzs
+    - from: binaries/umu/umu-run
+    - from: python
+      to: python
+  target:
+    - AppImage
+    - snap
+    - deb
+    - rpm
+  maintainer: electronjs.org
+  category: Game
+  mimeTypes:
+    - x-scheme-handler/protonforge
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: github
+  owner: lucasgertke11-bot
+  repo: Proton_Forge
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

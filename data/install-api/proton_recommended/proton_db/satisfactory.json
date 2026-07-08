@@ -1,0 +1,245 @@
+{
+  "gameId": "satisfactory",
+  "steamAppId": "526870",
+  "totalReports": 59,
+  "versions": [
+    {
+      "version": "6.3-8",
+      "total": 7,
+      "positive": 5,
+      "negative": 2,
+      "positiveRatio": 0.71
+    },
+    {
+      "version": "5.13-6",
+      "total": 5,
+      "positive": 5,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.8-2",
+      "total": 4,
+      "positive": 4,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.21-1",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-7",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-9",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.21-2",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-10",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton EXPERIMENTAL",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "8.0-2",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-1",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton Experimental",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "7.0-6",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "9.0-3",
+      "total": 2,
+      "positive": 0,
+      "negative": 2,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "5.0-8",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.11-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.9-5",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.9-8",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "lutris-5.7",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.5-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.9-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-6",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.19-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.20-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Glorious Eggroll Proton-7.0rc2-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0rc3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0rc2-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton-7.1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "10.0-2 (beta",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-4",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "3.7-8",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "7.0rc3-GE-1",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "6.3-8",
+    "5.13-6",
+    "GE-Proton5.8-2",
+    "GE-Proton5.21-1",
+    "6.3-7"
+  ]
+}

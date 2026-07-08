@@ -1,0 +1,7 @@
+@use "../../scss/tokens/text";
+
+.collapsed-menu {
+  &__button {
+    color: text.$muted-color;
+  }
+}

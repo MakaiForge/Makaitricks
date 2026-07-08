@@ -1,0 +1,133 @@
+.home {
+  &__carousel {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-height: 240px;
+  }
+
+  &__carousel-slide {
+    display: flex;
+    min-height: 240px;
+  }
+
+  &__carousel-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__carousel-meta {
+    display: flex;
+    align-items: center;
+  }
+
+  &__carousel-source {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__carousel-time {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  &__carousel-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__carousel-desc {
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 600px;
+  }
+
+  &__carousel-cta {
+    align-self: flex-start;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px color-mix(in srgb, var(--accent, #6366f1) 30%, transparent);
+    }
+  }
+
+  &__carousel-img {
+    width: 300px;
+    min-width: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+
+    &--prev { left: 12px; }
+    &--next { right: 12px; }
+  }
+
+  &__carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+  }
+
+  &__carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+
+    &--active {
+      width: 24px;
+      border-radius: 4px;
+    }
+  }
+}

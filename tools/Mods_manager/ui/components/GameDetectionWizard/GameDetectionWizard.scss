@@ -1,0 +1,119 @@
+.detection-wizard-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.detection-wizard {
+  background: var(--color-background, #1a1a2e);
+  border: 1px solid var(--color-border, #2a2a4a);
+  border-radius: 12px;
+  padding: 24px;
+  width: 520px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.detection-wizard__step {
+  h2 {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+  }
+  p {
+    margin: 0 0 16px;
+    color: var(--color-text-secondary, #888);
+  }
+}
+
+.detection-wizard__spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border, #2a2a4a);
+  border-top-color: var(--color-primary, #7c5cfc);
+  border-radius: 50%;
+  animation: detection-spin 0.8s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes detection-spin {
+  to { transform: rotate(360deg); }
+}
+
+.detection-wizard__error {
+  color: #ff4444;
+  margin-bottom: 12px;
+}
+
+.detection-wizard__game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.detection-wizard__game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &--found {
+    &:hover {
+      background: var(--color-hover, rgba(124, 92, 252, 0.1));
+    }
+    &--selected {
+      background: var(--color-primary, #7c5cfc);
+      color: #fff;
+    }
+  }
+
+  &--selected {
+    background: var(--color-primary, #7c5cfc);
+    color: #fff;
+  }
+}
+
+.detection-wizard__game-name {
+  font-weight: 500;
+}
+
+.detection-wizard__game-status {
+  font-size: 0.85rem;
+
+  &--found {
+    color: #4caf50;
+  }
+
+  &--missing {
+    color: #666;
+  }
+}
+
+.detection-wizard__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.detection-wizard__game-item--selected .detection-wizard__game-status--found {
+  color: #fff;
+}

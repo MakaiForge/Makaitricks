@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.home {
+  &__deal-badge {
+    background: token.$brand-gradient;
+  }
+
+  &__deal-new {
+    color: token.$success-color;
+  }
+}

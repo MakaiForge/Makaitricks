@@ -1,0 +1,13 @@
+@use "../../scss/tokens/app-bg" as token;
+
+.notification-item {
+  background-color: token.$dark-background-color;
+
+  &__picture {
+    background-color: token.$background-color;
+  }
+
+  &__badge-picture {
+    background-color: token.$background-color;
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "_version": 1,
+  "_comment": "Database de DLLs, registry e dependências por jogo. Baseado no padrão Amethyst Mod Manager.",
+  "games": [
+    {
+      "gameId": "skyrim_se",
+      "name": "Skyrim Special Edition",
+      "steamIds": ["489830"],
+      "detectExe": "SkyrimSELauncher.exe",
+      "detectExeAlts": ["SkyrimSE.exe"],
+      "nexusDomain": "skyrimspecialedition",
+      "wineDllOverrides": {
+        "winmm": "native,builtin",
+        "version": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "wineDllOverridesRange": {
+        "xaudio2_": { "start": 0, "end": 7, "mode": "native,builtin" },
+        "x3daudio1_": { "start": 0, "end": 7, "mode": "native,builtin" }
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "winetricksComponents": [],
+      "scriptExtender": {
+        "name": "SKSE64",
+        "loaderExe": "skse64_loader.exe",
+        "downloadUrl": "https://skse.silverlock.org/beta/skse64_2_02_06.7z",
+        "installPath": "."
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64,
+      "frameworks": {
+        "Script Extender": "skse64_loader.exe"
+      }
+    },
+    {
+      "gameId": "fallout4",
+      "name": "Fallout 4",
+      "steamIds": ["377160"],
+      "detectExe": "Fallout4Launcher.exe",
+      "detectExeAlts": ["Fallout4.exe"],
+      "nexusDomain": "fallout4",
+      "wineDllOverrides": {
+        "winmm": "native,builtin",
+        "version": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "wineDllOverridesRange": {
+        "xaudio2_": { "start": 0, "end": 7, "mode": "native,builtin" },
+        "x3daudio1_": { "start": 0, "end": 7, "mode": "native,builtin" }
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "winetricksComponents": [],
+      "scriptExtender": {
+        "name": "F4SE",
+        "loaderExe": "f4se_loader.exe",
+        "downloadUrl": "https://f4se.silverlock.org/beta/f4se_0_06_23.7z",
+        "installPath": "."
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "fallout_new_vegas",
+      "name": "Fallout New Vegas",
+      "steamIds": ["22380", "22490"],
+      "detectExe": "FalloutNV.exe",
+      "nexusDomain": "newvegas",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "wineDllOverridesRange": {
+        "xaudio2_": { "start": 0, "end": 7, "mode": "native,builtin" }
+      },
+      "autoInstallDeps": ["vcredist"],
+      "scriptExtender": {
+        "name": "NVSE",
+        "loaderExe": "nvse_loader.exe",
+        "downloadUrl": "https://github.com/xNVSE/NVSE/releases/latest/download/nvse.zip",
+        "installPath": "."
+      },
+      "reshadeDll": "d3d9.dll",
+      "reshadeArch": 32
+    },
+    {
+      "gameId": "oblivion",
+      "name": "Oblivion",
+      "steamIds": ["22330", "900883"],
+      "detectExe": "Oblivion.exe",
+      "nexusDomain": "oblivion",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "scriptExtender": {
+        "name": "OBSE",
+        "loaderExe": "obse_loader.exe",
+        "downloadUrl": "https://obse.silverlock.org/beta/obse_0021_beta_6.7z",
+        "installPath": "."
+      },
+      "reshadeDll": "d3d9.dll",
+      "reshadeArch": 32
+    },
+    {
+      "gameId": "cyberpunk2077",
+      "name": "Cyberpunk 2077",
+      "steamIds": ["1091500"],
+      "detectExe": "Cyberpunk2077.exe",
+      "nexusDomain": "cyberpunk2077",
+      "wineDllOverrides": {
+        "winmm": "native,builtin",
+        "version": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "frameworks": {
+        "RED4ext": "red4ext.dll",
+        "Cyber Engine Tweaks": "CET.exe"
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "witcher3",
+      "name": "The Witcher 3",
+      "steamIds": ["292030", "499450"],
+      "detectExe": "witcher3.exe",
+      "nexusDomain": "witcher3",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "baldurs_gate3",
+      "name": "Baldur's Gate 3",
+      "steamIds": ["1086940"],
+      "detectExe": "bg3.exe",
+      "nexusDomain": "baldursgate3",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "scriptExtender": {
+        "name": "BG3 Script Extender",
+        "loaderExe": "bg3se_loader.exe",
+        "downloadUrl": "",
+        "installPath": "."
+      }
+    },
+    {
+      "gameId": "stardew_valley",
+      "name": "Stardew Valley",
+      "steamIds": ["413150"],
+      "detectExe": "Stardew Valley.exe",
+      "nexusDomain": "stardewvalley",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "frameworks": {
+        "SMAPI": "StardewModdingAPI.exe"
+      }
+    },
+    {
+      "gameId": "subnautica",
+      "name": "Subnautica",
+      "steamIds": ["264710"],
+      "detectExe": "Subnautica.exe",
+      "nexusDomain": "subnautica",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "frameworks": {
+        "BepInEx": "doorstop_config.ini"
+      }
+    },
+    {
+      "gameId": "valheim",
+      "name": "Valheim",
+      "steamIds": ["892970"],
+      "detectExe": "valheim.exe",
+      "nexusDomain": "valheim",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "frameworks": {
+        "BepInEx": "doorstop_config.ini"
+      }
+    },
+    {
+      "gameId": "resident_evil_village",
+      "name": "Resident Evil Village",
+      "steamIds": ["1196590"],
+      "detectExe": "RE8.exe",
+      "nexusDomain": "residentevilvillage",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "frameworks": {
+        "REFramework": "reframework/d3d11.dll"
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "hogwarts_legacy",
+      "name": "Hogwarts Legacy",
+      "steamIds": ["990080"],
+      "detectExe": "HogwartsLegacy.exe",
+      "nexusDomain": "hogwartslegacy",
+      "wineDllOverrides": {
+        "winmm": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "red_dead_redemption2",
+      "name": "Red Dead Redemption 2",
+      "steamIds": ["1174180"],
+      "detectExe": "RDR2.exe",
+      "nexusDomain": "reddeadredemption2",
+      "wineDllOverrides": {
+        "version": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "starfield",
+      "name": "Starfield",
+      "steamIds": ["1716740"],
+      "detectExe": "Starfield.exe",
+      "nexusDomain": "starfield",
+      "wineDllOverrides": {
+        "winmm": "native,builtin",
+        "version": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "scriptExtender": {
+        "name": "SFSE",
+        "loaderExe": "sfse_loader.exe",
+        "downloadUrl": "",
+        "installPath": "."
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "elden_ring",
+      "name": "Elden Ring",
+      "steamIds": ["1245620"],
+      "detectExe": "EldenRing.exe",
+      "nexusDomain": "eldenring",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "subnautica_below_zero",
+      "name": "Subnautica Below Zero",
+      "steamIds": ["848450"],
+      "detectExe": "SubnauticaZero.exe",
+      "nexusDomain": "subnauticabelowzero",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "frameworks": {
+        "BepInEx": "doorstop_config.ini"
+      }
+    },
+    {
+      "gameId": "stalker2",
+      "name": "S.T.A.L.K.E.R. 2",
+      "steamIds": ["1643320"],
+      "detectExe": "Stalker2.exe",
+      "nexusDomain": "stalker2",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "palworld",
+      "name": "Palworld",
+      "steamIds": ["1623730"],
+      "detectExe": "Palworld.exe",
+      "nexusDomain": "palworld",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "frameworks": {
+        "UE4SS": "UE4SS.dll"
+      }
+    },
+    {
+      "gameId": "monster_hunter_world",
+      "name": "Monster Hunter World",
+      "steamIds": ["582010"],
+      "detectExe": "MonsterHunterWorld.exe",
+      "nexusDomain": "monsterhunterworld",
+      "wineDllOverrides": {
+        "winhttp": "native,builtin",
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "frameworks": {
+        "Stracker's Loader": "loader.dll"
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    },
+    {
+      "gameId": "kingdom_come_deliverance",
+      "name": "Kingdom Come Deliverance",
+      "steamIds": ["379430"],
+      "detectExe": "KingdomCome.exe",
+      "nexusDomain": "kingdomcomedeliverance",
+      "wineDllOverrides": {
+        "d3dcompiler_47": "native"
+      },
+      "autoInstallDeps": ["vcredist"],
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 64
+    }
+  ]
+}

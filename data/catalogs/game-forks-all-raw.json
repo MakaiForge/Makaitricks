@@ -1,0 +1,3998 @@
+{
+  "valve": {
+    "Fixed mouse movement behavior in Call of Duty 2.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Rebased on top of [Wine 11.0](https://gitlab.winehq.org/wine/wine/-/releases/wine-11.0).": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Sea of Solitude showing black screen on Proton.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed controller hotplug not working for 8BitDo Ultimate 2C and other controllers that expose multiple HID devices.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed CHRONO TRIGGER flickering in windowed mode with certain resolutions when using Gamescope.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Rec Room not being playable after a recent game update.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed many EA games being unplayable after a recent EA Desktop update.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed intro video playback in Crimson Desert.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Resident Evil 2 should no longer have issues when changing resolutions on GNOME.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Unknown Faces": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Disintegration getting stuck on the first loading screen.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Dungeon Siege tools showing up at character's feet.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Warhammer: Vermintide 2": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed glitchy video playback in Satisfactory.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Resident Evil 2 (1998)": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed rendering issue in launcher of DEATH STRANDING 2: ON THE BEACH.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved Space Engineers dual monitor support": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added controller support for launchers of the following games: Rocket Knight, Puddle, Zero Escape: The Nonary Games, Metal Slug XX, Mortal Kombat Komplete Edition, Disney Epic Mickey 2: The Power of Two, Batman: Arkham Asylum GOTY, LocoCycle, Ys SEVEN, Resident Evil (1996), Resident Evil 2 (1998), Resident Evil 3 Nemesis (1999), Dino Crisis, Dino Crisis 2.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Xalia wrongly selecting option from unfocused tabs in Rayman: Raving Rabbids.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed video playback in She Sees Red.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Call of Duty: WWII should no longer fail to render properly in fullscreen native resolution on setups with dual monitors.": [
+      "proton-11.0-1-beta1"
+    ],
+    "DCS World Steam Edition": [
+      "proton-11.0-1-beta1",
+      "proton-7.0-1"
+    ],
+    "Fixed KDE window maximization support.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Breath of Fire IV": [
+      "proton-11.0-1-beta1"
+    ],
+    "The Elder Scrolls IV: Oblivion Game of the Year Edition (2009) no longer has problems minimizing after Alt-Tabbing.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed hang after METAL GEAR SOLID 2: Sons of Liberty end credits.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Steam Overlay not working correctly with many EA games.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed a crash in HELLDIVERS 2 happening in high enemy-count missions.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed VR controller tracking in Microsoft Flight Simulator.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed The King of Fighters XIII Global Match freezing when playing videos from the gallery.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved emoji support in Idle Trillionaire.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added System Voice support for multiple languages in Phasmophobia.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Resident Evil (1996)": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Killer Inn not launching on Steam Decks and other machines with /tmp sizes lower than 10GB.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Age of Empires II: Definitive Edition no longer has issues with keyboard registration after refocusing the game.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated vkd3d to [vkd3d-1.19](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.19)-139-g[30b93dcea8b0](https://gitlab.winehq.org/wine/vkd3d/-/commit/30b93dcea8b0).": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed intro video not looping in Blazblue Centralfiction.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Blaite": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved focus loss behavior with RoBoRumble.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Newly playable:": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed graphical gliches in Duck Game that happen with newer Wine Mono versions.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed random hangs in Killer Inn.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added controller support for launchers of the following games: Red Faction®: Armageddon™, Final Fantasy X/X-2 HD Remaster, Sonic the Hedgehog 4 - Episode II, Hellsinker., Disney Bolt, STAR WARS™ Starfighter™.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Kodi media player": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Rei and the Floating City not being playable with gamescope.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed rendering issue in Hellsinker. launcher.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated vkd3d-proton to [proton-20260410](https://github.com/HansKristian-Work/vkd3d-proton/tree/proton-20260410)": [
+      "proton-11.0-1-beta1"
+    ],
+    "Dino Crisis": [
+      "proton-11.0-1-beta1"
+    ],
+    "Gothic 1 Classic": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed small memory leak with The King of Fighters XIII Global Match video playback.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Xalia intermittently failing to start when game is launched.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added support for SteamWorks SDK 1.64.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed stutter from keyboard input in Titanfall 2.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed voice chat in Phasmophobia lobby for desktop players.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Deadly Premonition": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed black blocks in dialog windows created by ARC Raiders and The Finals.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Hollow Knight Beta update wrongly registering Steam Deck's Steam button as a left trigger.": [
+      "proton-11.0-1-beta1"
+    ],
+    "RAGE no longer has focus issues when Alt-Tabbing on KDE Wayland.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Killer Inn not being able to connect to Square Enix account.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved gamepad binding support for Graze Counter.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated Wine Mono to [11.0.0](https://gitlab.winehq.org/mono/wine-mono/-/releases/wine-mono-11.0.0).": [
+      "proton-11.0-1-beta1"
+    ],
+    "X-Plane 12": [
+      "proton-11.0-1-beta1"
+    ],
+    "Don't Die Dateless, Dummy!": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added controller support for DirectX Runtime Components installer when launching BioShock for the first time.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed audio playback when playing intro videos in BIRDCAGE.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed rendering of certain symbols with Ukranian language option in Chambers.": [
+      "proton-11.0-1-beta1"
+    ],
+    "METAL GEAR SURVIVE": [
+      "proton-11.0-1-beta1"
+    ],
+    "Universe Generator: The Golden Sword": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed Brighter Shores window resizing support.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Dino Crisis 2": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved support for Kodi media player.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated dxvk-nvapi to [v0.9.1](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.9.1).": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated Xalia to [0.4.8](https://github.com/madewokherd/xalia/releases/tag/xalia-0.4.8):": [
+      "proton-11.0-1-beta1"
+    ],
+    "Enabled text-to-speech accessibility feature in Pentiment and Grounded.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added controller support for the MC Visual C++ 2010 redistributable installer.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved rendering of Rockstar Launcher popups.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed scaling issue with Arma: Reforger when changing window modes.": [
+      "proton-11.0-1-beta1"
+    ],
+    "SteamWorks SDK 1": [
+      "proton-11.0-1-beta1",
+      "proton-10.0-4"
+    ],
+    "Improved timezone detection.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Added FEX-[2604](https://fex-emu.com/FEX-2604/) for ARM64EC builds.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Updated dxvk to v2.7.1-467-g[83e503b4ae6d](https://github.com/doitsujin/dxvk/commit/83e503b4ae6d) from [Proton 11 support branch](https://github.com/doitsujin/dxvk/tree/proton-11).": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed REDLauncher (e.g. as seen with Cyberpunk 2077 and The Witcher 3) taking a long time to exit.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Improved VR support so that No Man's Sky VR mode is playable again.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed video playback in 我打不过漂亮的她们.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Made more games using MonoGame playable.": [
+      "proton-11.0-1-beta1"
+    ],
+    "From Dust": [
+      "proton-11.0-1-beta1"
+    ],
+    "Fixed lag spikes caused by Steam overlay being opened for prolonged time.": [
+      "proton-11.0-1-beta1"
+    ],
+    "Metal Fatigue": [
+      "proton-11.0-1-beta1"
+    ],
+    "SHOGUN: Total War.": [
+      "proton-11.0-1-beta1"
+    ],
+    "懒人修仙传2": [
+      "proton-10.0-4"
+    ],
+    "Zero Caliber 2 Remastered": [
+      "proton-10.0-4"
+    ],
+    "Chronology": [
+      "proton-10.0-4"
+    ],
+    "Fixed Lemma randomly crashing.": [
+      "proton-10.0-4"
+    ],
+    "Fellowship": [
+      "proton-10.0-4"
+    ],
+    "Fixed video playback in Conquer the World.": [
+      "proton-10.0-4"
+    ],
+    "Fixed horizontal mouse scroll being incorrectly registered as back / forward buttons.": [
+      "proton-10.0-4"
+    ],
+    "Fixed HDR in Far Cry 5 on OLED Steam Decks.": [
+      "proton-10.0-4"
+    ],
+    "Sackboy: A Big Adventure should no longer display a series of errors on fresh prefix.": [
+      "proton-10.0-4"
+    ],
+    "Fixed voice line playback in Rigid Force Alpha.": [
+      "proton-10.0-4"
+    ],
+    "Fixed long wait on every launch of many Xbox Game Studios games including Avowed, Grounded 2, Indiana Jones and the Great Circle, and The Outer Worlds 2.": [
+      "proton-10.0-4"
+    ],
+    "Updated Wine Mono to [10.4.1](https://gitlab.winehq.org/mono/wine-mono/-/releases/wine-mono-10.4.1).": [
+      "proton-10.0-4"
+    ],
+    "The Obsessive Shadow": [
+      "proton-10.0-4"
+    ],
+    "Distant Worlds 2": [
+      "proton-10.0-4"
+    ],
+    "Fixed in-game screenshot feature in Mohrta.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Atelier Resleriana [JP] not working on certain setups.": [
+      "proton-10.0-4"
+    ],
+    "Fixed broken account switching in Crystal of Atlan with gamescope.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Ukrainian and Russian font rendering in Trainatic.": [
+      "proton-10.0-4"
+    ],
+    "Fixed music playback in Transcendence.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Agatha Christie: Evil Under the Sun not being playable in French.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Age of Empires IV Anniversary Edition showing GPU driver warning with Intel gpus.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Xalia not interacting correctly with dialogs produced by ARC Raiders.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Assassin's Creed Shadows and Wild Assault incorrectly warning about being installed on a HDD.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Marvel Rivals crashing in benchmark with AMD GPUs.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Crystal of Atlan crashing on desktops.": [
+      "proton-10.0-4"
+    ],
+    "Camera panning should work as expected in Dungeons & Dragons Online.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Assassin's Creed Shadows not being playable after a recent game update.": [
+      "proton-10.0-4"
+    ],
+    "Improved support for Sony controllers in Tekken 8.": [
+      "proton-10.0-4"
+    ],
+    "Stellar Reach": [
+      "proton-10.0-4"
+    ],
+    "Killer Instinct should no longer crash at the end of match.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Sword of the Stars: The Pit crashing when clicking an enemy.": [
+      "proton-10.0-4"
+    ],
+    "Fixed video playback in Okayunyumu! and AQUARIUM.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Dragon's Dogma Dark Arisen crashing on system with long Steam Library path.": [
+      "proton-10.0-4"
+    ],
+    "Death by Scrolling": [
+      "proton-10.0-4"
+    ],
+    "CHRONO TRIGGER should no longer flicker in fullscreen mode.": [
+      "proton-10.0-4"
+    ],
+    "Fixed language selection not working in Black Squad's launcher.": [
+      "proton-10.0-4",
+      "proton-10.0-3"
+    ],
+    "Quantum Threshold": [
+      "proton-10.0-4"
+    ],
+    "Added support for SteamWorks SDK 1.63.": [
+      "proton-10.0-4"
+    ],
+    "Fixed haptics support for DualSense controllers which should now work in most games that support it.": [
+      "proton-10.0-4"
+    ],
+    "speech recognition in Phasmophobia": [
+      "proton-10.0-4"
+    ],
+    "Fixed in-game browser in Figmin XR.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Rocket Jockey not being playable on some installations.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Arc Riders stutter on systems with non-Nvidia GPUs due to the game seeing and trying to continually load nvapi.": [
+      "proton-10.0-4"
+    ],
+    "Added support for speech recognition in Phasmophobia.": [
+      "proton-10.0-4"
+    ],
+    "Surgeon Simulator: Experience Reality": [
+      "proton-10.0-4"
+    ],
+    "Fixed Adventures Of Fluzz wrongly displaying \"No Device\" window which made game unplayable with gamescope.": [
+      "proton-10.0-4"
+    ],
+    "Lost Memories 3 Side Stories": [
+      "proton-10.0-4"
+    ],
+    "Fixed text input in Secrets of Grindea.": [
+      "proton-10.0-4"
+    ],
+    "Updated vkd3d to [1.18](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.18).": [
+      "proton-10.0-4"
+    ],
+    "Girls' Frontline": [
+      "proton-10.0-4"
+    ],
+    "Fixed Ara: History Untold displaying GPU error.": [
+      "proton-10.0-4"
+    ],
+    "Lost Planet: Extreme Condition is playable again.": [
+      "proton-10.0-4"
+    ],
+    "Fixed For Honor not starting on non-Steam Decks.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Mystery Manor: Hidden Objects not displaying anything on gamescope.": [
+      "proton-10.0-4"
+    ],
+    "Fixed a crash in Marvin's Mittens after the cutscenes.": [
+      "proton-10.0-4"
+    ],
+    "Ring Runner: Flight of the Sages": [
+      "proton-10.0-4"
+    ],
+    "Sony controllers in Tekken 8": [
+      "proton-10.0-4"
+    ],
+    "Fixed Far Cry 5 showing old GPU drivers warning with AMD gpus.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Cladun X3 hanging on exit.": [
+      "proton-10.0-4"
+    ],
+    "Video should play correctly again in King of Bones and Indivisible.": [
+      "proton-10.0-4"
+    ],
+    "Fixed Ultimate Marvel vs Capcom 3 crashing with monitors that support many resolutions.": [
+      "proton-10.0-4"
+    ],
+    "Blood Rush should no longer crash with new proton prefixes.": [
+      "proton-10.0-4"
+    ],
+    "Updated vkd3d-proton to [v3.0b](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v3.0b).": [
+      "proton-10.0-4"
+    ],
+    "Fixed audio playback in Rocket Jockey.": [
+      "proton-10.0-4"
+    ],
+    "Changeling VR": [
+      "proton-10.0-4"
+    ],
+    "REACH": [
+      "proton-10.0-4"
+    ],
+    "Fixed Proton 10 regressions:": [
+      "proton-10.0-4",
+      "proton-10.0-3",
+      "proton-10.0-2c"
+    ],
+    "Fixed 7.1 audio channel mapping in Ghost of Tsushima DIRECTOR'S CUT, Clair Obscur: Expedition 33 and potentially many other games.": [
+      "proton-10.0-4"
+    ],
+    "Fixed store in For Honor not working on desktops.": [
+      "proton-10.0-4"
+    ],
+    "Summoners War: RUSH": [
+      "proton-10.0-4"
+    ],
+    "Metal Slug: Awakening": [
+      "proton-10.0-4"
+    ],
+    "Fixed Thai font rendering in Warframe's launcher.": [
+      "proton-10.0-4"
+    ],
+    "Drop Dead: The Cabin": [
+      "proton-10.0-4"
+    ],
+    "Fixed Revolver360 Re:Actor crashing on keyboard input.": [
+      "proton-10.0-4"
+    ],
+    "GodsArena Online is now registering touch/mouse input correctly.": [
+      "proton-10.0-4"
+    ],
+    "Modules": [
+      "proton-10.0-4"
+    ],
+    "Fixed server / lobby listing in Men of War II.": [
+      "proton-10.0-4"
+    ],
+    "Workshop integration in The Conquest of Go should work again.": [
+      "proton-10.0-4"
+    ],
+    "Unplugging a controller should no longer break keyboard input in INSIDE.": [
+      "proton-10.0-3"
+    ],
+    "Fixed keybindings not working in Hunt: Showdown 1896 when using Programmer Dvorak layout.": [
+      "proton-10.0-3"
+    ],
+    "Act of War: Direct Action (with AMD GPUs)": [
+      "proton-10.0-3"
+    ],
+    "Fixed Teardown hanging when publishing a mod to the workshop.": [
+      "proton-10.0-3"
+    ],
+    "Ride 2 should no longer randomly freeze.": [
+      "proton-10.0-3"
+    ],
+    "Arken Age": [
+      "proton-10.0-3"
+    ],
+    "Fairy Fencer F Advent Dark Force": [
+      "proton-10.0-3"
+    ],
+    "Mary Skelter: Nightmares": [
+      "proton-10.0-3"
+    ],
+    "Fixed long loading times in God Eater Resurrection and God Eater 2 Rage Burst.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Sony controllers not working in God of War: Ragnarok on Steam Deck in handheld mode.": [
+      "proton-10.0-3"
+    ],
+    "Videos in Resident Evil 7 Biohazard should play at a normal speed again on Steam Decks.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Spark & Kling crashing when idling on main menu.": [
+      "proton-10.0-3"
+    ],
+    "Grim Fandango Remastered (AMD & Intel GPUs)": [
+      "proton-10.0-3"
+    ],
+    "Updated vkd3d to [vkd3d-1.17](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.17)-61-g[979d7e4b85f2](https://gitlab.winehq.org/wine/vkd3d/-/commits/979d7e4b85f2).": [
+      "proton-10.0-3"
+    ],
+    "Fixed short freezes happening every 5 min in Deadlock.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Counter-Strike rarely crashing when connecting to matches.": [
+      "proton-10.0-3"
+    ],
+    "Firefly Village": [
+      "proton-10.0-3"
+    ],
+    "Fixed The Finals kicking players after a game update.": [
+      "proton-10.0-3"
+    ],
+    "Starlight Re:Volver": [
+      "proton-10.0-3"
+    ],
+    "Fixed Sea Power not playing background music.": [
+      "proton-10.0-3"
+    ],
+    "Fixed broken CD key entry field in Age of Empires III.": [
+      "proton-10.0-3"
+    ],
+    "Fixed screen reader not working in Diablo 4 - requires download of Proton Voice Files.": [
+      "proton-10.0-3"
+    ],
+    "Quake IV and DOOM 3 should no longer have issues with mouse input in full screen mode.": [
+      "proton-10.0-3"
+    ],
+    "Assetto Corsa EVO should no longer reset modified autocenter strength.": [
+      "proton-10.0-3"
+    ],
+    "Improved performance in Rocket League and Unreal Tournament 3.": [
+      "proton-10.0-3"
+    ],
+    "Fixed drag and drop not working correctly in new Unity version for games including Timberborn and Master of Command Demo.": [
+      "proton-10.0-3"
+    ],
+    "Fixed sending feedback not working in Cosmoteer: Starship Architect & Commander.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Dune: Awakening wrongly displaying warning about hard drive below minimum requirements.": [
+      "proton-10.0-3"
+    ],
+    "METAL GEAR SOLID V: THE PHANTOM PAIN no longer crashes at the start of Chapter 1 video.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Warrior Maiden Lecia and the Lost Fortress hanging on exit.": [
+      "proton-10.0-3"
+    ],
+    "Fixed blue tint in Resident Evil Village videos.": [
+      "proton-10.0-3"
+    ],
+    "Fixed intro video in Warhammer 40,000: Dakka Squadron - Flyboyz Edition having no audio.": [
+      "proton-10.0-3"
+    ],
+    "Mitigated OpenSSL-related issues in Agony UNRATED that happen on newer Intel CPUs.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Dune: Awakening displaying warning about graphics drivers with AMD GPUs.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Chinese font rendering in Warage.": [
+      "proton-10.0-3"
+    ],
+    "Fixed video playback in The Heart of Influencer and Superscout.": [
+      "proton-10.0-3"
+    ],
+    "The Riftbreaker: Multiplayer Playtest": [
+      "proton-10.0-3"
+    ],
+    "Malody V is playable again.": [
+      "proton-10.0-3"
+    ],
+    "Updated vkd3d-proton to [v2.14.1](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.14.1)-472-g[32bffb836cb0](https://github.com/HansKristian-Work/vkd3d-proton/commits/32bffb836cb0).": [
+      "proton-10.0-3"
+    ],
+    "Improved AVPro player compatibility in VRChat: fixed distortion, seeking, improved performance - less freezes and video playback should work in more cases than before.": [
+      "proton-10.0-3"
+    ],
+    "Gemstones": [
+      "proton-10.0-3"
+    ],
+    "Fixed Alone in the Dark (2008), DiRT, Disney Universe, Hard Truck Apocalypse: Rise of Clans / Ex Machina: Meridian 113, Dino D-Day and Prototype 2 not running on CPU with high core count.": [
+      "proton-10.0-3"
+    ],
+    "Fixed rendering issues in VR Slots 3D.": [
+      "proton-10.0-3"
+    ],
+    "Fixed DualSense controllers registering spurious touchpad clicks over Bluetooth.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Crysis 3 getting stuck on an old EA Login page.": [
+      "proton-10.0-3"
+    ],
+    "LEGO Indiana Jones: The Original Adventures should correctly load controller mapping when using Steam Input.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Tales Of Berseria crashing with certain paths used for the location of the Steam Library.": [
+      "proton-10.0-3"
+    ],
+    "Fixed The Quarry not being playable on OLED Steam Decks.": [
+      "proton-10.0-3"
+    ],
+    "Far Horizon": [
+      "proton-10.0-3"
+    ],
+    "Alien: Rogue Incursion VR is playable again.": [
+      "proton-10.0-3"
+    ],
+    "SSR Wives: The Murder Of My Winter Crush Demo": [
+      "proton-10.0-3"
+    ],
+    "Fixed internet radio in Motor Town: Behind The Wheel.": [
+      "proton-10.0-3"
+    ],
+    "Rockstar Launcher's birthday date selection dropdowns work again.": [
+      "proton-10.0-3"
+    ],
+    "Resident Evil Village no longer freezes after cutscenes.": [
+      "proton-10.0-3"
+    ],
+    "Updated dxvk-nvapi to [v0.9.0](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.9.0)-10-g[0ea231734d60](https://github.com/jp7677/dxvk-nvapi/commits/0ea231734d60).": [
+      "proton-10.0-3"
+    ],
+    "Fixed Disgaea PC not displaying controller icons correctly.": [
+      "proton-10.0-3"
+    ],
+    "Ninja Reflex: Steamworks Edition": [
+      "proton-10.0-3"
+    ],
+    "Fixed DayZ tools failing to pack a mod.": [
+      "proton-10.0-3"
+    ],
+    "Fixed Avatar: Frontiers of Pandora complaining about an HDD when installed on a SSD.": [
+      "proton-10.0-3"
+    ],
+    "Fixed METAL GEAR SOLID V: THE PHANTOM PAIN having crackling during cutscenes on Steam Deck.": [
+      "proton-10.0-3"
+    ],
+    "Fixed cutscene pausing / skipping in Dungeon Lords Steam Edition.": [
+      "proton-10.0-3"
+    ],
+    "Fixed dropdown menus closing immediately after opening them in Doom Eternal.": [
+      "proton-10.0-3"
+    ],
+    "Crashlands 2 intro video is no longer distorted.": [
+      "proton-10.0-3"
+    ],
+    "Fixed a recent update causing Epic Games Store not launching under Proton.": [
+      "proton-10.0-3"
+    ],
+    "Marvin's Mittens sets up correctly on first launch again.": [
+      "proton-10.0-3"
+    ],
+    "The Crew Motorfest": [
+      "proton-10.0-3"
+    ],
+    "Updated dxvk to [v2.6.2](https://github.com/doitsujin/dxvk/releases/tag/v2.6.2)-23-g[3cb664e12609](https://github.com/doitsujin/dxvk/commits/3cb664e12609).": [
+      "proton-10.0-3"
+    ],
+    "Viking Rise: Valhalla": [
+      "proton-10.0-3"
+    ],
+    "Fixed Grand Theft Auto V Enhanced showing driver version warning with AMD GPUs.": [
+      "proton-10.0-2c"
+    ],
+    "Enabled [Xalia](https://github.com/madewokherd/xalia/) by default instead of only for selected titles. It should work with most launchers using builtin Win32 controls.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed The First Berserker: Khazan showing a warning about outdated OS/GPU drivers version.": [
+      "proton-10.0-2c"
+    ],
+    "Forza Horizon 4 and 5 no longer require focus change to not have black screen.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed controller support in MySims Kingdom.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed VRChat not being able to Alt+F4 out of game after playing some videos using Unity Player.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Dead Island 2 not detecting Epic Online Services and not allowing cross-play.": [
+      "proton-10.0-2c"
+    ],
+    "Oddworld: Stranger's Wrath HD setting launcher renders correctly again.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed The Elder Scrolls V: Skyrim Special Edition having wrong scaling with high DPI.": [
+      "proton-10.0-2c"
+    ],
+    "Warframe launcher should no longer have issues displaying titlebar elements.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Black Desert launcher rendering all black on Nvidia + Wayland setups.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed beginning of the Planet of the Apes: Last Frontier being a black screen.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed transfer account option in The Eminence in Shadow: Master of Garden.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed a crash late in game in Crysis 2 Remastered.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed screen darkening in e-Racer.": [
+      "proton-10.0-2c"
+    ],
+    "Improved force feedback support in Assetto Corsa EVO.": [
+      "proton-10.0-2c"
+    ],
+    "Updated dxvk-nvapi to [v0.9.0](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.9.0)-8-g[5fa4b3c7cddc](https://github.com/jp7677/dxvk-nvapi/commits/5fa4b3c7cddc)": [
+      "proton-10.0-2c"
+    ],
+    "Updated vkd3d to [vkd3d-1.16](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.16)-194-g[7c0da1747a89](https://gitlab.winehq.org/wine/vkd3d/-/commits/7c0da1747a89)": [
+      "proton-10.0-2c"
+    ],
+    "Improved situation with Once Human having bad stutter on certain setups.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed in-game screen capture in The Sims 2 Legacy Collection.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed The Finals showing EOS EAC updater window twice on start.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Space Engineers not registering trigger input with controllers.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Dune: Awakening DLSS support.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Monster Jam Showdown not being able to link Epic Games account.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed touch input not working correctly in menus of No Man's Sky.": [
+      "proton-10.0-2c"
+    ],
+    "OpenVR is working with 32 bit games again.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Risk of Rain 2 and The Last of Us Part 2 Remastered not working on certains setups.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed games not starting when upgrading from a removed Proton installation.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed scaling in Imperiums: Greek Wars in fullscreen mode.": [
+      "proton-10.0-2c"
+    ],
+    "Disabled interacting via Xalia with the input rebinding section in Unity3D game launchers to prevent it from wrongly recognizing controller inputs used for navigation as the desired binding.": [
+      "proton-10.0-2c"
+    ],
+    "Mitigated OpenSSL-related issues with many games including Claybook, Gravel, SMITE that happen on newer Intel CPUs.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed DOOM (2016) having issues with window decorations on certain setups.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Tower Unite crashing in VR mode.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed The Witcher 3: Wild Hunt having issue with Nvidia HairWorks - hair should no longer disappear.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Xalia not being able to fully progress through prerequisite installation in MultiVersus using only the controller.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed boss intro videos playback in River City Girls.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed DLSS frame generation options being disabled in The Elder Scrolls IV: Oblivion Remastered.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed built-in web browser in Banter.": [
+      "proton-10.0-2c"
+    ],
+    "The Sims 2 Legacy Collection is playable again.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Tiny Troopers Global Ops, Zombie Derby: Pixel Survival and possibly more having focus issues when using Steam Overlay on Steam Deck.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Ghostbusters: The Video Game Remastered showing green line at the bottom of video in the main menu.": [
+      "proton-10.0-2c"
+    ],
+    "Digseum is playable again.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed controller detection issues with devices that do not have axes, only buttons.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed VRChat crashing on some setups when h264 playback is attempted.": [
+      "proton-10.0-2c"
+    ],
+    "Atelier Yumia: The Alchemist of Memories & the Envisioned Land is playable again.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed querying graphics settings in Marvel Rivals.": [
+      "proton-10.0-2c"
+    ],
+    "Updated Wine-Mono to [10.0.0](https://gitlab.winehq.org/mono/wine-mono/-/releases/wine-mono-10.0.0).": [
+      "proton-10.0-2c"
+    ],
+    "The Eminence in Shadow: Master of Garden, VRChat, VIDEO GAME and more should behave better with regards to window focus.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed the new Final Fantasy XIV Online launcher not working.": [
+      "proton-10.0-2c"
+    ],
+    "Updated dxvk to [v2.6.2](https://github.com/doitsujin/dxvk/releases/tag/v2.6.2)-5-[g6873b37c6f90](https://github.com/doitsujin/dxvk/commits/g6873b37c6f90)": [
+      "proton-10.0-2c"
+    ],
+    "Fixed The First Berserker: Khazan wrongly displaying a warning about the drive the game is installed on.": [
+      "proton-10.0-2c"
+    ],
+    "Updated Xalia to [0.4.6](https://github.com/madewokherd/xalia/releases/tag/xalia-0.4.6).": [
+      "proton-10.0-2c"
+    ],
+    "Fixed some games using DirectStorage not working with Intel GPUs.": [
+      "proton-10.0-2c"
+    ],
+    "Enabled nvapi for The Last Of Us 2.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed radio not playing music in Fallout 3: GOTY.": [
+      "proton-10.0-2c"
+    ],
+    "Improved rendering of Alpha Protocol's launcher.": [
+      "proton-10.0-2c"
+    ],
+    "VRChat video playback issue that affected some instances is fixed.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Defiance failing to connect to the game.": [
+      "proton-10.0-2c"
+    ],
+    "Disabled Xalia for Rockstar Launcher - aftar a recent update it got native contoller support which resulted in registering events twice.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed game lag spikes in Mary Skelter Finale, Death end re;Quest, Death end re;Quest 2, Megadimension Neptunia VIIR and Dragon Star Varnir.": [
+      "proton-10.0-2c"
+    ],
+    "Enshrouded no longer crashes when refreshing server list.": [
+      "proton-10.0-2c"
+    ],
+    "Fixed Astroneer not being able to connect to an encrypted dedicated server.": [
+      "proton-10.0-2c"
+    ],
+    "Updated vkd3d-proton to [v2.14.1](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.14.1)-286-g[2b766f7639cf](https://github.com/HansKristian-Work/vkd3d-proton/commits/2b766f7639cf)": [
+      "proton-10.0-2c"
+    ],
+    "Ignited Entry": [
+      "proton-10.0-1b"
+    ],
+    "Zero Escape: The Nonary Games": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Deviator crashing with AMD GPUs shortly after launching.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Warhammer: Vermintide 2 showing prerequisite installer on every launch.": [
+      "proton-10.0-1b"
+    ],
+    "Improved reliability of Proton Prefix creation.": [
+      "proton-10.0-1b"
+    ],
+    "Willful": [
+      "proton-10.0-1b"
+    ],
+    "Microsoft Flight Simulator 2024": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Dread X Collection 3 Bete Grise minigame.": [
+      "proton-10.0-1b"
+    ],
+    "Improved video playback in Locoland on NVIDIA GPUs.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed VR mode in Evochron Legacy SE.": [
+      "proton-10.0-1b"
+    ],
+    "THE KING OF FIGHTERS XIII GLOBAL MATCH": [
+      "proton-10.0-1b"
+    ],
+    "Fixed interface elements in Disney Epic Mickey 2: The Power of Two showing as solid green color.": [
+      "proton-10.0-1b"
+    ],
+    "Updated dxvk-nvapi to [v0.9.0](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.9.0).": [
+      "proton-10.0-1b"
+    ],
+    "All-Star Fruit Racing": [
+      "proton-10.0-1b"
+    ],
+    "Fixed intermittent freezing in Spirit Hunter: NG.": [
+      "proton-10.0-1b"
+    ],
+    "Re-enabled nvapi for Neverwinter, Star Trek Online and Champions Online.": [
+      "proton-10.0-1b"
+    ],
+    "Improved performance in Dirt Rally 2.0.": [
+      "proton-10.0-1b"
+    ],
+    "Added support for game mods that load via custom dinput8.dll.": [
+      "proton-10.0-1b"
+    ],
+    "X Rebirth VR Edition": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Proton sometimes creating an empty window when running via XWayland.": [
+      "proton-10.0-1b"
+    ],
+    "Updated libvkd3d-shader to [vkd3d-1.15](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.15)-179-g[21e08955d3c3](https://gitlab.winehq.org/wine/vkd3d/-/commits/21e08955d3c3).": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Sea of Thieves Xbox login window not working.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed broken account creation in Final Fantasy XIV.": [
+      "proton-10.0-1b"
+    ],
+    "Black Ink": [
+      "proton-10.0-1b"
+    ],
+    "Rebased Wine on top of [wine-10.0](https://gitlab.winehq.org/wine/wine/-/releases/wine-10.0).": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Grand Theft Auto V Enhanced launcher hang and the game crashing on launch as well as not being possible to uninstall it via Steam.": [
+      "proton-10.0-1b"
+    ],
+    "Greedfall": [
+      "proton-10.0-1b"
+    ],
+    "Updated wine-mono to [9.4.0](https://gitlab.winehq.org/mono/wine-mono/-/releases/wine-mono-9.4.0).": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Dark and Darker not being playable after a game update.": [
+      "proton-10.0-1b",
+      "proton-9.0-4"
+    ],
+    "Fixed network issues in Hunt: Showdown 1896 after a game update.": [
+      "proton-10.0-1b"
+    ],
+    "SOULCALIBUR VI": [
+      "proton-10.0-1b"
+    ],
+    "Improved video playback in Max: The Curse of Brotherhood.": [
+      "proton-10.0-1b"
+    ],
+    "Factorio": [
+      "proton-10.0-1b"
+    ],
+    "TELEFORUM": [
+      "proton-10.0-1b"
+    ],
+    "Improved Ubisoft Connect behavior when switching between Proton versions.": [
+      "proton-10.0-1b"
+    ],
+    "Updated vkd3d-proton to [v2.14.1](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.14.1)-153-g[a7159b80e165](https://github.com/HansKristian-Work/vkd3d-proton/commits/a7159b80e165).": [
+      "proton-10.0-1b"
+    ],
+    "Fixed CPU topology override issues on machines with more than 32 logical cores.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed graphics scaling in Master Magistrate.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed The Finals crashing after a recent game update.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed non-Steam Battle.net installations.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Tiny Cauldron freezing when selecting some resolutions.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed XCOM 2 erroring out when trying to connect to my2K.": [
+      "proton-10.0-1b"
+    ],
+    "Improved situation with audio crackling in Assassin’s Creed Shadows on Steam Deck.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Marvel Rivals displaying OS/drivers out of date warning.": [
+      "proton-10.0-1b"
+    ],
+    "Sniper Elite: Nazi Zombie Army": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Supermarket Together not detecting DLC on some systems.": [
+      "proton-10.0-1b"
+    ],
+    "Updated dxvk to [v2.6.1](https://github.com/doitsujin/dxvk/releases/tag/v2.6.1).": [
+      "proton-10.0-1b"
+    ],
+    "Tintin Reporter - Cigars of the Pharaoh": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Nioh: Complete Edition hanging on a black screen when skipping videos.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed video playback in ATRI - My Dear Moments-.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed input not working with Studio System : Guardian Angel.": [
+      "proton-10.0-1b"
+    ],
+    "Included initial work on speech synthesis - requires manual installation of Proton Voice Files (steam://install/3086180), confirmed to work with The Thief, the Witch, the Toad, and the Mushroom.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Rivals of Aether II, Stalker 2, The Axis Unseen, Beyond Handwell, Marvel Rivals, The Finals, Creatures of Ava crashing with Intel GPUs.": [
+      "proton-10.0-1b"
+    ],
+    "Added hack to allow Steam Overlay to function with EAC EOS games.": [
+      "proton-10.0-1b"
+    ],
+    "Agony Unrated": [
+      "proton-10.0-1b"
+    ],
+    "Batman: Arkham Asylum Game of the Year Edition": [
+      "proton-10.0-1b"
+    ],
+    "Fixed cursor not working in the menu of Amerzone: The Explorer's Legacy (1999).": [
+      "proton-10.0-1b"
+    ],
+    "Reinstated hack from Proton 7 that helped with SpellForce: Platinum Edition, NieR: Automata, Sekiro: Shadows Die Twice and DARK SOULS III crashing with monitors exposing too many possible resolutions.": [
+      "proton-10.0-1b"
+    ],
+    "Added Steamworks SDK 1.62 support.": [
+      "proton-10.0-1b"
+    ],
+    "Improved video playback in Microsoft Flight Simulator.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed / improved video playback in:": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Killsquad freezing on character selection screen.": [
+      "proton-10.0-1b"
+    ],
+    "MySims Kingdom": [
+      "proton-10.0-1b"
+    ],
+    "Fixed full screen mode in The Bright Star Of Seraph-Katis.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed Final Fantasy XVI demo displaying driver warning on launch.": [
+      "proton-10.0-1b"
+    ],
+    "game mods that load via custom dinput8": [
+      "proton-10.0-1b"
+    ],
+    "VIDEO GAME (924310)": [
+      "proton-10.0-1b"
+    ],
+    "Gal*Gun 2": [
+      "proton-10.0-1b"
+    ],
+    "Bloodstained: Ritual of the Night": [
+      "proton-10.0-1b"
+    ],
+    "No Man's Sky in VR mode (regressed after a game update)": [
+      "proton-10.0-1b"
+    ],
+    "Fixed video playback in Twisted Sails.": [
+      "proton-10.0-1b"
+    ],
+    "Fixed extras video playback in Shadow Warrior 2.": [
+      "proton-10.0-1b"
+    ],
+    "Audiosurf": [
+      "proton-10.0-1b"
+    ],
+    "Indigo Park: Chapter 1": [
+      "proton-10.0-1b"
+    ],
+    "Omensight": [
+      "proton-10.0-1b"
+    ],
+    "Fixed desync issue with 60FPS AVPro videos in VRChat.": [
+      "proton-10.0-1b"
+    ],
+    "Updated Xalia to [0.4.5](https://github.com/madewokherd/xalia/releases/tag/xalia-0.4.5) and enabled it for The TakeOver, Floppy Heroes, Whiskered Away, Himno, Survirus, The Adventure of Ninomae Ina'nis.": [
+      "proton-10.0-1b"
+    ],
+    "Rising Storm 2: Vietnam": [
+      "proton-10.0-1b"
+    ],
+    "Fixed various crashes affecting Final Fantasy XIV launcher.": [
+      "proton-10.0-1b"
+    ],
+    "Soul Interface": [
+      "proton-10.0-1b"
+    ],
+    "Updated dxvk to [v2.5.1](https://github.com/doitsujin/dxvk/releases/tag/v2.5.1) + [a regression fix](https://github.com/doitsujin/dxvk/commit/d96fa54080320e9b63227e76124ffa50a927ced2).": [
+      "proton-9.0-4"
+    ],
+    "Fixed newer Unreal Engine games trying to install redistributables on each launch.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Final Fantasy XVI not showing displays in settings.": [
+      "proton-9.0-4"
+    ],
+    "Fixed font rendering in SpellForce 3: Versus Edition.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Unreal Engine Crash Report Client not launching properly.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Traditional Chinese font rendering in Mashiroiro Symphony HD -Sana Edition-.": [
+      "proton-9.0-4"
+    ],
+    "Updated dxvk-nvapi to [v0.7.1](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.7.1)-94-g[afb59a8e841b](https://github.com/jp7677/dxvk-nvapi/commits/afb59a8e841b0ad561250327eb6a370b925c5f03/).": [
+      "proton-9.0-4"
+    ],
+    "Updated vkd3d-proton to [v2.13-241](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.13)-g[4fd7d3ab3d35](https://github.com/HansKristian-Work/vkd3d-proton/commits/4fd7d3ab3d35/).": [
+      "proton-9.0-4"
+    ],
+    "Updated Xalia to [0.4.4](https://github.com/madewokherd/xalia/releases/tag/xalia-0.4.4) and enabled it for Trackmania United Forever, Trackmania Nations Forever, Oddworld: Stranger's Wrath HD, Fallout: New Vegas, and WARRIORS ALL-STARS.": [
+      "proton-9.0-4"
+    ],
+    "NVIDIA Optical Flow API and DLSS 3 Frame Generation": [
+      "proton-9.0-4"
+    ],
+    "ScarQuest": [
+      "proton-9.0-4"
+    ],
+    "Fixed Proton 9.0 regressions:": [
+      "proton-9.0-4"
+    ],
+    "Conqueror's Blade": [
+      "proton-9.0-4"
+    ],
+    "Fablecraft is playable again.": [
+      "proton-9.0-4"
+    ],
+    "Fixed controller support in Clash for Crust.": [
+      "proton-9.0-4"
+    ],
+    "Warhammer 40k: Space Marine 2 (requires disabled Steam Overlay)": [
+      "proton-9.0-4"
+    ],
+    "Fixed keyboard input in Rivals of Aether II.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Hard Reset Redux and Shadow Warrior crashing with AMD GPUs.": [
+      "proton-9.0-4"
+    ],
+    "Sniper Elite: Nazi Zombie Army 2 (AMD GPUs only)": [
+      "proton-9.0-4"
+    ],
+    "Fixed EA Desktop App setup not being configurable.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Yakuza 3 Remastered and Yakuza 4 Remastered not being playable on some setups.": [
+      "proton-9.0-4"
+    ],
+    "Fixed multiplayer in SpellForce 3: Versus Edition.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Korean input in Diablo IV.": [
+      "proton-9.0-4"
+    ],
+    "Added a warning in Proton logs when running on system with low [max_map_count](https://github.com/ValveSoftware/Proton/wiki/Requirements#increasing-the-maximum-number-of-memory-map-areas-a-process-may-have).": [
+      "proton-9.0-4"
+    ],
+    "Fixed Skull and Bones not exiting cleanly on systems with Nvidia GPUs.": [
+      "proton-9.0-4"
+    ],
+    "Marlow Briggs and the Mask of Death is playable again.": [
+      "proton-9.0-4"
+    ],
+    "Fixed FPS drops in Red Dead Redemption 2 when keys are pressed.": [
+      "proton-9.0-4"
+    ],
+    "Cube Hero Odyssey": [
+      "proton-9.0-4"
+    ],
+    "Total War: SHOGUN 2": [
+      "proton-9.0-4"
+    ],
+    "Fixed full screen in Dog Brew on Steam Deck.": [
+      "proton-9.0-4"
+    ],
+    "Fixed support for BattleServer in Age of Empires II: Definitive Edition.": [
+      "proton-9.0-4"
+    ],
+    "Fixed video playback in March of Empires.": [
+      "proton-9.0-4"
+    ],
+    "Enabled Xalia for MultiVersus - prerequisite installation can now be done with a controller.": [
+      "proton-9.0-4"
+    ],
+    "Improved loading times in Pharaoh Rebirth+.": [
+      "proton-9.0-4"
+    ],
+    "Improved performance in Blood Strike.": [
+      "proton-9.0-4"
+    ],
+    "Updated Wine Mono to [9.3.1](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-9.3.1).": [
+      "proton-9.0-4"
+    ],
+    "Improved video playback in March of Empires and Devil May Cry 3 Special Edition.": [
+      "proton-9.0-4"
+    ],
+    "Fixed single player game not working in Star Wars - Jedi Knight II: Jedi Outcast.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Astral Ascent hanging when unplugging a controller.": [
+      "proton-9.0-4"
+    ],
+    "Hard Chip Demo": [
+      "proton-9.0-4"
+    ],
+    "Multiplayer works again in Hotshot Racing.": [
+      "proton-9.0-4"
+    ],
+    "Star Wars: Knights of the Old Republic no longer launches to a black screen when in fullscreen mode.": [
+      "proton-9.0-4"
+    ],
+    "Added support for NVIDIA Optical Flow API and DLSS 3 Frame Generation.": [
+      "proton-9.0-4"
+    ],
+    "APB Reloaded": [
+      "proton-9.0-4"
+    ],
+    "Fixed Final Fantasy XVI having low FPS due to excessive DLL lookup.": [
+      "proton-9.0-4"
+    ],
+    "Updated vkd3d-shader to [vkd3d-1.14](https://gitlab.winehq.org/wine/vkd3d/-/releases/vkd3d-1.14) + [a hack](https://github.com/ValveSoftware/vkd3d/commit/function-overload-hack-2024-11-21).": [
+      "proton-9.0-4"
+    ],
+    "Fixed voice chat in For Honor and UNO.": [
+      "proton-9.0-4"
+    ],
+    "Disgaea 4 Complete+": [
+      "proton-9.0-4",
+      "proton-7.0-1"
+    ],
+    "Fixed Mary Skelter 2 stuttering on launch.": [
+      "proton-9.0-4"
+    ],
+    "Fixed missing icons in Age of Mythology: Retold.": [
+      "proton-9.0-4"
+    ],
+    "I Expect You To Die is playable again.": [
+      "proton-9.0-4"
+    ],
+    "Fixed mod support in DOOM Eternal.": [
+      "proton-9.0-4"
+    ],
+    "Fixed trigger buttons not registering in I Expect You To Die.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Yakuza 6 crash when trying playing Puyo Puyo mini-game.": [
+      "proton-9.0-4"
+    ],
+    "Test Drive Unlimited Solar Crown": [
+      "proton-9.0-4"
+    ],
+    "Fixed Crazy Taxi randomly crashing when starting a game.": [
+      "proton-9.0-4"
+    ],
+    "Welcome to Dustown": [
+      "proton-9.0-4"
+    ],
+    "Fixed Chromacell crashing on launch on AMD GPUs.": [
+      "proton-9.0-4"
+    ],
+    "Fixed The Finals not starting with non-English locale.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Proton not setting priorities correctly for new threads.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Hunt: Showdown 1896 failing to start after a recent game update.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Hell Let Loose crashing when joining a server after a recent game update.": [
+      "proton-9.0-4"
+    ],
+    "B-17 Flying Fortress - The Mighty 8th: Redux is playable again.": [
+      "proton-9.0-4"
+    ],
+    "Games now launch on the correct screen on setups with multiple monitors connected to multiple GPUs.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Dragon Age: The Veilguard displaying a warning about being installed on a spinning drive.": [
+      "proton-9.0-4"
+    ],
+    "Fixed Knowledge, or know Lady crashing about 10 minutes after launch.": [
+      "proton-9.0-4"
+    ],
+    "Fixed playback of videos in Max: The Curse of Brotherhood.": [
+      "proton-9.0-4"
+    ],
+    "KinitoPET": [
+      "proton-9.0-3"
+    ],
+    "Warhammer 40,000: Darktide no longer freezes randomly when processing shaders for the cache.": [
+      "proton-9.0-3"
+    ],
+    "Added support for D3D12 in OpenXR.": [
+      "proton-9.0-3"
+    ],
+    "Fixed font rendering in Shady Brook - A Dark Mystery Text Adventure.": [
+      "proton-9.0-3"
+    ],
+    "Added a warning that appears in Proton Log for systems that have low file descriptor limit (e.g. non-systemd distributions).": [
+      "proton-9.0-3"
+    ],
+    "Updated Wine Mono to [9.2.0](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-9.2.0).": [
+      "proton-9.0-3"
+    ],
+    "Fixed License Agreement not displaying correctly in Romance of the Three Kingdoms [JP].": [
+      "proton-9.0-3"
+    ],
+    "D3D12 in OpenXR": [
+      "proton-9.0-3"
+    ],
+    "workshop levels in Zeepkist": [
+      "proton-9.0-3"
+    ],
+    "Owl Observatory Demo": [
+      "proton-9.0-3"
+    ],
+    "Fixed FINAL FANTASY XII THE ZODIAC AGE displaying white screen on launch on Steam Deck OLED.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Once Human crashing when trying to join a server or opening the EULA on fresh Proton prefixes.": [
+      "proton-9.0-3"
+    ],
+    "Bionic Commando is playable again.": [
+      "proton-9.0-3"
+    ],
+    "Controllers work again in Sonic Forces.": [
+      "proton-9.0-3"
+    ],
+    "Unity of Command II": [
+      "proton-9.0-3"
+    ],
+    "To Pixelia Demo": [
+      "proton-9.0-3"
+    ],
+    "Updated vkd3d-proton to [v2.13](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.13)-64-g[47840a4bb614](https://github.com/HansKristian-Work/vkd3d-proton/commits/47840a4bb614).": [
+      "proton-9.0-3"
+    ],
+    "Fixed AVPro playback in VRChat.": [
+      "proton-9.0-3"
+    ],
+    "Ball at Work: The Ultimate Speedrun Platformer!": [
+      "proton-9.0-3"
+    ],
+    "Fixed missing cursor in IL-2 Sturmovik: Cliffs of Dover Blitz Edition.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Yakuza Kiwami not working on certain setups.": [
+      "proton-9.0-3"
+    ],
+    "Fixed a crash in Starfield: Creation Kit.": [
+      "proton-9.0-3"
+    ],
+    "Fixed cutscene playback in Iragon games.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Dinogen Online crashing randomly on start.": [
+      "proton-9.0-3"
+    ],
+    "Fixed SCP Secret Laboratory crashing after a recent game update.": [
+      "proton-9.0-3"
+    ],
+    "Super": [
+      "proton-9.0-3"
+    ],
+    "Alan Wake's American Nightmare's DLC is playable again.": [
+      "proton-9.0-3"
+    ],
+    "Dinner with an Owl,": [
+      "proton-9.0-3"
+    ],
+    "GRID Autosport and GRID 2 are playable again.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Aimlabs having broken News section.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Steam Deck users being forced to use MTL145 nickname in Project Kunai.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Undecember not being playable after a recent game update.": [
+      "proton-9.0-3"
+    ],
+    "Fixed text not being displayed during the installation of EA Desktop launcher.": [
+      "proton-9.0-3"
+    ],
+    "Improved memory usage when playing videos in 32bit games.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Halo Infinite rendering using a weird resolution on a Steam Deck.": [
+      "proton-9.0-3"
+    ],
+    "Fixed video playback in One Finger Death Punch.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Hell Yeah! Wrath of the Dead Rabbit crashing when reaching first boss.": [
+      "proton-9.0-3"
+    ],
+    "Flatout 3": [
+      "proton-9.0-3"
+    ],
+    "Updated dxvk-nvapi to [v0.7.1](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.7.1)-19-g[bd542144518d](https://github.com/jp7677/dxvk-nvapi/commits/bd542144518d).": [
+      "proton-9.0-3"
+    ],
+    "Fixed artifacts in Yakuza 4 Remastered opening video.": [
+      "proton-9.0-3"
+    ],
+    "Fixed 9.0 regressions:": [
+      "proton-9.0-3"
+    ],
+    "Fixed The Finals not being playable after a recent game update.": [
+      "proton-9.0-3"
+    ],
+    "Noita mods no longer fail to update.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Ubisoft Connect requiring a manual log in with a new prefix with Far Cry 3 Blood Dragon (some other games may still suffer from that similarly as on Windows with a clean Ubisoft Connect install).": [
+      "proton-9.0-3"
+    ],
+    "Improved loading time of Arcanum.": [
+      "proton-9.0-3"
+    ],
+    "Improved memory usage of Burnout Paradise Remastered and lowered the chances of crashing.": [
+      "proton-9.0-3"
+    ],
+    "Fixed microphone not working with Helldivers 2 after a recent game update.": [
+      "proton-9.0-3"
+    ],
+    "Improved support for workshop levels in Zeepkist.": [
+      "proton-9.0-3"
+    ],
+    "Fixed font rendering in Insanely Twisted Shadow Planet.": [
+      "proton-9.0-3"
+    ],
+    "Fixed RAID: World War II randomly hanging on start.": [
+      "proton-9.0-3"
+    ],
+    "Fixed Strip Fighter ZERO not starting on some setups.": [
+      "proton-9.0-3"
+    ],
+    "Fixed video quality of live streamed episodes in Quantum Break.": [
+      "proton-9.0-3"
+    ],
+    "Improved microphone support in Squad.": [
+      "proton-9.0-3"
+    ],
+    "Fixed connecting with Unreal Insights to games running under Proton.": [
+      "proton-9.0-3"
+    ],
+    "THE KING OF FIGHTERS XIII STEAM EDITION": [
+      "proton-9.0-3"
+    ],
+    "Banyu Lintar Angin": [
+      "proton-9.0-3"
+    ],
+    "Avatar: Frontiers of Pandora (desktop only)": [
+      "proton-9.0-3"
+    ],
+    "Fixed Burnout Paradise Remastered crashing when an input video device is plugged in.": [
+      "proton-9.0-3"
+    ],
+    "Fixed \"Customize Setup\" not working during EA Launcher installation.": [
+      "proton-9.0-3"
+    ],
+    "Zaccaria Pinball": [
+      "proton-9.0-3"
+    ],
+    "Updated dxvk to [v2.4](https://github.com/doitsujin/dxvk/releases/tag/v2.4)-40-g[d0ea5a4a87c9](https://github.com/doitsujin/dxvk/commits/d0ea5a4a87c9).": [
+      "proton-9.0-3"
+    ],
+    "Syberia": [
+      "proton-9.0-3"
+    ],
+    "Enable controller support in the launchers of Fallout 3 (standard and GOTY edition) via [Xalia](https://github.com/madewokherd/xalia/tree/main).": [
+      "proton-9.0-3"
+    ],
+    "Farlight 84": [
+      "proton-9.0-3"
+    ],
+    "Fixed freezes in Dinogen Online.": [
+      "proton-9.0-3"
+    ],
+    "Fixed video playback in Spirit Hunter: NG.": [
+      "proton-9.0-3"
+    ],
+    "Improved language support for Guild Wars 2.": [
+      "proton-9.0-3"
+    ],
+    "Sword of Convallaria": [
+      "proton-9.0-3"
+    ],
+    "Sleeping Dogs: Definitive Edition": [
+      "proton-9.0-3"
+    ],
+    "OpenComposite": [
+      "proton-9.0-2"
+    ],
+    "OpenXR to version [1": [
+      "proton-9.0-2"
+    ],
+    "Steamworks SDK 1": [
+      "proton-9.0-1",
+      "proton-9.0-beta16",
+      "proton-8.0-4"
+    ],
+    "input devices with 8+ axes": [
+      "proton-9.0-1",
+      "proton-9.0-beta11"
+    ],
+    "Default scaling fixed for The Last Game on Steam Deck": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Lethal Company, Phasmophobia and other Unity games crashing when a controller with a hat switch is plugged in.": [
+      "proton-9.0-beta11"
+    ],
+    "Lord of the Rings: Gollum": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed TouHou Makuka Sai ~ Fantastic Danmaku Festival Part I and II crashing during boss fights.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed crash in Microsoft Flight Simulator when live weather is enabled.": [
+      "proton-9.0-beta11"
+    ],
+    "Updated dxvk-nvapi to [v0.6.4](https://github.com/jp7677/dxvk-nvapi/releases/v0.6.4)-48-[g0951afb](https://github.com/jp7677/dxvk-nvapi/commit/0951afbe7e2bc72c671c1073b76abacfc3b4ae98).": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Brawhalla showing a security certificate warning.": [
+      "proton-9.0-beta11"
+    ],
+    "Improved video playback for the following titles: Lords of the Fallen, Harvestella, and Wayfinder, Sea of Thieves, KING OF FIGHTERS XV.": [
+      "proton-9.0-beta11"
+    ],
+    "Updated vkd3d-proton to [v2.11.1](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.11.1)-49-[g32ff676b](https://github.com/HansKristian-Work/vkd3d-proton/commit/32ff676b9994de05b973e2b12063afbbfcb6cd38).": [
+      "proton-9.0-beta11"
+    ],
+    "Improved support for input devices with 8+ axes.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Escape from Monkey Island getting minimized on a mouse click.": [
+      "proton-9.0-beta11"
+    ],
+    "George McGeehan Gamer Hero": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Savant - Ascent REMIX hitching during certain animations.": [
+      "proton-9.0-beta11"
+    ],
+    "The Finals": [
+      "proton-9.0-beta11"
+    ],
+    "Dinogen Online": [
+      "proton-9.0-beta11"
+    ],
+    "Previously playable on Proton Experimental:": [
+      "proton-9.0-beta11"
+    ],
+    "Started ignoring system mouse acceleration when using raw input API.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed audio controls and spatialization in VRChat with AVPro.": [
+      "proton-9.0-beta11"
+    ],
+    "WITCH ON THE HOLY NIGHT": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed audio issues when playing intro video in Airborne Kingdom.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Doom Eternal audio crackling on certain setups.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Super Robot Wars 30 crashing with languages other than English.": [
+      "proton-9.0-beta11"
+    ],
+    "Road to Vostok Demo": [
+      "proton-9.0-beta11"
+    ],
+    "True Reporter. Mystery of Mistwood": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed memory leaks that caused Final Fantasy XIV Online launcher crash over long time.": [
+      "proton-9.0-beta11"
+    ],
+    "Updated file distribution method to save disk space.": [
+      "proton-9.0-beta11"
+    ],
+    "Photography Simulator Demo": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed crash in Disaster Report 4: Summer Memories epilogue.": [
+      "proton-9.0-beta11"
+    ],
+    "Improved video playback in BIOMUTANT.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Bayonetta crashing on certain systems.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed Imperiums: Greek Wars launcher.": [
+      "proton-9.0-beta11"
+    ],
+    "Updated dxvk to [v2.3](https://github.com/doitsujin/dxvk/releases/tag/v2.3)-47-[ge2a46a34](https://github.com/doitsujin/dxvk/commit/e2a46a347d7193ee853bd8c75cbca5939f10a987).": [
+      "proton-9.0-beta11"
+    ],
+    "Rebased on top of upstream Wine 9.0.": [
+      "proton-9.0-beta11"
+    ],
+    "Fixed load / save dialogs not working in Idle Spiral on Steam Deck.": [
+      "proton-8.0-5c"
+    ],
+    "Red Tie Runner": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Crysis 3 being unable to launch properly due to failed authorization.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed video playback in Out of Ore.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed multiplayer in DiRT Rally.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed The Binding of Isaac cursor desync and focus issues when toggling fullscreen.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed triple monitor handling in Project Cars 3 and Project Cars 2.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Crysis 2 Remastered showing only black screen for some users.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed swapped Start / Select buttons on controllers in Starfield and other games using Windows.Gaming.Input.": [
+      "proton-8.0-5c"
+    ],
+    "Improved audio in Final Fantasy VIII and Freefall 3050AD.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Final Fantasy X/X-2 HD Remaster crashing after Steam Cloud save updates sets resolution to Non-Deck-Native.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Aura: Fate of the Ages missing some audio cues.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Hogwarts Legacy crashing on Intel GPUs.": [
+      "proton-8.0-5c"
+    ],
+    "Assassin's Creed Mirage": [
+      "proton-8.0-5c"
+    ],
+    "Fixed games not being able to switch monitors in fullscreen mode on Cinnamon DE.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Steam Workshop interface randomly not working in Trivia Tricks.": [
+      "proton-8.0-5c"
+    ],
+    "Enabled nvapi for the following titles:": [
+      "proton-8.0-5c"
+    ],
+    "Fixed multiplayer in NASCAR Heat 5.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Resident Evil 2 crashing for some users during gameplay.": [
+      "proton-8.0-5c"
+    ],
+    "Updated dxvk-nvapi to [v0.6.4](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.6.4)-20-[g0a7c48b](https://github.com/jp7677/dxvk-nvapi/commits/0a7c48b256cafe6b3fa1db8183f089712c72e9ad).": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Baldur's Gate 3 not starting after a recent game update.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed outdated driver warning in The Last of Us Part I.": [
+      "proton-8.0-5c"
+    ],
+    "Satisfactory": [
+      "proton-8.0-5c"
+    ],
+    "Fixed wrong scaling in MareQuest: An Interactive Tail and Naruto Shippuden Ultimate Ninja Storm 4 on Steam Deck when set to fullscreen.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed issues with connecting to online services in Tony Hawk's Pro Skater 1 + 2.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Witcher 3 not being able to switch between windowed and fullscreen correctly on XFCE.": [
+      "proton-8.0-5c"
+    ],
+    "Grotesque Tactics: Evil Heroes": [
+      "proton-8.0-5c"
+    ],
+    "Made HDR options available on compatible hardware (including Steam Deck OLED) in the following games: Resident Evil 2, Resident Evil 3, Resident Evil 7 Biohazard, Resident Evil Village, Hogwarts Legacy, Mass Effect Legendary Edition, Injustice 2, Alan Wake 2, Devil May Cry 5.": [
+      "proton-8.0-5c"
+    ],
+    "Welcome to Princeland": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Remnant: From The Ashes and Deep Rock Galactic and possibly other games crashing when too many audio devices are connected.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Aveyond 4: Shadow of the Mist crashing when clicking on Strategy Guide button.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Cyberpunk 2077 crashing with DualSense plugged in after a recent game update.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Mighty Switch Force! Collection crashing on some setups when no controllers are plugged in.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Forza Horizon 5 not working after a recent game update.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Final Fantasy X/X-2 HD Remaster crashing during combat.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Witcher 3 and other games crashing when monitor is turned off and on again.": [
+      "proton-8.0-5c"
+    ],
+    "Updated Wine Mono to [8.1.0](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-8.1.0).": [
+      "proton-8.0-5c"
+    ],
+    "Updated vkd3d-proton to [v2.11](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.11)-19-[g0e681135](https://github.com/HansKristian-Work/vkd3d-proton/commits/0e681135f8bb3e43985574bb8c40bcecb17e7f7a).": [
+      "proton-8.0-5c"
+    ],
+    "Fixed fonts not rendering in the main menu of Aveyond 4: Shadow of the Mist.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Starfield not saving photos in photo mode.": [
+      "proton-8.0-5c"
+    ],
+    "Updated dxvk to [v2.3](https://github.com/doitsujin/dxvk/releases/tag/v2.3)-21-[g1b31aa5d](https://github.com/doitsujin/dxvk/commits/1b31aa5dbca0749d0737cff02043acb061332fb6).": [
+      "proton-8.0-5c"
+    ],
+    "Improved support for VKB Gladiator NXT Evo and Virpil Constellation ALPHA-R when hidraw device is accessible.": [
+      "proton-8.0-5c"
+    ],
+    "Simon the Sorcerer: 25th Anniversary Edition": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Crysis 3 Administrative Approval EA App Window being corrupted on Nvidia.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed multiple memory leaks when playing videos in VRchat using AVPro.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed font rendering in save / load dialog in Idle Spiral.": [
+      "proton-8.0-5c"
+    ],
+    "Improved load times in LIGHTNING RETURNS: FINAL FANTASY XIII and FINAL FANTASY XIII-2.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed The Binding of Isaac: Rebirth crashes that mostly happened when using bombs later in a run.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed periodic frame rate drops in Nickelodeon All-Star Brawl 2.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Elite Dangerous crashing when opening external links.": [
+      "proton-8.0-5c"
+    ],
+    "Fixed Halo Infinite crashes on SteamOS 3.5.": [
+      "proton-8.0-5c"
+    ],
+    "Atelier Meruru": [
+      "proton-8.0-1c"
+    ],
+    "Gungrave G.O.R.E.": [
+      "proton-8.0-1c"
+    ],
+    "Atelier Rorona \\~The Alchemist of Arland\\~ DX": [
+      "proton-8.0-1c"
+    ],
+    "Atelier Lydie & Suelle \\~The Alchemists and the Mysterious Paintings\\~": [
+      "proton-8.0-1c"
+    ],
+    "ROMANCE OF THE THREE KINGDOMS XIV": [
+      "proton-8.0-1c"
+    ],
+    "Forspoken": [
+      "proton-8.0-1c"
+    ],
+    "Atelier Sophie: The Alchemist of the Mysterious Book DX": [
+      "proton-8.0-1c"
+    ],
+    "Dead Space (2023)": [
+      "proton-8.0-1c"
+    ],
+    "Nioh 2 - The Complete Edition": [
+      "proton-8.0-1c"
+    ],
+    "Creativerse": [
+      "proton-8.0-1c"
+    ],
+    "ToGather:Island": [
+      "proton-8.0-1c"
+    ],
+    "Chex Quest HD": [
+      "proton-8.0-1c"
+    ],
+    "One Piece: Pirate Warriors 4": [
+      "proton-8.0-1c"
+    ],
+    "WARRIORS OROCHI 3 Ultimate Definitive Edition": [
+      "proton-8.0-1c"
+    ],
+    "Exceed - Gun Bullet Children": [
+      "proton-8.0-1c"
+    ],
+    "Samurai Maiden": [
+      "proton-8.0-1c"
+    ],
+    "Blue Reflection": [
+      "proton-8.0-1c"
+    ],
+    "Disney Dreamlight Valley": [
+      "proton-8.0-1c"
+    ],
+    "Heroes of the Dark": [
+      "proton-7.0-6e"
+    ],
+    "Fix Quake III: Arena and Quake III: Team Arena displaying weird texture over the menu.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Lost Lands: Dark Overlord, Lost Lands: Dark Lord, Lost Lands: Redemption, and Haunted Hotel: Silent Waters Collector's Edition crashing when trying to set a wallpaper.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Ubisoft Connect launcher failure caused by launcher update.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Zeepkist freezing when using controller.": [
+      "proton-7.0-6e"
+    ],
+    "Crazy Machines 3": [
+      "proton-7.0-6e"
+    ],
+    "King under the Mountain": [
+      "proton-7.0-6e"
+    ],
+    "Fix Spyro Reignited Trilogy playing intro video in a wrong language.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Microsoft Flight Simulator not starting after a recent game update.": [
+      "proton-7.0-6e"
+    ],
+    "Improve video playback with OUTRIDERS and ToGather: Island.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Overcooked! All You Can Eat being unable to add a second controller-using player.": [
+      "proton-7.0-6e"
+    ],
+    "Fix multiple languages not rendering correctly in Sins of a Solar Empire: Rebellion.": [
+      "proton-7.0-6e"
+    ],
+    "Super Arcade Racing": [
+      "proton-7.0-6e"
+    ],
+    "Fix Korean not being rendered correctly in Romance of the Three Kingdoms XIII launcher.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Super House of Dead Ninjas, Enemy Mind, and Out There Somewhere frame hitching every few seconds.": [
+      "proton-7.0-6e"
+    ],
+    "NinNinDays2": [
+      "proton-7.0-6e"
+    ],
+    "Update dxvk-nvapi to [v0.6](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.6).": [
+      "proton-7.0-6e"
+    ],
+    "UNCHARTED: Legacy of Thieves Collection": [
+      "proton-7.0-6e"
+    ],
+    "Fix Septerra Core hanging on redistributables installation.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Jurassic World Evolution 2 bad performance with recent Proton versions.": [
+      "proton-7.0-6e"
+    ],
+    "Update wine-mono to [7.4.0](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-7.4.0).": [
+      "proton-7.0-6e"
+    ],
+    "Fix Microsoft Flight Simulator not displaying live traffic.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Marvel Snap not being able connect to online services.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Persona 5 Royal crashing when creating game save data.": [
+      "proton-7.0-6e"
+    ],
+    "Gotham Knights": [
+      "proton-7.0-6e"
+    ],
+    "Fix the new EA launcher displaying a blank window.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Microsoft Flight Simulator crashing when starting next to big cities.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Sackboy: A Big Adventure failing to start the first time it's launched.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Microsoft Flight Simulator crashing during longer flights.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Vampire Survivors intermittent error message.": [
+      "proton-7.0-6e"
+    ],
+    "Fix multiple monitor support in Project Cars 2 and Project Cars 3.": [
+      "proton-7.0-6e"
+    ],
+    "雀姬 (Mahjong ladies)": [
+      "proton-7.0-6e"
+    ],
+    "Fix video playback regression with Chronos: Before the Ashes.": [
+      "proton-7.0-6e"
+    ],
+    "Fix Planet Zoo randomly crashing.": [
+      "proton-7.0-5"
+    ],
+    "Aspire: Ina's Tale": [
+      "proton-7.0-5"
+    ],
+    "Fix Thrustmaster HOTAS having non-functional dial in Elite Dangerous.": [
+      "proton-7.0-5"
+    ],
+    "Fix cutscene stutter in Disgaea 5.": [
+      "proton-7.0-5"
+    ],
+    "Fix Final Fantasy IV (3D Remake) having no audio.": [
+      "proton-7.0-5"
+    ],
+    "Fix Tekken 7 crashing at launch.": [
+      "proton-7.0-5"
+    ],
+    "Six Ages: Ride Like the Wind": [
+      "proton-7.0-5"
+    ],
+    "Pico Park Classic Edition": [
+      "proton-7.0-5"
+    ],
+    "Fix Bail or Jail crashing when opening the Terms of Serivce.": [
+      "proton-7.0-5"
+    ],
+    "Rift": [
+      "proton-7.0-5"
+    ],
+    "Fix Marvel's Spider-Man Remastered displaying dialog about outdated drivers on AMD systems.": [
+      "proton-7.0-5"
+    ],
+    "Darkstar One": [
+      "proton-7.0-5"
+    ],
+    "Improve GTA V situation with not loading textures.": [
+      "proton-7.0-5"
+    ],
+    "Fix Final Fantasy XIV Online launcher functionality after game update.": [
+      "proton-7.0-5"
+    ],
+    "Primal Carnage: Extinction": [
+      "proton-7.0-5"
+    ],
+    "Bulletstorm: Full Clip Edition": [
+      "proton-7.0-5"
+    ],
+    "Fix SCP: Secret Labratory not being playable after a recent game update (again).": [
+      "proton-7.0-5"
+    ],
+    "Nancy Drew: Legend of the Crystal Skull": [
+      "proton-7.0-5"
+    ],
+    "Airborne Kingdom": [
+      "proton-7.0-5"
+    ],
+    "Fix Space Engineers intro video not playing correctly.": [
+      "proton-7.0-5"
+    ],
+    "Indiana Jones and the Emperor Tomb": [
+      "proton-7.0-5"
+    ],
+    "Unravel 2": [
+      "proton-7.0-5"
+    ],
+    "Implement network video support for VRChat.": [
+      "proton-7.0-5"
+    ],
+    "Fix Sword Art Online: Hollow Realization freezing after the tutorial.": [
+      "proton-7.0-5"
+    ],
+    "Fix Dragon's Dogma: Dark Arisen videos not playing correctly.": [
+      "proton-7.0-5"
+    ],
+    "Fix Batman: Arkham City GOTY launching in the background on Steam Deck when set to fullscreen.": [
+      "proton-7.0-5"
+    ],
+    "Update dxvk to v1.10.3-28-ge3daa699.": [
+      "proton-7.0-5"
+    ],
+    "Fix Red Dead Redemption 2 crashing after a recent game update.": [
+      "proton-7.0-5"
+    ],
+    "Fix upsidedown videos in VRChat and many other games.": [
+      "proton-7.0-5"
+    ],
+    "Fix Call of Duty Black Ops II Zombies and Multiplayer hanging on exit.": [
+      "proton-7.0-5"
+    ],
+    "Fix Return to Monkey Island not reacting to mouse clicks after a recent game update.": [
+      "proton-7.0-5"
+    ],
+    "Battle Realms: Zen Edition": [
+      "proton-7.0-5"
+    ],
+    "Re-Volt": [
+      "proton-7.0-5"
+    ],
+    "Deathsmiles II": [
+      "proton-7.0-5"
+    ],
+    "Fix Armello hanging on exit.": [
+      "proton-7.0-5"
+    ],
+    "Support automatically bringing up on screen keyboard on Steam Deck in the Final Fantasy XIV launcher.": [
+      "proton-7.0-4"
+    ],
+    "Update dxvk to [v1.10.3](https://github.com/doitsujin/dxvk/releases/tag/v1.10.3).": [
+      "proton-7.0-4"
+    ],
+    "Fix The Ball displaying error message on the first launch.": [
+      "proton-7.0-4"
+    ],
+    "Fix Call of Duty: Black Ops II - Zombies and Call of Duty: Black Ops II - Multiplayer crashing after connecting online.": [
+      "proton-7.0-4"
+    ],
+    "Fix video playback in: POSTAL: Brain Damaged, Lost Ember.": [
+      "proton-7.0-4"
+    ],
+    "Chuzzle Deluxe": [
+      "proton-7.0-4"
+    ],
+    "Fix Elden Ring getting stuck on a white screen on first launch.": [
+      "proton-7.0-4"
+    ],
+    "Fix Chrono Trigger, Adventure Pals crashing during cutscenes.": [
+      "proton-7.0-4"
+    ],
+    "Fix Azur Lane: Crosswave hanging on a black screen for some users.": [
+      "proton-7.0-4"
+    ],
+    "Trove": [
+      "proton-7.0-4"
+    ],
+    "Fix Assassin's Creed Origins hanging during gameplay after recent game update.": [
+      "proton-7.0-4"
+    ],
+    "Reduce space used by game prefixes if filesystem supports copy on write.": [
+      "proton-7.0-4"
+    ],
+    "The Rising of the Shield Hero: Relive The Animation": [
+      "proton-7.0-4"
+    ],
+    "Zuma's Revenge!": [
+      "proton-7.0-4"
+    ],
+    "Fix garbled audio in Monster Hunter Rise: Sunbreak.": [
+      "proton-7.0-4"
+    ],
+    "Karmaflow The Rock Opera Videogame - Act I & Act II": [
+      "proton-7.0-4"
+    ],
+    "Aquarist - My First Job": [
+      "proton-7.0-4"
+    ],
+    "Fix graphical glitches in Cossacs 3 on desktop.": [
+      "proton-7.0-4"
+    ],
+    "Fix Sid Meier's Civilization IV crashing on world creation.": [
+      "proton-7.0-4"
+    ],
+    "Improve performance of HROT.": [
+      "proton-7.0-4"
+    ],
+    "Implement Vulkan other process rendering (used by nw.js games).": [
+      "proton-7.0-4"
+    ],
+    "Fix Hardspace: Shipbreaker failing to connect to online services.": [
+      "proton-7.0-4"
+    ],
+    "Fix Final Fantasy XIV launcher exiting silently when there's not enough space to download the update.": [
+      "proton-7.0-4"
+    ],
+    "Fix Dokyusei Bangin' Summer showing only flickering black window on desktop.": [
+      "proton-7.0-4"
+    ],
+    "Improve video playback for many games that previously required targeted hacks.": [
+      "proton-7.0-4"
+    ],
+    "Fix Bloons TD 6 crashing on touch input.": [
+      "proton-7.0-4"
+    ],
+    "Disgaea 5": [
+      "proton-7.0-4"
+    ],
+    "Update vkd3d-proton to [v2.6-1-gc05900da](https://github.com/HansKristian-Work/vkd3d-proton/commits/proton-v2.6-support).": [
+      "proton-7.0-4"
+    ],
+    "Fix Elite Dangerous and other launchers not working properly when cloned displays are present.": [
+      "proton-7.0-4"
+    ],
+    "Fix The Legend of Heroes: Zero no Kiseki Kai failing to start for the first time.": [
+      "proton-7.0-3"
+    ],
+    "V Rising": [
+      "proton-7.0-3"
+    ],
+    "Chrono Cross: The Radical Dreamer Edition": [
+      "proton-7.0-3"
+    ],
+    "Age of Chivalry": [
+      "proton-7.0-3"
+    ],
+    "We Were Here Forever": [
+      "proton-7.0-3"
+    ],
+    "Fix Elden Ring crashing during prolonged gameplay.": [
+      "proton-7.0-3"
+    ],
+    "Update Wine Mono to [7.3.0](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-7.3.0).": [
+      "proton-7.0-3"
+    ],
+    "Update dxvk-nvapi to [v0.5.4](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.5.4).": [
+      "proton-7.0-3"
+    ],
+    "Fix controller support in Mini Ninja.": [
+      "proton-7.0-3"
+    ],
+    "Flanarion Tactics": [
+      "proton-7.0-3"
+    ],
+    "Stranger of Sword City Revisited": [
+      "proton-7.0-3"
+    ],
+    "Cursed Armor": [
+      "proton-7.0-3"
+    ],
+    "Star Wars Episode I Racer": [
+      "proton-7.0-3"
+    ],
+    "Fix Mortal Kombat Komplete crashing when audio devices with long names are present.": [
+      "proton-7.0-3"
+    ],
+    "Improve steering wheel detection.": [
+      "proton-7.0-3"
+    ],
+    "Improve Sekiro: Shadow Die Twice performance in certain areas.": [
+      "proton-7.0-3"
+    ],
+    "Update dxvk to v1.10.1-57-g279b4b7e.": [
+      "proton-7.0-3"
+    ],
+    "Fix Resident Evil Revelations 2 not starting on the Steam Deck.": [
+      "proton-7.0-3"
+    ],
+    "Cities XXL": [
+      "proton-7.0-3"
+    ],
+    "Fix non-steering-wheel controller support in WRC10.": [
+      "proton-7.0-3"
+    ],
+    "Fix DEATHLOOP crashing after long system suspend.": [
+      "proton-7.0-3"
+    ],
+    "Fix video playback in: Disintegration, Dread X Collection: The Hunt, EZ2ON REBOOT : R, El Hijo - A Wild West Tale, Ember Knights, Outward: Definitive Edition, POSTAL4: No Regerts, Power Rangers: Battle for the Grid, Solasta: Crown of the Magister, Street Fighter V, The Room 4: Old Sins. Fix video playback in Ghostwire: Tokyo and other games using VP8 and VP9 codecs.": [
+      "proton-7.0-3"
+    ],
+    "Iragon: Prologue": [
+      "proton-7.0-3"
+    ],
+    "Gary Grigsby's War in the East": [
+      "proton-7.0-3"
+    ],
+    "Fix The Turing Test crashing when starting Chapter 4.": [
+      "proton-7.0-3"
+    ],
+    "Warhammer: End Times - Vermintide": [
+      "proton-7.0-3"
+    ],
+    "Improve FPS in Street Fighter V during online matches.": [
+      "proton-7.0-3"
+    ],
+    "Fix handling of external links in Castle Morihisa.": [
+      "proton-7.0-3"
+    ],
+    "MechWarrior Online": [
+      "proton-7.0-3"
+    ],
+    "Succubus x Saint": [
+      "proton-7.0-3"
+    ],
+    "Small Radios Big Televisions": [
+      "proton-7.0-3"
+    ],
+    "Support xinput controller reordering on the Steam Deck.": [
+      "proton-7.0-3"
+    ],
+    "Split/Second": [
+      "proton-7.0-3"
+    ],
+    "Gary Grigsby's War in the West": [
+      "proton-7.0-3"
+    ],
+    "Improve text rendering in Rockstar Launcher.": [
+      "proton-7.0-3"
+    ],
+    "Fix the new Final Fantasy XIV Online launcher.": [
+      "proton-7.0-3"
+    ],
+    "Cladun X2": [
+      "proton-7.0-3"
+    ],
+    "Beneath a Steel Sky": [
+      "proton-7.0-3"
+    ],
+    "Fix S&box not finding any games to join.": [
+      "proton-7.0-3"
+    ],
+    "Add support for Windows.Gaming.Input.": [
+      "proton-7.0-3"
+    ],
+    "Fall in Labyrinth": [
+      "proton-7.0-2"
+    ],
+    "Fix GTA V randomly crashing on certain window managers.": [
+      "proton-7.0-2"
+    ],
+    "Montaro": [
+      "proton-7.0-2"
+    ],
+    "Fix Civilization VI and Chicken Invaders Universe crashing a few minutes into the game.": [
+      "proton-7.0-2"
+    ],
+    "Double Dragon Trilogy": [
+      "proton-7.0-2"
+    ],
+    "One Shot and One Shot: Fading Memory": [
+      "proton-7.0-2"
+    ],
+    "Fix STAR WARS: Squadrons displaying warning about outdated drivers.": [
+      "proton-7.0-2"
+    ],
+    "Fix DiRT Rally 2 and DiRT 4 not being able to connect to the game server.": [
+      "proton-7.0-2"
+    ],
+    "Fix Ride 3 having horizontally squished main menu on the Steam Deck.": [
+      "proton-7.0-2"
+    ],
+    "Bright Memory: Infinite": [
+      "proton-7.0-2"
+    ],
+    "King of Fighters XIII": [
+      "proton-7.0-2"
+    ],
+    "Fix Devil May Cry 5 and Capcom Arcade Stadium crashing when scrolling through videos too quickly.": [
+      "proton-7.0-2"
+    ],
+    "Guilty Gear Isuka": [
+      "proton-7.0-2"
+    ],
+    "Update dxvk to [v1.10.1](https://github.com/doitsujin/dxvk/releases/tag/v1.10.1).": [
+      "proton-7.0-2"
+    ],
+    "Fix Xbox login window lagging with updating window's content.": [
+      "proton-7.0-2"
+    ],
+    "Elden Ring": [
+      "proton-7.0-2"
+    ],
+    "Fix Assassin's Creed Odyssey displaying unsupported driver warning in the overlay.": [
+      "proton-7.0-2"
+    ],
+    "Saint Seiya: Soldiers' Soul": [
+      "proton-7.0-2"
+    ],
+    "Fix Uplay / Ubisoft Connect reliably failing to update with fsync enabled.": [
+      "proton-7.0-2"
+    ],
+    "Fix STAR WARS Jedi Knight - Jedi Academy not displaying anything on the Steam Deck.": [
+      "proton-7.0-2"
+    ],
+    "Fix Quake Live being unable to connect to multiplayer matches.": [
+      "proton-7.0-2"
+    ],
+    "Medieval Dynasty": [
+      "proton-7.0-2"
+    ],
+    "Update vkd3d-proton to [v2.6](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.6).": [
+      "proton-7.0-2"
+    ],
+    "Fix Cyberpunk 2077 crashing with 4.0 audio setups.": [
+      "proton-7.0-2"
+    ],
+    "Metal Slug 2 and 3 and X": [
+      "proton-7.0-2"
+    ],
+    "Baseball Stars 2": [
+      "proton-7.0-2"
+    ],
+    "Fix Microsoft Flight Simulator crashing after a recent game update.": [
+      "proton-7.0-2"
+    ],
+    "Dragon Quest Builders 2": [
+      "proton-7.0-2"
+    ],
+    "INVERSUS Deluxe": [
+      "proton-7.0-2"
+    ],
+    "Devil May Cry HD Collection": [
+      "proton-7.0-2"
+    ],
+    "Fix The Last Campfire not starting on the Steam Deck.": [
+      "proton-7.0-2"
+    ],
+    "Fix multiplayer in UNO.": [
+      "proton-7.0-2"
+    ],
+    "A Way Out": [
+      "proton-7.0-2"
+    ],
+    "Fix Swords of Legends Online performance regression.": [
+      "proton-7.0-2"
+    ],
+    "Fix Vampyr and The Beast Inside displaying menus a few pixels wide on Steam Decks.": [
+      "proton-7.0-2"
+    ],
+    "ATRI -My Dear Moments-": [
+      "proton-7.0-2"
+    ],
+    "Fix Arma 3 launcher.": [
+      "proton-7.0-2"
+    ],
+    "Fix Divinity: Original Sin - Enhanced Edition crash on resolution or vsync change.": [
+      "proton-7.0-2"
+    ],
+    "Fix Melty Blood: Type Lumina hanging on the intro video.": [
+      "proton-7.0-2"
+    ],
+    "Fix Quake Champions crashing after a recent game update.": [
+      "proton-7.0-2"
+    ],
+    "Atelier Ayesha": [
+      "proton-7.0-2"
+    ],
+    "Fix VR Chat not handling suspend / resume well.": [
+      "proton-7.0-2"
+    ],
+    "Fix Horizon Zero Dawn running in slowmotion.": [
+      "proton-7.0-2"
+    ],
+    "Fix Killing Floor 2 not connecting to the item server.": [
+      "proton-7.0-2"
+    ],
+    "Update dxvk-nvapi to [v0.5.3](https://github.com/jp7677/dxvk-nvapi/releases/tag/v0.5.3)": [
+      "proton-7.0-2"
+    ],
+    "Fix Persona 4 Golden lacking audio in the cutscenes.": [
+      "proton-7.0-2"
+    ],
+    "Fix video playback in Atelier Meruru, Cook-out, DJMAX RESPECT V, Gloomhaven, Haven, Rust, Rustler, The Complex, TOHU, Monster Train, Hardspace: Shipbreaker, Car Mechanic Simulator 2021, Nine Sols Demo.": [
+      "proton-7.0-2"
+    ],
+    "Fix Unity games crashing on launch with certain peripherals connected (e.g. Logitech's Unifying Receiver).": [
+      "proton-7.0-2"
+    ],
+    "Fix Teardown randomly crashing.": [
+      "proton-7.0-2"
+    ],
+    "Fix random hang on exit in Little Nightmares 2.": [
+      "proton-7.0-2"
+    ],
+    "Fix Age of Chivalry crashing when starting a match.": [
+      "proton-7.0-2"
+    ],
+    "Fix Apex Legends sometimes starting minimized on Steam Decks.": [
+      "proton-7.0-2"
+    ],
+    "Fix some older games including Deus Ex GOTY, Prey 2006, Quake 4 and Chaser having visible banding especially in shadows compared to older Protons.": [
+      "proton-7.0-2"
+    ],
+    "Call of Duty Black Ops 3": [
+      "proton-7.0-2"
+    ],
+    "Fix Chrono Trigger intro video stutter.": [
+      "proton-7.0-2"
+    ],
+    "Fix low Forza Horizon 5 performance with fsync enabled.": [
+      "proton-7.0-2"
+    ],
+    "NecroVisioN": [
+      "proton-7.0-1"
+    ],
+    "Persona 4 Golden": [
+      "proton-7.0-1"
+    ],
+    "Dungeon Fighter Online": [
+      "proton-7.0-1"
+    ],
+    "Order of War": [
+      "proton-7.0-1"
+    ],
+    "SCP: Secret Laboratory": [
+      "proton-7.0-1"
+    ],
+    "Improve Steam Input controller support for games running via Origin.": [
+      "proton-7.0-1"
+    ],
+    "Fix flickering in Mount & Blade II: Bannerlord launcher.": [
+      "proton-7.0-1"
+    ],
+    "Fix Pathfinder: Wrath of the Righteous hang on exit.": [
+      "proton-7.0-1"
+    ],
+    "Improve audio support in Skyrim and Fallout 4.": [
+      "proton-7.0-1"
+    ],
+    "Fix Far Cry regression - the game is playable again.": [
+      "proton-7.0-1"
+    ],
+    "Epic Roller Coasters XR": [
+      "proton-7.0-1"
+    ],
+    "Fix audio in Mass Effect 1 from Mass Effect Legendary Edition.": [
+      "proton-7.0-1"
+    ],
+    "Improve Runescape stability.": [
+      "proton-7.0-1"
+    ],
+    "Wartales": [
+      "proton-7.0-1"
+    ],
+    "Oceanhorn: Monster of the Uncharted Seas": [
+      "proton-7.0-1"
+    ],
+    "Eternal Return": [
+      "proton-7.0-1"
+    ],
+    "Resident Evil Revelations 2": [
+      "proton-7.0-1"
+    ],
+    "Fix Sea of Thieves' voice chat.": [
+      "proton-7.0-1"
+    ],
+    "Improve Paradox Launcher support.": [
+      "proton-7.0-1"
+    ],
+    "Monster Hunter Rise": [
+      "proton-7.0-1"
+    ],
+    "Resident Evil 0": [
+      "proton-7.0-1"
+    ],
+    "Added support for local decoding of H264 videos.": [
+      "proton-7.0-1"
+    ],
+    "Nights of Azure": [
+      "proton-7.0-1"
+    ],
+    "Forza Horizon 5": [
+      "proton-7.0-1"
+    ],
+    "Update Wine to [7.0](https://www.winehq.org/announce/7.0).": [
+      "proton-7.0-1"
+    ],
+    "Fix Sea of Thieves getting stuck on \"locating fresh supplies\" when joining multiplayer.": [
+      "proton-7.0-1"
+    ],
+    "Update DXVK to [1.9.4](https://github.com/doitsujin/dxvk/releases/tag/v1.9.4).": [
+      "proton-7.0-1"
+    ],
+    "Fix Age of Empires IV and Marvel's Avengers displaying graphics drivers warnings.": [
+      "proton-7.0-1"
+    ],
+    "Fix Doom Eternal's multiplayer.": [
+      "proton-7.0-1"
+    ],
+    "Update vkd3d-proton to [2.5-146-g33f17cc7](https://github.com/HansKristian-Work/vkd3d-proton/commits/33f17cc7).": [
+      "proton-7.0-1"
+    ],
+    "Call of Juarez": [
+      "proton-7.0-1"
+    ],
+    "Anno 1404": [
+      "proton-7.0-1"
+    ],
+    "Wargroove": [
+      "proton-7.0-1"
+    ],
+    "Fix quick save in Castlevania Advance Collection.": [
+      "proton-7.0-1"
+    ],
+    "Rocksmith 2014 Edition": [
+      "proton-7.0-1"
+    ],
+    "local decoding of H264 videos": [
+      "proton-7.0-1"
+    ],
+    "Update wine-mono to [7.1.2](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-7.1.2).": [
+      "proton-7.0-1"
+    ],
+    "EasyAntiCheat if the game has enabled a Linux module": [
+      "proton-7.0-1"
+    ],
+    "Gravity Sketch VR": [
+      "proton-7.0-1"
+    ],
+    "Added support for EasyAntiCheat if the game has enabled a Linux module.": [
+      "proton-7.0-1"
+    ],
+    "Fix Beacon crashing when getting into daily/weekly challenge.": [
+      "proton-7.0-1"
+    ],
+    "Various performance improvements around input, windowing, and memory allocation that were previously in Experimental.": [
+      "proton-7.0-1"
+    ],
+    "Yakuza 4 Remastered": [
+      "proton-7.0-1"
+    ],
+    "Fix a sporadic crash when starting Baldur's Gate 3.": [
+      "proton-6.3-8"
+    ],
+    "Fly'N": [
+      "proton-6.3-8"
+    ],
+    "Fix Paradox Launcher (used by Europa Universalis IV) failing to display anything.": [
+      "proton-6.3-8"
+    ],
+    "Nickelodeon All-Star Brawl": [
+      "proton-6.3-8"
+    ],
+    "Sol Survivor": [
+      "proton-6.3-8"
+    ],
+    "Fix connection issues in Satisfactory on systems with multiple network interfaces.": [
+      "proton-6.3-8"
+    ],
+    "Assassin's Creed": [
+      "proton-6.3-8"
+    ],
+    "FIA European Truck Racing Championship": [
+      "proton-6.3-8"
+    ],
+    "Penny Arcade's On the Rain-Slicked Precipice of Darkness 3": [
+      "proton-6.3-8"
+    ],
+    "Support DLSS in DX11 and DX12 games (guarded by [`PROTON_ENABLE_NVAPI=1`](https://github.com/ValveSoftware/Proton/tree/proton_6.3-rc#runtime-config-options) and [`dxgi.nvapiHack = False`](https://github.com/doitsujin/dxvk/blob/581f09696e7c6918d00240cb5abdd23c7a9c0332/dxvk.conf#L51)).": [
+      "proton-6.3-8"
+    ],
+    "Call of Duty: Black Ops II singleplayer (202970)": [
+      "proton-6.3-8"
+    ],
+    "Fix stuck Alt key after Alt+Tabbing out and back for Warhammer: Chaosbane.": [
+      "proton-6.3-8"
+    ],
+    "GreedFall": [
+      "proton-6.3-8"
+    ],
+    "Fix networked multiplayer in RaceRoom Racing Experience.": [
+      "proton-6.3-8"
+    ],
+    "Marvel's Guardians of the Galaxy (AMD GPUs only)": [
+      "proton-6.3-8"
+    ],
+    "Update wine-mono to 6.4.1.": [
+      "proton-6.3-8"
+    ],
+    "Fix Industries of Titan not listing any resolutions and monitors.": [
+      "proton-6.3-8"
+    ],
+    "Fix Bloons TD6 not being able to access account settings, see [`docs/ICMP_ECHO.md`](https://github.com/ValveSoftware/Proton/blob/proton_6.3/docs/ICMP_ECHO.md).": [
+      "proton-6.3-8"
+    ],
+    "Game Dev Tycoon": [
+      "proton-6.3-8"
+    ],
+    "Support latest Steamworks SDK.": [
+      "proton-6.3-8"
+    ],
+    "Support Korean and Arabic characters in Cyberpunk 2077 launcher.": [
+      "proton-6.3-8"
+    ],
+    "Age of Empires 4": [
+      "proton-6.3-8"
+    ],
+    "TT Isle of Man Ride on the Edge 2": [
+      "proton-6.3-8"
+    ],
+    "Breath of Death VI": [
+      "proton-6.3-8"
+    ],
+    "Added support for [an initial set of BattlEye games](https://store.steampowered.com/news/group/4145017/view/3104663180636096966).": [
+      "proton-6.3-8"
+    ],
+    "The Riftbreaker": [
+      "proton-6.3-8"
+    ],
+    "TT Isle of Man Ride on the Edge": [
+      "proton-6.3-8"
+    ],
+    "Fix Biomutant videos not playing.": [
+      "proton-6.3-8"
+    ],
+    "Fix Project CARS 3 ignoring inputs after Alt+Tab.": [
+      "proton-6.3-8"
+    ],
+    "Magicka": [
+      "proton-6.3-8"
+    ],
+    "Mass Effect Legendary Edition (ME1 does not have working audio, see #4823)": [
+      "proton-6.3-8"
+    ],
+    "Monster Energy Supercross - The Official Video Game": [
+      "proton-6.3-8"
+    ],
+    "Support Thai characters in Mirror and other Unity games.": [
+      "proton-6.3-8"
+    ],
+    "Fix video freezing and causing game to hang in Deep Rock Galactic.": [
+      "proton-6.3-8"
+    ],
+    "[an initial set of BattlEye games](https://store": [
+      "proton-6.3-8"
+    ],
+    "Fix Atomic Shop and random crashes on start in Fallout 76.": [
+      "proton-6.3-8"
+    ],
+    "Improve compatibility with games using Valve's CEG DRM.": [
+      "proton-6.3-8"
+    ],
+    "Update dxvk to v1.9.2-13-g714ca482.": [
+      "proton-6.3-8"
+    ],
+    "Update vkd3d-proton to v2.5-50-g0251b404.": [
+      "proton-6.3-8"
+    ],
+    "Fix cutscene desync in Assassin's Creed: Odyssey.": [
+      "proton-6.3-8"
+    ],
+    "RiMS Racing": [
+      "proton-6.3-8"
+    ],
+    "DEATHLOOP": [
+      "proton-6.3-8"
+    ],
+    "Fix audio stuttering in Gahkthun Steam Edition.": [
+      "proton-6.3-8"
+    ],
+    "Monster Boy and the Cursed Kingdom": [
+      "proton-6.3-8"
+    ],
+    "Ghostbusters: The Video Game Remastered": [
+      "proton-6.3-8"
+    ],
+    "Mafia II (Classic)": [
+      "proton-6.3-8"
+    ],
+    "Monster Energy Supercross - The Official Video Game 2": [
+      "proton-6.3-8"
+    ],
+    "Fix crashes in Project Wingman, Satisfactory and other Unreal Engine 4 games using the Vulkan renderer.": [
+      "proton-6.3-8"
+    ],
+    "Life is Strange: True Colors": [
+      "proton-6.3-7"
+    ],
+    "Improve Forza Horizon 4 windowing.": [
+      "proton-6.3-7"
+    ],
+    "Fix Logitech G920 mapping for F1 2020.": [
+      "proton-6.3-7"
+    ],
+    "Quake Champions (broken after a game update)": [
+      "proton-6.3-7"
+    ],
+    "Divinity Original Sin 2 (broken after a game update)": [
+      "proton-6.3-7"
+    ],
+    "eFootball PES 2021": [
+      "proton-6.3-7"
+    ],
+    "Update vkd3d-proton to include the latest development work.": [
+      "proton-6.3-7"
+    ],
+    "Update DXVK to [v1.9.2](https://github.com/doitsujin/dxvk/releases/tag/v1.9.2).": [
+      "proton-6.3-7"
+    ],
+    "WRC 8, 9 and 10": [
+      "proton-6.3-7"
+    ],
+    "Fix Resident Evil Village display settings.": [
+      "proton-6.3-7"
+    ],
+    "EVERSLAUGHT VR": [
+      "proton-6.3-7"
+    ],
+    "Improve video playback in Deep Rock Galactic, The Medium, Nier: Replicant, and Contra: Rogue Corps.": [
+      "proton-6.3-6b"
+    ],
+    "Death Stranding": [
+      "proton-6.3-6b"
+    ],
+    "Improve input handling after focus loss in some games, including Warhammer: Chaosbane and Far Cry Primal.": [
+      "proton-6.3-6b"
+    ],
+    "Improve cursor capture behavior for fullscreen windows.": [
+      "proton-6.3-6b"
+    ],
+    "Fix Mafia III: Definitive Edition performance when FPS limiter is enabled.": [
+      "proton-6.3-6b"
+    ],
+    "Homeworld Remastered Collection": [
+      "proton-6.3-6b"
+    ],
+    "3D Aim Trainer": [
+      "proton-6.3-6b"
+    ],
+    "Scarlet Nexus": [
+      "proton-6.3-6b"
+    ],
+    "Update DXVK to [v1.9.1](https://github.com/doitsujin/dxvk/releases/tag/v1.9.1).": [
+      "proton-6.3-6b"
+    ],
+    "Improve launcher behavior in Swords of Legends Online.": [
+      "proton-6.3-6b"
+    ],
+    "Fix text input and clipboard pasting in Origin overlay and launcher.": [
+      "proton-6.3-6b"
+    ],
+    "Elite Dangerous": [
+      "proton-6.3-6b"
+    ],
+    "Star Wars Knights of the Old Republic": [
+      "proton-6.3-6b"
+    ],
+    "Sonic Adventure 2": [
+      "proton-6.3-6b"
+    ],
+    "Update FAudio to [20.08](https://github.com/FNA-XNA/FAudio/releases/tag/21.08).": [
+      "proton-6.3-6b"
+    ],
+    "Guilty Gear -Strive-": [
+      "proton-6.3-6b"
+    ],
+    "Tokyo Xanadu eX+": [
+      "proton-6.3-6b"
+    ],
+    "Fix some music not playing in Planet Coaster.": [
+      "proton-6.3-6b"
+    ],
+    "Fix Unreal Engine 4 update installation, which impacted Everspace 2 and KARDS.": [
+      "proton-6.3-6b"
+    ],
+    "Update vkd3d-proton to [v2.4](https://github.com/HansKristian-Work/vkd3d-proton/releases/tag/v2.4).": [
+      "proton-6.3-6b"
+    ],
+    "Improve non-English experience in Cyberpunk 2077 and Rockstar Games launchers.": [
+      "proton-6.3-6b"
+    ],
+    "Guardians VR": [
+      "proton-6.3-6b"
+    ],
+    "Update wine-mono to [6.3.0](https://github.com/madewokherd/wine-mono/releases/tag/wine-mono-6.3.0).": [
+      "proton-6.3-6b"
+    ],
+    "Add optional support for Nvidia's NVAPI GPU support library and DLSS. It is disabled by default and can be enabled with `PROTON_ENABLE_NVAPI=1`.": [
+      "proton-6.3-6b"
+    ],
+    "Katamari Damacy Reroll": [
+      "proton-6.3-6b"
+    ],
+    "Blood of Steel": [
+      "proton-6.3-6b"
+    ],
+    "Rez Infinite": [
+      "proton-6.3-6b"
+    ],
+    "Fix Microsoft Flight Simulator hang while loading.": [
+      "proton-6.3-6b"
+    ],
+    "Fix audio playback issues in Fallout: New Vegas, Oblivion, Borderlands 3, and Deep Rock Galactic.": [
+      "proton-6.3-6b"
+    ],
+    "Correct game save locations to improve Steam cloud sync behavior in:": [
+      "proton-6.3-6b"
+    ],
+    "Sid Meier's Civilization VI": [
+      "proton-6.3-5"
+    ],
+    "Far Cry": [
+      "proton-6.3-5"
+    ],
+    "Hogs of War": [
+      "proton-6.3-5"
+    ],
+    "Fix CyberPunk 2077, Darksburg, and other launchers hanging when external links are clicked.": [
+      "proton-6.3-5"
+    ],
+    "Fix missing audio in Project Cars 3.": [
+      "proton-6.3-5"
+    ],
+    "Crypt Stalker": [
+      "proton-6.3-5"
+    ],
+    "Sang Froid - Tales of Werewolves": [
+      "proton-6.3-5"
+    ],
+    "Trainz Railroad Simulator 2019": [
+      "proton-6.3-5"
+    ],
+    "Dark Devotion": [
+      "proton-6.3-5"
+    ],
+    "Improve controller support in Hades and many Unity titles.": [
+      "proton-6.3-5"
+    ],
+    "Hard Reset": [
+      "proton-6.3-5"
+    ],
+    "Pro Cycling Manager 2020": [
+      "proton-6.3-5"
+    ],
+    "Dorfromantic": [
+      "proton-6.3-5"
+    ],
+    "Secret of Mana": [
+      "proton-6.3-5"
+    ],
+    "Fix Conan Exiles and other Funcom launchers crashing.": [
+      "proton-6.3-5"
+    ],
+    "Better support for container-based builds outside of the build VM.": [
+      "proton-6.3-5"
+    ],
+    "Might & Magic: Clash of Heroes": [
+      "proton-6.3-5"
+    ],
+    "Support adjusting brightness/gamma in older games like Deus Ex.": [
+      "proton-6.3-3"
+    ],
+    "Fix Xbox controller detection in Far Cry Primal.": [
+      "proton-6.3-3"
+    ],
+    "Restored VR support in No Man's Sky": [
+      "proton-5.13-6"
+    ],
+    "Voice chat in Deep Rock Galactic is now functional": [
+      "proton-5.13-6"
+    ],
+    "Fixed black screen on focus loss in DOOM Eternal on AMD": [
+      "proton-5.13-6"
+    ],
+    "More fixes for game input being active while the Steam overlay is up": [
+      "proton-5.13-6"
+    ],
+    "Sound in Dark Sector is working now": [
+      "proton-5.13-6"
+    ],
+    "Fixed Need for Speed (2015) hang on AMD": [
+      "proton-5.13-6"
+    ],
+    "Better support for PlayStation 5 controllers": [
+      "proton-5.13-6"
+    ],
+    "Fix networking failures in Call of Duty: World War II.": [
+      "proton-5.13-3"
+    ],
+    "Update FAudio to [20.12](https://github.com/FNA-XNA/FAudio/releases/tag/20.12).": [
+      "proton-5.13-3"
+    ],
+    "Update DXVK to [v1.7.3](https://github.com/doitsujin/dxvk/releases/tag/v1.7.3).": [
+      "proton-5.13-3"
+    ],
+    "Fix Paradox games launchers.": [
+      "proton-5.13-3"
+    ],
+    "Fix flickering graphics in Serious Sam 4.": [
+      "proton-5.13-3"
+    ],
+    "Fix Age of Empires II HD crash in multiplayer lobbies.": [
+      "proton-5.13-3"
+    ],
+    "Fix sound in Warframe and Ghostrunner.": [
+      "proton-5.13-3"
+    ],
+    "the latest OpenVR SDKs": [
+      "proton-5.0-10b"
+    ],
+    "the latest Steamworks SDK": [
+      "proton-5.0-10b"
+    ],
+    "systems with multiple monitors": [
+      "proton-5.13-1b"
+    ],
+    "Improve developer debugging experience.": [
+      "proton-5.0-7"
+    ],
+    "Fixes for sound in TrackMania Nations Forever, TrackMania Ultimate Forever, and Zusi 3 Aerosoft.": [
+      "proton-5.0-7"
+    ],
+    "Update DXVK to v1.6.1.": [
+      "proton-5.0-7"
+    ],
+    "Updates to vkd3d to improve Direct3D 12 compatibility and performance.": [
+      "proton-5.0-7"
+    ],
+    "Fix crash in Plebby Quest: The Crusades.": [
+      "proton-5.0-7"
+    ],
+    "Fix connecting to Gearbox SHiFT in Borderlands 3.": [
+      "proton-5.0-7"
+    ],
+    "Update steamworks SDK support.": [
+      "proton-4.11-12"
+    ],
+    "Restore support for mapped mouse cursor buttons.": [
+      "proton-4.11-11"
+    ],
+    "FAudio updated to 19.12.": [
+      "proton-4.11-10"
+    ],
+    "Fix Metal Gear Solid V hang on launch.": [
+      "proton-4.11-10"
+    ],
+    "D9VK updated to 0.40-rc-p": [
+      "proton-4.11-10"
+    ],
+    "Added new integer scaling mode, to give sharp pixels when upscaling. This can be enabled with this environment variable: `WINE_FULLSCREEN_INTEGER_SCALING=1`.": [
+      "proton-4.11-10"
+    ],
+    "Major improvements to mouse handling. In our testing, this improved Fallout 4, Furi, and Metal Gear Solid V mouse behavior.": [
+      "proton-4.11-10"
+    ],
+    "Trine 4 framerate should no longer be locked to 30 FPS.": [
+      "proton-4.11-10"
+    ],
+    "Improve gamepad force feedback handling, especially for steering wheel controllers.": [
+      "proton-4.11-10"
+    ],
+    "Fix frequent crash in IL-2 Sturmovik.": [
+      "proton-4.11-10"
+    ],
+    "Fix Xbox controller performance regression.": [
+      "proton-4.11-10"
+    ],
+    "Fix a couple of controller mapping issues. This is known to improve Telltale games with Xbox controllers and Cuphead and ICEY when using PlayStation 4 controllers over Bluetooth.": [
+      "proton-4.11-10"
+    ],
+    "Miscellaneous DXVK bugfixes.": [
+      "proton-4.11-10"
+    ],
+    "FAudio is updated to 19.11.": [
+      "proton-4.11-8"
+    ],
+    "DXVK is updated to v1.4.4.": [
+      "proton-4.11-8"
+    ],
+    "D9VK is updated to 0.30.": [
+      "proton-4.11-8"
+    ],
+    "Wine-mono is updated to 4.9.4.": [
+      "proton-4.11-8"
+    ],
+    "Proton's distribution has been improved to use less disk space and decrease the download size for future updates.": [
+      "proton-4.11-8"
+    ],
+    "Build system upgrades: new 'redist' makefile target allows for easier redistribution of Proton builds between users; the build is now much faster; the build VM has been upgraded to Debian 10.": [
+      "proton-4.11-8"
+    ],
+    "Wine and other libraries are now shipped with debug symbols removed. For developers who wish to have debug symbols, select the \"debug\" branch for Proton in the Steam client.": [
+      "proton-4.11-8"
+    ],
+    "Update DXVK to v1.4.": [
+      "proton-4.11-6"
+    ],
+    "Beginnings of support for Rockstar's new launcher. There is more work to do here, but Grand Theft Auto 5 should be playable again.": [
+      "proton-4.11-6"
+    ],
+    "Update D9VK to 0.21-rc-p.": [
+      "proton-4.11-4"
+    ],
+    "Fix some graphics issues in A Hat in Time and Ultimate Marvel vs Capcom 3.": [
+      "proton-4.11-4"
+    ],
+    "Update DXVK to v1.3.4": [
+      "proton-4.11-4"
+    ],
+    "Update FAudio to 19.09.": [
+      "proton-4.11-4"
+    ],
+    "Continue maintaining Uplay functionality.": [
+      "proton-4.2-3b"
+    ],
+    "Update DXVK to [1.0.3](https://github.com/doitsujin/dxvk/releases/tag/v1.0.3).": [
+      "proton-4.2-3b"
+    ],
+    "Update FAudio to 19.04-13-ge8c0855.": [
+      "proton-4.2-3b"
+    ]
+  },
+  "ge-proton": {
+    "god of war ragnarok playstation sdk error": [
+      "GE-Proton10-34"
+    ],
+    "cpu topology for Assassin's Creed 1": [
+      "GE-Proton10-34"
+    ],
+    "GOG version of Oddworld: Stranger's Wrath HD": [
+      "GE-Proton10-34"
+    ],
+    "disable hidraw and enable sdl for gta v": [
+      "GE-Proton10-34"
+    ],
+    "run when the module is imported]": [
+      "GE-Proton10-33"
+    ],
+    "enable gstreamer for Akiba's Trip": [
+      "GE-Proton10-32"
+    ],
+    "Warhammer 40k Darktide to skip the launcher": [
+      "GE-Proton10-31"
+    ],
+    "ds4 in bioshock 2 remastered/classic": [
+      "GE-Proton10-29"
+    ],
+    "ds4 in dragons dogma: dark arisen": [
+      "GE-Proton10-29"
+    ],
+    "broken textures in Legendary": [
+      "GE-Proton10-28"
+    ],
+    "Fallen Enchantress: Legendary Heroes": [
+      "GE-Proton10-28"
+    ],
+    "Duet Night Abyss steam version": [
+      "GE-Proton10-28"
+    ],
+    "Sorcerer King": [
+      "GE-Proton10-28"
+    ],
+    "games that only allow spatial audio": [
+      "GE-Proton10-28"
+    ],
+    "Duet Night Abyss standalone version": [
+      "GE-Proton10-28"
+    ],
+    "PAIcom": [
+      "GE-Proton10-28"
+    ],
+    "Duet Night Abyss egs version": [
+      "GE-Proton10-28"
+    ],
+    "ghostwire tokyo video playback + egs version": [
+      "GE-Proton10-28"
+    ],
+    "Angelic Chaos: RE-BOOT": [
+      "GE-Proton10-27"
+    ],
+    "escape from tarkov": [
+      "GE-Proton10-27"
+    ],
+    "space engineers": [
+      "GE-Proton10-27",
+      "GE-Proton10-26"
+    ],
+    "rocket league in-game voice": [
+      "GE-Proton10-27"
+    ],
+    "Full Metal Daemon Muramasa": [
+      "GE-Proton10-27"
+    ],
+    "sword of the stars": [
+      "GE-Proton10-27"
+    ],
+    "Zeit 2 added": [
+      "GE-Proton10-26"
+    ],
+    "\"Not For Broadcast\" and \"Not For Broadcast: Prologue\"": [
+      "GE-Proton10-26"
+    ],
+    "\"They Are Billions\" crash when using Russian localization": [
+      "GE-Proton10-26"
+    ],
+    "the outer worlds 2": [
+      "GE-Proton10-26"
+    ],
+    "soulbringer": [
+      "GE-Proton10-25"
+    ],
+    "genshin impact non-steam version game open crash": [
+      "GE-Proton10-25"
+    ],
+    "ff14 launcher not working with winewayland": [
+      "GE-Proton10-25"
+    ],
+    "Space Engineers launch crash": [
+      "GE-Proton10-24"
+    ],
+    "Blade & Soul NEO in-game options crash": [
+      "GE-Proton10-24"
+    ],
+    "Killer Instinct crashing after match end": [
+      "GE-Proton10-23"
+    ],
+    "Ghosts n' Goblins Resurrection skill videos not playing": [
+      "GE-Proton10-23"
+    ],
+    "Heroes of Newerth Reborn not running after Juvio client closes": [
+      "GE-Proton10-23"
+    ],
+    "Richard Burns Rally": [
+      "GE-Proton10-22"
+    ],
+    "Persona 5 Strikers that works around Intel CPU crashing": [
+      "GE-Proton10-22"
+    ],
+    "blue protocol star resonance videos to work": [
+      "GE-Proton10-18"
+    ],
+    "ue4ss mod for stellar blade": [
+      "GE-Proton10-16"
+    ],
+    "Two Worlds: Epic Edition": [
+      "GE-Proton10-14"
+    ],
+    "GOG Two Worlds: Epic Edition": [
+      "GE-Proton10-14"
+    ],
+    "ubisoft assassins creed syndicate": [
+      "GE-Proton10-14"
+    ],
+    "helldivers 2": [
+      "GE-Proton10-14"
+    ],
+    "GOG version of 40k Dawn of War Definitive Edition": [
+      "GE-Proton10-13"
+    ],
+    "fix 40k Dawn of War Definitive Edition multiplayer": [
+      "GE-Proton10-13"
+    ],
+    "restore sound in One Piece Pirate Warriors": [
+      "GE-Proton10-13"
+    ],
+    "EGS and standalone versions of guild wars 2": [
+      "GE-Proton10-11"
+    ],
+    "EGS version of MudRunner": [
+      "GE-Proton10-11"
+    ],
+    "GOG version of DOOM 2016": [
+      "GE-Proton10-10"
+    ],
+    "Voice Attack 2": [
+      "GE-Proton10-10"
+    ],
+    "JR East Train Simulator": [
+      "GE-Proton10-10"
+    ],
+    "Chronology": [
+      "GE-Proton10-10"
+    ],
+    "Blood & Bacon": [
+      "GE-Proton10-10"
+    ],
+    "sifu freeze": [
+      "GE-Proton10-9"
+    ],
+    "winetricks wget gnutls failing inside fex": [
+      "GE-Proton10-9"
+    ],
+    "set SteamOS=1 for Wuthering Waves": [
+      "GE-Proton10-8"
+    ],
+    "Blade & Soul NEO": [
+      "GE-Proton10-8"
+    ],
+    "Artificial Academy 2": [
+      "GE-Proton10-6"
+    ],
+    "Anno 1800 from Ubisoft Store": [
+      "GE-Proton10-6"
+    ],
+    "Persona 4 Arena Ultimax": [
+      "GE-Proton10-6"
+    ],
+    "Anno 1800": [
+      "GE-Proton10-6"
+    ],
+    "daedalic games": [
+      "GE-Proton10-4"
+    ],
+    "LOTRO": [
+      "GE-Proton10-4"
+    ],
+    "Colin McRaie: DiRT": [
+      "GE-Proton10-4"
+    ],
+    "Tree of Savior": [
+      "GE-Proton10-4"
+    ],
+    "The Chronicles of Myrtana: Archolos": [
+      "GE-Proton10-4"
+    ],
+    "Once human": [
+      "GE-Proton10-4"
+    ],
+    "the cursor issue in the DOOM games. Fingers crossed": [
+      "GE-Proton10-1"
+    ],
+    "various games": [
+      "GE-Proton10-1"
+    ],
+    "pkhex": [
+      "GE-Proton9-27"
+    ],
+    "spellforce not launching)": [
+      "GE-Proton9-27"
+    ],
+    "monster hunter wilds": [
+      "GE-Proton9-27"
+    ],
+    "all epic games": [
+      "GE-Proton9-27"
+    ],
+    "Deus Ex: Invisible War (]": [
+      "GE-Proton9-26"
+    ],
+    "Cardfight Vanguard Dear Days 2": [
+      "GE-Proton9-26"
+    ],
+    "UberSolder": [
+      "GE-Proton9-26"
+    ],
+    "PowerWash Adventure (]": [
+      "GE-Proton9-26"
+    ],
+    "FF7 Rebirth]": [
+      "GE-Proton9-24"
+    ],
+    "the game you're trying to play": [
+      "GE-Proton9-24"
+    ],
+    "CastleMiner Z (]": [
+      "GE-Proton9-24"
+    ],
+    "Angelic Chaos: RE-BOOT! (]": [
+      "GE-Proton9-24"
+    ],
+    "HZD Remastered]": [
+      "GE-Proton9-24"
+    ],
+    "[REDACTED] (EGS) (]": [
+      "GE-Proton9-23"
+    ],
+    "BioShock Remastered and BioShock 2 Remastered (EGS) (]": [
+      "GE-Proton9-23"
+    ],
+    "Middle-earth: Shadow of War (GOG) (]": [
+      "GE-Proton9-23"
+    ],
+    "Vanguard: Saga of Heroes": [
+      "GE-Proton9-23"
+    ],
+    "Super Meat Boy(EGS) (]": [
+      "GE-Proton9-23"
+    ],
+    "Sifu (EGS) (]": [
+      "GE-Proton9-23"
+    ],
+    "Bus Simulator 21 Next Stop (]": [
+      "GE-Proton9-22"
+    ],
+    "Identity V]": [
+      "GE-Proton9-22"
+    ],
+    "Hell Yeah! (]": [
+      "GE-Proton9-22"
+    ],
+    "From Dust (33460) (]": [
+      "GE-Proton9-22"
+    ],
+    "Ghostrunner 2]": [
+      "GE-Proton9-22"
+    ],
+    "SteamDeck=1 for Dauntless on steam": [
+      "GE-Proton9-21"
+    ],
+    "Teenage Mutant Ninja Turtles Shredders Revenge": [
+      "GE-Proton9-21"
+    ],
+    "The Callisto Protocol": [
+      "GE-Proton9-21"
+    ],
+    "dirt 3 outside of steam": [
+      "GE-Proton9-21"
+    ],
+    "Horizon Zero Dawn Remastered internet connection": [
+      "GE-Proton9-19"
+    ],
+    "silent hill 3 video playback": [
+      "GE-Proton9-19"
+    ],
+    "Mini Ninjas": [
+      "GE-Proton9-17"
+    ],
+    "Gothic Playable Teaser": [
+      "GE-Proton9-16"
+    ],
+    "metal gear solid 2": [
+      "GE-Proton9-16"
+    ],
+    "Kindom Hearts HD Remix added for steam version": [
+      "GE-Proton9-16"
+    ],
+    "Worms: Blast": [
+      "GE-Proton9-14"
+    ],
+    "Plain Site": [
+      "GE-Proton9-14"
+    ],
+    "Dirt 2": [
+      "GE-Proton9-12"
+    ],
+    "CYGNI: All Guns Blazing": [
+      "GE-Proton9-12"
+    ],
+    "Bully: Scholarship edition": [
+      "GE-Proton9-12"
+    ],
+    "GOG Beyond Good and Evil": [
+      "GE-Proton9-11"
+    ],
+    "Flowers": [
+      "GE-Proton9-11"
+    ],
+    "WRC4": [
+      "GE-Proton9-11"
+    ],
+    "The Last Blade": [
+      "GE-Proton9-11"
+    ],
+    "allow elden ring to run even if dlc not owned": [
+      "GE-Proton9-10"
+    ],
+    "gog: resident evil": [
+      "GE-Proton9-8"
+    ],
+    "Contractors VR": [
+      "GE-Proton9-8"
+    ],
+    "Oddworld: Abe's Oddysee": [
+      "GE-Proton9-5"
+    ],
+    "Total War: Shogun 2": [
+      "GE-Proton9-5"
+    ],
+    "Stranger's Wrath HD": [
+      "GE-Proton9-5"
+    ],
+    "Add fix for Sabbat of the Witch": [
+      "GE-Proton9-5"
+    ],
+    "Add fix for Senren * Banka": [
+      "GE-Proton9-5"
+    ],
+    "The Witcher 2: Assassins of Kings Enhanced Edition": [
+      "GE-Proton9-5"
+    ],
+    "(Newest) Many WMP9 Video Playback fixes for Yuzusoft VN's": [
+      "GE-Proton9-5"
+    ],
+    "COJ Gunslinger": [
+      "GE-Proton9-5"
+    ],
+    "Overlord II": [
+      "GE-Proton9-5"
+    ],
+    "Ducati World Championship": [
+      "GE-Proton9-5"
+    ],
+    "Add fix for Riddle Joker": [
+      "GE-Proton9-5"
+    ],
+    "Add fix for Café Stella and the Reaper's Butterflies": [
+      "GE-Proton9-5"
+    ],
+    "Fallout 76]": [
+      "GE-Proton9-3"
+    ],
+    "Street Racing Syndicate": [
+      "GE-Proton9-1"
+    ],
+    "black screen in Grim Dawn and add ulwgl entry for gog version": [
+      "GE-Proton9-1"
+    ],
+    "duke nukem manhatten project zoom edition": [
+      "GE-Proton9-1"
+    ],
+    "Gobliiins 5": [
+      "GE-Proton9-1"
+    ],
+    "Trails in the Sky 1-3 and ulwgl entries for the gog versions": [
+      "GE-Proton9-1"
+    ],
+    "Gabriel Knight 3": [
+      "GE-Proton9-1"
+    ],
+    "Incoming trilogy": [
+      "GE-Proton9-1"
+    ],
+    "New World": [
+      "GE-Proton9-1"
+    ],
+    "They Are Billions and ulwgl entry for gog version": [
+      "GE-Proton9-1"
+    ],
+    "screen resolution detection": [
+      "GE-Proton9-1"
+    ],
+    "Ceville": [
+      "GE-Proton9-1"
+    ],
+    "Postal III": [
+      "GE-Proton9-1"
+    ],
+    "Dirt 3 complete edition": [
+      "GE-Proton9-1"
+    ],
+    "Nine Witches: Family Disruption": [
+      "GE-Proton9-1"
+    ],
+    "all Agarest games": [
+      "GE-Proton8-32"
+    ],
+    "Dark and Darker": [
+      "GE-Proton8-31"
+    ],
+    "Age of Wonders": [
+      "GE-Proton8-28"
+    ],
+    "Alien Breed 2: Assault": [
+      "GE-Proton8-28"
+    ],
+    "Ys Origin": [
+      "GE-Proton8-28"
+    ],
+    "Alien Breed 3: Descent": [
+      "GE-Proton8-28"
+    ],
+    "Alien Breed: Impact": [
+      "GE-Proton8-28"
+    ],
+    "Model 2 emulator": [
+      "GE-Proton8-28"
+    ],
+    "Catherine Classic": [
+      "GE-Proton8-28"
+    ],
+    "HID devices with more than 8 axis https://bugs.winehq.org/show_bug.cgi?id=55660": [
+      "GE-Proton8-27"
+    ],
+    "protonaudioconv workaround": [
+      "GE-Proton8-26"
+    ],
+    "xliveless xlive workaround added": [
+      "GE-Proton8-26"
+    ],
+    "Beam.NG.Drive added": [
+      "GE-Proton8-26"
+    ],
+    "The Great Ace Attorney Chronicles workaround added": [
+      "GE-Proton8-26"
+    ],
+    "cpu topology workaround": [
+      "GE-Proton8-26"
+    ],
+    "Super Naughty Maid 2": [
+      "GE-Proton8-26"
+    ],
+    "esync/fsync enable/disable added": [
+      "GE-Proton8-26"
+    ],
+    "Fable III": [
+      "GE-Proton8-24"
+    ],
+    "NUKITASHI": [
+      "GE-Proton8-22"
+    ],
+    "actually add it this time": [
+      "GE-Proton8-18"
+    ],
+    "The Song of Saya": [
+      "GE-Proton8-17"
+    ],
+    "YOU and ME and HER: A Love Story": [
+      "GE-Proton8-17"
+    ],
+    "Batman Arkham Asylum": [
+      "GE-Proton8-17"
+    ],
+    "Alan Wake": [
+      "GE-Proton8-17"
+    ],
+    "Tokyo Necro": [
+      "GE-Proton8-17",
+      "GE-Proton7-51"
+    ],
+    "resident evil games": [
+      "GE-Proton8-16"
+    ],
+    "Star Trek Online black/empty launcher window": [
+      "GE-Proton8-14"
+    ],
+    "restore original Titanfall2.exe if NorthstarLauncher.exe symlink was previously used.": [
+      "GE-Proton8-13"
+    ],
+    "Tex Murphy: Overseer": [
+      "GE-Proton8-12"
+    ],
+    "Memento Mori logo hang and broken videos": [
+      "GE-Proton8-12"
+    ],
+    "DCS World steam edition": [
+      "GE-Proton8-12"
+    ],
+    "Shin Megami Tensei III Nocturne HD Remaster audio": [
+      "GE-Proton8-12"
+    ],
+    "Alternativa logo hang and broken videos": [
+      "GE-Proton8-12"
+    ],
+    "allow Titanfall 2 '-northstar' launch option to work without patching steam helper": [
+      "GE-Proton8-12"
+    ],
+    "Escape From Monkey Island force anti-aliasing and allow higher resolution": [
+      "GE-Proton8-12"
+    ],
+    "Assetto Corsa": [
+      "GE-Proton8-12"
+    ],
+    "Persona 5 Strikers audio": [
+      "GE-Proton8-12"
+    ],
+    "kovaaks": [
+      "GE-Proton8-10"
+    ],
+    "Oceanhorn removed as it's no longer needed": [
+      "GE-Proton8-7"
+    ],
+    "Neptunia Re;Birth 1 & 2": [
+      "GE-Proton8-7"
+    ],
+    "APB Reloaded": [
+      "GE-Proton8-5"
+    ],
+    "Two Worlds audio": [
+      "GE-Proton8-5"
+    ],
+    "The Blind Prophet": [
+      "GE-Proton8-4"
+    ],
+    "Moero Chronicle": [
+      "GE-Proton8-4"
+    ],
+    "northstar launch arguement not working": [
+      "GE-Proton8-4"
+    ],
+    "Shadows on the Vatican games": [
+      "GE-Proton8-4"
+    ],
+    "Alter Ego": [
+      "GE-Proton8-4"
+    ],
+    "Conception PLUS": [
+      "GE-Proton8-2"
+    ],
+    "the last of us, uncharted, and a few more": [
+      "GE-Proton7-54"
+    ],
+    "Carnage cross": [
+      "GE-Proton7-54"
+    ],
+    "Outlaws + A Handful of Missions": [
+      "GE-Proton7-52"
+    ],
+    "Underdog Detective": [
+      "GE-Proton7-52"
+    ],
+    "halo infinite": [
+      "GE-Proton7-51"
+    ],
+    "Anno 1800 multiplayer": [
+      "GE-Proton7-51"
+    ],
+    "Battle Fantia Revised Edition": [
+      "GE-Proton7-44"
+    ],
+    "stronghold hd/stronghold crusader hd/ stronghold crusader extreme hd": [
+      "GE-Proton7-44"
+    ],
+    "gears 5 hang after hitting enter on logo screen": [
+      "GE-Proton7-43"
+    ],
+    "game drive option not being applied properly to elder scrolls online (fixes installation": [
+      "GE-Proton7-43"
+    ],
+    "witcher 3": [
+      "GE-Proton7-43"
+    ],
+    "fall guys (does not need exe workaround": [
+      "GE-Proton7-43"
+    ],
+    "Re-Volt": [
+      "GE-Proton7-42"
+    ],
+    "Skeleton Boomerang": [
+      "GE-Proton7-42"
+    ],
+    "secret world:legends": [
+      "GE-Proton7-42"
+    ],
+    "Persona 5 Royal": [
+      "GE-Proton7-38"
+    ],
+    "Shatterline": [
+      "GE-Proton7-36"
+    ],
+    "Ougon Musoukyoku": [
+      "GE-Proton7-36"
+    ],
+    "Halo Reach mod tools": [
+      "GE-Proton7-36"
+    ],
+    "CoD BO3 Multiplayer + zombies added": [
+      "GE-Proton7-34"
+    ],
+    "gta v, rdr2, verified bioshock remastered 1/2 + infinite work with 2k launcher": [
+      "GE-Proton7-33"
+    ],
+    "Flatout Ultimate Carnage (single player only) added": [
+      "GE-Proton7-30"
+    ],
+    "Spiderman: Shattered Dimensions": [
+      "GE-Proton7-29"
+    ],
+    "Super naughty maid 2": [
+      "GE-Proton7-28"
+    ],
+    "Halo 2 mod tools": [
+      "GE-Proton7-27"
+    ],
+    "Halo 3: ODST mod tools": [
+      "GE-Proton7-27"
+    ],
+    "fix failure to launch on systems with large core counts": [
+      "GE-Proton7-27"
+    ],
+    "Halo CE mod tools": [
+      "GE-Proton7-27"
+    ],
+    "Halo 3 mod tools": [
+      "GE-Proton7-27"
+    ],
+    "EZ2ON REBOOT added from upstream proton": [
+      "GE-Proton7-19"
+    ],
+    "Fall Guys to for Proton EAC runtime to install if not already present": [
+      "GE-Proton7-19"
+    ],
+    "The Room 4 added from upstream proton": [
+      "GE-Proton7-19"
+    ],
+    "Outward added": [
+      "GE-Proton7-19"
+    ],
+    "El Hijo added from upstream proton": [
+      "GE-Proton7-19"
+    ],
+    "We Were Here Forever added from upstream proton": [
+      "GE-Proton7-19"
+    ],
+    "State of Decay 2 crashes": [
+      "GE-Proton7-15"
+    ],
+    "Fall Guys EAC": [
+      "GE-Proton7-15"
+    ],
+    "set L.A. Noire to use DX11": [
+      "GE-Proton7-9"
+    ],
+    "some games": [
+      "GE-Proton7-7"
+    ],
+    "SMITE to fix incorrect EAC library location": [
+      "GE-Proton7-6"
+    ],
+    "Apex Legends": [
+      "GE-Proton7-5"
+    ],
+    "Exo One": [
+      "GE-Proton7-5"
+    ],
+    "MotorGP": [
+      "GE-Proton7-5"
+    ],
+    "Project MIKHAIL: A Muv-Luv War Story": [
+      "GE-Proton7-5"
+    ],
+    "Putt Putt PBS": [
+      "7.3-GE-1"
+    ],
+    "Heavy Rain": [
+      "7.3-GE-1"
+    ],
+    "Civ IV: Colonization": [
+      "7.3-GE-1"
+    ],
+    "allow Batman Arkham Knight to use physx": [
+      "7.2-GE-1"
+    ],
+    "fix Watch Dogs xaudio2_7 crash": [
+      "7.2-GE-1"
+    ],
+    "enable game drive option for Elder Scrolls Online installer. (Note": [
+      "7.1-GE-1"
+    ],
+    "Progressbar95": [
+      "7.1-GE-1"
+    ],
+    "most of the Resident Evil series": [
+      "7.0rc6-GE-1"
+    ],
+    "Lord of the Rings: War in the North": [
+      "7.0rc6-GE-1"
+    ],
+    "Super Meat Boy": [
+      "7.0rc6-GE-1"
+    ],
+    "LEGO Batman 2: DC Super Heroes": [
+      "7.0rc3-GE-1"
+    ],
+    "broken mouse input in Borderlands and R6S added": [
+      "6.21-GE-1"
+    ],
+    "ship graveyard simulator": [
+      "6.21-GE-1"
+    ],
+    "the beamng mouse issue updated so that it does not affect non-steam games": [
+      "6.21-GE-1"
+    ],
+    "error when using file browser to pick a file location added": [
+      "6.21-GE-1"
+    ],
+    "Nickelodeon All-Star brawl from proton upstream": [
+      "6.20-GE-1"
+    ],
+    "WRC8/9/10 from proton upstream": [
+      "6.20-GE-1"
+    ],
+    "paradox launcher from proton upstream": [
+      "6.20-GE-1"
+    ],
+    "Fallout 76 crash from proton upstream": [
+      "6.20-GE-1"
+    ],
+    "Space Engineers": [
+      "6.20-GE-1"
+    ],
+    "Resident Evil 4": [
+      "6.20-GE-1"
+    ],
+    "Satisfactory multiplayer from proton upstream": [
+      "6.20-GE-1"
+    ],
+    "broken right click camera control in BeamNG.drive": [
+      "6.20-GE-1"
+    ],
+    "Syberia black screen": [
+      "6.19-GE-1"
+    ],
+    "Japanese version of Tree of Savior": [
+      "6.19-GE-1"
+    ],
+    "allow crysis remastered to run": [
+      "6.18-GE-1"
+    ],
+    "Bejeweled 3": [
+      "6.18-GE-1"
+    ],
+    "Sonic CD": [
+      "6.18-GE-1"
+    ],
+    "enable dxvk async for Final Fantaxy XIII and Tomb Raider 2013": [
+      "6.16-GE-1"
+    ],
+    "fix black screen in Gothic 1 and 2": [
+      "6.16-GE-1"
+    ],
+    "Metro 2033": [
+      "6.14-GE-1"
+    ],
+    "HighFleet": [
+      "6.14-GE-1"
+    ],
+    "L.A.Noire": [
+      "6.14-GE-1"
+    ],
+    "star wars galactic battlegrounds saga": [
+      "6.12-GE-1"
+    ],
+    "Guilty Gear XX Accent Core R 2 hang": [
+      "6.10-GE-1"
+    ],
+    "Ninja Gaiden Sigma/Sigma 2 black screens in dxvk": [
+      "6.10-GE-1"
+    ],
+    "any games launched with this version. Old prefixes will not work": [
+      "6.8-GE-1"
+    ],
+    "winetricks": [
+      "6.1-GE-2"
+    ],
+    "auto-enable seccomp": [
+      "5.9-GE-7-ST"
+    ],
+    "force to run on Vulkan": [
+      "5.9-GE-7-ST"
+    ],
+    "allow game to run": [
+      "5.9-GE-7-ST"
+    ],
+    "the stable version": [
+      "5.9-GE-5-ST"
+    ],
+    "allow less stutter in DX11 mode": [
+      "5.9-GE-4-ST"
+    ],
+    "Assetto Corsa, should now work OOTB": [
+      "5.11-GE-1-MF"
+    ],
+    "Catherine": [
+      "5.11-GE-1-MF"
+    ],
+    "warframe": [
+      "5.4-GE-1"
+    ],
+    "loading hang for endless legend": [
+      "5.0-GE-1"
+    ],
+    "warlock: master of the arcane new game freeze in d9vk": [
+      "4.20-GE-1"
+    ],
+    "warhammer: chaosbane hair glitch in dxvk": [
+      "4.20-GE-1"
+    ],
+    "these two games": [
+      "4.20-GE-1"
+    ],
+    "fullscreen hack that allows integer scaling: https://github.com/ValveSoftware/wine/pull/69": [
+      "4.20-GE-1"
+    ],
+    "Divinity Original Sin 2. Note: On first run the game must be closed and relaunched": [
+      "4.10-GE-3"
+    ],
+    "Divinity Original Sin 2": [
+      "4.10-GE-2"
+    ]
+  },
+  "proton-cachyos": {
+    "Death Stranding 2 from upstream Proton Experimental Bleeding Edge": [
+      "cachyos-10.0-20260320-slr"
+    ],
+    "Crimson Desert / Death Stranding 2 from upstream Proton Experimental Bleeding Edge": [
+      "cachyos-10.0-20260319-slr"
+    ],
+    "EA App from `steam_helper` to `umu_helper`": [
+      "cachyos-10.0-20260127-slr"
+    ],
+    "videos with the wrong orientation": [
+      "cachyos-10.0-20250819-slr"
+    ],
+    "91a7e086901ebaf3c39c2b9051fde53df96019e0": [
+      "cachyos-9.0-20250307-slr"
+    ]
+  },
+  "proton-em": {
+    "the key repeat issue": [
+      "EM-10.0-34"
+    ]
+  },
+  "dw-proton": {
+    "**Goddess of Victory: NIKKE**": [
+      "dwproton-10.0-20"
+    ],
+    "some games outside of Steam based on game executable": [
+      "dwproton-10.0-20"
+    ],
+    "mouse pointer not working in some games": [
+      "dwproton-10.0-19"
+    ],
+    "**Duet Night Abyss** crashing at startup": [
+      "dwproton-10.0-11",
+      "dwproton-10.0-10"
+    ],
+    "Girls' Frontline crashing at login screen": [
+      "dwproton-10.0-8"
+    ],
+    "dxvk-gplasync issues": [
+      "dwproton-10.0-1-hotfix"
+    ]
+  },
+  "proton-tkg": {
+    "it soon": [
+      "5.6.1.r0.g4c160ec8"
+    ]
+  },
+  "proton-ge-rtsp": {
+    "VR not working with linked XRizer builds": [
+      "GE-Proton10-15-rtsp18-1"
+    ],
+    "stutter & sudden halting in streams": [
+      "GE-Proton9-22-rtsp17"
+    ],
+    "AVPro audio file playback that got broken a little while ago": [
+      "GE-Proton9-20-rtsp16"
+    ],
+    "some livestreams terminating after a few minutes": [
+      "GE-Proton9-11-rtsp15"
+    ],
+    "yt-dlp failure in VRChat": [
+      "rtsp6-hotfix"
+    ],
+    "random audio/video/both freezes": [
+      "GE-Proton9-5-rtsp10"
+    ]
+  }
+}

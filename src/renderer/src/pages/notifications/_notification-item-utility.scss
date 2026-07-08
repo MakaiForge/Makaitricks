@@ -1,0 +1,33 @@
+@use "../../scss/tokens/utility" as token;
+
+.notification-item {
+  gap: calc(token.$spacing-unit * 2);
+  padding: calc(token.$spacing-unit * 2);
+
+  &__content {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__title {
+    font-size: token.$body-font-size;
+  }
+
+  &__description {
+    font-size: token.$small-font-size;
+  }
+
+  &__time {
+    font-size: token.$small-font-size;
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__actions {
+    gap: token.$spacing-unit;
+  }
+
+  &__dismiss {
+    top: calc(token.$spacing-unit / 2);
+    right: calc(token.$spacing-unit / 2);
+    padding: calc(token.$spacing-unit / 2);
+  }
+}

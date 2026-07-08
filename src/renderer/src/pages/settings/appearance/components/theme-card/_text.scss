@@ -1,0 +1,7 @@
+@use "../../../../../scss/tokens/text";
+
+.theme-card {
+  &__name {
+    color: text.$muted-color;
+  }
+}

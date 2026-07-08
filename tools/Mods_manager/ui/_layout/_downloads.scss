@@ -1,0 +1,45 @@
+.mod-manager {
+  &__downloads-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__download-row {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid #222;
+    font-size: 12px;
+    gap: 8px;
+    min-height: 30px;
+    &:hover { background: #2a2a2a; }
+  }
+
+  &__download-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #d0d0d0;
+  }
+
+  &__download-size {
+    color: #888;
+    font-size: 11px;
+    width: 70px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__install-btn {
+    background: #2a6a2a;
+    color: #ddd;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    flex-shrink: 0;
+    &:hover { background: #3a8a3a; }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "gameId": "cyberpunk2077",
+  "steamAppId": "1091500",
+  "totalReports": 289,
+  "versions": [
+    {
+      "version": "7.0-6",
+      "total": 65,
+      "positive": 53,
+      "negative": 12,
+      "positiveRatio": 0.82
+    },
+    {
+      "version": "5.13-4",
+      "total": 58,
+      "positive": 39,
+      "negative": 19,
+      "positiveRatio": 0.67
+    },
+    {
+      "version": "Proton Experimental",
+      "total": 30,
+      "positive": 23,
+      "negative": 7,
+      "positiveRatio": 0.77
+    },
+    {
+      "version": "6.3-8",
+      "total": 20,
+      "positive": 19,
+      "negative": 1,
+      "positiveRatio": 0.95
+    },
+    {
+      "version": "GE-Proton6.21-2",
+      "total": 15,
+      "positive": 14,
+      "negative": 1,
+      "positiveRatio": 0.93
+    },
+    {
+      "version": "8.0-5",
+      "total": 13,
+      "positive": 12,
+      "negative": 1,
+      "positiveRatio": 0.92
+    },
+    {
+      "version": "GE-Proton6.1-2",
+      "total": 8,
+      "positive": 8,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.13-6",
+      "total": 8,
+      "positive": 7,
+      "negative": 1,
+      "positiveRatio": 0.88
+    },
+    {
+      "version": "7.0-1",
+      "total": 7,
+      "positive": 7,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-4",
+      "total": 7,
+      "positive": 7,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.13-3",
+      "total": 5,
+      "positive": 3,
+      "negative": 2,
+      "positiveRatio": 0.6
+    },
+    {
+      "version": "GE-Proton6.10-1",
+      "total": 4,
+      "positive": 3,
+      "negative": 1,
+      "positiveRatio": 0.75
+    },
+    {
+      "version": "GE-Proton5.21-1",
+      "total": 4,
+      "positive": 2,
+      "negative": 2,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "6.3-7",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton7.2-2",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "experimental",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-1",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-2",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-3",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.21",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "Proton-7.0rc3-GE-1",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "Proton-5.13-0483d8d",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-experimental",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-tkg-6.0",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Branch: experimental_5.13 Commit: 8e79ebb8c7bf8bd49982a274400adb0092db8898",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.1-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "proton-tkg-6.2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-GE 6.5-GE-3 (build 1618159877",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.5-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "wine-tkg",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "lutris-6.10-2-x86_64",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.13-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.14-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.18-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.19-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.20-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.21.GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0rc3-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-7.0rc6-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "8.0-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.0-rc1 eggroll (self-compiled",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "GE-Proton6.5-1",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "GE-Proton6.12-1",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "6.3-6",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "GE-Proton6.16-1",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "8.0-2",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "7.0-6",
+    "5.13-4",
+    "Proton Experimental",
+    "6.3-8",
+    "GE-Proton6.21-2"
+  ]
+}

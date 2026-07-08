@@ -1,0 +1,45 @@
+.mod-manager {
+  &__proton-config {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12px;
+      color: #aaa;
+
+      input[type="text"] {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 4px;
+        padding: 6px 8px;
+        color: #d0d0d0;
+        font-size: 12px;
+        outline: none;
+        &:focus { border-color: #4a9eff; }
+      }
+
+      input[type="checkbox"] { margin-right: 4px; }
+    }
+  }
+
+  &__proton-error {
+    color: #f44;
+    font-size: 12px;
+  }
+
+  &__setup-log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #111;
+    border-radius: 4px;
+    padding: 8px;
+    p { font-size: 11px; margin: 1px 0; color: #aaa; font-family: monospace; }
+  }
+
+  &__setup-success { color: #4c4; font-size: 12px; }
+  &__setup-error    { color: #f44; font-size: 12px; }
+}

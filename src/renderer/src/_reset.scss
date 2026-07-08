@@ -1,0 +1,45 @@
+@use "scss/tokens/utility" as token;
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 20px;
+}
+
+label {
+  font-size: token.$body-font-size;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}

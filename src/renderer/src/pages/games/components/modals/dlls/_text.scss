@@ -1,0 +1,31 @@
+@use "../../../../../scss/tokens/text" as token;
+
+.check-dlls-modal__header {
+  h2 {
+    color: token.$muted-color;
+  }
+}
+
+.check-dlls-modal__close {
+  color: rgba(255, 255, 255, 0.4);
+
+  &:hover {
+    color: token.$muted-color;
+  }
+}
+
+.check-dlls-modal-loading {
+  p {
+    color: token.$body-color;
+  }
+}
+
+.check-dlls-modal-section {
+  ul {
+    color: token.$body-color;
+  }
+}
+
+.check-dlls-modal__button {
+  color: token.$muted-color;
+}

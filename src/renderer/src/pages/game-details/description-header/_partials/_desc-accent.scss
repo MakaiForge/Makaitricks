@@ -1,0 +1,17 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.description-header {
+  &__steam-btn {
+    background: token.$brand-gradient;
+
+    &:hover {
+      background: token.$brand-gradient-hover;
+    }
+  }
+
+  &__chevron {
+    &--open {
+      background: token.$brand-gradient;
+    }
+  }
+}

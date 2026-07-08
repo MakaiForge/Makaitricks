@@ -1,0 +1,70 @@
+@use "../../../../../scss/tokens/text" as token;
+@use "../../../../../scss/tokens/border" as border;
+
+.wine-tools-menu {
+  &__toggle {
+    background: rgba(255, 255, 255, 0.06);
+    color: token.$body-color;
+    border: 1px solid border.$border-color;
+    border-radius: 4px;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    transition: background 0.15s ease;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__header {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid border.$border-color;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: token.$body-color;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__divider {
+    height: 1px;
+    background: border.$border-color;
+    margin: 0 0.5rem;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: token.$muted-color;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    text-align: left;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}

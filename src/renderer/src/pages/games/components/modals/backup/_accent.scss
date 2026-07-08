@@ -1,0 +1,15 @@
+@use "../../../../../scss/tokens/accent" as token;
+
+.backup-modal {
+  &__error {
+    color: token.$error-color;
+  }
+
+  &__connect-btn {
+    background: token.$brand-gradient;
+
+    &:hover {
+      background: token.$brand-gradient-hover;
+    }
+  }
+}

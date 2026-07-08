@@ -1,0 +1,100 @@
+.deploy-confirm-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.deploy-confirm-modal {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+  min-width: 400px;
+  max-width: 520px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.deploy-confirm-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #333;
+}
+
+.deploy-confirm-modal__header h3 { margin: 0; font-size: 14px; color: #e0e0e0; }
+
+.deploy-confirm-modal__close {
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.deploy-confirm-modal__close:hover { color: #fff; }
+
+.deploy-confirm-modal__body {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.deploy-confirm-modal__progress { color: #4a9eff; }
+.deploy-confirm-modal__warn { color: #d94; }
+
+.deploy-confirm-modal__actions {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 11px;
+}
+.deploy-confirm-modal__actions li { padding: 2px 0; color: #999; }
+
+.deploy-confirm-modal__backup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+.deploy-confirm-modal__backup input,
+.deploy-confirm-modal__bsa input { accent-color: #4a9eff; }
+
+.deploy-confirm-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 16px;
+  border-top: 1px solid #333;
+  gap: 8px;
+}
+
+.deploy-confirm-modal__footer button {
+  padding: 5px 14px;
+  border: 1px solid #444;
+  border-radius: 3px;
+  background: #2a2a2a;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+}
+.deploy-confirm-modal__footer button:hover { background: #333; }
+.deploy-confirm-modal__footer button:last-child {
+  background: #2a7a2a;
+  border-color: #3a9a3a;
+  color: #bfb;
+}
+.deploy-confirm-modal__footer button:last-child:hover { background: #3a9a3a; }

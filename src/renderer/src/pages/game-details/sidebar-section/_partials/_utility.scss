@@ -1,0 +1,26 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.sidebar-section {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    padding: calc(token.$spacing-unit * 2.5) calc(token.$spacing-unit * 2);
+    gap: calc(token.$spacing-unit / 2);
+    transition: background-color 0.2s ease;
+  }
+
+  &__button {
+    gap: token.$spacing-unit;
+    font-size: token.$body-font-size;
+
+    &:active {
+      opacity: token.$active-opacity;
+    }
+  }
+
+  &__subtitle {
+    font-size: token.$small-font-size;
+    gap: calc(token.$spacing-unit / 2);
+  }
+}

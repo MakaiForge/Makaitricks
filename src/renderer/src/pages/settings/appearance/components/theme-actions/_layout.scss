@@ -1,0 +1,25 @@
+.settings-appearance {
+  &__actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &.settings-appearance__button--black {
+      background: #111;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.08);
+
+      &:hover {
+        background: #1e1e1e;
+        border-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
+      }
+    }
+  }
+}

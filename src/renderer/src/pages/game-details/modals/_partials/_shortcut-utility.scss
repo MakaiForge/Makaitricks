@@ -1,0 +1,15 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.create-steam-shortcut-modal {
+  &__content {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__inputs {
+    gap: token.$spacing-unit;
+  }
+
+  &__actions {
+    gap: token.$spacing-unit;
+  }
+}

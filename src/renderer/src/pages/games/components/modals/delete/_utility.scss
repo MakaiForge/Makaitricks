@@ -1,0 +1,24 @@
+@use "../../../../../scss/tokens/utility" as token;
+
+.delete-modal__header {
+  padding: calc(token.$spacing-unit * 2);
+}
+
+.delete-modal__body {
+  padding: calc(token.$spacing-unit * 3) calc(token.$spacing-unit * 2);
+}
+
+.delete-options {
+  gap: calc(token.$spacing-unit * 1.5);
+}
+
+.delete-option {
+  gap: calc(token.$spacing-unit * 1.5);
+  padding: calc(token.$spacing-unit * 1.5);
+
+  &-text {
+    strong {
+      font-size: 0.875rem;
+    }
+  }
+}

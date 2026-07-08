@@ -1,0 +1,13 @@
+@use "../../../../scss/tokens/app-bg" as token;
+
+.download-settings-modal {
+  &__downloaders-list-wrapper {
+    background-color: token.$dark-background-color;
+  }
+
+  &__folder-checkbox--indeterminate {
+    &::after {
+      background: token.$dark-background-color;
+    }
+  }
+}

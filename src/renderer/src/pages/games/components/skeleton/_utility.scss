@@ -1,0 +1,19 @@
+@use "../../../../scss/tokens/utility" as token;
+@use "../../../../scss/tokens/border" as border;
+
+.games__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: calc(token.$spacing-unit * 1.5);
+
+  .games__section-header {
+    margin-bottom: 0;
+  }
+}
+
+.games__skeleton-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid border.$border-color;
+  background: rgba(255, 255, 255, 0.02);
+}

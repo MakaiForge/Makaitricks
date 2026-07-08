@@ -1,0 +1,120 @@
+.mod-manager {
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: #222;
+    border-bottom: 1px solid #2a2a2a;
+    input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: #d0d0d0;
+      font-size: 12px;
+      outline: none;
+      &::placeholder { color: #666; }
+    }
+    svg { color: #666; width: 14px; height: 14px; }
+  }
+
+  &__modlist-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 70px 70px 90px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: #222;
+    border-bottom: 2px solid #444;
+    font-size: 11px;
+    color: #ccc;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    min-height: 28px;
+  }
+
+  &__header-name { padding: 0; }
+  &__header-center { text-align: center; }
+
+  &__modlist {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__mod-row {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    user-select: none;
+    min-height: 28px;
+    font-size: 12px;
+
+    &:hover { background: #2a2a2a; }
+    &--enabled { color: #e0e0e0; }
+    &--selected { background: #2a3a4a !important; }
+    &--drag-over { border-top: 2px solid #4a9eff; }
+
+    input[type="checkbox"] {
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      accent-color: #4a9eff;
+      flex-shrink: 0;
+    }
+  }
+
+  &__mod-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 6px;
+  }
+
+  &__mod-version {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+  }
+
+  &__mod-priority {
+    width: 65px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+  }
+
+  &__mod-preview, &__mod-readme {
+    width: 34px;
+    flex-shrink: 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+    &:hover { opacity: 1; }
+  }
+
+  &__mod-media--empty {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__empty, &__loading {
+    padding: 32px 16px;
+    text-align: center;
+    color: #666;
+    p { margin: 4px 0; }
+  }
+
+  &__empty-hint { font-size: 11px; color: #555; }
+}

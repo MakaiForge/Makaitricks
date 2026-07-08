@@ -1,0 +1,46 @@
+.mod-list-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.mod-list-panel__header,
+.mod-list-panel__body { padding: 0; }
+
+.mod-list-panel__header {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mod-list-panel__col--name { flex: 1; padding: 0 24px; }
+.mod-list-panel__col--version { width: 70px; text-align: center; }
+.mod-list-panel__col--priority { width: 55px; text-align: center; }
+.mod-list-panel__col--media { width: 28px; text-align: center; }
+
+.mod-list-panel__body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.mod-list-panel__empty {
+  text-align: center;
+  padding: 40px 16px;
+  color: #555;
+  font-size: 13px;
+}
+
+/* custom scroll */
+.mod-list-panel__body::-webkit-scrollbar { width: 6px; }
+.mod-list-panel__body::-webkit-scrollbar-track { background: transparent; }
+.mod-list-panel__body::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }

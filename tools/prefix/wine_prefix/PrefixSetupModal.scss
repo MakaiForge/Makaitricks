@@ -1,0 +1,169 @@
+.pfs {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 24px;
+  min-width: 420px;
+  gap: 16px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ccc;
+  }
+
+  &__game {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 2px;
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__bar-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background: #51cf66;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+
+    &.--ok { background: #51cf66; }
+    &.--fail { background: #ff6b6b; }
+  }
+
+  &__bar-label {
+    font-size: 12px;
+    color: #888;
+    min-width: 36px;
+    text-align: right;
+  }
+
+  &__stages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__stage {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #666;
+
+    &.--done {
+      background: rgba(81, 207, 102, 0.12);
+      color: #51cf66;
+    }
+
+    &.--active {
+      background: rgba(81, 207, 102, 0.2);
+      color: #51cf66;
+      font-weight: 600;
+    }
+
+    &.--fail {
+      background: rgba(255, 107, 107, 0.15);
+      color: #ff6b6b;
+    }
+  }
+
+  &__stage-icon {
+    font-size: 12px;
+  }
+
+  &__stage-label {
+    white-space: nowrap;
+  }
+
+  &__log {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px 12px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__pending {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  &__line {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #999;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    &.--error { color: #ff6b6b; }
+    &.--done { color: #51cf66; font-weight: 500; }
+    &.--warn { color: #ffd43b; }
+    &.--header { color: #ccc; font-weight: 600; }
+  }
+
+  &__spinner {
+    text-align: center;
+    padding: 6px 0;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #51cf66;
+      border-radius: 50%;
+      animation: pfs-spin 0.7s linear infinite;
+    }
+  }
+
+  &__result {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+
+    &.--ok {
+      background: rgba(81, 207, 102, 0.12);
+      color: #51cf66;
+    }
+    &.--fail {
+      background: rgba(255, 107, 107, 0.12);
+      color: #ff6b6b;
+    }
+  }
+}
+
+@keyframes pfs-spin {
+  to { transform: rotate(360deg); }
+}

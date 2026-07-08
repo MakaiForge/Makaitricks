@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/border" as token;
+
+.cloud-sync-panel {
+  &__artifact {
+    border: 1px solid token.$border-color;
+  }
+}

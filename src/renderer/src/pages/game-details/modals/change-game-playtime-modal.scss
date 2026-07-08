@@ -1,0 +1,34 @@
+@use "_partials/playtime-modal-utility";
+
+.change-game-playtime-modal {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__warning {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 4px;
+    color: #ffc107;
+    font-size: 14px;
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__actions {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

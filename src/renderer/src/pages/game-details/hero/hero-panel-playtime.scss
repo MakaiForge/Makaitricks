@@ -1,0 +1,25 @@
+@use "_partials/playtime-utility";
+@use "_partials/playtime-text";
+
+.hero-panel-playtime {
+  &__download-details {
+    display: flex;
+    align-items: center;
+  }
+
+  &__downloads-link {
+    text-decoration: underline;
+  }
+
+  &__play-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+  }
+
+  &__manual-warning {
+    color: #f59e0b;
+    flex-shrink: 0;
+  }
+}

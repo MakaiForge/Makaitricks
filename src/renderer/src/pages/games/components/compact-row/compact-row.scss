@@ -1,0 +1,121 @@
+.game-compact-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    .game-compact-row__play {
+      opacity: 1;
+    }
+  }
+
+  &--selected {
+    border-color: var(--accent, #6366f1);
+    background: color-mix(in srgb, var(--accent, #6366f1) 8%, transparent);
+  }
+
+  &__thumb {
+    width: 46px;
+    height: 26px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #1b2838;
+    margin-right: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  &__name {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+  }
+
+  &__badge {
+    width: 48px;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+  }
+
+  &__size {
+    width: 72px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.25);
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &__hours {
+    width: 56px;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__play {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.12s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent, #6366f1) 20%, transparent);
+      color: color-mix(in srgb, var(--accent, #6366f1) 70%, white);
+      opacity: 1;
+    }
+  }
+}

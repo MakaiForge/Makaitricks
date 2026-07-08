@@ -1,0 +1,5 @@
+@use "../../scss/tokens/border" as token;
+
+.notification-item {
+  border: 1px solid token.$border-color;
+}

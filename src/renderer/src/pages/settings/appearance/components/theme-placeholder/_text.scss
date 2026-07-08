@@ -1,0 +1,13 @@
+@use "../../../../../scss/tokens/text";
+
+.theme-placeholder {
+  &__icon {
+    svg {
+      color: text.$body-color;
+    }
+  }
+
+  &__text {
+    color: rgba(text.$body-color, 0.85);
+  }
+}

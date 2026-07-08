@@ -1,0 +1,22 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.gallery-slider {
+  &__container {
+    padding: calc(token.$spacing-unit * 1.5) 0;
+  }
+
+  &__preview {
+    padding: token.$spacing-unit 0;
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__button {
+    &--left {
+      left: token.$spacing-unit;
+    }
+
+    &--right {
+      right: token.$spacing-unit;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  min-height: 32px;
+  max-width: 100%;
+
+  &__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 220px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+  }
+
+  &__orb {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.28);
+    align-self: center;
+  }
+
+  &__remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    line-height: 1;
+    align-self: center;
+    border-radius: 0;
+    width: 22px;
+    height: 22px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--filter-item-color);
+      outline-offset: 1px;
+    }
+
+    svg {
+      display: block;
+      transform: translateY(-0.5px);
+    }
+  }
+}
+
+.filter-section {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &__button {
+    padding: calc(16px) calc(16px);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    font-weight: bold;
+    border: none;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--accent, #6366f1) 12%, transparent);
+    }
+  }
+
+  &__chevron {
+    transition: transform ease 0.2s;
+    flex-shrink: 0;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+  }
+
+  &__header-count {
+    background-color: color-mix(in srgb, var(--accent, #6366f1) 15%, transparent);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  &__orb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    position: relative;
+  }
+
+  &__content-inner {
+    padding: calc(16px);
+  }
+
+  &__count {
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__clear-button {
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:focus-visible {
+      outline-offset: 1px;
+    }
+  }
+
+  &__search {
+    margin-bottom: 12px;
+
+    .text-field-container__text-field--focused {
+      border-color: var(--accent, #6366f1);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent, #6366f1) 20%, transparent);
+    }
+  }
+
+  &__item {
+    height: 28px;
+    max-height: 28px;
+  }
+}
+
+/* ===== THEME EFFECTS ===== */
+html.wallpaper-active .filter-section {
+  background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 25%, rgb(0,0,0));
+  backdrop-filter: blur(8px);
+  border-color: var(--catalogue-border-effect-color, var(--accent, #6366f1));
+  box-shadow:
+    0 0 20px color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 35%, transparent),
+    inset 0 0 20px color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 20%, transparent);
+
+  &__button:hover {
+    background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 18%, transparent);
+  }
+
+  &__content {
+    background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 20%, rgb(0,0,0));
+  }
+
+  &__header-count {
+    background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 40%, transparent);
+  }
+}
+
+html.wallpaper-active .catalogue__search-bar .text-field-container__text-field {
+  background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 18%, rgb(0,0,0));
+  border-color: var(--catalogue-border-effect-color, var(--accent, #6366f1));
+}
+
+html.wallpaper-active .filter-item {
+  background-color: color-mix(in srgb, var(--catalogue-border-effect-color, var(--accent, #6366f1)) 25%, rgb(0,0,0));
+  backdrop-filter: blur(4px);
+}

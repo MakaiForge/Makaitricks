@@ -1,0 +1,17 @@
+@use "../../scss/tokens/border";
+
+.settings {
+  &__content {
+    border: solid 1px border.$border-color;
+  }
+
+  &__sidebar {
+    border-right: 1px solid border.$border-color;
+  }
+
+  @media (max-width: 860px) {
+    &__sidebar {
+      border-bottom: 1px solid border.$border-color;
+    }
+  }
+}

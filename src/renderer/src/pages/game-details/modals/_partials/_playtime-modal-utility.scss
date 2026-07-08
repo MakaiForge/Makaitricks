@@ -1,0 +1,20 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.change-game-playtime-modal {
+  &__content {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__warning {
+    gap: token.$spacing-unit;
+    padding: token.$spacing-unit;
+  }
+
+  &__inputs {
+    gap: token.$spacing-unit;
+  }
+
+  &__actions {
+    gap: token.$spacing-unit;
+  }
+}

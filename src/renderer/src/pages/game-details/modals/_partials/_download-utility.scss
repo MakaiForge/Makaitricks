@@ -1,0 +1,51 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.download-settings-modal {
+  &__container {
+    gap: calc(token.$spacing-unit * 3);
+  }
+
+  &__downloads-path-field {
+    gap: token.$spacing-unit;
+  }
+
+  &__downloader-item {
+    padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2);
+  }
+
+  &__torrent-step {
+    gap: calc(token.$spacing-unit * 1.5);
+    padding: calc(token.$spacing-unit * 2);
+  }
+
+  &__torrent-step-toolbar {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__torrent-filters {
+    gap: calc(token.$spacing-unit * 0.75);
+    padding-left: calc(token.$spacing-unit * 2);
+  }
+
+  &__torrent-table-head {
+    gap: token.$spacing-unit;
+    padding: 0 calc(token.$spacing-unit * 1.5);
+  }
+
+  &__torrent-file-row {
+    gap: token.$spacing-unit;
+    padding: 0 calc(token.$spacing-unit * 1.5);
+
+    &--select-all {
+      margin-bottom: token.$spacing-unit;
+    }
+  }
+
+  &__torrent-file-name-cell {
+    gap: token.$spacing-unit;
+  }
+
+  &__torrent-files-footer {
+    gap: token.$spacing-unit;
+  }
+}

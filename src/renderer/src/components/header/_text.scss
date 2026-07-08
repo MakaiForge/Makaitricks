@@ -1,0 +1,5 @@
+@use "../../scss/tokens/text";
+
+.header {
+  color: text.$muted-color;
+}

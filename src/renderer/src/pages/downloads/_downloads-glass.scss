@@ -1,0 +1,7 @@
+.downloads {
+  &__sub-tab--active {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

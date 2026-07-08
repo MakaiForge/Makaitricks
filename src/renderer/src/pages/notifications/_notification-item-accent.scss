@@ -1,0 +1,7 @@
+@use "../../scss/tokens/accent" as token;
+
+.notification-item {
+  &--unread {
+    border-left: 3px solid token.$brand-teal;
+  }
+}

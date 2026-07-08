@@ -1,0 +1,97 @@
+{
+  "gameId": "oblivion",
+  "steamAppId": "22330",
+  "totalReports": 27,
+  "versions": [
+    {
+      "version": "6.3-8",
+      "total": 6,
+      "positive": 5,
+      "negative": 1,
+      "positiveRatio": 0.83
+    },
+    {
+      "version": "4.11-12",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0-1",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "8.0-5",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "4.11-13",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-10",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-4",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.13-6",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "5.0-9",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-6",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-7",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "6.3-8",
+    "4.11-12",
+    "7.0-1",
+    "8.0-5"
+  ]
+}

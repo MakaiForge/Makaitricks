@@ -1,0 +1,49 @@
+.runners {
+  &__loading {
+    color: var(--text-muted);
+  }
+
+  &__category-title {
+    color: var(--text-muted);
+  }
+
+  &__card {
+    background: var(--surface);
+  }
+
+  &__icon-placeholder {
+    background: var(--primary-dim);
+    color: var(--primary);
+  }
+
+  &__card-platforms {
+    color: var(--text-muted);
+  }
+
+  &__not-installed {
+    color: var(--text-muted);
+  }
+
+  &__unavailable {
+    color: var(--text-muted);
+  }
+
+  &__card-notes {
+    color: var(--text-muted);
+  }
+
+  &__progress-text {
+    color: var(--text-muted);
+  }
+
+  &__toggle {
+    input[type="checkbox"] {
+      accent-color: var(--primary);
+    }
+  }
+
+  &__popup {
+    background: var(--surface);
+    color: var(--text);
+  }
+}

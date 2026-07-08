@@ -1,0 +1,46 @@
+@use "../../../scss/tokens/utility" as token;
+
+$hero-height: 350px;
+
+.game-details {
+  &__hero-panel {
+    padding: token.$spacing-unit;
+  }
+
+  &__hero-content {
+    padding: calc(token.$spacing-unit * 1.5);
+
+    @media (min-width: 768px) {
+      padding: calc(token.$spacing-unit * 2);
+    }
+  }
+
+  &__hero-buttons {
+    gap: token.$spacing-unit;
+  }
+
+  &__edit-custom-game-button {
+    padding: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__cloud-sync-button {
+    padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2);
+    gap: token.$spacing-unit;
+    font-size: token.$small-font-size;
+
+    &:disabled {
+      opacity: token.$disabled-opacity;
+    }
+  }
+
+  &__randomizer-button {
+    bottom: calc(token.$spacing-unit * 5);
+    right: calc(token.$spacing-unit * 2);
+    padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2);
+    gap: token.$spacing-unit;
+
+    &:disabled {
+      opacity: token.$disabled-opacity;
+    }
+  }
+}

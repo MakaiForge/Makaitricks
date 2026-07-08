@@ -1,0 +1,17 @@
+@use "../../../../scss/tokens/border" as token;
+
+.game-options-modal {
+  &__sidebar {
+    border-right: 1px solid token.$border-color;
+  }
+
+  @media (max-width: 860px) {
+    &__sidebar {
+      border-bottom: 1px solid token.$border-color;
+    }
+  }
+}
+
+.drive-card {
+  border: 1px solid token.$border-color;
+}

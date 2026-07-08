@@ -1,0 +1,61 @@
+name: Build venv
+
+on:
+  push:
+    tags:
+      - 'venv-v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag override (e.g. venv-v1.0.1)'
+        required: true
+
+# The venv assets are hosted on MakaiForge/venv (separate repo) to keep
+# the main app repo lean.  The CI uploads cross-repo using VENV_PAT secret,
+# which must be a GitHub PAT with `repo` scope on both repos.
+env:
+  VENV_REPO: MakaiForge/venv
+
+concurrency: venv-build
+
+jobs:
+  build:
+    name: venv-${{ matrix.platform }}-${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            arch: x86_64
+            runner: ubuntu-24.04
+          - platform: darwin
+            arch: x86_64
+            runner: macos-13
+          - platform: darwin
+            arch: aarch64
+            runner: macos-14
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build venv
+        run: bash scripts/venv-build/build.sh -p ${{ matrix.platform }} -a ${{ matrix.arch }}
+
+      - name: Upload Release Asset
+        env:
+          GH_TOKEN: ${{ secrets.VENV_PAT }}
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          ASSET="scripts/venv-build/out/venv-${{ matrix.platform }}-${{ matrix.arch }}.tar.gz"
+
+          # create release (idempotent — subsequent uploads just add assets)
+          gh release create "$TAG" \
+            --repo "${{ env.VENV_REPO }}" \
+            --title "$TAG" \
+            --notes "Python 3.10.15 venv with aiohttp + ijson (build-standalone)" \
+            --generate-notes || true
+
+          gh release upload "$TAG" "$ASSET" \
+            --repo "${{ env.VENV_REPO }}" \
+            --clobber

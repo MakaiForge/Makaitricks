@@ -1,0 +1,5 @@
+@use "../../../../scss/tokens/border" as token;
+
+.hero-panel {
+  border-bottom: solid 1px token.$border-color;
+}

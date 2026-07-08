@@ -1,0 +1,45 @@
+{
+  "gameId": "xcom2",
+  "steamAppId": "268500",
+  "totalReports": 6,
+  "versions": [
+    {
+      "version": "9.0-4",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.10-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0rc3-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "8.0-4",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "9.0-4"
+  ]
+}

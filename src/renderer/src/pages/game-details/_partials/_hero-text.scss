@@ -1,0 +1,23 @@
+@use "../../../scss/tokens/text" as token;
+
+.game-details {
+  &__edit-custom-game-button {
+    color: token.$muted-color;
+
+    &:hover {
+      color: token.$body-color;
+    }
+  }
+
+  &__cloud-sync-button {
+    color: token.$muted-color;
+  }
+
+  &__randomizer-button {
+    color: token.$muted-color;
+
+    &:hover {
+      color: token.$body-color;
+    }
+  }
+}

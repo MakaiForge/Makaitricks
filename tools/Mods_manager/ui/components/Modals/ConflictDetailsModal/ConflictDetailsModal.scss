@@ -1,0 +1,270 @@
+.conflict-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.conflict-details-modal {
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.conflict-details-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #333;
+  background: #16213e;
+}
+
+.conflict-details-modal__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.conflict-details-modal__icon {
+  font-size: 20px;
+}
+
+.conflict-details-modal__close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.conflict-details-modal__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.conflict-details-modal__empty {
+  text-align: center;
+  color: #888;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.conflict-details-modal__section {
+  margin-bottom: 20px;
+}
+
+.conflict-details-modal__section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+.conflict-file-item {
+  background: #0f0f23;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.conflict-file-item__path {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.conflict-file-item__icon {
+  font-size: 14px;
+}
+
+.conflict-file-item__name {
+  font-family: monospace;
+  font-size: 12px;
+  color: #888;
+  word-break: break-all;
+}
+
+.conflict-file-item__mods {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.conflict-file-item__mod {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: #1a1a2e;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #252545;
+  }
+
+  &--deselected {
+    opacity: 0.5;
+    background: #1a1a1a;
+  }
+
+  &--winner {
+    background: rgba(76, 175, 80, 0.15);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+  }
+}
+
+.conflict-file-item__checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.conflict-file-item__mod-name {
+  flex: 1;
+  font-size: 13px;
+  color: #e0e0e0;
+}
+
+.conflict-file-item__mod-priority {
+  font-size: 11px;
+  color: #888;
+}
+
+.conflict-file-item__winner-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #4caf50;
+  text-transform: uppercase;
+}
+
+.conflict-details-modal__summary {
+  background: #0f0f23;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 16px;
+
+  h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+  }
+}
+
+.conflict-details-modal__mod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.conflict-details-modal__mod-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #1a1a2e;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #252545;
+  }
+
+  &--deselected {
+    opacity: 0.5;
+    background: #1a1a1a;
+  }
+}
+
+.conflict-details-modal__checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.conflict-details-modal__mod-name {
+  flex: 1;
+  font-size: 13px;
+  color: #e0e0e0;
+}
+
+.conflict-details-modal__mod-priority {
+  font-size: 11px;
+  color: #888;
+}
+
+.conflict-details-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #333;
+  background: #16213e;
+}
+
+.conflict-details-modal__btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &--cancel {
+    background: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+
+    &:hover {
+      background: #444;
+    }
+  }
+
+  &--apply {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background: #5cbf60;
+    }
+
+    &:disabled {
+      background: #333;
+      color: #666;
+      cursor: not-allowed;
+    }
+  }
+}

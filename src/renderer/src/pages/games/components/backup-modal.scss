@@ -1,0 +1,133 @@
+@use "../variables" as *;
+
+.backup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.backup-modal {
+  background: $bg-dark;
+  border: 1px solid $border;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  overflow: hidden;
+  color: $text-primary;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid $border;
+
+    h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: $text-primary;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__desc {
+    padding: 16px 20px 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  &__error {
+    margin: 12px 20px 0;
+    padding: 8px 12px;
+    background: rgba(231, 76, 60, 0.15);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    border-radius: 6px;
+    color: $danger;
+    font-size: 0.85rem;
+  }
+
+  &__list {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    transition: border-color 0.15s;
+
+    &:hover {
+      border-color: $border-hover;
+    }
+
+    &--soon {
+      opacity: 0.5;
+    }
+  }
+
+  &__item-icon {
+    font-size: 1.4rem;
+    width: 28px;
+    text-align: center;
+  }
+
+  &__item-name {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  &__connect-btn {
+    padding: 6px 16px;
+    background: $accent;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+
+    &:hover {
+      background: $accent-hover;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__soon {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+  }
+}

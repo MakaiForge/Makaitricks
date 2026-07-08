@@ -1,0 +1,9 @@
+.add-theme-modal {
+  &__css-textarea {
+    background: var(--input-bg, var(--card-bg));
+
+    &::placeholder {
+      color: var(--text-muted);
+    }
+  }
+}

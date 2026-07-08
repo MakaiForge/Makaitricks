@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/border" as token;
+
+.gallery-slider {
+  &__preview-button {
+    border: solid 1px token.$border-color;
+  }
+}

@@ -1,0 +1,11 @@
+$bg-dark: var(--app-bg, #0d0d0d);
+$text-primary: var(--text-primary, #d0d1d7);
+$text-secondary: var(--text-secondary, #f0f1f7);
+$accent: var(--accent, #16b195);
+$border: var(--border-color, rgba(255, 255, 255, 0.08));
+$border-light: var(--border-color, rgba(255, 255, 255, 0.06));
+$border-accent: rgba(255, 255, 255, 0.1);
+$hover-bg: rgba(255, 255, 255, 0.03);
+$hover-bg-light: rgba(255, 255, 255, 0.05);
+$active-bg: rgba(255, 255, 255, 0.1);
+$installed-bg: color-mix(in srgb, var(--accent, #16b195) 15%, transparent);

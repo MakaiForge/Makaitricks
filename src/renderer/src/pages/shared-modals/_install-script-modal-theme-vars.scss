@@ -1,0 +1,42 @@
+.install-script-modal {
+  &__title { color: var(--purple-200); }
+  &__meta { color: var(--text-dim); }
+  &__tag { color: var(--purple-300); }
+  &__section-title { color: var(--purple-300); }
+  &__section-text { color: var(--text-light); }
+  &__preview-summary { color: var(--text-dim); }
+  &__preview-content { color: var(--text-dim); }
+  &__progress-status { color: var(--accent); }
+  &__progress-pct { color: var(--text-dim); }
+  &__success { color: var(--green-400); }
+  &__success-sub { color: var(--text-dim); }
+  &__loading { color: var(--text-dim); }
+
+  &__vote-btn {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-dim);
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-light);
+    }
+
+    &:disabled { opacity: 0.4; cursor: not-allowed; }
+  }
+
+  &__comments-title { color: var(--text-light); }
+  &__comments-empty { color: var(--text-dim); }
+  &__comment-author { color: var(--accent); }
+  &__comment-date { color: var(--text-dim); }
+  &__comment-body { color: var(--text-light); }
+
+  &__comment-input {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-light);
+
+    &:focus { border-color: rgba(168, 85, 247, 0.4); }
+    &::placeholder { color: var(--text-dim); }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.home {
+  &__carousel-source {
+    background: token.$brand-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__carousel-cta {
+    background: token.$brand-gradient;
+  }
+}

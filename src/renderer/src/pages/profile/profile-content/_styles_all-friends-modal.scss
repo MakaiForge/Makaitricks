@@ -1,0 +1,102 @@
+@use '../../../scss/tokens/utility' as utility;
+@use '../../../scss/tokens/text' as text;
+
+.all-friends-modal {
+  display: flex;
+  flex-direction: column;
+  gap: utility.$spacing-unit;
+  max-height: 400px;
+  margin-top: calc(utility.$spacing-unit * -1);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: utility.$spacing-unit;
+  }
+
+  &__count {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: utility.$spacing-unit;
+    overflow-y: auto;
+    padding-right: utility.$spacing-unit;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: calc(utility.$spacing-unit * 2);
+    padding: calc(utility.$spacing-unit * 1.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: calc(utility.$spacing-unit / 2);
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: text.$muted-color;
+    font-size: utility.$body-font-size;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__game {
+    display: flex;
+    align-items: center;
+    gap: utility.$spacing-unit;
+    font-size: utility.$small-font-size;
+    color: text.$body-color;
+
+    img {
+      border-radius: 4px;
+    }
+
+    small {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding: calc(utility.$spacing-unit * 4);
+    color: text.$body-color;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    padding: calc(utility.$spacing-unit * 2);
+  }
+
+  &__load-more {
+    display: flex;
+    justify-content: center;
+    padding-top: utility.$spacing-unit;
+  }
+}

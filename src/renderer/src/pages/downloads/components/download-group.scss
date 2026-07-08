@@ -1,0 +1,64 @@
+.download-group {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &-title-group {
+      display: flex;
+      align-items: center;
+      flex: 1;
+
+      h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.95);
+      }
+    }
+
+    &-count {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      min-width: 24px;
+      text-align: center;
+      flex-shrink: 0;
+      margin: 0 0 0 8px;
+    }
+  }
+
+  &__card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+  }
+}
+
+html.wallpaper-active .downloads .download-group {
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html.wallpaper-active .downloads .download-group--hero,
+html.wallpaper-active .downloads .download-group--queued,
+html.wallpaper-active .downloads .download-group--completed,
+html.wallpaper-active .downloads .download-group__header,
+html.wallpaper-active .downloads .downloads__sub-tabs,
+html.wallpaper-active .downloads .downloads__sub-tab {
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}

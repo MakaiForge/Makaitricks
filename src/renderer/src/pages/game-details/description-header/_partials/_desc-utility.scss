@@ -1,0 +1,43 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.description-header {
+  padding: calc(token.$spacing-unit * 2);
+
+  &__info {
+    gap: calc(token.$spacing-unit * 0.5);
+
+    p {
+      font-size: token.$small-font-size;
+    }
+  }
+
+  &__actions {
+    gap: calc(token.$spacing-unit * 0.5);
+  }
+
+  &__dropdown {
+    padding: calc(token.$spacing-unit * 1);
+  }
+
+  &__dropdown-header {
+    margin: calc(token.$spacing-unit * 1) 0 calc(token.$spacing-unit * 0.5);
+  }
+
+  &__deal {
+    gap: calc(token.$spacing-unit * 0.75);
+    padding: calc(token.$spacing-unit * 0.5) calc(token.$spacing-unit * 0.75);
+  }
+
+  &__store-name {
+    font-size: token.$small-font-size;
+  }
+
+  &__deal-price {
+    font-size: token.$small-font-size;
+  }
+
+  &__gg-link {
+    padding: calc(token.$spacing-unit * 0.75);
+    margin-top: calc(token.$spacing-unit * 0.5);
+  }
+}

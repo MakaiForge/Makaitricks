@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/text" as token;
+
+.game-item {
+  &__genres {
+    color: token.$body-color;
+  }
+}

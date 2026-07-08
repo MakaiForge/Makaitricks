@@ -1,0 +1,15 @@
+@use "../../scss/tokens/utility" as token;
+
+.downloads {
+  &__groups {
+    gap: calc(token.$spacing-unit * 3);
+  }
+
+  &__arrow-icon {
+    margin-bottom: calc(token.$spacing-unit * 2);
+  }
+
+  &__no-downloads {
+    gap: token.$spacing-unit;
+  }
+}

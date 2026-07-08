@@ -1,0 +1,72 @@
+.games__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+
+  .TextField {
+    height: 30px;
+    font-size: 12px;
+    min-width: 140px;
+    max-width: 200px;
+  }
+}
+
+.games__toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.games__toolbar-view {
+  display: flex;
+  gap: 2px;
+
+  button {
+    padding: 4px 7px;
+    font-size: 13px;
+    line-height: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover { background: rgba(255, 255, 255, 0.06); color: rgba(255, 255, 255, 0.7); }
+    &.active { background: rgba(255, 255, 255, 0.1); color: #fff; }
+  }
+}
+
+.games__toolbar-hide {
+  padding: 4px 7px;
+  font-size: 13px;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.4);
+
+  &.active { opacity: 0.5; }
+  &:hover { background: rgba(255, 255, 255, 0.06); }
+}
+
+.games__toolbar-filter {
+  padding: 4px 7px;
+  font-size: 13px;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.4);
+
+  &.active {
+    color: #4fc3f7;
+    background: rgba(79, 195, 247, 0.1);
+  }
+  &:hover { background: rgba(255, 255, 255, 0.06); }
+}

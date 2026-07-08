@@ -1,0 +1,60 @@
+{
+  "gameId": "terraria",
+  "steamAppId": "105600",
+  "totalReports": 15,
+  "versions": [
+    {
+      "version": "5.0-9",
+      "total": 6,
+      "positive": 4,
+      "negative": 2,
+      "positiveRatio": 0.67
+    },
+    {
+      "version": "5.0-10",
+      "total": 4,
+      "positive": 4,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.5-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-8",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton-Custom",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "Proton Experimental",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "8.0-5",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "5.0-9",
+    "5.0-10"
+  ]
+}

@@ -1,0 +1,20 @@
+@use "../../../scss/tokens/app-bg" as token;
+@use "../../../scss/tokens/utility" as util;
+
+.game-details {
+  &__description-container {
+    background: linear-gradient(
+      0deg,
+      token.$background-color 50%,
+      token.$dark-background-color 100%
+    );
+  }
+
+  &__description {
+    &--collapsed {
+      &::after {
+        background: linear-gradient(transparent, token.$background-color);
+      }
+    }
+  }
+}

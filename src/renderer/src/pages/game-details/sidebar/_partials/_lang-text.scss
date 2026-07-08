@@ -1,0 +1,19 @@
+@use "../../../../scss/tokens/text" as token;
+
+.game-language-section {
+  &__header-item {
+    color: token.$muted-color;
+  }
+
+  &__cell {
+    color: token.$body-color;
+  }
+
+  &__check {
+    color: token.$body-color;
+  }
+
+  &__cross {
+    color: token.$body-color;
+  }
+}

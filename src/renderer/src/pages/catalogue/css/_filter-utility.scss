@@ -1,0 +1,13 @@
+@use "../../../scss/tokens/utility" as token;
+
+.filter-section {
+  &__button {
+    padding: calc(token.$spacing-unit * 2.5) calc(token.$spacing-unit * 2);
+    gap: token.$spacing-unit;
+    font-size: token.$body-font-size;
+
+    &:active {
+      opacity: token.$active-opacity;
+    }
+  }
+}

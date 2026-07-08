@@ -1,0 +1,11 @@
+.settings-appearance {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

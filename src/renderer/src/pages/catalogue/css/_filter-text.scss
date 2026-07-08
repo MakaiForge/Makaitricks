@@ -1,0 +1,31 @@
+@use "../../../scss/tokens/text" as token;
+
+.filter-item {
+  color: token.$body-color;
+
+  &__remove-button {
+    color: color-mix(
+      in srgb,
+      token.$body-color 84%,
+      var(--filter-item-color) 16%
+    );
+
+    &:hover {
+      color: var(--accent, #6366f1);
+    }
+  }
+}
+
+.filter-section {
+  &__button {
+    color: token.$muted-color;
+  }
+
+  &__clear-button {
+    color: token.$body-color;
+
+    &:focus-visible {
+      outline: 2px solid token.$muted-color;
+    }
+  }
+}

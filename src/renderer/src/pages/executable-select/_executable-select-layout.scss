@@ -1,0 +1,159 @@
+.executable-select {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.executable-select__header {
+  padding: 24px 24px 0;
+  -webkit-app-region: drag;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #fff;
+  }
+}
+
+.executable-select__subtitle {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+.executable-select__content {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-y: auto;
+}
+
+.executable-select__description {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 12px;
+}
+
+.executable-select__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.executable-select__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+
+  &:hover {
+    background: #2a2a2a;
+    border-color: #555;
+  }
+
+  &--selected {
+    background: #1a3a5c;
+    border-color: #4a9eff;
+  }
+}
+
+.executable-select__option-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.executable-select__option-name {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.executable-select__option-path {
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.executable-select__option-size {
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.executable-select__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid #333;
+  gap: 8px;
+}
+
+.executable-select__actions-right {
+  display: flex;
+  gap: 8px;
+}
+
+.executable-select__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 16px;
+  color: #999;
+}
+
+.executable-select__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  font-size: 16px;
+  color: #f44;
+}
+
+.executable-select__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  text-align: center;
+  padding: 24px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+
+  p {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+  }
+}
+
+.executable-select__success-icon {
+  color: #27ae60;
+}

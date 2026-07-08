@@ -1,0 +1,1 @@
+export { GameConfigPanel } from "./GameConfigPanel";

@@ -1,0 +1,180 @@
+{
+  "gameId": "larian",
+  "steamAppId": "1086940",
+  "totalReports": 62,
+  "versions": [
+    {
+      "version": "5.0-9",
+      "total": 19,
+      "positive": 19,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.9-7",
+      "total": 12,
+      "positive": 10,
+      "negative": 2,
+      "positiveRatio": 0.83
+    },
+    {
+      "version": "8.0-5",
+      "total": 3,
+      "positive": 2,
+      "negative": 1,
+      "positiveRatio": 0.67
+    },
+    {
+      "version": "GE-Proton5.9-8",
+      "total": 3,
+      "positive": 1,
+      "negative": 2,
+      "positiveRatio": 0.33
+    },
+    {
+      "version": "6.3-5",
+      "total": 3,
+      "positive": 1,
+      "negative": 2,
+      "positiveRatio": 0.33
+    },
+    {
+      "version": "GE-Proton6.1-2",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton Experimental",
+      "total": 2,
+      "positive": 2,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-8",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    },
+    {
+      "version": "proton-tkg 5.18.r3.g9acfa3b8",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-7",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-5.9-GE.7.ST",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-10 RC3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton5.21-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.4-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-4 RC",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-7",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.20-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton-7.0rc6-GE-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0-3",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "8.0-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "7.0-6",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "Proton Hotfix",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton6.10-1",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    },
+    {
+      "version": "GE-Proton6.21-2",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "5.0-9",
+    "GE-Proton5.9-7",
+    "8.0-5"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "gameId": "starfield",
+  "steamAppId": "1716740",
+  "totalReports": 6,
+  "versions": [
+    {
+      "version": "8.0-5",
+      "total": 5,
+      "positive": 4,
+      "negative": 1,
+      "positiveRatio": 0.8
+    },
+    {
+      "version": "9.0-3",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": [
+    "8.0-5"
+  ]
+}

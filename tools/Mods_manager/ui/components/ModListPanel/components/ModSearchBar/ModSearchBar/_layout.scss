@@ -1,0 +1,25 @@
+.mod-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #222;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.mod-search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #d0d0d0;
+  font-size: 12px;
+  outline: none;
+}
+
+.mod-search-bar input::placeholder { color: #666; }
+
+.mod-search-bar svg {
+  color: #666;
+  width: 14px;
+  height: 14px;
+}

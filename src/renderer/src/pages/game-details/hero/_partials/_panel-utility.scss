@@ -1,0 +1,27 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.hero-panel {
+  padding: calc(token.$spacing-unit * 2) calc(token.$spacing-unit * 3);
+
+  &__content {
+    gap: calc(token.$spacing-unit * 0.5);
+
+    p {
+      font-size: token.$small-font-size;
+    }
+  }
+
+  &__actions {
+    gap: token.$spacing-unit;
+  }
+
+  &__download-details {
+    gap: token.$spacing-unit;
+  }
+
+  &__progress-bar {
+    &--disabled {
+      opacity: token.$disabled-opacity;
+    }
+  }
+}

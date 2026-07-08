@@ -1,0 +1,131 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.game-options-modal {
+  &__container {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__sidebar {
+    gap: token.$spacing-unit;
+    padding: calc(token.$spacing-unit * 2) calc(token.$spacing-unit * 1.75);
+  }
+
+  &__sidebar-button {
+    gap: token.$spacing-unit;
+    padding: calc(token.$spacing-unit * 1.25) calc(token.$spacing-unit * 1.5);
+    font-size: token.$body-font-size;
+  }
+
+  &__panel {
+    gap: calc(token.$spacing-unit * 2.5);
+    padding: calc(token.$spacing-unit * 2.5);
+  }
+
+  &__panel-header {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__section {
+    gap: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__header {
+    gap: token.$spacing-unit;
+  }
+
+  &__cloud-panel {
+    gap: token.$spacing-unit;
+  }
+
+  &__row {
+    gap: token.$spacing-unit;
+  }
+
+  &__executable-field {
+    gap: token.$spacing-unit;
+
+    &-buttons {
+      gap: token.$spacing-unit;
+      margin-top: calc(token.$spacing-unit / 2);
+    }
+  }
+
+  &__wine-prefix {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__launch-options {
+    gap: token.$spacing-unit;
+  }
+
+  &__mangohud-toggle {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__gamemode-toggle {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__mangohud-label {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__gamemode-label {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__mangohud-link {
+    gap: calc(token.$spacing-unit / 3);
+  }
+
+  &__gamemode-link {
+    gap: calc(token.$spacing-unit / 3);
+  }
+
+  &__downloads {
+    gap: token.$spacing-unit;
+  }
+
+  &__danger-zone {
+    gap: token.$spacing-unit;
+
+    &-buttons {
+      gap: token.$spacing-unit;
+    }
+  }
+
+  &__category-note {
+    font-size: token.$small-font-size;
+  }
+
+  @media (max-width: 860px) {
+    &__sidebar {
+      padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2) token.$spacing-unit;
+    }
+
+    &__panel {
+      padding-top: token.$spacing-unit;
+    }
+  }
+}
+
+.drive-selector {
+  gap: token.$spacing-unit;
+
+  &__list {
+    margin-bottom: calc(token.$spacing-unit / 2);
+  }
+
+  &__custom {
+    margin-top: calc(token.$spacing-unit / 2);
+  }
+
+  &__error {
+    margin: calc(token.$spacing-unit / 2) 0 0;
+    font-size: token.$small-font-size;
+  }
+
+  &__actions {
+    margin-top: calc(token.$spacing-unit / 2);
+  }
+}

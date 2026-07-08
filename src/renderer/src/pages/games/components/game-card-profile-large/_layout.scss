@@ -1,0 +1,109 @@
+.games-card-profile-large {
+  cursor: pointer;
+  transition: all ease 0.2s;
+  box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 172%;
+    position: absolute;
+    background: linear-gradient(
+      35deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.07) 51.5%,
+      rgba(255, 255, 255, 0.15) 64%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    transition: opacity ease 0.3s;
+    transform: translateY(-36%);
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &__overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 20%, transparent 100%);
+    padding: 8px;
+    z-index: 2;
+  }
+
+  &__top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__playtime {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.8);
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.75rem;
+  }
+
+  &__favorite {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #e74c3c;
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__cover-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

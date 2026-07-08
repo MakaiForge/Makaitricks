@@ -1,0 +1,21 @@
+@use "../../scss/tokens/border" as token;
+
+.games {
+  &__divider {
+    width: 1px;
+    height: 20px;
+    background: token.$border-color;
+    flex-shrink: 0;
+  }
+
+  &__toolbar-select {
+    padding: 4px 8px;
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid token.$border-color;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    height: 30px;
+  }
+}

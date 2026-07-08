@@ -1,0 +1,32 @@
+@use "../../../scss/tokens/utility" as token;
+
+.home {
+  &__tabs {
+    padding: 0 calc(token.$spacing-unit * 3);
+  }
+
+  &__content {
+    padding: calc(token.$spacing-unit * 3);
+    gap: calc(token.$spacing-unit * 3);
+  }
+
+  &__section {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__section-title {
+    font-family: token.$heading-font;
+  }
+
+  &__deals-grid {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__free-grid {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__empty {
+    padding: calc(token.$spacing-unit * 2) 0;
+  }
+}

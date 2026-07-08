@@ -1,0 +1,58 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.cloud-sync-panel {
+  &__section-header {
+    gap: calc(token.$spacing-unit / 2);
+    margin-bottom: calc(token.$spacing-unit / 2);
+  }
+
+  &__header {
+    gap: token.$spacing-unit;
+    margin-bottom: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__automatic-sync {
+    margin-bottom: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__automatic-sync-label {
+    gap: token.$spacing-unit;
+  }
+
+  &__automatic-sync-badge {
+    padding: 0 token.$spacing-unit;
+    font-size: token.$small-font-size;
+  }
+
+  &__title-container {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__backups-header {
+    gap: token.$spacing-unit;
+    margin-bottom: token.$spacing-unit;
+  }
+
+  &__backups-count {
+    font-size: token.$small-font-size;
+  }
+
+  &__artifacts {
+    gap: token.$spacing-unit;
+  }
+
+  &__artifact {
+    gap: token.$spacing-unit;
+    padding: calc(token.$spacing-unit * 2);
+  }
+
+  &__upgrade {
+    gap: token.$spacing-unit;
+  }
+
+  &__manage-files-button {
+    &:disabled {
+      opacity: token.$disabled-opacity;
+    }
+  }
+}

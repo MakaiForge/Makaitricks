@@ -1,0 +1,145 @@
+@use "../variables" as *;
+
+.backup-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backup-panel {
+  border-radius: 12px;
+  width: 90%;
+  max-width: 520px;
+  overflow: hidden;
+  color: $text-primary;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid $border;
+
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: all 0.15s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: $text-primary;
+    }
+  }
+
+  &__status {
+    padding: 12px 20px;
+    border-bottom: 1px solid $border;
+  }
+
+  &__connected {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    background: rgba(28, 151, 73, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(28, 151, 73, 0.2);
+  }
+
+  &__error {
+    margin: 12px 20px 0;
+    padding: 10px 14px;
+    background: rgba(128, 29, 30, 0.15);
+    border: 1px solid rgba(225, 29, 72, 0.3);
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+
+  &__menu {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid $border;
+    border-radius: 10px;
+    color: $text-primary;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: $border;
+      }
+    }
+  }
+
+  &__progress {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__result-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__result-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__result-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid $border;
+
+    span {
+      font-size: 0.85rem;
+    }
+  }
+}

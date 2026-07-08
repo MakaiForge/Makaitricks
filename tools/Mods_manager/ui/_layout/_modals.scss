@@ -1,0 +1,144 @@
+.mod-manager {
+  &__preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70vh;
+    overflow: auto;
+  }
+
+  &__preview-img {
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  &__preview-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    button {
+      background: #333;
+      color: #ccc;
+      border: none;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      &:hover:not(:disabled) { background: #555; }
+      &:disabled { opacity: 0.4; cursor: default; }
+    }
+    span { color: #888; font-size: 12px; }
+  }
+
+  &__readme {
+    max-height: 70vh;
+    overflow: auto;
+  }
+
+  &__readme-content {
+    background: #111;
+    color: #ccc;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  &__install-modal {
+    padding: 12px;
+    p { color: #999; margin-bottom: 12px; }
+  }
+
+  &__install-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  &__config-form {
+    padding: 12px;
+    label {
+      display: block;
+      color: #aaa;
+      font-size: 11px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+    input {
+      width: 100%;
+      background: #2a2a2a;
+      border: 1px solid #3a3a3a;
+      border-radius: 4px;
+      padding: 6px 8px;
+      color: #d0d0d0;
+      font-size: 12px;
+      outline: none;
+      box-sizing: border-box;
+      &:focus { border-color: #4a9eff; }
+    }
+  }
+
+  &__config-row {
+    display: flex;
+    gap: 6px;
+    input { flex: 1; }
+  }
+
+  &__config-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+}
+
+.mod-manager__conflicts {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mod-manager__conflict {
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border-left: 3px solid #888;
+
+  &--plugin { border-left-color: #f44; }
+  &--script { border-left-color: #fa0; }
+  &--asset  { border-left-color: #4a4; }
+}
+
+.mod-manager__conflict-path {
+  font-family: monospace;
+  font-size: 12px;
+  color: #ccc;
+  word-break: break-all;
+  margin-bottom: 4px;
+}
+
+.mod-manager__conflict-mods {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.mod-manager__conflict-winner { color: #4c4; }
+.mod-manager__conflict-loser { color: #a44; }
+
+.mod-manager__conflict-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+  p { margin: 0; flex: 1; font-size: 12px; }
+}

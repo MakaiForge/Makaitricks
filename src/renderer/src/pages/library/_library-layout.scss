@@ -1,0 +1,131 @@
+.library__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 32px;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.library__page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.library__controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.library__controls-left,
+.library__controls-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.library__collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.library__collection-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &--active {
+    border-color: transparent;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.library__collection-count {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.library__no-games,
+.library__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 12px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    max-width: 400px;
+  }
+}
+
+.library__telescope-icon,
+.library__icon-container {
+  opacity: 0.5;
+}
+
+.library__games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &--large {
+    gap: 16px;
+  }
+}
+
+.library__games-grid {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+
+  &--grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  &--compact {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.library__collection-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.library__collection-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

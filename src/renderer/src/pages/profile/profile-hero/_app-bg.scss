@@ -1,0 +1,7 @@
+@use '../../../scss/tokens/app-bg' as token;
+
+.profile-hero {
+  &__avatar-button {
+    background-color: token.$background-color;
+  }
+}

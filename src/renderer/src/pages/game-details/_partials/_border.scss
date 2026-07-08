@@ -1,0 +1,13 @@
+@use "../../../scss/tokens/border" as token;
+
+.game-details {
+  &__description-toggle {
+    border: 1px solid token.$border-color;
+  }
+
+  &__skeleton {
+    .review-item-skeleton {
+      border: 1px solid token.$border-color;
+    }
+  }
+}

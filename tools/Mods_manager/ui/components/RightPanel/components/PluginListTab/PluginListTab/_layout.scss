@@ -1,0 +1,36 @@
+.plugin-list-tab__empty {
+  padding: 24px 16px;
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+}
+
+.plugin-list-tab__header {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #222;
+}
+
+.plugin-list-tab__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.plugin-list-tab__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #bbb;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.plugin-list-tab__row input[type="checkbox"] { accent-color: #4a9eff; }
+.plugin-list-tab__row--enabled { color: #e0e0e0; }
+.plugin-list-tab__name { flex: 1; }
+.plugin-list-tab__masters { font-size: 10px; color: #555; }

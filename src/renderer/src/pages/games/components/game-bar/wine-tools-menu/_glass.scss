@@ -1,0 +1,16 @@
+@use "../../../../../scss/tokens/glass" as token;
+
+.wine-tools-menu {
+  &__dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 8px;
+    @include token.glass-strong;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: hidden;
+  }
+}

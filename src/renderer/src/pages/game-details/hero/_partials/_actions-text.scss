@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/text" as token;
+
+.hero-panel-actions {
+  &__action {
+    border: solid 1px token.$muted-color;
+  }
+
+  &__separator {
+    background-color: token.$muted-color;
+  }
+}

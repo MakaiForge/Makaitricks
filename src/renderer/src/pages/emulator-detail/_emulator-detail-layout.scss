@@ -1,0 +1,400 @@
+.emulator-detail {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__loading {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &__icon-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__info {
+    flex: 1;
+
+    h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+  }
+
+  &__platforms {
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 0.1rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin-top: 0.2rem;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  &__version {
+    font-size: 0.75rem;
+    background: rgba(28, 151, 73, 0.15);
+    color: #1c9749;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  &__play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &--running {
+      border-color: #e74c3c;
+      color: #e74c3c;
+
+      &:hover {
+        background: #e74c3c;
+        color: #fff;
+      }
+    }
+  }
+
+  &__spinner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    animation: emulator-spin 0.6s linear infinite;
+  }
+
+  @keyframes emulator-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  &__hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    height: 268px;
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  &__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  &__slideshow {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
+    background: #0c0c12;
+  }
+
+  &__slideshow-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0c0c12 0%, #1a1025 50%, #0c0c12 100%);
+    z-index: 0;
+  }
+
+  &__slideshow-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+
+    &.loaded { opacity: 1; }
+  }
+
+  &__slideshow-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(12, 12, 18, 0.7) 0%,
+      rgba(12, 12, 18, 0.25) 40%,
+      rgba(12, 12, 18, 0.5) 70%,
+      rgba(12, 12, 18, 0.9) 100%
+    );
+    z-index: 2;
+  }
+
+  &__slideshow-label {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 3;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.3rem 0.7rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  &__sites {
+    margin-top: 2rem;
+  }
+
+  &__sites-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    h2 { font-size: 1rem; margin: 0; }
+  }
+
+  &__add-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.15s;
+  }
+
+  &__sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  &__site-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      .emulator-detail__site-card-icon { opacity: 1; }
+      .emulator-detail__site-card-info { background: linear-gradient(135deg, rgba(128, 90, 213, 0.15), rgba(168, 85, 247, 0.08)); }
+    }
+  }
+
+  &__site-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__site-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__site-card-info {
+    padding: 0.6rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    transition: background 0.2s;
+
+    strong {
+      font-size: 0.85rem;
+      color: #c4b5fd;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      font-size: 0.7rem;
+      color: #8b7f9c;
+    }
+  }
+
+  &__site-card-icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &__modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  &__modal {
+    background: #0c0c12;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+    h3 { margin: 0 0 1rem; font-size: 1rem; color: #c4b5fd; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.8rem;
+      color: #8b8f9a;
+    }
+
+    input {
+      padding: 0.55rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #1a1a24;
+      color: #f0f1f7;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.15s;
+
+      &::placeholder { color: #555; }
+      &:focus { border-color: var(--accent, #6366f1); }
+    }
+  }
+
+  &__modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    button {
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: transparent;
+      color: #b0b1b7;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.15s;
+
+      &[type="submit"] {
+        background: var(--accent-gradient, linear-gradient(135deg, #6366f1, #8b5cf6));
+        color: #fff;
+        border: none;
+
+        &:disabled { opacity: 0.4; cursor: not-allowed; }
+        &:hover:not(:disabled) { filter: brightness(1.15); }
+      }
+
+      &:first-child:hover { background: rgba(255, 255, 255, 0.06); }
+    }
+  }
+}

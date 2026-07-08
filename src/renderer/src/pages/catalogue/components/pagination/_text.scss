@@ -1,0 +1,16 @@
+@use "../../../../scss/tokens/text" as token;
+
+.pagination {
+  &__button.button--outline {
+    color: var(--accent, #6366f1);
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__page-input {
+    color: token.$muted-color;
+  }
+}

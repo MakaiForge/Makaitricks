@@ -1,0 +1,185 @@
+.game-config-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.game-config-modal {
+  border-radius: 16px;
+  width: 930px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow: hidden;
+
+  &__tab-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  &__tab-list {
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+
+    scrollbar-width: none;
+  }
+
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  &__add-env {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  &__progress-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    animation: fadeIn 0.1s ease-out;
+  }
+
+  &__progress-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__progress-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__progress-error {
+    font-size: 0.8125rem;
+    color: #e74c3c;
+    margin-top: 0.5rem;
+    word-break: break-all;
+  }
+
+  &__x11-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  &__x11-label {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+
+    &--active {
+      color: #a855f7;
+    }
+  }
+
+  &__x11-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+
+    &--active {
+      background: linear-gradient(135deg, #a855f7, #7c3aed);
+    }
+
+    &--inactive {
+      background: #444;
+    }
+  }
+
+  &__x11-knob {
+    position: absolute;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &--on {
+      left: 22px;
+    }
+
+    &--off {
+      left: 2px;
+    }
+  }
+
+  &__library-btn {
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: rgba(168, 85, 247, 0.1);
+    color: #c084fc;
+    transition: all 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, #a855f7, #06b6d4);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &--done {
+      background: rgba(46, 204, 113, 0.15);
+      border-color: rgba(46, 204, 113, 0.3);
+      color: #2ecc71;
+    }
+
+    &--error {
+      background: rgba(231, 76, 60, 0.15);
+      border-color: rgba(231, 76, 60, 0.3);
+      color: #e74c3c;
+    }
+  }
+}

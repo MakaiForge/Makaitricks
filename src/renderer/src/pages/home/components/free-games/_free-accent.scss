@@ -1,0 +1,14 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.home {
+  &__free-badge {
+    background: token.$brand-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__free-ends {
+    color: token.$warning-color;
+  }
+}

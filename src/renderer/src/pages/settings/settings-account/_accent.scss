@@ -1,0 +1,7 @@
+@use "../../../scss/tokens/accent";
+
+.settings-account {
+  &__unblock-button {
+    color: accent.$danger-color;
+  }
+}

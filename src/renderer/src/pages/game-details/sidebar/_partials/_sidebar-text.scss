@@ -1,0 +1,43 @@
+@use "../../../../scss/tokens/text" as token;
+
+.list {
+  &__item {
+    color: token.$muted-color;
+  }
+}
+
+.how-long-to-beat {
+  &__category-label {
+    color: token.$muted-color;
+  }
+}
+
+.protondb {
+  &__category-title {
+    color: token.$muted-color;
+  }
+
+  &__confidence {
+    color: token.$muted-color;
+  }
+
+  &__alt-title {
+    color: token.$muted-color;
+  }
+
+  &__alt-version {
+    color: token.$muted-color;
+  }
+
+  &__alt-notes {
+    color: token.$muted-color;
+  }
+}
+
+.requirement {
+  &__details {
+    a {
+      color: token.$body-color;
+    }
+  }
+}

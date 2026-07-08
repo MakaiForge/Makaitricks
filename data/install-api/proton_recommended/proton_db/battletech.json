@@ -1,0 +1,29 @@
+{
+  "gameId": "battletech",
+  "steamAppId": "637090",
+  "totalReports": 3,
+  "versions": [
+    {
+      "version": "GE-Proton1.19-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "GE-Proton4.21-2",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "6.3-8",
+      "total": 1,
+      "positive": 0,
+      "negative": 1,
+      "positiveRatio": 0.0
+    }
+  ],
+  "recommended": []
+}

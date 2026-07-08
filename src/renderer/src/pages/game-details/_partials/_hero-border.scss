@@ -1,0 +1,15 @@
+@use "../../../scss/tokens/border" as token;
+
+.game-details {
+  &__edit-custom-game-button {
+    border: solid 1px token.$border-color;
+  }
+
+  &__cloud-sync-button {
+    border: solid 1px token.$border-color;
+  }
+
+  &__randomizer-button {
+    border: solid 1px token.$border-color;
+  }
+}

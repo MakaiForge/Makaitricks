@@ -1,0 +1,9 @@
+.add-theme-modal {
+  &__css-textarea {
+    border: 1px solid var(--border-color);
+
+    &:focus {
+      border-color: var(--accent);
+    }
+  }
+}

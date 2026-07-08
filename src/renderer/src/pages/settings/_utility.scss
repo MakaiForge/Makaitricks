@@ -1,0 +1,38 @@
+@use "../../scss/tokens/utility";
+
+.settings {
+  &__sidebar {
+    gap: utility.$spacing-unit;
+    padding: calc(utility.$spacing-unit * 2) calc(utility.$spacing-unit * 1.75);
+  }
+
+  &__sidebar-button {
+    gap: utility.$spacing-unit;
+    padding: calc(utility.$spacing-unit * 1.25) calc(utility.$spacing-unit * 1.5);
+    font-size: utility.$body-font-size;
+  }
+
+  &__panel {
+    gap: calc(utility.$spacing-unit * 2.5);
+    padding: calc(utility.$spacing-unit * 2.5);
+  }
+
+  @media (max-width: 860px) {
+    &__sidebar {
+      padding: calc(utility.$spacing-unit * 1.5) calc(utility.$spacing-unit * 2) utility.$spacing-unit;
+    }
+
+    &__panel {
+      padding-top: utility.$spacing-unit;
+    }
+  }
+}
+
+.settings-context-panel {
+  gap: calc(utility.$spacing-unit * 2);
+
+  &__group {
+    gap: calc(utility.$spacing-unit * 1.5);
+    padding-top: calc(utility.$spacing-unit * 1.5);
+  }
+}

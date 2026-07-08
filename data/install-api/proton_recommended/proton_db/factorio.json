@@ -1,0 +1,17 @@
+{
+  "gameId": "factorio",
+  "steamAppId": "427520",
+  "totalReports": 2,
+  "versions": [
+    {
+      "version": "9.0-2",
+      "total": 2,
+      "positive": 1,
+      "negative": 1,
+      "positiveRatio": 0.5
+    }
+  ],
+  "recommended": [
+    "9.0-2"
+  ]
+}

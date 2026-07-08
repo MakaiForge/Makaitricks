@@ -1,0 +1,15 @@
+@use "../../../../scss/tokens/text" as token;
+
+.home {
+  &__carousel-title {
+    color: token.$muted-color;
+  }
+
+  &__carousel-desc {
+    color: token.$body-color;
+  }
+
+  &__carousel-dot--active {
+    background: token.$muted-color;
+  }
+}

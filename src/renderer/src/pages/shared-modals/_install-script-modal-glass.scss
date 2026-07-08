@@ -1,0 +1,35 @@
+@use "../../scss/tokens/glass" as token;
+
+.install-script-modal {
+  &__tag {
+    @include token.glass;
+  }
+
+  &__section {
+    @include token.glass;
+  }
+
+  &__preview-content {
+    @include token.glass;
+  }
+
+  &__progress {
+    @include token.glass;
+  }
+
+  &__log {
+    @include token.glass;
+  }
+
+  &__error-box {
+    @include token.glass-strong;
+  }
+
+  &__loading {
+    @include token.glass;
+  }
+
+  &__comments {
+    @include token.glass;
+  }
+}

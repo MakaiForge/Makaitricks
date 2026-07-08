@@ -1,0 +1,117 @@
+@use "../../css/variables" as *;
+
+.prefix-progress-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.prefix-progress-modal {
+  background: #1a1a2e;
+  border: 1px solid color-mix(in srgb, var(--accent, #ad1457) 30%, rgba(255,255,255,0.1));
+  border-radius: 12px;
+  min-width: 420px;
+  max-width: 560px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: color-mix(in srgb, var(--accent, #ad1457) 20%, #0d0d1a);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent, #ad1457) 15%, rgba(255,255,255,0.05));
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #e0e0e0;
+      font-weight: 600;
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 1;
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+  }
+
+  &__body {
+    padding: 20px;
+    min-height: 80px;
+    max-height: 240px;
+    overflow-y: auto;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  &__pending {
+    color: #666;
+    font-style: italic;
+    font-family: inherit;
+  }
+
+  &__line {
+    color: #ccc;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    &.--error {
+      color: #f66;
+      font-weight: 600;
+    }
+    &.--done {
+      color: #6f6;
+      font-weight: 600;
+    }
+    &.--warn {
+      color: #fd6;
+    }
+  }
+
+  &__spinner {
+    margin-top: 8px;
+    color: $text-secondary;
+    animation: pulse 1s infinite;
+  }
+
+  &__result {
+    padding: 12px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    &.--ok {
+      background: rgba(80,200,80,0.15);
+      color: #8f8;
+      border-top: 1px solid rgba(80,200,80,0.2);
+    }
+    &.--fail {
+      background: rgba(255,80,80,0.15);
+      color: #f88;
+      border-top: 1px solid rgba(255,80,80,0.2);
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

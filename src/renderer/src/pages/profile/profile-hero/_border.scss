@@ -1,0 +1,7 @@
+@use '../../../scss/tokens/border' as token;
+
+.profile-hero {
+  &__avatar-button {
+    border: solid 1px token.$border-color;
+  }
+}

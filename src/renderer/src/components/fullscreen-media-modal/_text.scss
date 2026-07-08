@@ -1,0 +1,7 @@
+@use "../../scss/tokens/text";
+
+.fullscreen-media-modal {
+  &__close-button {
+    color: text.$body-color;
+  }
+}

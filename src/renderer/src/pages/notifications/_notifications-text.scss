@@ -1,0 +1,7 @@
+@use "../../scss/tokens/text" as token;
+
+.notifications {
+  &__empty-filter {
+    color: token.$body-color;
+  }
+}

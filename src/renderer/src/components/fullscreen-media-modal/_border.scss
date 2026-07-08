@@ -1,0 +1,7 @@
+@use "../../scss/tokens/border";
+
+.fullscreen-media-modal {
+  &__close-button {
+    border: 1px solid border.$border-color;
+  }
+}

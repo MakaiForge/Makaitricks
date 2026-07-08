@@ -1,0 +1,24 @@
+@use "../../scss/tokens/app-bg";
+@use "../../scss/tokens/border";
+
+.settings {
+  &__content {
+    background-color: app-bg.$background-color;
+  }
+
+  &__sidebar {
+    background: app-bg.$dark-background-color;
+  }
+
+  &__panel {
+    background-color: app-bg.$background-color;
+  }
+}
+
+.settings-context-panel {
+  background-color: app-bg.$background-color;
+
+  &__group {
+    background-color: app-bg.$background-color;
+  }
+}

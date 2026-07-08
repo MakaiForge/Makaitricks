@@ -1,0 +1,29 @@
+.runners {
+  &__category-title {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__card {
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  &__card-footer {
+    border-top: 1px solid var(--border-color);
+  }
+
+  &__card-notes {
+    border-left: 2px solid var(--border-color);
+  }
+
+  &__toggles {
+    border-top: 1px solid var(--border-color);
+  }
+
+  &__popup {
+    border: 1px solid var(--primary);
+  }
+}

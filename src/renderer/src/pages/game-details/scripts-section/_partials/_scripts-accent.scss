@@ -1,0 +1,13 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.scripts-section {
+  &__btn {
+    &--install {
+      background: token.$brand-gradient;
+
+      &:hover {
+        background: token.$brand-gradient-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../../../../scss/tokens/border";
+
+.theme-placeholder {
+  background-color: rgba(border.$border-color, 0.01);
+  border: 1px dashed border.$border-color;
+
+  &:hover {
+    background-color: rgba(border.$border-color, 0.03);
+  }
+}

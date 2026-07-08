@@ -1,0 +1,85 @@
+@use "../../scss/tokens/accent" as token;
+@use "../../scss/tokens/border" as border;
+
+.games {
+  &__sync-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid border.$border-color;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      background: token.$brand-gradient;
+      color: #fff;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__backup-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid border.$border-color;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(22, 177, 149, 0.12), rgba(22, 177, 149, 0.04));
+    color: rgb(22, 177, 149);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 4px;
+
+    &:hover {
+      background: token.$brand-gradient;
+      color: #fff;
+      border-color: transparent;
+    }
+  }
+
+  &__toolbar-add {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid border.$border-color;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    white-space: nowrap;
+    height: 30px;
+    transition: all 0.1s;
+
+    &:hover { background: token.$brand-gradient; color: #fff; border-color: transparent; }
+  }
+
+  &__steam-card-play-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: token.$brand-gradient;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--accent, #6366f1) 40%, transparent);
+  }
+}

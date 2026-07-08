@@ -1,0 +1,8 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.cloud-sync-rename-artifact-modal {
+  &__form-actions {
+    gap: 8px;
+    margin-top: 16px;
+  }
+}

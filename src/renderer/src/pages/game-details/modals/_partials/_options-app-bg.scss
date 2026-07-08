@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/app-bg" as token;
+
+.game-options-modal {
+  &__sidebar {
+    background: token.$dark-background-color;
+  }
+}
+
+.drive-card {
+  background: token.$dark-background-color;
+}

@@ -1,0 +1,46 @@
+.game-assets-settings {
+  &__asset-label {
+    color: var(--color-text);
+  }
+
+  &__resolution-info {
+    color: var(--color-text-secondary);
+  }
+
+  &__image-preview {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background-secondary);
+
+    &[type="button"] {
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+    }
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__drop-zone {
+    &:hover {
+      border-color: var(--color-primary);
+      background-color: rgba(var(--color-primary-rgb), 0.05);
+    }
+  }
+
+  &__drop-zone--active {
+    border-color: var(--color-primary) !important;
+    background-color: rgba(var(--color-primary-rgb), 0.1) !important;
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.3);
+  }
+
+  &__drop-overlay {
+    background-color: rgba(var(--color-primary-rgb), 0.9);
+  }
+
+  &__drop-zone-content {
+    color: var(--color-text-secondary);
+  }
+}

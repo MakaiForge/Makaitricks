@@ -1,0 +1,7 @@
+@use "../../../scss/tokens/text" as token;
+
+.home {
+  &__section-title {
+    color: token.$muted-color;
+  }
+}

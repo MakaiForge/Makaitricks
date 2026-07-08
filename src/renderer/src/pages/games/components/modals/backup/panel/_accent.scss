@@ -1,0 +1,25 @@
+@use "../../../../../../scss/tokens/accent" as token;
+
+.backup-panel {
+  &__connected {
+    color: token.$success-color;
+  }
+
+  &__error {
+    color: token.$error-color;
+  }
+
+  &__menu-btn--danger {
+    color: token.$error-color;
+    border-color: rgba(225, 29, 72, 0.2);
+
+    &:hover {
+      background: rgba(225, 29, 72, 0.08);
+      border-color: rgba(225, 29, 72, 0.4);
+    }
+  }
+
+  &__result-title {
+    color: token.$success-color;
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../css/variables" as *;
+
+.download-progress {
+  padding: 16px;
+  background: $bg-dark;
+  border-radius: 8px;
+  border: 1px solid $border;
+
+  &__item { margin-bottom: 16px; }
+  &__item:last-child { margin-bottom: 0; }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__label { font-size: 0.85rem; color: $text-secondary; }
+  &__tool { font-size: 0.95rem; font-weight: 600; color: $accent; }
+  &__version { font-size: 0.8rem; color: $text-primary; opacity: 0.7; }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    .progress-bar { flex: 1; }
+  }
+
+  &__percent { font-size: 0.85rem; font-weight: 600; color: $text-primary; min-width: 45px; text-align: right; }
+  &__footer { display: flex; justify-content: flex-end; }
+  &__speed {
+    font-size: 0.85rem;
+    color: $text-secondary;
+
+    &--status {
+      color: #ffcc66;
+      font-style: italic;
+    }
+
+    &--done {
+      color: #66cc66;
+      font-weight: 600;
+    }
+  }
+  &__empty { padding: 24px; text-align: center; color: $text-secondary; }
+}

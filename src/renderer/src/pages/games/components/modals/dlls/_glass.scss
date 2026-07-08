@@ -1,0 +1,5 @@
+@use "../../../../../scss/tokens/glass" as token;
+
+.check-dlls-modal-content {
+  @include token.glass-strong;
+}

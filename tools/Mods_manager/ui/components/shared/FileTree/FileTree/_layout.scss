@@ -1,0 +1,40 @@
+.file-tree {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.file-tree__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  min-height: 24px;
+  &:hover { background: #2a2a2a; }
+}
+
+.file-tree__checkbox {
+  width: 13px; height: 13px;
+  accent-color: #4a9eff;
+  flex-shrink: 0;
+}
+
+.file-tree__icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+
+.file-tree__name {
+  color: #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-tree__name--excluded {
+  color: #666;
+  text-decoration: line-through;
+}

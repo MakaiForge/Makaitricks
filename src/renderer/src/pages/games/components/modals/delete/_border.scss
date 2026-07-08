@@ -1,0 +1,5 @@
+@use "../../../../../scss/tokens/border" as token;
+
+.delete-modal__header {
+  border-bottom: 1px solid token.$border-color;
+}

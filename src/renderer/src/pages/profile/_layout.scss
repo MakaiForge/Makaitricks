@@ -1,0 +1,10 @@
+@use '../../scss/tokens/utility' as token;
+
+.profile {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(token.$spacing-unit * 3);
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "gameId": "stardewvalley",
+  "steamAppId": "413150",
+  "totalReports": 10,
+  "versions": [
+    {
+      "version": "9.0-4",
+      "total": 4,
+      "positive": 3,
+      "negative": 1,
+      "positiveRatio": 0.75
+    },
+    {
+      "version": "7.0-6",
+      "total": 3,
+      "positive": 3,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.0-10",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "5.13-6",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    },
+    {
+      "version": "9.0-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    }
+  ],
+  "recommended": [
+    "9.0-4",
+    "7.0-6"
+  ]
+}

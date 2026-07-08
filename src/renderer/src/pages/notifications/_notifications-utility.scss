@@ -1,0 +1,41 @@
+@use "../../scss/tokens/utility" as token;
+
+.notifications {
+  gap: calc(token.$spacing-unit * 2);
+  padding: calc(token.$spacing-unit * 3);
+
+  &__header {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__filter-tabs {
+    gap: token.$spacing-unit;
+  }
+
+  &__tab {
+    padding: calc(token.$spacing-unit) calc(token.$spacing-unit * 2);
+    gap: calc(token.$spacing-unit * 0.5);
+  }
+
+  &__actions {
+    gap: token.$spacing-unit;
+  }
+
+  &__list {
+    gap: token.$spacing-unit;
+    padding-bottom: calc(token.$spacing-unit * 3);
+  }
+
+  &__empty {
+    gap: token.$spacing-unit;
+  }
+
+  &__icon-container {
+    margin-bottom: calc(token.$spacing-unit * 2);
+  }
+
+  &__load-more {
+    padding: calc(token.$spacing-unit * 2);
+    padding-bottom: calc(token.$spacing-unit * 3);
+  }
+}

@@ -1,0 +1,70 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.repacks-modal {
+  &__filter-top {
+    margin-bottom: calc(token.$spacing-unit * 2);
+    gap: calc(token.$spacing-unit * 1);
+  }
+
+  &__filter-toggle {
+    gap: calc(token.$spacing-unit * 1);
+    font-size: token.$small-font-size;
+    padding: calc(token.$spacing-unit * 1) calc(token.$spacing-unit * 1.5);
+  }
+
+  &__repacks {
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__repack-button {
+    gap: calc(token.$spacing-unit * 1);
+    padding: calc(token.$spacing-unit * 2);
+    padding-right: calc(token.$spacing-unit * 4);
+  }
+
+  &__availability-orb {
+    top: calc(token.$spacing-unit * 1.5);
+    right: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__repack-title {
+    gap: calc(token.$spacing-unit * 1);
+  }
+
+  &__repack-info {
+    font-size: token.$small-font-size;
+  }
+
+  &__no-results {
+    padding: calc(token.$spacing-unit * 4) 0;
+    font-size: token.$small-font-size;
+  }
+
+  &__no-results-content {
+    gap: calc(token.$spacing-unit * 1.5);
+  }
+
+  &__no-results-text {
+    font-size: token.$small-font-size;
+  }
+
+  &__download-sources {
+    margin-bottom: calc(token.$spacing-unit * 2);
+    margin-top: calc(token.$spacing-unit * 1);
+  }
+
+  &__filter-label {
+    font-size: token.$small-font-size;
+    margin-bottom: 0.75rem;
+  }
+
+  &__source-grid {
+    gap: calc(token.$spacing-unit * 1);
+    padding: calc(token.$spacing-unit * 0.5) calc(token.$spacing-unit * 0.5) calc(token.$spacing-unit * 0.5) 0;
+  }
+
+  &__source-item {
+    padding: calc(token.$spacing-unit * 0.75) calc(token.$spacing-unit * 1);
+    min-height: calc(token.$spacing-unit * 5);
+  }
+}

@@ -1,0 +1,5 @@
+@use "../../../../../scss/tokens/glass" as token;
+
+.backup-modal {
+  @include token.glass-strong;
+}

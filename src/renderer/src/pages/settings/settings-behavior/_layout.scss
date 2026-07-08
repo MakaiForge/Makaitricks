@@ -1,0 +1,93 @@
+.settings-behavior {
+  &__proton-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__proton-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__proton-description {
+    margin: 0;
+  }
+
+  &__mangohud-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__gamemode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__mangohud-label {
+    display: inline-flex;
+    align-items: center;
+
+    &--disabled {
+      text-decoration: underline dotted;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__gamemode-label {
+    display: inline-flex;
+    align-items: center;
+
+    &--disabled {
+      text-decoration: underline dotted;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__mangohud-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__gamemode-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__checkbox-container {
+    cursor: not-allowed;
+
+    &--enabled {
+      cursor: pointer;
+    }
+
+    &--with-tooltip {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+    }
+
+    &--tooltip {
+      cursor: pointer;
+    }
+  }
+}
+
+.settings-context-compatibility {
+  &__stack {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__global-toggles {
+    display: flex;
+    flex-direction: column;
+  }
+}

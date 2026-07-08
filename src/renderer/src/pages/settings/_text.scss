@@ -1,0 +1,11 @@
+@use "../../scss/tokens/text";
+
+.settings {
+  &__sidebar-button {
+    color: text.$muted-color;
+
+    &--active {
+      color: text.$muted-color;
+    }
+  }
+}

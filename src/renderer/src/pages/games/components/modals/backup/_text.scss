@@ -1,0 +1,20 @@
+@use "../../../../../scss/tokens/text" as token;
+@use "variables" as *;
+
+.backup-modal {
+  &__close {
+    color: token.$body-color;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+
+  &__desc {
+    color: token.$body-color;
+  }
+
+  &__soon {
+    color: token.$body-color;
+  }
+}

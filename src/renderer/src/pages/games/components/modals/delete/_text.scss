@@ -1,0 +1,30 @@
+@use "../../../../../scss/tokens/text" as token;
+
+.delete-modal__header {
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: token.$body-color;
+    margin: 0;
+  }
+}
+
+.delete-modal__close {
+  color: token.$body-color;
+}
+
+.delete-modal__body {
+  p {
+    color: token.$body-color;
+    margin-bottom: calc(8px * 2);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+}
+
+.delete-option-text {
+  strong {
+    color: token.$body-color;
+  }
+}

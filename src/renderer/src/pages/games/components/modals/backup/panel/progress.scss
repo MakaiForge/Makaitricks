@@ -1,0 +1,36 @@
+@use "../variables" as *;
+
+.backup-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+
+  &__bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__bar {
+    height: 100%;
+    background: linear-gradient(90deg, $accent, #8b5cf6);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+
+  &__percent {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $accent;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__status {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

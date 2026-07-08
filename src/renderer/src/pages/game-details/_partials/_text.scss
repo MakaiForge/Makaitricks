@@ -1,0 +1,13 @@
+@use "../../../scss/tokens/text" as token;
+
+.game-details {
+  &__description {
+    a {
+      color: token.$body-color;
+    }
+  }
+
+  &__description-toggle {
+    color: token.$body-color;
+  }
+}

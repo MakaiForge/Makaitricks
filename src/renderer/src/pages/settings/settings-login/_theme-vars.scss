@@ -1,0 +1,41 @@
+.settings-login {
+  &__username {
+    color: var(--text);
+  }
+
+  &__role {
+    color: var(--text-dim);
+  }
+
+  &__badge {
+    small {
+      color: var(--text-dim);
+    }
+  }
+
+  &__stat {
+    strong {
+      color: var(--text);
+    }
+
+    small {
+      color: var(--text-dim);
+    }
+  }
+
+  &__badge-name {
+    color: var(--text);
+  }
+
+  &__badge-desc {
+    color: var(--text-dim);
+  }
+
+  &__script-title {
+    color: var(--text);
+  }
+
+  &__script-meta {
+    color: var(--text-dim);
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/border" as token;
+
+.game-language-section {
+  &__header {
+    border-bottom: 1px solid token.$border-color;
+  }
+}

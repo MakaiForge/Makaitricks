@@ -1,0 +1,24 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.cloud-sync-files-modal {
+  &__mapping-methods {
+    gap: token.$spacing-unit;
+  }
+
+  &__file-list {
+    gap: token.$spacing-unit;
+    margin-top: calc(token.$spacing-unit * 2);
+  }
+
+  &__container {
+    gap: token.$spacing-unit;
+  }
+
+  &__mapping-label {
+    margin-bottom: token.$spacing-unit;
+  }
+
+  &__custom-path {
+    margin-top: calc(token.$spacing-unit * 2);
+  }
+}

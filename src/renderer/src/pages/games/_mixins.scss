@@ -1,0 +1,85 @@
+@use "./variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin card-base {
+  background: $bg-dark;
+  border: 1px solid $border;
+  border-radius: 12px;
+}
+
+@mixin button-base {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: $text-primary;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@mixin text-primary { color: $text-primary; }
+@mixin text-secondary { color: $text-secondary; }
+
+@mixin modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  @include flex-center;
+  z-index: 99999;
+}
+
+@mixin modal-content($bg: $surface-ground, $border-color: #444) {
+  background: $bg;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  padding: 0;
+}
+
+@mixin modal-header {
+  @include flex-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid $surface-hover;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+}
+
+@mixin modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  @include flex-center;
+  border-radius: 4px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $surface-hover;
+    color: $text-primary;
+  }
+}

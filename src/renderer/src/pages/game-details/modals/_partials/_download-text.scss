@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/text" as token;
+
+.download-settings-modal {
+  &__hint-text {
+    color: token.$body-color;
+  }
+
+  &__downloader-item {
+    color: token.$body-color;
+  }
+}

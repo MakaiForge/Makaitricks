@@ -1,0 +1,10 @@
+@use "../../../../scss/tokens/glass" as token;
+
+.description-header {
+  &__dropdown {
+    background: token.$glass-background;
+    backdrop-filter: blur(token.$glass-blur);
+    -webkit-backdrop-filter: blur(token.$glass-blur);
+    border: 1px solid token.$glass-border;
+  }
+}

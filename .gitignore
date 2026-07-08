@@ -1,0 +1,47 @@
+node_modules/
+out/
+dist/
+venv/
+__pycache__/
+*.pyc
+games-data/
+games-with-downloads/
+data/cache/
+data/releases/
+data/sources/
+resources/catalogo/
+*.bak
+*.db
+*.db-shm
+*.db-wal
+logs/
+fetch-logs.txt
+*.tsbuildinfo
+*.log
+.env
+opencode
+image.jpg
+catalogo.db
+proton_data.db
+
+# Rust build artifacts
+tools/native/**/target/
+native/**/target/
+protonforge-native/**/target/
+
+# Python RPC frozen artifacts
+protonforge-python-rpc/lib/
+protonforge-python-rpc/frozen_application_license.txt
+
+# Native compiled modules
+*.node
+*.so
+
+# Scrapers data (1.6 GB, 396K JSON files — base de dados externa)
+scrapers/
+
+# Chave da API GG.deals (usuário coloca a própria)
+src/main/gg-deals-key.ts
+.chrome-profiles/
+logs/
+*.log

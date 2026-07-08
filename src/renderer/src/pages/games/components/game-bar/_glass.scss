@@ -1,0 +1,65 @@
+@use "../../../../scss/tokens/glass" as token;
+@use "../../../../scss/tokens/text" as text;
+@use "../../../../scss/tokens/border" as border;
+@use "../../../../scss/tokens/accent" as accent;
+
+.game-bar {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include token.glass-strong;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    @include token.glass-strong;
+    border-radius: 8px;
+    padding: 0.375rem;
+    min-width: 160px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.375rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 0.5rem 0.625rem;
+      cursor: pointer;
+      color: text.$body-color;
+      border-radius: 4px;
+      font-size: 0.8125rem;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: text.$muted-color;
+      }
+
+      span:first-child {
+        width: 16px;
+        text-align: center;
+      }
+    }
+
+    &-divider {
+      height: 1px;
+      background: border.$border-color;
+      margin: 0.375rem 0;
+    }
+
+    &-delete {
+      color: accent.$danger-color !important;
+    }
+  }
+}

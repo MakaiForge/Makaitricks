@@ -1,0 +1,13 @@
+@use "../../../scss/tokens/accent";
+
+.settings-login {
+  &__avatar {
+    &--fallback {
+      background: accent.$brand-gradient;
+    }
+  }
+}
+
+.settings__login-btn {
+  background: accent.$brand-gradient;
+}

@@ -1,0 +1,54 @@
+@use "_partials/app-bg";
+@use "_partials/utility";
+@use "_partials/text";
+
+.sidebar-section {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    &:has(.sidebar-section__button:hover) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    transition: opacity ease 0.2s;
+
+    &:hover {
+      opacity: 0.85;
+      text-decoration: underline;
+    }
+  }
+
+  &__chevron {
+    transition: transform ease 0.2s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    position: relative;
+  }
+}

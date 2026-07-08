@@ -1,0 +1,80 @@
+.emulators {
+  &__subtitle {
+    color: var(--text-muted);
+  }
+
+  &__empty {
+    color: var(--text-muted);
+  }
+
+  &__category-title {
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  &__icon-placeholder {
+    background: var(--primary-dim);
+    color: var(--primary);
+  }
+
+  &__card-platforms {
+    color: var(--text-muted);
+  }
+
+  &__card-desc {
+    color: var(--text-secondary);
+  }
+
+  &__play-btn {
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+
+    &:hover {
+      background: var(--primary);
+      color: var(--surface);
+    }
+  }
+
+  &__play-btn-spinner {
+    border: 2px solid var(--primary);
+    border-top-color: transparent;
+  }
+
+  &__rom-sites-toggle {
+    color: var(--primary);
+  }
+
+  &__rom-site-tab {
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+
+  &__rom-site-add-btn {
+    border: 1px dashed var(--text-muted);
+    color: var(--text-muted);
+
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+
+  &__rom-site-preview {
+    border: 1px solid var(--border-color);
+  }
+}

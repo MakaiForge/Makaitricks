@@ -1,0 +1,38 @@
+.mod-manager {
+  &__statusbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 12px;
+    background: #1e1e1e;
+    border-top: 1px solid #2a2a2a;
+    font-size: 11px;
+    color: #888;
+    flex-shrink: 0;
+    min-height: 24px;
+    max-height: 24px;
+    overflow: hidden;
+
+    &-log {
+      flex: 1;
+      display: flex;
+      gap: 8px;
+      overflow: hidden;
+      align-items: center;
+    }
+
+    &-entry {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-idle { color: #555; }
+
+    &-info {
+      flex-shrink: 0;
+      margin-left: 12px;
+      color: #777;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../scss/tokens/accent";
+
+.runners {
+  &__version-badge {
+    color: accent.$success-color;
+  }
+}

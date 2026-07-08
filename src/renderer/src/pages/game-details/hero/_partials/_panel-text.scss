@@ -1,0 +1,23 @@
+@use "../../../../scss/tokens/text" as token;
+
+.hero-panel {
+  &__content {
+    p {
+      color: token.$muted-color;
+    }
+  }
+
+  &__download-details {
+    color: token.$body-color;
+  }
+
+  &__downloads-link {
+    color: token.$body-color;
+  }
+
+  &__progress-bar {
+    &::-webkit-progress-value {
+      background-color: token.$muted-color;
+    }
+  }
+}

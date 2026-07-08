@@ -1,0 +1,38 @@
+@use "../../../scss/tokens/app-bg";
+@use "../../../scss/tokens/text";
+
+.settings-general {
+  &__volume-slider {
+    background: app-bg.$dark-background-color;
+
+    &::-webkit-slider-thumb {
+      border: 2px solid app-bg.$background-color;
+    }
+
+    &::-moz-range-thumb {
+      border: 2px solid app-bg.$background-color;
+    }
+
+    &::-moz-range-track {
+      background: app-bg.$dark-background-color;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: linear-gradient(
+        to right,
+        text.$muted-color 0%,
+        text.$muted-color var(--volume-percent),
+        app-bg.$dark-background-color var(--volume-percent),
+        app-bg.$dark-background-color 100%
+      );
+    }
+
+    &::-ms-thumb {
+      border: 2px solid app-bg.$background-color;
+    }
+
+    &::-ms-fill-upper {
+      background: app-bg.$dark-background-color;
+    }
+  }
+}

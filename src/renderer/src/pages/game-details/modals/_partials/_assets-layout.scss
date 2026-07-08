@@ -1,0 +1,30 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.game-assets-settings {
+  gap: 16px;
+
+  &__asset-selector {
+    margin-bottom: 8px;
+  }
+
+  &__asset-tabs {
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  &__image-section {
+    gap: 8px;
+  }
+
+  &__input-actions {
+    gap: 8px;
+  }
+
+  &__image-preview {
+    padding: 8px;
+  }
+
+  &__drop-zone-content {
+    gap: 8px;
+  }
+}

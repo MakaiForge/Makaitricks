@@ -1,0 +1,15 @@
+{
+  "gameId": "fallout4_vr",
+  "steamAppId": "611660",
+  "totalReports": 1,
+  "versions": [
+    {
+      "version": "GE-Proton5.21-1",
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "positiveRatio": 1.0
+    }
+  ],
+  "recommended": []
+}

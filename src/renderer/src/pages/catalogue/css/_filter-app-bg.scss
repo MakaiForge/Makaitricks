@@ -1,0 +1,21 @@
+@use "../../../scss/tokens/app-bg" as token;
+
+.filter-item {
+  background-color: color-mix(
+    in srgb,
+    token.$dark-background-color 84%,
+    var(--filter-item-color) 16%
+  );
+}
+
+.filter-section {
+  background-color: color-mix(in srgb, token.$background-color 75%, var(--accent, #6366f1) 25%);
+
+  &__button {
+    background-color: transparent;
+  }
+
+  &__content {
+    background-color: color-mix(in srgb, token.$dark-background-color 75%, var(--accent, #6366f1) 25%);
+  }
+}

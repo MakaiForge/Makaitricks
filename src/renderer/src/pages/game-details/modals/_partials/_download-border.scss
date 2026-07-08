@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/border" as token;
+
+.download-settings-modal {
+  &__downloaders-list-wrapper {
+    border: 1px solid token.$border-color;
+  }
+
+  &__downloader-item {
+    border-bottom: 1px solid token.$border-color;
+  }
+}

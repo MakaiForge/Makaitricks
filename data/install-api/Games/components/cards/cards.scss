@@ -1,0 +1,264 @@
+.games__steam-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    .games__steam-card-overlay { opacity: 1; }
+  }
+
+  &--selected {
+    border-color: var(--accent, #6366f1);
+  }
+
+  &--launching {
+    position: relative;
+    animation: steam-card-heartbeat 1.2s ease-in-out infinite;
+  }
+
+  &-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 460 / 215;
+    overflow: hidden;
+    background: #1b2838;
+  }
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 1;
+  }
+
+  &-play-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent-gradient, linear-gradient(135deg, #6366f1, #4f46e5));
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--accent, #6366f1) 40%, transparent);
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+    .games__steam-card:hover & { transform: scale(1.03); }
+  }
+
+  &-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading, "Inter");
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+    user-select: none;
+    z-index: 0;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  &-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+  }
+
+  &-size {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+    svg { fill: currentColor; }
+  }
+}
+
+@keyframes steam-card-heartbeat {
+  0% { outline: 3px solid rgba(255, 200, 0, 0.1); outline-offset: -3px; }
+  15% { outline: 4px solid rgba(255, 200, 0, 0.9); outline-offset: -2px; }
+  22% { outline: 3px solid rgba(255, 200, 0, 0.1); outline-offset: -3px; }
+  30% { outline: 4px solid rgba(255, 200, 0, 0.6); outline-offset: -2px; }
+  37% { outline: 3px solid rgba(255, 200, 0, 0.1); outline-offset: -3px; }
+  100% { outline: 3px solid rgba(255, 200, 0, 0.1); outline-offset: -3px; }
+}
+
+.game-compact-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    .game-compact-row__play { opacity: 1; }
+  }
+
+  &--selected {
+    border-color: var(--accent, #6366f1);
+    background: color-mix(in srgb, var(--accent, #6366f1) 8%, transparent);
+  }
+
+  &__thumb {
+    width: 46px; height: 26px; border-radius: 4px; overflow: hidden;
+    flex-shrink: 0; background: #1b2838; margin-right: 12px;
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+
+  &__thumb-placeholder {
+    width: 100%; height: 100%; display: flex; align-items: center;
+    justify-content: center; font-size: 13px; font-weight: 700;
+    color: rgba(255, 255, 255, 0.06); background: rgba(255, 255, 255, 0.02);
+  }
+
+  &__name {
+    flex: 1; min-width: 0; font-size: 13px; font-weight: 500;
+    color: rgba(255, 255, 255, 0.85); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; margin-right: 12px;
+  }
+
+  &__badge {
+    width: 48px; flex-shrink: 0; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.35); text-align: center;
+  }
+
+  &__size {
+    width: 72px; flex-shrink: 0; display: inline-flex; align-items: center;
+    gap: 4px; font-size: 10px; font-weight: 500; color: rgba(255, 255, 255, 0.25);
+    svg { fill: currentColor; }
+  }
+
+  &__hours {
+    width: 56px; flex-shrink: 0; font-size: 11px;
+    color: rgba(255, 255, 255, 0.3); text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__play {
+    width: 28px; height: 28px; flex-shrink: 0; border: none; border-radius: 6px;
+    background: transparent; color: rgba(255, 255, 255, 0.25); font-size: 12px;
+    cursor: pointer; opacity: 0; transition: all 0.12s ease;
+    display: flex; align-items: center; justify-content: center;
+    &:hover {
+      background: color-mix(in srgb, var(--accent, #6366f1) 20%, transparent);
+      color: color-mix(in srgb, var(--accent, #6366f1) 70%, white);
+      opacity: 1;
+    }
+  }
+}
+
+.game-large-card {
+  display: flex; gap: 24px; padding: 16px; border-radius: 12px;
+  cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02); transition: all 0.15s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  &--selected {
+    border-color: var(--accent, #6366f1);
+    background: color-mix(in srgb, var(--accent, #6366f1) 8%, transparent);
+  }
+
+  &__art {
+    width: 200px; min-height: 300px; border-radius: 8px; overflow: hidden;
+    flex-shrink: 0; background: #1b2838;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  }
+
+  &__art-placeholder {
+    width: 100%; height: 300px; display: flex; align-items: center;
+    justify-content: center; font-size: 48px; font-weight: 700;
+    color: rgba(255, 255, 255, 0.06); background: rgba(255, 255, 255, 0.02);
+  }
+
+  &__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 8px 0; }
+  &__title { font-size: 22px; font-weight: 700; color: rgba(255, 255, 255, 0.9); margin: 0; line-height: 1.2; }
+  &__meta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  &__year { font-size: 13px; color: rgba(255, 255, 255, 0.4); }
+
+  &__badge {
+    padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    &--steam { background: rgba(27, 40, 56, 0.8); color: #66c0f4; }
+    &--local {
+      background: color-mix(in srgb, var(--accent, #6366f1) 15%, transparent);
+      color: color-mix(in srgb, var(--accent, #6366f1) 70%, white);
+    }
+  }
+
+  &__platform { font-size: 12px; color: rgba(255, 255, 255, 0.35); }
+  &__size { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.4); svg { fill: currentColor; } }
+  &__hours { font-size: 12px; color: rgba(255, 255, 255, 0.35); }
+  &__developer { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+  &__desc { font-size: 13px; color: rgba(255, 255, 255, 0.45); line-height: 1.5; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  &__play {
+    align-self: flex-start; margin-top: auto; padding: 10px 28px; border: none;
+    border-radius: 8px; background: var(--accent-gradient, linear-gradient(135deg, #6366f1, #4f46e5));
+    color: #fff; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.15s ease;
+    &:hover {
+      background: var(--accent-gradient-hover, linear-gradient(135deg, #818cf8, #6366f1));
+      transform: translateY(-1px);
+    }
+  }
+}

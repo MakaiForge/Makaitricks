@@ -1,0 +1,13 @@
+@use "../../../scss/tokens/text" as token;
+
+.modal-close {
+  background: none;
+  border: none;
+  color: token.$body-color;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

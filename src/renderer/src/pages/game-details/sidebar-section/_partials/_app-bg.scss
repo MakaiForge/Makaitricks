@@ -1,0 +1,13 @@
+@use "../../../../scss/tokens/app-bg" as token;
+
+.sidebar-section {
+  background-color: token.$background-color;
+
+  &__header {
+    background-color: token.$background-color;
+  }
+
+  &__content {
+    background-color: token.$dark-background-color;
+  }
+}

@@ -1,0 +1,40 @@
+.exe-picker-modal {
+  &__description {
+    color: var(--text-secondary, #999);
+  }
+
+  &__btn {
+    border: 1px solid var(--border-color, #444);
+    background: var(--bg-secondary, #1a1a2e);
+    color: var(--text-primary);
+
+    &:hover {
+      background: var(--hover-bg, rgba(255, 255, 255, 0.08));
+    }
+  }
+
+  &__path {
+    color: var(--text-muted, #666);
+  }
+
+  &__browse-btn {
+    border: 1px solid var(--accent-color, #0078d4);
+    background: transparent;
+    color: var(--accent-color, #0078d4);
+
+    &:hover {
+      background: var(--accent-color, #0078d4);
+      color: #fff;
+    }
+  }
+
+  &__close-btn {
+    border: 1px solid var(--border-color, #444);
+    background: transparent;
+    color: var(--text-primary);
+
+    &:hover {
+      background: var(--hover-bg, rgba(255, 255, 255, 0.05));
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../../css/variables" as *;
+
+.version-list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid $border-light;
+    transition: background 0.15s;
+
+    &:hover { background: $hover-bg; }
+    &.installed { background: $installed-bg; border-left: 3px solid $accent; }
+    &.selected { background: $active-bg; border-left: 3px solid $accent; }
+  }
+
+  &__left { display: flex; align-items: center; gap: 10px; }
+  &__name { color: $text-primary; font-size: 0.85rem; font-weight: 500; }
+  &__date { color: $text-secondary; font-size: 0.7rem; opacity: 0.6; }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    button { padding: 4px 8px; min-width: 28px; font-size: 0.8rem; }
+  }
+}
+
+.download-btn {
+  &.installed { background: $accent; color: $bg-dark; }
+}
+
+.folder-btn, .info-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: $text-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+
+  &:hover { background: rgba(255, 255, 255, 0.2); }
+}

@@ -1,0 +1,123 @@
+@use '../../../scss/tokens/utility' as utility;
+@use '../../../scss/tokens/text' as text;
+
+.add-friend-modal {
+  display: flex;
+  flex-direction: column;
+  gap: calc(utility.$spacing-unit * 2);
+  width: 100%;
+  min-width: 400px;
+
+  &__my-code {
+    display: flex;
+    align-items: center;
+    gap: calc(utility.$spacing-unit * 1.5);
+    padding: calc(utility.$spacing-unit * 1.5);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__my-code-label {
+    font-size: 0.875rem;
+    color: text.$muted-color;
+    font-weight: 500;
+  }
+
+  &__my-code-value {
+    font-size: 0.875rem;
+    color: text.$body-color;
+    font-family: monospace;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  &__copy-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: text.$body-color;
+    cursor: pointer;
+    padding: calc(utility.$spacing-unit / 2);
+    border-radius: 4px;
+    transition: all ease 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: text.$body-color;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: utility.$spacing-unit;
+  }
+
+  &__button {
+    align-self: flex-end;
+    white-space: nowrap;
+  }
+
+  &__pending-status {
+    color: text.$body-color;
+    font-size: utility.$small-font-size;
+    text-align: center;
+    padding: calc(utility.$spacing-unit / 2);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin-top: calc(utility.$spacing-unit * -1);
+  }
+
+  &__pending-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(utility.$spacing-unit * 2);
+    margin-top: calc(utility.$spacing-unit * 2);
+
+    h3 {
+      margin: 0;
+      font-size: utility.$body-font-size;
+      font-weight: 600;
+      color: text.$muted-color;
+    }
+  }
+
+  &__pending-list {
+    display: flex;
+    flex-direction: column;
+    gap: utility.$spacing-unit;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: utility.$spacing-unit;
+  }
+
+  &__friend-item {
+    display: flex;
+    align-items: center;
+    gap: calc(utility.$spacing-unit * 2);
+    padding: calc(utility.$spacing-unit * 1.5);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    text-align: left;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__friend-name {
+    flex: 1;
+    font-weight: 600;
+    color: text.$muted-color;
+    font-size: utility.$body-font-size;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

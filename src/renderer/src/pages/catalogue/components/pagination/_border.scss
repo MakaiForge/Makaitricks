@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/border" as token;
+
+.pagination {
+  &__page-input {
+    border: solid 1px token.$border-color;
+  }
+}

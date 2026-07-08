@@ -1,0 +1,21 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.game-language-section {
+  &__header-item {
+    font-size: token.$small-font-size;
+    padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2.5);
+  }
+
+  &__cell {
+    padding: calc(token.$spacing-unit * 1.5) calc(token.$spacing-unit * 2.5);
+    font-size: token.$body-font-size;
+  }
+
+  @media (max-width: 320px) {
+    &__header,
+    &__cell {
+      padding: calc(token.$spacing-unit * 1) calc(token.$spacing-unit * 0.5);
+      font-size: calc(token.$small-font-size * 0.9);
+    }
+  }
+}

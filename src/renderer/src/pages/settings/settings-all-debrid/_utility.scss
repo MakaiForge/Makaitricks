@@ -1,0 +1,15 @@
+@use "../../../scss/tokens/utility";
+
+.settings-all-debrid {
+  &__form {
+    gap: calc(utility.$spacing-unit * 2);
+  }
+
+  &__description-container {
+    gap: utility.$spacing-unit;
+  }
+
+  &__create-account {
+    gap: utility.$spacing-unit;
+  }
+}

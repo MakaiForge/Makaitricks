@@ -1,0 +1,19 @@
+@use "../../../../scss/tokens/border" as token;
+
+.requirement {
+  &__button {
+    border: solid 1px token.$border-color;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.how-long-to-beat {
+  &__category {
+    border: solid 1px token.$border-color;
+  }
+
+  &__category-skeleton {
+    border: solid 1px token.$border-color;
+  }
+}

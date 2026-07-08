@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.hero-panel-playtime {
+  &__download-details {
+    gap: token.$spacing-unit;
+  }
+}

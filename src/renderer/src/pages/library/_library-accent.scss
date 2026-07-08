@@ -1,0 +1,12 @@
+@use "../../scss/tokens/accent" as token;
+
+.library__collection-item {
+  &--active {
+    background: token.$brand-gradient;
+    color: #fff;
+
+    &:hover {
+      background: token.$brand-gradient-hover;
+    }
+  }
+}

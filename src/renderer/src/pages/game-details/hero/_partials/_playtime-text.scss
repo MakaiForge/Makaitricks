@@ -1,0 +1,11 @@
+@use "../../../../scss/tokens/text" as token;
+
+.hero-panel-playtime {
+  &__download-details {
+    color: token.$body-color;
+  }
+
+  &__downloads-link {
+    color: token.$body-color;
+  }
+}

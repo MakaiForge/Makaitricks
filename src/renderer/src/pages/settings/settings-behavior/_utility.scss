@@ -1,0 +1,59 @@
+@use "../../../scss/tokens/utility";
+
+.settings-behavior {
+  &__proton-section {
+    gap: calc(utility.$spacing-unit / 2);
+  }
+
+  &__proton-title {
+    font-size: utility.$body-font-size;
+  }
+
+  &__proton-description {
+    font-size: utility.$small-font-size;
+  }
+
+  &__mangohud-toggle {
+    gap: calc(utility.$spacing-unit / 2);
+  }
+
+  &__gamemode-toggle {
+    gap: calc(utility.$spacing-unit / 2);
+  }
+
+  &__mangohud-label {
+    gap: calc(utility.$spacing-unit / 2);
+  }
+
+  &__gamemode-label {
+    gap: calc(utility.$spacing-unit / 2);
+  }
+
+  &__mangohud-link {
+    gap: calc(utility.$spacing-unit / 3);
+  }
+
+  &__gamemode-link {
+    gap: calc(utility.$spacing-unit / 3);
+  }
+
+  &__checkbox-container {
+    opacity: utility.$disabled-opacity;
+  }
+}
+
+.settings-context-compatibility {
+  &__stack {
+    gap: calc(utility.$spacing-unit * 1.75);
+    padding-top: calc(utility.$spacing-unit / 2);
+  }
+
+  &__section {
+    gap: utility.$spacing-unit;
+  }
+
+  &__global-toggles {
+    padding-top: calc(utility.$spacing-unit / 2);
+    gap: calc(utility.$spacing-unit * 1.25);
+  }
+}

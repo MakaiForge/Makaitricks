@@ -1,0 +1,43 @@
+.ini-editor-tab__empty { padding: 24px 16px; color: #555; font-size: 12px; text-align: center; }
+
+.ini-editor-tab__header {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #222;
+}
+
+.ini-editor-tab__list { display: flex; flex-direction: column; }
+
+.ini-editor-tab__file {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #bbb;
+  border-bottom: 1px solid #1e1e1e;
+  &:hover { background: #222; }
+}
+
+.ini-editor-tab__file--selected { background: #2a3a4a !important; }
+.ini-editor-tab__icon { font-size: 12px; }
+.ini-editor-tab__name { flex: 1; }
+
+.ini-editor-tab__editor {
+  width: 100%;
+  min-height: 200px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #d0d0d0;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 8px;
+  resize: vertical;
+  outline: none;
+  &:focus { border-color: #4a9eff; }
+}

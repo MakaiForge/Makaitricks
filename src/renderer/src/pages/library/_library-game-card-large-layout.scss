@@ -1,0 +1,128 @@
+.library-game-card-large {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+  padding: 0;
+  text-align: left;
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--accent, #6366f1) 30%, transparent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.library-game-card-large__background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.library-game-card-large__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 8, 12, 0.92) 0%,
+    rgba(8, 8, 12, 0.6) 50%,
+    rgba(8, 8, 12, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.library-game-card-large__overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 16px;
+}
+
+.library-game-card-large__top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.library-game-card-large__size-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.library-game-card-large__size-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.library-game-card-large__size-bar-line {
+  height: 4px;
+  border-radius: 2px;
+  min-width: 20px;
+
+  &--installer { background: color-mix(in srgb, var(--accent, #6366f1) 50%, transparent); }
+  &--installed { background: rgba(34, 197, 94, 0.5); }
+}
+
+.library-game-card-large__size-bar-text {
+  white-space: nowrap;
+}
+
+.library-game-card-large__playtime {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.library-game-card-large__manual-playtime {
+  color: #f59e0b;
+}
+
+.library-game-card-large__playtime-text {
+  white-space: nowrap;
+}
+
+.library-game-card-large__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.library-game-card-large__logo {
+  max-width: 200px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.library-game-card-large__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.library-game-card-large__info-bar {
+  display: flex;
+  gap: 8px;
+}

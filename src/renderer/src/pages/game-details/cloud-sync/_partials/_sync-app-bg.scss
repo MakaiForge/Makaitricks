@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/app-bg" as token;
+
+.cloud-sync-panel {
+  &__artifact {
+    background-color: token.$dark-background-color;
+  }
+}

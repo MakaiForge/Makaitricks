@@ -1,0 +1,209 @@
+@forward "./tokens/app-bg";
+@forward "./tokens/text";
+@forward "./tokens/accent";
+@forward "./tokens/border";
+@forward "./tokens/sidebar";
+@forward "./tokens/title-bar";
+@forward "./tokens/header";
+@forward "./tokens/bottom-panel";
+@forward "./tokens/card";
+@forward "./tokens/glass";
+@forward "./tokens/utility";
+@forward "./tokens/z-index";
+
+:root {
+  --app-bg: #0c0c12;
+  --app-bg-dark: #08080a;
+  --app-bg-image: none;
+  --app-bg-blur: 0px;
+  --app-content-opacity: 1;
+  --app-bg-overlay-color: rgba(0,0,0,0);
+  --app-bg-overlay-blur: 0px;
+
+  --text-primary: #f0f1f7;
+  --text-secondary: #b0b1b7;
+  --text-muted: rgba(255,255,255,0.45);
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --accent-gradient-hover: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --accent-secondary: linear-gradient(135deg, #16b195, #3e62c0);
+  --accent-success: #1c9749;
+  --accent-danger: #801d1e;
+  --accent-error: #e11d48;
+  --accent-warning: #ffc107;
+
+  --border-color: rgba(255,255,255,0.06);
+
+  --sidebar-width: 250px;
+  --sidebar-bg: #0a0a0e;
+  --sidebar-opacity: 1;
+  --sidebar-border: rgba(255,255,255,0.06);
+  --sidebar-text: rgba(255,255,255,0.55);
+  --sidebar-text-hover: rgba(255,255,255,0.85);
+  --sidebar-item-hover: rgba(255,255,255,0.06);
+  --sidebar-item-active: rgba(255,255,255,0.08);
+
+  --el-sidebar-border: rgba(255,255,255,0.06);
+  --el-sidebar-bg-image-opacity: 0;
+
+  --title-bar-height: 35px;
+  --title-bar-bg: #0a0a0e;
+  --title-bar-border: rgba(255,255,255,0.06);
+  --title-bar-text: #f0f1f7;
+
+  --header-height: 0px;
+  --header-bg: #0a0a0e;
+  --header-border: rgba(255,255,255,0.06);
+  --header-text: #f0f1f7;
+
+  --bottom-panel-height: 36px;
+  --bottom-panel-bg: #0c0c12;
+  --bottom-panel-border: rgba(255,255,255,0.06);
+  --bottom-panel-text: #b0b1b7;
+
+  --card-radius: 8px;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.06);
+  --card-size: 160px;
+  --card-gap: 16px;
+  --card-glow: none;
+  --card-hover-transform: translateY(-4px);
+  --card-hover-shadow: 0 8px 24px color-mix(in srgb, var(--accent, #6366f1) 15%, transparent);
+
+  --glass-bg: rgba(12,12,18,0.65);
+  --glass-blur: 20px;
+  --glass-border: rgba(255,255,255,0.06);
+
+  --sidebar-glass-blur: 0px;
+  --sidebar-glass-bg: transparent;
+  --sidebar-active-animation: none;
+  --sidebar-active-color: #6366f1;
+  --sidebar-active-glow-color: rgba(99,102,241,0.25);
+  --sidebar-active-glow-spread: 20px;
+  --sidebar-active-style: gradient;
+  --sidebar-active-intensity: 70;
+  --sidebar-item-active-opacity: 1;
+  --sidebar-animation-speed: 2s;
+  --sidebar-hover-opacity: 1;
+  --sidebar-hover-lift-distance: 4px;
+  --sidebar-hover-scale-amount: 1.03;
+  --sidebar-active-text: #f0f1f7;
+  --sidebar-border-gradient: none;
+  --sidebar-section-text: rgba(255,255,255,0.35);
+  --sidebar-item-bg: transparent;
+  --sidebar-position: left;
+
+  --disabled-opacity: 0.5;
+  --active-opacity: 0.7;
+  --body-font-size: 14px;
+  --small-font-size: 12px;
+  --spacing-unit: 8px;
+
+  --toast-z-index: 150;
+  --bottom-panel-z-index: 3;
+  --title-bar-z-index: 4;
+  --backdrop-z-index: 4;
+  --modal-z-index: 5;
+}
+
+.wallpaper-active {
+  --card-bg: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(0,0,0,0.75));
+  --surface: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(0,0,0,0.75));
+  --surface-hover: color-mix(in srgb, var(--accent, #6366f1) 30%, rgba(0,0,0,0.65));
+  --glass-bg: color-mix(in srgb, var(--accent, #6366f1) 15%, rgba(0,0,0,0.65));
+  --card-glow: 0 0 20px color-mix(in srgb, var(--accent, #6366f1) 25%, transparent);
+  --card-border: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(255,255,255,0.08));
+}
+
+/* Container principal da pagina — esconde overflow horizontal */
+#scrollableDiv {
+  overflow-x: hidden;
+}
+
+/* Wallpaper visivel atras de tudo */
+html.wallpaper-active body {
+  background-color: transparent !important;
+}
+html.wallpaper-active .container__content {
+  background: transparent !important;
+}
+
+/* === CARDS & PAINEIS COM COR DO TEMA + BLUR === */
+html.wallpaper-active .game-large-card,
+html.wallpaper-active .library-game-card__wrapper,
+html.wallpaper-active .library-game-card-large,
+html.wallpaper-active .game-card__placeholder,
+html.wallpaper-active .game-card,
+html.wallpaper-active .game-bar,
+html.wallpaper-active .game-compact-row,
+html.wallpaper-active .games__steam-card-info,
+html.wallpaper-active .download-group__hero-overlay,
+html.wallpaper-active .download-group__hero-stats,
+html.wallpaper-active .download-group__glass-btn,
+html.wallpaper-active .badge,
+html.wallpaper-active .game-details__description-container,
+html.wallpaper-active .game-details__hero-logo-backdrop,
+html.wallpaper-active .content-sidebar,
+html.wallpaper-active .scripts-section,
+html.wallpaper-active .scripts-section__card,
+html.wallpaper-active .scripts-section__comment-card,
+html.wallpaper-active .scripts-section__comments-input,
+html.wallpaper-active .game-launcher__modal-card,
+html.wallpaper-active .install-script-modal,
+html.wallpaper-active .home__carousel,
+html.wallpaper-active .home__deal-card,
+html.wallpaper-active .home__free-card,
+html.wallpaper-active .home__tabs,
+html.wallpaper-active .home__carousel-nav,
+html.wallpaper-active .proton-tools__card {
+  background-color: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(0,0,0,0.75)) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Settings — vidro apenas no container externo */
+html.wallpaper-active .settings__content {
+  background-color: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(0,0,0,0.75)) !important;
+  backdrop-filter: blur(8px);
+}
+/* Inner content transparent para vidro aparecer */
+html.wallpaper-active .game-details__description-content,
+html.wallpaper-active .scripts-section__header,
+html.wallpaper-active .scripts-section__list,
+html.wallpaper-active .scripts-section__card-main,
+html.wallpaper-active .scripts-section__card-info,
+html.wallpaper-active .scripts-section__card-actions,
+html.wallpaper-active .scripts-section__card-details,
+html.wallpaper-active .scripts-section__comments-header,
+html.wallpaper-active .scripts-section__comments-list,
+html.wallpaper-active .scripts-section__info-box,
+html.wallpaper-active .requirement__details,
+html.wallpaper-active .requirement__button-container,
+html.wallpaper-active .sidebar-section,
+html.wallpaper-active .sidebar-section__header,
+html.wallpaper-active .sidebar-section__content {
+  background: transparent !important;
+}
+
+/* Containers internos transparentes para o vidro do .settings__content aparecer */
+html.wallpaper-active .settings__sidebar,
+html.wallpaper-active .settings__panel,
+html.wallpaper-active .settings-context-panel,
+html.wallpaper-active .settings-context-panel__group {
+  background: transparent !important;
+}
+
+/* Mods page */
+html.wallpaper-active .mod-manager__tabs,
+html.wallpaper-active .mod-manager__topbar,
+html.wallpaper-active .mod-manager__left,
+html.wallpaper-active .mod-manager__right,
+html.wallpaper-active .mod-manager__browser-container,
+html.wallpaper-active .mod-manager__right-tabs,
+html.wallpaper-active .mod-manager__statusbar,
+html.wallpaper-active .mod-manager__search,
+html.wallpaper-active .mod-manager__modlist-header {
+  background-color: color-mix(in srgb, var(--accent, #6366f1) 20%, rgba(0,0,0,0.75)) !important;
+  backdrop-filter: blur(8px);
+}

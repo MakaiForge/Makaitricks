@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/text" as token;
+
+.cloud-sync-files-modal {
+  &__file-item {
+    color: token.$muted-color;
+  }
+}

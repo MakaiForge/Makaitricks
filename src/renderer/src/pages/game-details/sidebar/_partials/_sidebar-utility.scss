@@ -1,0 +1,102 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.content-sidebar {
+  gap: calc(token.$spacing-unit * 1.5);
+}
+
+.requirement {
+  &__details {
+    padding: calc(token.$spacing-unit * 2);
+    font-size: token.$body-font-size;
+  }
+
+  &__details-skeleton {
+    gap: token.$spacing-unit;
+    padding: calc(token.$spacing-unit * 2);
+    font-size: token.$body-font-size;
+  }
+}
+
+.how-long-to-beat {
+  &__categories-list {
+    padding: calc(token.$spacing-unit * 2);
+    gap: calc(token.$spacing-unit * 2);
+  }
+
+  &__category {
+    gap: calc(token.$spacing-unit / 2);
+    padding: token.$spacing-unit calc(token.$spacing-unit * 2);
+  }
+}
+
+.protondb {
+  &__content {
+    padding: calc(token.$spacing-unit * 2);
+  }
+
+  &__section {
+    gap: calc(token.$spacing-unit * 1);
+  }
+
+  &__category {
+    gap: calc(token.$spacing-unit / 2);
+  }
+
+  &__category-title {
+    font-size: token.$small-font-size;
+    gap: token.$spacing-unit;
+  }
+
+  &__link-skeleton {
+    margin-top: calc(token.$spacing-unit * 2);
+  }
+
+  &__view-link {
+    gap: calc(token.$spacing-unit / 2);
+    margin-top: calc(token.$spacing-unit * 2);
+  }
+
+  &__value {
+    font-size: token.$body-font-size;
+  }
+}
+
+.stats {
+  &__section {
+    gap: calc(token.$spacing-unit * 1);
+    padding: calc(token.$spacing-unit * 2);
+  }
+
+  &__category-title {
+    font-size: token.$small-font-size;
+    gap: token.$spacing-unit;
+  }
+
+  &__category {
+    gap: calc(token.$spacing-unit / 2);
+  }
+}
+
+.list {
+  gap: calc(token.$spacing-unit * 2);
+  padding: calc(token.$spacing-unit * 2);
+
+  &__item {
+    padding: token.$spacing-unit;
+    gap: calc(token.$spacing-unit * 2);
+  }
+}
+
+.subscription-required-button {
+  gap: calc(token.$spacing-unit / 2);
+}
+
+.proton-recommended {
+  padding: calc(token.$spacing-unit * 2);
+  gap: calc(token.$spacing-unit * 1);
+
+  &__alternatives {
+    margin-top: calc(token.$spacing-unit * 2);
+    gap: calc(token.$spacing-unit * 1);
+  }
+}

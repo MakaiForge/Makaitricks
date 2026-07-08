@@ -1,0 +1,43 @@
+@use "../../../scss/tokens/text";
+
+.settings-general {
+  &__disabled-hint {
+    color: text.$muted-color;
+  }
+
+  &__volume-control {
+    label {
+      color: text.$muted-color;
+    }
+  }
+
+  &__volume-icon {
+    color: text.$muted-color;
+  }
+
+  &__volume-value {
+    color: text.$body-color;
+  }
+
+  &__volume-slider {
+    &::-webkit-slider-thumb {
+      background: text.$muted-color;
+    }
+
+    &::-moz-range-thumb {
+      background: text.$muted-color;
+    }
+
+    &::-moz-range-progress {
+      background: text.$muted-color;
+    }
+
+    &::-ms-thumb {
+      background: text.$muted-color;
+    }
+
+    &::-ms-fill-lower {
+      background: text.$muted-color;
+    }
+  }
+}

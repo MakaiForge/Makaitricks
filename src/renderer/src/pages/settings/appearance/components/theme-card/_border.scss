@@ -1,0 +1,15 @@
+@use "../../../../../scss/tokens/border";
+
+.theme-card {
+  background-color: rgba(border.$border-color, 0.01);
+  border: 1px solid border.$border-color;
+
+  &--active {
+    border-color: var(--accent, #4a90e2);
+    background-color: rgba(var(--accent, #4a90e2), 0.04);
+  }
+
+  &__bg {
+    border-bottom: 1px solid border.$border-color;
+  }
+}

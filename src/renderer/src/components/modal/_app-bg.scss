@@ -1,0 +1,5 @@
+@use "../../scss/tokens/app-bg";
+
+.modal {
+  background-color: app-bg.$background-color;
+}

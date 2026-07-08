@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/text" as token;
+
+.real-debrid-info-modal {
+  &__description {
+    color: token.$body-color;
+  }
+}

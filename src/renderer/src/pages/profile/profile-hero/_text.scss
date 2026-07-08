@@ -1,0 +1,21 @@
+@use '../../../scss/tokens/text' as token;
+
+.profile-hero {
+  &__copy-button {
+    color: token.$body-color;
+  }
+
+  &__avatar-button {
+    color: token.$muted-color;
+  }
+
+  &__information {
+    color: token.$muted-color;
+  }
+
+  &__button {
+    &--outline {
+      border-color: token.$body-color;
+    }
+  }
+}

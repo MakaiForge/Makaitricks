@@ -1,0 +1,7 @@
+@use '../../../scss/tokens/text' as token;
+
+.profile-section {
+  &__button {
+    color: token.$muted-color;
+  }
+}

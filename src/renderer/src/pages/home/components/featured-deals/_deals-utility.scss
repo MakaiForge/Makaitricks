@@ -1,0 +1,8 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.home {
+  &__deal-info {
+    padding: calc(token.$spacing-unit * 1.5);
+    gap: calc(token.$spacing-unit);
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../../../scss/tokens/utility" as token;
+
+.home {
+  &__carousel-content {
+    padding: calc(token.$spacing-unit * 3);
+    gap: calc(token.$spacing-unit);
+  }
+
+  &__carousel-meta {
+    gap: calc(token.$spacing-unit);
+  }
+
+  &__carousel-cta {
+    margin-top: calc(token.$spacing-unit * 0.5);
+    padding: calc(token.$spacing-unit * 0.75) calc(token.$spacing-unit * 2);
+  }
+}

@@ -1,0 +1,99 @@
+@use "../../css/variables" as *;
+
+.games-tab {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__sync-btn {
+    padding: 4px 12px;
+    background: color-mix(in srgb, var(--accent, #ad1457) 25%, rgb(0,0,0));
+    border: 1px solid color-mix(in srgb, var(--accent, #ad1457) 35%, rgba(255,255,255,0.1));
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    &:hover {
+      background: color-mix(in srgb, var(--accent, #ad1457) 40%, rgb(0,0,0));
+    }
+  }
+
+  &__status {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid;
+  }
+
+  &__empty {
+    margin-top: 16px;
+    padding: 24px;
+    text-align: center;
+    color: $text-secondary;
+  }
+
+  &__game {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: color-mix(in srgb, var(--accent, #ad1457) 30%, rgb(0,0,0));
+    border: 1px solid color-mix(in srgb, var(--accent, #ad1457) 20%, rgba(255,255,255,0.08));
+    border-radius: 8px;
+    margin-top: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  &__game-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__game-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+
+  &__game-meta {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  &__proton-select {
+    padding: 6px 10px;
+    background: #000;
+    border: 1px solid color-mix(in srgb, var(--accent, #ad1457) 30%, rgba(255,255,255,0.1));
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+    max-width: 180px;
+    option {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__changing {
+    font-size: 0.8rem;
+    color: #ffd866;
+    background: rgba(255,216,102,0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: pulse 1.5s infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

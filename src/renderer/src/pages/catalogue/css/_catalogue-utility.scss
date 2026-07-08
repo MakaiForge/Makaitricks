@@ -1,0 +1,9 @@
+@use "../../../scss/tokens/utility" as token;
+
+.catalogue {
+  gap: calc(token.$spacing-unit * 2);
+
+  &__content {
+    gap: calc(token.$spacing-unit * 2);
+  }
+}

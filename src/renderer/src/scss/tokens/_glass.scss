@@ -1,0 +1,17 @@
+$glass-background: var(--glass-bg, rgba(12, 12, 18, 0.75));
+$glass-border: var(--glass-border, rgba(255, 255, 255, 0.06));
+$glass-blur: var(--glass-blur, 20px);
+
+@mixin glass {
+  background: var(--glass-bg, rgba(12, 12, 18, 0.65));
+  backdrop-filter: blur(var(--glass-blur, 20px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 20px));
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.06));
+}
+
+@mixin glass-strong {
+  background: var(--glass-bg, rgba(12, 12, 18, 0.85));
+  backdrop-filter: blur(calc(var(--glass-blur, 20px) + 4px));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur, 20px) + 4px));
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.08));
+}

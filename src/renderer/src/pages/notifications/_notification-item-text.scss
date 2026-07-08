@@ -1,0 +1,15 @@
+@use "../../scss/tokens/text" as token;
+
+.notification-item {
+  &__title {
+    color: token.$muted-color;
+  }
+
+  &__description {
+    color: token.$body-color;
+  }
+
+  &__dismiss {
+    color: token.$body-color;
+  }
+}

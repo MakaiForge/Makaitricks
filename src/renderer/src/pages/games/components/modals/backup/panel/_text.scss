@@ -1,0 +1,13 @@
+@use "../../../../../../scss/tokens/text" as token;
+
+.backup-panel {
+  &__close {
+    color: token.$body-color;
+  }
+
+  &__result-stats {
+    span {
+      color: token.$body-color;
+    }
+  }
+}

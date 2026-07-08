@@ -1,0 +1,56 @@
+.settings-account {
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__subscription-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subscription-button {
+    place-self: flex-start;
+  }
+
+  &__blocked-users {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__blocked-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-avatar {
+    filter: grayscale(100%);
+  }
+
+  &__unblock-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}

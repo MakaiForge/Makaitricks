@@ -1,0 +1,11 @@
+@use "../../../scss/tokens/border" as token;
+
+.filter-item {
+  border: solid 1px
+    color-mix(in srgb, token.$border-color 70%, var(--filter-item-color) 30%);
+}
+
+.filter-section {
+  border: 1px solid var(--accent, #6366f1);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent, #6366f1) 20%, transparent);
+}

@@ -1,0 +1,66 @@
+.home {
+  &__free-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  &__free-card {
+    display: flex;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__free-img {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  &__free-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  &__free-badge {
+    align-self: flex-start;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__free-title {
+    font-size: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__free-store {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &__free-ends {
+    font-size: 11px;
+  }
+}

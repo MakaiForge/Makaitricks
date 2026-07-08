@@ -1,0 +1,7 @@
+@use "../../../../scss/tokens/accent" as token;
+
+.drive-selector {
+  &__error {
+    color: token.$error-color;
+  }
+}
