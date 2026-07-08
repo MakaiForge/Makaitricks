@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+import os from "node:os";
 import { registerEvent } from "@main/events/register-event";
 import { ModStorageService } from "@main/services";
 import { ProtonForgeRPC } from "@main/services/protonforge-rpc";
@@ -13,6 +16,47 @@ type ModGameConfig = {
   protonVersion?: string;
 };
 
+/** Procura qualquer Proton instalado no sistema. */
+function findAnyProton(): string | null {
+  // 1. Steam common/Proton*
+  const steamRoots = [
+    path.join(os.homedir(), ".local", "share", "Steam"),
+    path.join(os.homedir(), ".steam", "steam"),
+    "/usr/share/steam",
+  ];
+  for (const root of steamRoots) {
+    const commonDir = path.join(root, "steamapps", "common");
+    if (!fs.existsSync(commonDir)) continue;
+    try {
+      for (const entry of fs.readdirSync(commonDir, { withFileTypes: true })) {
+        if (!entry.isDirectory()) continue;
+        if (entry.name.startsWith("Proton") || entry.name.startsWith("proton")) {
+          const protonDir = path.join(commonDir, entry.name);
+          if (fs.existsSync(path.join(protonDir, "proton"))) return protonDir;
+        }
+      }
+    } catch { continue; }
+  }
+
+  // 2. compatibilitytools.d
+  const compatDirs = [
+    path.join(os.homedir(), ".steam", "steam", "compatibilitytools.d"),
+    "/usr/share/steam/compatibilitytools.d",
+  ];
+  for (const compatDir of compatDirs) {
+    if (!fs.existsSync(compatDir)) continue;
+    try {
+      for (const entry of fs.readdirSync(compatDir, { withFileTypes: true })) {
+        if (!entry.isDirectory()) continue;
+        const protonBin = path.join(compatDir, entry.name, "proton");
+        if (fs.existsSync(protonBin)) return path.dirname(protonBin);
+      }
+    } catch { continue; }
+  }
+
+  return null;
+}
+
 registerEvent("modCreatePrefix", async (_event, gameId: string) => {
   const config = ModStorageService.get<ModGameConfig | null>(`game:${gameId}:config`);
   if (!config) {
@@ -20,14 +64,25 @@ registerEvent("modCreatePrefix", async (_event, gameId: string) => {
     return { ok: false, error: "Jogo não configurado. Detecte ou configure manualmente primeiro." };
   }
 
-  const protonPath = config.protonVersion || "";
+  let protonPath = config.protonVersion || "";
+
+  // Se não tem Proton configurado, auto-detecta
   if (!protonPath) {
-    logPlay(gameId, "modCreatePrefix", { error: "proton_nao_configurado" });
-    return { ok: false, error: "Nenhum Proton configurado. Selecione um Proton primeiro." };
+    logPlay(gameId, "modCreatePrefix", { status: "auto-detectando_proton" });
+    const found = findAnyProton();
+    if (found) {
+      protonPath = found;
+      // Salva no config pra não precisar detectar de novo
+      ModStorageService.put(`game:${gameId}:config`, { ...config, protonVersion: protonPath });
+      logPlay(gameId, "modCreatePrefix", { status: "proton_detectado", protonPath });
+    } else {
+      logPlay(gameId, "modCreatePrefix", { error: "nenhum_proton_encontrado" });
+      return { ok: false, error: "Nenhum Proton encontrado no sistema. Instale um Proton pelo Steam primeiro." };
+    }
   }
 
   const prefixPath = config.protonPrefix || "";
-  logPlay(gameId, "modCreatePrefix", { protonPath, prefixPath });
+  logPlay(gameId, "modCreatePrefix", { protonPath, prefixPath, gamePath: config.gamePath });
 
   try {
     const result = await ProtonForgeRPC.call<{
