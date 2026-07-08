@@ -117,6 +117,7 @@ def run_winetricks(
     winetricks_bin: str | None = None,
 ) -> tuple[bool, str]:
     """Install a single winetricks verb into the prefix."""
+    prefix_path = os.path.abspath(os.path.expanduser(prefix_path))
     env = os.environ.copy()
     env["WINEPREFIX"] = prefix_path
     env["WINEARCH"] = "win64"
@@ -165,6 +166,7 @@ def install_recommended_dlls(
     winetricks_bin: str | None = None,
 ) -> dict:
     """Install DLL verbs into prefix, skipping already-installed ones."""
+    prefix_path = os.path.abspath(os.path.expanduser(prefix_path))
     verbs = extra_verbs or []
     if not verbs:
         return {"installed": [], "errors": []}
