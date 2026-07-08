@@ -10,6 +10,7 @@ import { detectGame } from "@mods/services/detection";
 import { defaultStagingDir, defaultPrefixDir } from "@mods/services/steam-library";
 import { checkPrefixHealth, autoFixPrefix } from "@mods/services/health-check";
 import { setBridgeContext, getBridgeContext, clearBridgeContext } from "@mods/services/bridge-context";
+import { logPlay } from "@mods/play/logger";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -17,11 +18,19 @@ const mkMlKey = (g: string, p: string) => `game:${g}:profile:${p}:modlist`;
 
 registerEvent("saveGameConfig", async (_event, gameName: string, config: { gamePath: string; stagingDir: string; protonPrefix: string; protonVersion?: string }) => {
   ModStorageService.put(`game:${gameName}:config`, config);
+  logPlay(gameName, "saveGameConfig", {
+    gamePath: config.gamePath,
+    stagingDir: config.stagingDir,
+    protonPrefix: config.protonPrefix,
+    protonVersion: config.protonVersion || "",
+  });
   return { ok: true };
 });
 
 registerEvent("getGameConfig", async (_event, gameName: string) => {
-  return ModStorageService.get(`game:${gameName}:config`) || null;
+  const cfg = ModStorageService.get(`game:${gameName}:config`) || null;
+  logPlay(gameName, "getGameConfig", cfg ? { gamePath: cfg.gamePath, stagingDir: cfg.stagingDir, protonPrefix: cfg.protonPrefix } : {});
+  return cfg;
 });
 
 registerEvent("removeMod", async (_event, gameId: string, profile: string, modName: string) => {
@@ -66,17 +75,22 @@ registerEvent("getModGameInfo", async (_event, gameId: string) => {
 
 registerEvent("modDetectGamePath", async (_event, gameId: string) => {
   const detected = detectGame(gameId);
+  logPlay(gameId, "modDetectGamePath", detected.source ? { source: detected.source, gamePath: detected.gamePath || "" } : { source: "not_found" });
   if (detected.source) return detected.gamePath;
   return null;
 });
 
 registerEvent("detectGameManual", async (_event, gameId: string, selectedPath: string) => {
   const gameInfo = gameDllCatalog.getGame(gameId);
-  if (!gameInfo) return { ok: false, error: "Jogo não encontrado no catálogo" };
+  if (!gameInfo) {
+    logPlay(gameId, "detectGameManual", { error: "jogo_nao_encontrado_catalogo" });
+    return { ok: false, error: "Jogo não encontrado no catálogo" };
+  }
 
   const exes = [gameInfo.detectExe, ...(gameInfo.detectExeAlts || [])];
   const foundExe = exes.find((exe) => fs.existsSync(path.join(selectedPath, exe)));
   if (!foundExe) {
+    logPlay(gameId, "detectGameManual", { error: "exe_nao_encontrado", selectedPath, exesBuscados: exes.join(",") });
     return { ok: false, error: `Nenhum executável encontrado em ${selectedPath}. Esperado: ${exes.join(" ou ")}` };
   }
 
@@ -89,17 +103,23 @@ registerEvent("detectGameManual", async (_event, gameId: string, selectedPath: s
     protonVersion: "",
   });
 
+  logPlay(gameId, "detectGameManual", { gamePath: selectedPath, stagingDir: staging, prefixDir: prefix, foundExe });
+
   return { ok: true, data: { gamePath: selectedPath, stagingDir: staging, protonPrefix: prefix } };
 });
 
 registerEvent("listGameConfigs", async () => {
   const entries = ModStorageService.entries<any>("game:");
-  return entries
+  const configs = entries
     .filter((e) => e.key.endsWith(":config"))
     .map((e) => ({
       name: e.key.slice("game:".length, -":config".length),
       config: e.value,
     }));
+  for (const c of configs) {
+    logPlay(c.name, "listGameConfigs", { gamePath: c.config.gamePath, stagingDir: c.config.stagingDir });
+  }
+  return configs;
 });
 
 registerEvent("getGameDllCatalog", async () => {
@@ -114,18 +134,27 @@ registerEvent("getGameDllInfo", async (_event, gameId: string) => {
 registerEvent("prefixHealthCheck", async (_event, gameId: string) => {
   const config = ModStorageService.get<any>(`game:${gameId}:config`);
   if (!config?.gamePath || !config?.protonPrefix) {
+    logPlay(gameId, "prefixHealthCheck", { error: "jogo_nao_configurado" });
     return { ok: false, error: "Jogo não configurado. Detecte ou configure manualmente primeiro." };
   }
   const report = checkPrefixHealth(gameId, config.gamePath, config.protonPrefix);
+  logPlay(gameId, "prefixHealthCheck", {
+    gamePath: config.gamePath,
+    protonPrefix: config.protonPrefix,
+    valid: String(report.valid),
+    errors: report.errors.join(","),
+  });
   return { ok: true, data: report };
 });
 
 registerEvent("prefixAutoFix", async (_event, gameId: string) => {
   const config = ModStorageService.get<any>(`game:${gameId}:config`);
   if (!config?.gamePath || !config?.protonPrefix) {
+    logPlay(gameId, "prefixAutoFix", { error: "jogo_nao_configurado" });
     return { ok: false, error: "Jogo não configurado." };
   }
   const result = await autoFixPrefix(gameId, config.gamePath, config.protonPrefix);
+  logPlay(gameId, "prefixAutoFix", { fixed: (result.fixed || []).join(",") });
   return { ok: true, data: result };
 });
 
