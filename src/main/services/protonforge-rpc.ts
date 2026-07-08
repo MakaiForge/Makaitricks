@@ -4,6 +4,9 @@ import path from "node:path";
 import { app } from "electron";
 import { getVenvPythonPath } from "@prefix/core/venv";
 
+// LOG DE DEBUG: se isso aparecer no terminal, o módulo carregou.
+console.log("[ProtonForgeRPC] MODULE LOADED");
+
 let LOG_FILE = "";
 
 function getLogFile(): string {
