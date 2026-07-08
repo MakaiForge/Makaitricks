@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@renderer/components";
 import "./GameDetectionWizard.scss";
 
@@ -9,8 +9,6 @@ interface GameDetectionWizardProps {
   selectedGameId?: string;
 }
 
-type WizardStep = "detecting" | "result" | "saved";
-
 interface DetectionAttempt {
   gameId: string;
   name: string;
@@ -19,40 +17,30 @@ interface DetectionAttempt {
 }
 
 export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGameId: initialGameId }: GameDetectionWizardProps) {
-  const [step, setStep] = useState<WizardStep>("detecting");
+  const [step, setStep] = useState<"detecting" | "result" | "saved">("detecting");
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
   const [chosenGameId, setChosenGameId] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
-  const [debugLog, setDebugLog] = useState<string[]>([]);
-
-  const log = useCallback((msg: string) => {
-    setDebugLog(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${msg}`]);
-  }, []);
+  const autoClosed = useRef(false);
 
   const startDetection = useCallback(async (targetGameId?: string) => {
     setStep("detecting");
     setError(null);
     setDetected([]);
-    setDebugLog([]);
-    log(`Iniciando detecção. targetGameId: ${targetGameId || "todos"}`);
+    autoClosed.current = false;
     try {
       const catalogResult = await window.electron.getGameDllCatalog();
       if (!catalogResult.ok || !catalogResult.data?.games) {
         setError("Catálogo de jogos não disponível");
-        log("ERRO: catálogo não disponível");
         return;
       }
       const games = catalogResult.data.games;
-      log(`Catálogo carregado: ${games.length} jogos`);
       const scanTarget = targetGameId
         ? games.filter((g: any) => g.gameId === targetGameId)
         : games;
-      log(`Alvo da varredura: ${scanTarget.length} jogos (${scanTarget.map((g: any) => g.gameId).join(", ")})`);
       const found: DetectionAttempt[] = [];
       for (const game of scanTarget) {
-        log(`Verificando ${game.gameId}...`);
         const path = await window.electron.modDetectGamePath(game.gameId);
-        log(`${game.gameId} → ${path ? "ENCONTRADO: " + path : "NÃO ENCONTRADO"}`);
         found.push({
           gameId: game.gameId,
           name: game.name,
@@ -62,14 +50,23 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       }
       setDetected(found);
       const firstFound = found.find((g) => g.found);
+
+      if (targetGameId && firstFound) {
+        const path = await window.electron.modDetectGamePath(firstFound.gameId);
+        if (path) {
+          onGameDetected(firstFound.gameId, path);
+        }
+        onClose();
+        return;
+      }
+
       if (firstFound) setChosenGameId(firstFound.gameId);
       setStep("result");
     } catch (e: any) {
-      log(`ERRO: ${e.message || e}`);
       setError(e.message || "Erro na detecção");
       setStep("result");
     }
-  }, [log]);
+  }, [onGameDetected, onClose]);
 
   useEffect(() => {
     if (!open) return;
@@ -103,7 +100,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
     if (path) {
       onGameDetected(gameId, path);
     }
-    setStep("saved");
+    onClose();
   };
 
   const foundCount = detected.filter((g) => g.found).length;
@@ -113,7 +110,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       <div className="detection-wizard" onClick={(e) => e.stopPropagation()}>
         {step === "detecting" && (
           <div className="detection-wizard__step">
-            <h2>Detectando jogos instalados...</h2>
+            <h2>Detectando {initialGameId ? "..." : "jogos instalados..."}</h2>
             <div className="detection-wizard__spinner" />
             <p>Procurando em bibliotecas Steam, GOG e diretórios comuns...</p>
           </div>
@@ -124,9 +121,9 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
             <h2>Jogos Detectados</h2>
             {error && <p className="detection-wizard__error">⚠️ {error}</p>}
             {foundCount > 0 ? (
-              <p>{foundCount} jogo(s) encontrado(s) automaticamente.</p>
+              <p>{foundCount} jogo(s) encontrado(s). Clique em um para configurar.</p>
             ) : (
-              <p>Nenhum jogo encontrado automaticamente.</p>
+              <p>Nenhum jogo encontrado.</p>
             )}
             <div className="detection-wizard__game-list">
               {detected.map((g) => (
@@ -145,31 +142,15 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
               ))}
             </div>
             <div className="detection-wizard__actions">
-              <Button onClick={handleSelectManual}>Selecionar Manualmente</Button>
-              <Button onClick={() => startDetection(initialGameId)}>Buscar Novamente</Button>
+              <Button onClick={handleSelectManual}>Selecionar Pasta Manualmente</Button>
               <Button
                 theme="primary"
                 disabled={!chosenGameId || !detected.find((g) => g.gameId === chosenGameId)?.found}
                 onClick={() => handleConfirm(chosenGameId)}
               >
-                Configurar Selecionado
+                Configurar
               </Button>
             </div>
-            {debugLog.length > 0 && (
-              <details className="detection-wizard__debug">
-                <summary>Log de depuração ({debugLog.length} linhas)</summary>
-                <pre className="detection-wizard__debug-pre">{debugLog.join("\n")}</pre>
-              </details>
-            )}
-          </div>
-        )}
-
-        {step === "saved" && (
-          <div className="detection-wizard__step">
-            <h2>✅ Jogo Configurado!</h2>
-            <p>O jogo foi configurado com paths padrão.</p>
-            <p>Você pode ajustar as configurações no painel de Configurações do Jogo.</p>
-            <Button theme="primary" onClick={onClose}>Concluir</Button>
           </div>
         )}
       </div>
