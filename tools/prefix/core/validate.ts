@@ -64,7 +64,7 @@ export function ensurePrefixDir(prefixPath: string): string | null {
     logCall("validate", "ensurePrefixDir", { prefixPath }, { result: null }, 0);
     return null;
   }
-  // Check root path first (actual Wine prefix), then pfx/ subpath (compatdata layout)
+  // Check root path first (direct Wine prefix), then pfx/ subpath (compatdata layout)
   if (fs.existsSync(path.join(prefixPath, "user.reg"))) {
     logCall("validate", "ensurePrefixDir", { prefixPath }, { result: prefixPath }, Date.now() - _start);
     return prefixPath;
@@ -75,17 +75,17 @@ export function ensurePrefixDir(prefixPath: string): string | null {
     return pfx;
   }
 
-  const pfxDir = path.join(prefixPath, "pfx");
-  if (!fs.existsSync(pfxDir)) {
-    fs.mkdirSync(pfxDir, { recursive: true });
+  // Create new prefix using direct Wine layout (no pfx/ subdir)
+  if (!fs.existsSync(prefixPath)) {
+    fs.mkdirSync(prefixPath, { recursive: true });
   }
 
-  const userReg = path.join(pfxDir, "user.reg");
+  const userReg = path.join(prefixPath, "user.reg");
   if (!fs.existsSync(userReg)) {
     fs.writeFileSync(userReg, "WINE REGISTRY Version 2\n", "utf-8");
     logger.info(`Created minimal prefix marker at ${userReg}`);
   }
 
-  logCall("validate", "ensurePrefixDir", { prefixPath }, { result: pfxDir }, Date.now() - _start);
-  return pfxDir;
+  logCall("validate", "ensurePrefixDir", { prefixPath }, { result: prefixPath }, Date.now() - _start);
+  return prefixPath;
 }
