@@ -4,6 +4,54 @@ import path from "node:path";
 import { app } from "electron";
 import { getVenvPythonPath } from "@prefix/core/venv";
 
+let LOG_FILE = "";
+
+function getLogFile(): string {
+  if (LOG_FILE) return LOG_FILE;
+
+  const candidates = [
+    // app.isPackaged, usar userData
+    path.join(app.getPath("userData"), "protonforge-api.log"),
+  ];
+
+  if (!app.isPackaged) {
+    // Dev: parent do out/main/ é a raiz do projeto
+    const devRoot = path.dirname(path.dirname(__dirname));
+    candidates.push(
+      path.join(devRoot, "tools", "python-rpc", "protonforge-api", "log.txt")
+    );
+  }
+
+  for (const c of candidates) {
+    try {
+      const dir = path.dirname(c);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.accessSync(dir, fs.constants.W_OK);
+      LOG_FILE = c;
+      console.log("[ProtonForgeRPC] log file:", LOG_FILE);
+      return LOG_FILE;
+    } catch { continue; }
+  }
+
+  // Último recurso: CWD
+  LOG_FILE = path.resolve("protonforge-api.log");
+  return LOG_FILE;
+}
+
+function log(...args: unknown[]) {
+  const ts = new Date().toLocaleString("pt-BR");
+  const line = `[${ts}] ${args.map(a => String(a)).join(" ")}`;
+  console.log("[ProtonForgeRPC]", line);
+  try {
+    const f = getLogFile();
+    const dir = path.dirname(f);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.appendFileSync(f, line + "\n");
+  } catch (e) {
+    console.error("[ProtonForgeRPC] log write failed:", e);
+  }
+}
+
 type PendingRpc = {
   resolve: (value: unknown) => void;
   reject: (reason?: unknown) => void;
@@ -20,10 +68,15 @@ export class ProtonForgeRPC {
   private static readyResolve: (() => void) | null = null;
 
   static async call<T = unknown>(method: string, params?: unknown, timeoutMs = 120_000): Promise<T> {
+    log("call", method, "params=" + JSON.stringify(params).slice(0, 200));
     if (!this.process) await this.spawn();
     await this.ensureReady();
 
-    if (!this.process?.stdin) throw new Error("ProtonForge RPC not available");
+    if (!this.process?.stdin) {
+      const err = "ProtonForge RPC not available";
+      log("call", "FAIL", err);
+      throw new Error(err);
+    }
 
     const id = this.nextId++;
     const payload = { id, method, params: params ?? {} };
@@ -31,7 +84,9 @@ export class ProtonForgeRPC {
     return new Promise<T>((resolve, reject) => {
       const timer = setTimeout(() => {
         this.pending.delete(id);
-        reject(new Error(`ProtonForge RPC timeout: ${method}`));
+        const msg = `ProtonForge RPC timeout: ${method}`;
+        log("call", "TIMEOUT", method);
+        reject(new Error(msg));
       }, timeoutMs);
       this.pending.set(id, { resolve: resolve as (v: unknown) => void, reject, timer });
       this.process?.stdin?.write(JSON.stringify(payload) + "\n");
@@ -47,9 +102,15 @@ export class ProtonForgeRPC {
     const python = getVenvPythonPath() || "python3";
     const script = path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api", "server.py");
 
+    log("spawn", "python=" + python, "script=" + script);
+
     if (!fs.existsSync(script)) {
-      throw new Error(`ProtonForge RPC script not found: ${script}`);
+      const err = `ProtonForge RPC script not found: ${script}`;
+      log("spawn", "FAIL", err);
+      throw new Error(err);
     }
+
+    log("spawn", "executando server.py --stdio...");
 
     const child = cp.spawn(python, [script, "--stdio"], {
       stdio: ["pipe", "pipe", "pipe"],
@@ -63,11 +124,19 @@ export class ProtonForgeRPC {
 
     child.stderr?.setEncoding("utf-8");
     child.stderr?.on("data", (chunk: string) => {
+      log("stderr", chunk.trim());
       console.error("[ProtonForgeRPC:stderr]", chunk);
     });
 
-    child.on("error", (err) => this.handleExit(String(err)));
-    child.on("exit", (code, signal) => this.handleExit(`code=${code} signal=${signal}`));
+    child.on("error", (err) => {
+      log("spawn", "ERROR", String(err));
+      this.handleExit(String(err));
+    });
+
+    child.on("exit", (code, signal) => {
+      log("spawn", "EXIT", `code=${code} signal=${signal}`);
+      this.handleExit(`code=${code} signal=${signal}`);
+    });
 
     this.process = child;
 
@@ -76,7 +145,9 @@ export class ProtonForgeRPC {
         this.readyPromise,
         new Promise<void>((_, reject) => setTimeout(() => reject(new Error("ProtonForge RPC startup timeout")), 10_000)),
       ]);
+      log("spawn", "READY");
     } catch (err) {
+      log("spawn", "TIMEOUT/ERROR", String(err));
       this.kill();
       throw err;
     }
@@ -118,6 +189,7 @@ export class ProtonForgeRPC {
   }
 
   private static handleExit(reason: string) {
+    log("exit", reason);
     const err = new Error(`ProtonForge RPC exited: ${reason}`);
     for (const p of this.pending.values()) {
       clearTimeout(p.timer);
@@ -140,14 +212,14 @@ export class ProtonForgeRPC {
     ]);
   }
 
-  /** Spawns the Python RPC server eagerly at startup. Safe to call multiple times. */
   static async init(): Promise<void> {
     if (this.process) return;
-    console.log("[ProtonForgeRPC] init() — spawning server.py...");
+    log("init", "spawning server.py...");
     try {
       await this.spawn();
-      console.log("[ProtonForgeRPC] init() — ready");
+      log("init", "ready");
     } catch (err) {
+      log("init", "FAILED", String(err));
       console.error("[ProtonForgeRPC] init() — failed:", err);
     }
   }

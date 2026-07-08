@@ -1,3 +1,0 @@
-[08/07/2026 13:01:23] API single-shot
-[08/07/2026 13:01:23] OK get_installed_protons 1
-[08/07/2026 13:02:06] API started --stdio
