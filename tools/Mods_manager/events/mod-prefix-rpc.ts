@@ -3,9 +3,9 @@ import { ModStorageService } from "@main/services";
 import { ProtonForgeRPC } from "@main/services/protonforge-rpc";
 import fs from "node:fs";
 import path from "node:path";
-import os from "node:os";
+import { app } from "electron";
 
-const LOG_FILE = path.join(os.homedir(), "Games", "Mods", "prepare-prefix.log");
+const LOG_FILE = path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api", "log.txt");
 
 function log(...args: unknown[]) {
   const ts = new Date().toLocaleString("pt-BR");
