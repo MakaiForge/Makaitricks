@@ -46,3 +46,6 @@ src/main/gg-deals-key.ts
 
 # Diretório Data/ (mods, arquivos avulsos)
 Data/
+
+# Chrome runtime (arquivos binários enormes, 267MB+)
+resources/chrome/

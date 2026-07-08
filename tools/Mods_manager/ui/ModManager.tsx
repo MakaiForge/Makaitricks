@@ -236,6 +236,12 @@ export default function ModManager() {
     return () => { cancelled = true; };
   }, [selectedGame, configGamePath]);
 
+  useEffect(() => {
+    if (healthBanner?.status !== "valid") return;
+    const timer = setTimeout(() => setHealthBanner(null), 4000);
+    return () => clearTimeout(timer);
+  }, [healthBanner]);
+
   const handleDiscover = useCallback(async () => {
     const count = await discoverInstalledGames();
     if (count > 0) addLog(`Discovered ${count} game(s)`);
