@@ -64,15 +64,22 @@ export function GameConfigPanel({
     setFixing(false);
   };
 
+  /** Mapeia autoInstallDeps (catálogo) para verbs do Makaitricks */
+  const depToVerb = (dep: string): string => {
+    const map: Record<string, string> = {
+      vcredist: "vcrun2022",
+      d3dcompiler_47: "d3dcompiler_47",
+      dxvk: "dxvk",
+    };
+    return map[dep] || dep;
+  };
+
   const handleInstallDep = async (dep: string) => {
     if (!selectedGame) return;
     setInstallingDep(dep);
     try {
-      if (dep === "vcredist") {
-        await window.electron.modRunWineTool(selectedGame, "vcrun2022");
-      } else if (dep === "d3dcompiler_47") {
-        await window.electron.modRunWineTool(selectedGame, "d3dcompiler_47");
-      }
+      const verb = depToVerb(dep);
+      await window.electron.installGameDlls(selectedGame, [verb]);
       await runHealthCheck();
     } catch { /* ignore */ }
     setInstallingDep(null);

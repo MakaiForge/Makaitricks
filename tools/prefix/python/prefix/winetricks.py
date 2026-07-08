@@ -14,7 +14,7 @@ import subprocess
 import urllib.request
 
 _INSTALL_API_DIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), *([".."] * 6), "data", "install-api")
+    os.path.join(os.path.dirname(__file__), *([".."] * 4), "data", "install-api")
 )
 
 _MAKAITRICKS_REPO = "https://raw.githubusercontent.com/MakaiForge/Makaitricks/main"

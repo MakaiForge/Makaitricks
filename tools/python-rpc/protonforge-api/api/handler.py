@@ -94,7 +94,8 @@ def handle_create_prefix(params: dict) -> dict:
 
     Args:
         params: Deve conter "game_id" (str), "proton_path" (str)
-                Opcional: "prefix_path" (str), "auto_dlls" (bool)
+                Opcional: "prefix_path" (str), "auto_dlls" (bool),
+                "extra_verbs" (list[str])
 
     Retorna:
         Dict com status e caminho do prefixo criado
@@ -106,12 +107,14 @@ def handle_create_prefix(params: dict) -> dict:
 
     prefix_path = params.get("prefix_path")
     auto_dlls = params.get("auto_dlls", True)
+    extra_verbs = params.get("extra_verbs")
 
     return prefix.create_prefix(
         game_id=str(game_id),
         proton_path=str(proton_path),
         prefix_path=str(prefix_path) if prefix_path else None,
         auto_dlls=bool(auto_dlls),
+        extra_verbs=extra_verbs,
     )
 
 

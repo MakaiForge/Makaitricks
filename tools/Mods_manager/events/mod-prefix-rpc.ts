@@ -5,6 +5,7 @@ import { registerEvent } from "@main/events/register-event";
 import { ModStorageService } from "@main/services";
 import { ProtonForgeRPC } from "@main/services/protonforge-rpc";
 import { logPlay } from "@mods/play/logger";
+import { gameDllCatalog } from "../services/game-dlls-service";
 
 // Eager spawn: server.py roda no startup e grava log.txt
 ProtonForgeRPC.init();
@@ -57,6 +58,40 @@ function findAnyProton(): string | null {
   return null;
 }
 
+// Mapeamento de autoInstallDeps (catalogo) para verbs do Makaitricks
+const DEP_TO_VERB: Record<string, string> = {
+  vcredist: "vcrun2022",
+  d3dcompiler_47: "d3dcompiler_47",
+  dxvk: "dxvk",
+};
+
+// Verbs de mídia recomendados para jogos com cutscenes em vídeo
+const MEDIA_VERBS = ["mf", "lavfilters"];
+// Jogos conhecidos que usam vídeos BINK/outros codecs
+const GAMES_WITH_VIDEO = new Set([
+  "skyrim", "skyrim_se", "fallout4", "fallout_new_vegas", "oblivion",
+  "witcher3", "cyberpunk2077", "resident_evil_village", "hogwarts_legacy",
+  "elden_ring", "kingdom_come_deliverance", "starfield", "red_dead_redemption2",
+]);
+
+function getVerbsForGame(gameId: string): string[] {
+  const verbs: string[] = [];
+  const gameInfo = gameDllCatalog.getGame(gameId);
+  if (gameInfo?.autoInstallDeps) {
+    for (const dep of gameInfo.autoInstallDeps) {
+      const verb = DEP_TO_VERB[dep];
+      if (verb) verbs.push(verb);
+    }
+  }
+  if (gameInfo?.winetricksComponents?.length) {
+    verbs.push(...gameInfo.winetricksComponents);
+  }
+  if (GAMES_WITH_VIDEO.has(gameId)) {
+    verbs.push(...MEDIA_VERBS);
+  }
+  return [...new Set(verbs)];
+}
+
 registerEvent("modCreatePrefix", async (_event, gameId: string) => {
   const config = ModStorageService.get<ModGameConfig | null>(`game:${gameId}:config`);
   if (!config) {
@@ -82,7 +117,10 @@ registerEvent("modCreatePrefix", async (_event, gameId: string) => {
   }
 
   const prefixPath = config.protonPrefix || "";
-  logPlay(gameId, "modCreatePrefix", { protonPath, prefixPath, gamePath: config.gamePath });
+
+  // Monta lista de verbs Makaitricks para este jogo
+  const extraVerbs = getVerbsForGame(gameId);
+  logPlay(gameId, "modCreatePrefix", { protonPath, prefixPath, gamePath: config.gamePath, extraVerbs: extraVerbs.join(",") });
 
   try {
     const result = await ProtonForgeRPC.call<{
@@ -96,6 +134,7 @@ registerEvent("modCreatePrefix", async (_event, gameId: string) => {
       proton_path: protonPath,
       prefix_path: prefixPath,
       auto_dlls: true,
+      extra_verbs: extraVerbs,
     });
 
     logPlay(gameId, "modCreatePrefix_result", {
