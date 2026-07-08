@@ -59,9 +59,6 @@ import { registerProtonEvents } from "./proton";
 
 registerProtonEvents();
 
-import { registerCompatFlowEvents } from "@provision/CompactFlow/index";
-
-registerCompatFlowEvents();
 
 import "./game-log/get-game-log-lines";
 import "./game-log/clear-game-log";
