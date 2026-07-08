@@ -51,9 +51,38 @@ export function findGameByExe(exeName: string): GameDllEntry | undefined {
   );
 }
 
+export function findGameByName(name: string): GameDllEntry | undefined {
+  const catalog = loadCatalog();
+  const lower = name.toLowerCase();
+  return catalog.games.find(
+    (g) =>
+      g.gameId.toLowerCase() === lower ||
+      g.name.toLowerCase() === lower ||
+      g.name.toLowerCase().includes(lower) ||
+      g.gameId.toLowerCase().includes(lower)
+  );
+}
+
+export function findGameByGameIdOrName(gameId: string, gameName?: string): GameDllEntry | undefined {
+  const catalog = loadCatalog();
+  let info = catalog.games.find((g) => g.gameId === gameId);
+  if (info) return info;
+  const lower = gameId.toLowerCase();
+  info = catalog.games.find(
+    (g) =>
+      g.gameId.toLowerCase() === lower ||
+      g.name.toLowerCase() === lower
+  );
+  if (info) return info;
+  if (gameName) return findGameByName(gameName);
+  return findGameByName(gameId);
+}
+
 export const gameDllCatalog = {
   getAll: getGameDllCatalog,
   getGame: getGameDllInfo,
   findBySteamId: findGameBySteamId,
   findByExe: findGameByExe,
+  findByName: findGameByName,
+  findByIdOrName: findGameByGameIdOrName,
 };

@@ -14,8 +14,8 @@ export interface DetectionResult {
 }
 
 export function detectGame(gameId: string): DetectionResult {
-  const gameInfo = gameDllCatalog.getGame(gameId);
-  logger.info(`[detect] Starting detection for ${gameId}. gameInfo: ${gameInfo ? gameInfo.name : "NOT FOUND"}`);
+  const gameInfo = gameDllCatalog.findByIdOrName(gameId);
+  logger.info(`[detect] Starting detection for ${gameId}. gameInfo: ${gameInfo ? gameInfo.name + " (gameId: " + gameInfo.gameId + ")" : "NOT FOUND"}`);
 
   if (gameInfo?.steamIds?.length) {
     for (const steamId of gameInfo.steamIds) {
