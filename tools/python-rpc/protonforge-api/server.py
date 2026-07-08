@@ -32,11 +32,27 @@ Métodos disponíveis:
 """
 
 import json
+import os
 import sys
 import traceback
 import threading
+from datetime import datetime
 
 from api.handler import dispatch, RpcError
+
+LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "log.txt")
+
+
+def log_msg(*args):
+    """Appends a timestamped line to log.txt in the same directory as this script."""
+    ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    line = f"[{ts}] {' '.join(str(a) for a in args)}"
+    try:
+        os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+        with open(LOG_FILE, "a") as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
 
 
 def write_response(payload: dict):
@@ -87,12 +103,15 @@ def handle_request(request_payload: dict):
     try:
         result = dispatch(method, params)
         write_response({"id": request_id, "result": result})
+        log_msg("OK", method, str(request_id))
     except RpcError as e:
+        log_msg("RPC_ERROR", method, str(request_id), e.code, e.message)
         write_response({
             "id": request_id,
             "error": {"code": e.code, "message": e.message},
         })
     except Exception as e:
+        log_msg("EXCEPTION", method, str(request_id), str(e)[:200])
         traceback.print_exc(file=sys.stderr)
         write_response({
             "id": request_id,
@@ -110,6 +129,7 @@ def start_stdio_rpc_loop():
 
     Evento de ready é enviado assim que o servidor inicia.
     """
+    log_msg("API", "started", "--stdio")
     write_response({"event": "ready", "protocolVersion": 1})
 
     for raw_line in sys.stdin:
@@ -158,10 +178,12 @@ def main():
         # Modo pipe: lê uma linha, processa, sai
         raw_line = sys.stdin.readline().strip()
         if raw_line:
+            log_msg("API", "single-shot")
             try:
                 payload = json.loads(raw_line)
                 handle_request(payload)
             except json.JSONDecodeError as e:
+                log_msg("JSON_ERROR", str(e))
                 write_response({
                     "id": None,
                     "error": {"code": "invalid_json", "message": str(e)},
@@ -169,6 +191,7 @@ def main():
         return
 
     # Modo interativo (loop contínuo)
+    log_msg("API", "started", "interactive")
     start_stdio_rpc_loop()
 
 

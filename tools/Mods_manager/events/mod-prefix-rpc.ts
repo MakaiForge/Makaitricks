@@ -5,11 +5,20 @@ import fs from "node:fs";
 import path from "node:path";
 import { app } from "electron";
 
-const LOG_FILE = path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api", "log.txt");
+// Eager spawn: garante que o server.py rode e gere log.txt desde o startup
+ProtonForgeRPC.init();
+
+// Usa o mesmo path que protonforge-rpc.ts usa pra achar server.py
+const API_DIR = path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api");
+const LOG_FILE = path.join(API_DIR, "log.txt");
+
+console.log("[mod-prefix-rpc] LOG_FILE:", LOG_FILE);
+console.log("[mod-prefix-rpc] API_DIR exists:", fs.existsSync(API_DIR));
 
 function log(...args: unknown[]) {
   const ts = new Date().toLocaleString("pt-BR");
   const line = `[${ts}] ${args.map(a => String(a)).join(" ")}`;
+  console.log("[mod-prefix-rpc]", line);
   try {
     const dir = path.dirname(LOG_FILE);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });

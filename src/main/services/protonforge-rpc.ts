@@ -140,6 +140,18 @@ export class ProtonForgeRPC {
     ]);
   }
 
+  /** Spawns the Python RPC server eagerly at startup. Safe to call multiple times. */
+  static async init(): Promise<void> {
+    if (this.process) return;
+    console.log("[ProtonForgeRPC] init() — spawning server.py...");
+    try {
+      await this.spawn();
+      console.log("[ProtonForgeRPC] init() — ready");
+    } catch (err) {
+      console.error("[ProtonForgeRPC] init() — failed:", err);
+    }
+  }
+
   static kill(): void {
     this.process?.kill();
     this.handleExit("killed");
