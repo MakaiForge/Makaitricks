@@ -34,11 +34,13 @@ Métodos disponíveis:
 import json
 import os
 import sys
+import time
 import traceback
 import threading
 from datetime import datetime
 
 from api.handler import dispatch, RpcError
+from api import audit
 
 LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "log.txt")
 
@@ -70,7 +72,7 @@ def write_response(payload: dict):
 
 
 def handle_request(request_payload: dict):
-    """Processa uma requisição RPC.
+    """Processa uma requisição RPC com audit logging completo.
 
     Args:
         request_payload: Dict com id, method, params
@@ -85,8 +87,10 @@ def handle_request(request_payload: dict):
     request_id = request_payload.get("id")
     method = request_payload.get("method")
     params = request_payload.get("params")
+    _start = time.monotonic()
 
     if request_id is None:
+        audit.request(None, method or "unknown", params)
         write_response({
             "id": None,
             "error": {"code": "invalid_request", "message": "Missing request id"},
@@ -94,23 +98,32 @@ def handle_request(request_payload: dict):
         return
 
     if not isinstance(method, str) or not method:
+        audit.request(request_id, "invalid", params)
         write_response({
             "id": request_id,
             "error": {"code": "invalid_method", "message": "Invalid method"},
         })
         return
 
+    audit.request(request_id, method, params)
+
     try:
         result = dispatch(method, params)
+        duration = (time.monotonic() - _start) * 1000
+        audit.response(request_id, method, result, duration)
         write_response({"id": request_id, "result": result})
         log_msg("OK", method, str(request_id))
     except RpcError as e:
+        duration = (time.monotonic() - _start) * 1000
+        audit.error(request_id, method, e.code, e.message, duration)
         log_msg("RPC_ERROR", method, str(request_id), e.code, e.message)
         write_response({
             "id": request_id,
             "error": {"code": e.code, "message": e.message},
         })
     except Exception as e:
+        duration = (time.monotonic() - _start) * 1000
+        audit.exception(request_id, method, e, duration)
         log_msg("EXCEPTION", method, str(request_id), str(e)[:200])
         traceback.print_exc(file=sys.stderr)
         write_response({

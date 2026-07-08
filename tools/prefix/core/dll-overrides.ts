@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { logger } from "@main/services";
+import { logCall } from "../activity-logger";
 
 export type DllOverridesMap = Record<string, string>;
 
@@ -21,7 +22,11 @@ export function applyWineDllOverrides(
   prefixPath: string,
   overrides: DllOverridesMap,
 ): void {
-  if (!prefixPath || Object.keys(overrides).length === 0) return;
+  const _start = Date.now();
+  if (!prefixPath || Object.keys(overrides).length === 0) {
+    logCall("dll-overrides", "applyWineDllOverrides", { prefixPath, overrides }, { skipped: true }, 0);
+    return;
+  }
 
   const rootUserReg = path.join(prefixPath, "user.reg");
   const pfxUserReg = path.join(prefixPath, "pfx", "user.reg");
@@ -69,6 +74,7 @@ export function applyWineDllOverrides(
   const indentContent = before.endsWith("\n") || before === "" ? before : before + "\n";
   fs.writeFileSync(userRegPath, indentContent + `${sectionHeader}\n${dllLines}\n` + after, "utf-8");
   logger.info(`Applied ${Object.keys(overrides).length} DLL overrides to ${userRegPath}`);
+  logCall("dll-overrides", "applyWineDllOverrides", { prefixPath, overrides }, { count: Object.keys(overrides).length, userRegPath }, Date.now() - _start);
 }
 
 /**

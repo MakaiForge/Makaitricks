@@ -23,6 +23,37 @@
 - Created Release v2025.1 with Makaitricks asset
 - Multilingual README (PT/ES/EN)
 
+## Activity Logging System (v2025.2)
+Sistema de audit logging estruturado (NDJSON) nos 3 apps principais:
+
+### 1. protonforge-api (`tools/python-rpc/protonforge-api/`)
+- `api/audit.py` — logger completo de RPC requests/responses/errors
+- `server.py` — cada chamada RPC auditada com timestamp, params, resultado, status, duração (ms)
+- Saída: `activity.log` na raiz da API
+
+### 2. Mods_manager/play (`tools/Mods_manager/play/`)
+- `activity-logger.ts` — logger estruturado substituindo `logger.ts`
+- `play-game.ts` — cada step instrumentado com início/fim/duração/status
+- `index.ts` — evento IPC `modPlayGame` auditado + event map documentado
+- Saída: `activity.log` na pasta `play/`
+- Event map completo documentado inline em `index.ts`
+
+### 3. Prefix (`tools/prefix/`)
+- `activity-logger.ts` — logger centralizado para operações de prefixo
+- `core/init.ts` — `createPrefix` e `ensureGamePrefix` com audit logging de cada estratégia
+- `core/dll-overrides.ts` — `applyWineDllOverrides` auditado
+- `core/validate.ts` — `validatePrefix` e `ensurePrefixDir` auditados
+- Todos os 6 eventos IPC instrumentados: clear/delete/ensure/run/select/setup
+- Saída: `activity.log` na pasta `prefix/`
+
+### Formato
+NDJSON (JSON Lines), uma entrada por linha:
+```json
+{"type":"step","ts":"2026-07-09...","gameId":"skyrim","step":"proton","status":"done","duration_ms":1234}
+{"type":"prefix_operation","ts":"...","operation":"createPrefix","status":"success","pfxDir":"...","method":"proton_run","duration_ms":5678}
+{"type":"request","ts":"...","id":1,"method":"recommend_proton","params":{"game_id":"1245620"}}
+```
+
 ## What We're Working On
 - **Reforma GameConfigPanel** — substituir 6 botões inúteis por:
   - Detecção automática de jogo (Steam/GOG/Manual)

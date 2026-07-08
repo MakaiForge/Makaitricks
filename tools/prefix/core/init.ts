@@ -4,6 +4,7 @@ import { spawn } from "node:child_process";
 import { logger, Umu } from "@main/services";
 import { findProtonPath, findSteamClientPath, parseLibraryFolders } from "./steam-paths";
 import { clearCompatData, ensureCompatData } from "./clear";
+import { logOperation, logCall, logError as auditLogError } from "../activity-logger";
 
 export interface CreatePrefixOptions {
   /** Path to Proton directory (containing `proton` binary) */
@@ -53,6 +54,14 @@ function prefixExists(prefixPath: string): boolean {
  *   4. `proton run wineboot -u`
  */
 export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefixResult> {
+  const _start = Date.now();
+  logOperation("createPrefix", "started", {
+    prefixPath: options.prefixPath,
+    protonPath: options.protonPath,
+    gameId: options.gameId,
+    useUmu: !!options.useUmu,
+  });
+
   const {
     protonPath,
     prefixPath,
@@ -69,13 +78,24 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
   const protonBin = path.join(protonPath, "proton");
 
   return new Promise((resolve) => {
+    const _loggedResolve = (result: CreatePrefixResult) => {
+      logOperation("createPrefix", result.success ? "success" : "error", {
+        pfxDir: result.pfxDir,
+        method: result.method,
+        error: result.error,
+        errorType: result.errorType,
+        duration_ms: Date.now() - _start,
+      });
+      resolve(result);
+    };
+
     const emit = onProgress || (() => {});
 
     // Already exists?
     if (prefixExists(pfxDir)) {
       logger.info("Prefix already exists", { pfxDir });
       emit("✅ Prefixo já existe");
-      resolve({ success: true, pfxDir });
+      _loggedResolve({ success: true, pfxDir });
       return;
     }
 
@@ -162,7 +182,7 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
           umuEnv.PROTONPATH = protonPath;
           const r = await trySpawn(umuBin, ["wineboot", "-u"], umuEnv, "umu");
           if (r.ok) {
-            resolve({ success: true, pfxDir, method: "umu" });
+            _loggedResolve({ success: true, pfxDir, method: "umu" });
             return;
           }
           emit("⚠ umu-run falhou, tentando Proton diretamente...");
@@ -175,7 +195,7 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
         emit("🔧 Usando wineboot direto...");
         const r = await trySpawn(winebootBin, ["-u"], baseEnv, "direct_wineboot");
         if (r.ok) {
-          resolve({ success: true, pfxDir, method: "direct_wineboot" });
+          _loggedResolve({ success: true, pfxDir, method: "direct_wineboot" });
           return;
         }
         emit("⚠ wineboot direto falhou, tentando Proton wineboot...");
@@ -186,12 +206,12 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
         emit("🔧 Usando proton wineboot...");
         const r = await trySpawn(protonBin, ["wineboot", "-u"], baseEnv, "proton_wineboot", true, 20000);
         if (r.ok) {
-          resolve({ success: true, pfxDir, method: "proton_wineboot" });
+          _loggedResolve({ success: true, pfxDir, method: "proton_wineboot" });
           return;
         }
 
         if (r.errType === "default_pfx") {
-          resolve({
+          _loggedResolve({
             success: false,
             pfxDir,
             error: "default_pfx corrompido, necessário reinstalar Proton",
@@ -206,11 +226,11 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
         // Strategy 4: `proton run wineboot -u` (120s — comprovado funcionar)
         const r2 = await trySpawn(protonBin, ["run", "wineboot", "-u"], baseEnv, "proton_run", true, 120000);
         if (r2.ok || prefixExists(pfxDir)) {
-          resolve({ success: true, pfxDir, method: "proton_run" });
+          _loggedResolve({ success: true, pfxDir, method: "proton_run" });
           return;
         }
 
-        resolve({
+        _loggedResolve({
           success: false,
           pfxDir,
           error: `Todas as estratégias falharam. Último stderr: ${(r2.stderr || "").slice(0, 200)}`,
@@ -220,7 +240,7 @@ export function createPrefix(options: CreatePrefixOptions): Promise<CreatePrefix
         return;
       }
 
-      resolve({
+      _loggedResolve({
         success: false,
         pfxDir,
         error: "Proton binary not found",
@@ -332,6 +352,9 @@ export interface EnsureGamePrefixResult {
 export async function ensureGamePrefix(
   options: EnsureGamePrefixOptions,
 ): Promise<EnsureGamePrefixResult> {
+  const _start = Date.now();
+  logOperation("ensureGamePrefix", "started", { appId: options.appId, protonName: options.protonName });
+
   const { appId, onProgress } = options;
   const emit = onProgress || (() => {});
   let { protonName } = options;
@@ -340,6 +363,17 @@ export async function ensureGamePrefix(
     success: false,
     appId,
     protonName: protonName || null,
+  };
+
+  const _finish = () => {
+    logOperation("ensureGamePrefix", result.success ? "success" : "error", {
+      appId: result.appId,
+      protonName: result.protonName,
+      pfxDir: result.pfxDir,
+      error: result.error,
+      duration_ms: Date.now() - _start,
+    });
+    return result;
   };
 
   // 1. Resolve Proton name
@@ -356,12 +390,12 @@ export async function ensureGamePrefix(
         emit("   ℹ Nenhum Proton configurado — limpando prefixo sem recriar");
         await clearSteamPrefixCore(appId);
         result.success = true;
-        return result;
+        return _finish();
       }
     } catch (err) {
       result.error = `Falha ao ler config.vdf: ${String(err).slice(0, 200)}`;
       logger.error(result.error);
-      return result;
+      return _finish();
     }
   }
 
@@ -373,13 +407,13 @@ export async function ensureGamePrefix(
     if (!wrote) {
       result.error = "Falha ao escrever config.vdf";
       logger.error(result.error);
-      return result;
+      return _finish();
     }
     emit("   ✅ Proton configurado no Steam");
   } catch (err) {
     result.error = `Erro ao configurar Proton: ${String(err).slice(0, 200)}`;
     logger.error(result.error);
-    return result;
+    return _finish();
   }
 
   // 3. Find Proton binary
@@ -388,7 +422,7 @@ export async function ensureGamePrefix(
   if (!protonBinary) {
     result.error = `Proton "${protonName}" não encontrado. Use a aba Proton Tools para baixar.`;
     logger.error(result.error);
-    return result;
+    return _finish();
   }
   emit(`   ✅ ${protonName} encontrado`);
 
@@ -398,7 +432,7 @@ export async function ensureGamePrefix(
   if (!pfxDir) {
     result.error = "Não foi possível localizar o diretório compatdata do jogo";
     logger.error(result.error);
-    return result;
+    return _finish();
   }
   emit("   ✅ Prefixo antigo removido");
 
@@ -417,13 +451,13 @@ export async function ensureGamePrefix(
   if (!cpResult.success) {
     result.error = cpResult.error || "Falha ao criar prefixo";
     logger.error(result.error);
-    return result;
+    return _finish();
   }
 
   emit("   ✅ Prefixo recriado com sucesso");
   result.success = true;
   result.pfxDir = path.join(pfxDir, "pfx");
-  return result;
+  return _finish();
 }
 
 /**

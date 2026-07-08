@@ -3,6 +3,8 @@
 
 export type { PrefixOptions, PrefixResult, ScanFixResult } from "./types";
 
+export { logOperation, logCall, logError as logPrefixError } from "./activity-logger";
+
 export {
   parseLibraryFolders,
   findAllSteamLibraries,

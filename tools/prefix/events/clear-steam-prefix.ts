@@ -6,14 +6,26 @@ import { getSteamLocation } from "@main/services/steam";
 import { parseLibraryFolders, findProtonPath, findSteamClientPath } from "../core/steam-paths";
 import { createPrefix } from "../core/init";
 import { clearCompatData, ensureCompatData } from "../core/clear";
+import { logOperation } from "../activity-logger";
 
 const clearSteamPrefix = async (
   event: Electron.IpcMainInvokeEvent,
   appId: string,
   protonName?: string,
 ): Promise<boolean> => {
+  const _start = Date.now();
+  logOperation("clearSteamPrefix", "started", { appId, protonName });
+
   const sendProgress = (msg: string) => {
     try { event.sender.send("prefix-progress", appId, msg); } catch {}
+  };
+
+  const _finish = (success: boolean) => {
+    logOperation("clearSteamPrefix", success ? "success" : "error", {
+      appId, protonName,
+      duration_ms: Date.now() - _start,
+    });
+    return success;
   };
 
   const steamPath = await getSteamLocation().catch(() => {
@@ -23,7 +35,7 @@ const clearSteamPrefix = async (
   });
   if (!steamPath) {
     logger.error(`[clearSteamPrefix] Aborting — no Steam path for appId=${appId}`);
-    return false;
+    return _finish(false);
   }
 
   const libraryPaths = parseLibraryFolders(steamPath);
@@ -40,7 +52,7 @@ const clearSteamPrefix = async (
       if (!clearCompatData(compatDir)) {
         logger.error(`[clearSteamPrefix] Failed to clear ${compatDir}`);
         sendProgress("❌ Erro ao limpar prefixo");
-        return false;
+        return _finish(false);
       }
       compatDataPath = compatDir;
       break;
@@ -59,7 +71,7 @@ const clearSteamPrefix = async (
     if (!compatDataPath) {
       logger.error(`[clearSteamPrefix] Could not create compatdata for appId=${appId}`);
       sendProgress("❌ Não foi possível criar diretório compatdata");
-      return false;
+      return _finish(false);
     }
   }
 
@@ -72,7 +84,7 @@ const clearSteamPrefix = async (
     if (!protonBinary) {
       logger.error(`[clearSteamPrefix] Proton "${protonName}" not found`);
       sendProgress(`❌ Proton "${protonName}" não encontrado`);
-      return false;
+      return _finish(false);
     }
 
     const pfxDir = path.join(compatDataPath, "pfx");
@@ -89,16 +101,16 @@ const clearSteamPrefix = async (
     if (!result.success) {
       logger.error(`[clearSteamPrefix] Prefix creation failed: ${result.error}`);
       sendProgress(`❌ ${result.error || "Falha ao criar prefixo"}`);
-      return false;
+      return _finish(false);
     }
 
     sendProgress(`✅ Prefixo recriado com ${protonName}`);
-    return true;
+    return _finish(true);
   }
 
   logger.warn(`[clearSteamPrefix] No protonName provided — prefix cleared but NOT recreated for appId=${appId}`);
   sendProgress("⚠ Prefixo limpo, mas não recriado (sem Proton especificado)");
-  return true;
+  return _finish(true);
 };
 
 registerEvent("clearSteamPrefix", clearSteamPrefix);

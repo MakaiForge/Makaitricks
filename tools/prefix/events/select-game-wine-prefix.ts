@@ -5,6 +5,7 @@ import { app } from "electron";
 import { storeKeys, gamesStore } from "@main/store";
 import { Wine } from "@prefix/core/wine-prefix";
 import type { GameShop } from "@types";
+import { logOperation } from "../activity-logger";
 
 const getGamesFolder = () => path.join(app.getPath("userData"), "games");
 
@@ -20,20 +21,29 @@ const selectGameWinePrefix = async (
   objectId: string,
   winePrefixPath: string | null,
 ) => {
+  logOperation("selectGameWinePrefix", "started", { shop, objectId, winePrefixPath });
+  const _start = Date.now();
   const gameKey = storeKeys.game(shop, objectId);
   const game = await gamesStore.get(gameKey);
-  if (!game) return;
+  if (!game) {
+    logOperation("selectGameWinePrefix", "error", { shop, objectId, error: "game not found", duration_ms: Date.now() - _start });
+    return;
+  }
 
   const updatedGame = { ...game, winePrefixPath: null };
 
   if (winePrefixPath) {
     const realPath = await fs.promises.realpath(winePrefixPath);
-    if (!Wine.validatePrefix(realPath)) throw new Error("Invalid wine prefix path");
+    if (!Wine.validatePrefix(realPath)) {
+      logOperation("selectGameWinePrefix", "error", { shop, objectId, error: "invalid prefix path", duration_ms: Date.now() - _start });
+      throw new Error("Invalid wine prefix path");
+    }
     updatedGame.winePrefixPath = realPath;
   }
 
   await gamesStore.put(gameKey, updatedGame);
   await saveGameJson(objectId, updatedGame);
+  logOperation("selectGameWinePrefix", "success", { shop, objectId, winePrefixPath: updatedGame.winePrefixPath, duration_ms: Date.now() - _start });
 };
 
 const getDefaultWinePrefixSelectionPath = async () => {

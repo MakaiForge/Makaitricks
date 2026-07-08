@@ -7,6 +7,7 @@ import fs from "node:fs";
 import { logsPath } from "@main/constants";
 import type { GameShop } from "@types";
 import { getVenvPythonPath } from "@prefix/core/venv";
+import { logOperation } from "../activity-logger";
 
 const getPythonBin = (): string | null => {
   const candidates = [
@@ -41,6 +42,8 @@ const runWineTool = async (
   objectId: string,
   tool: string
 ): Promise<boolean> => {
+  logOperation("runWineTool", "started", { shop, objectId, tool });
+  const _start = Date.now();
   try {
     if (tool === "winelog") {
       const pythonBin = getPythonBin();
@@ -58,9 +61,11 @@ const runWineTool = async (
         child.stderr?.on("data", (data) => {
           console.error("[run-wine-tool] Python GUI stderr:", data.toString());
         });
+        logOperation("runWineTool", "success", { shop, objectId, tool, duration_ms: Date.now() - _start });
         return true;
       }
       console.error("[run-wine-tool] Python or script not found:", { pythonBin, guiScript });
+      logOperation("runWineTool", "error", { shop, objectId, tool, error: "Python or script not found", duration_ms: Date.now() - _start });
       return false;
     }
 
@@ -70,9 +75,13 @@ const runWineTool = async (
     });
 
     const result = await runner.run(tool as WineTool);
+    logOperation("runWineTool", result.success ? "success" : "error", {
+      shop, objectId, tool, duration_ms: Date.now() - _start,
+    });
     return result.success;
   } catch (error) {
     console.error("Failed to run wine tool:", error);
+    logOperation("runWineTool", "error", { shop, objectId, tool, error: String(error), duration_ms: Date.now() - _start });
     return false;
   }
 };
