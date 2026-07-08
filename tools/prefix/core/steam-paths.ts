@@ -35,6 +35,8 @@ const KNOWN_STEAM_LIBRARIES = [
   path.join(os.homedir(), ".local", "share", "Steam", "steamapps"),
   path.join(os.homedir(), ".steam", "steam", "steamapps"),
   "/usr/share/steam/steamapps",
+  path.join(os.homedir(), ".var", "app", "com.valvesoftware.Steam", "data", "steam", "steamapps"),
+  path.join(os.homedir(), "snap", "steam", "common", ".local", "share", "Steam", "steamapps"),
 ];
 
 export function findAllSteamLibraries(): string[] {
@@ -42,6 +44,8 @@ export function findAllSteamLibraries(): string[] {
   const vdfPaths = [
     path.join(os.homedir(), ".steam", "steam", "steamapps", "libraryfolders.vdf"),
     path.join(os.homedir(), ".local", "share", "Steam", "steamapps", "libraryfolders.vdf"),
+    path.join(os.homedir(), ".var", "app", "com.valvesoftware.Steam", "data", "steam", "steamapps", "libraryfolders.vdf"),
+    path.join(os.homedir(), "snap", "steam", "common", ".local", "share", "Steam", "steamapps", "libraryfolders.vdf"),
   ];
 
   for (const vdfPath of vdfPaths) {
@@ -121,6 +125,8 @@ export function findSteamClientPath(): string {
     path.join(os.homedir(), ".local", "share", "Steam"),
     path.join(os.homedir(), ".steam", "steam"),
     "/usr/share/steam",
+    path.join(os.homedir(), ".var", "app", "com.valvesoftware.Steam", "data", "steam"),
+    path.join(os.homedir(), "snap", "steam", "common", ".local", "share", "Steam"),
   ];
   for (const p of candidates) {
     if (fs.existsSync(path.join(p, "steam.sh")) || fs.existsSync(path.join(p, "steam"))) {

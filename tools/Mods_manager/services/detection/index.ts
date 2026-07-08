@@ -35,7 +35,7 @@ export function detectGame(gameId: string): DetectionResult {
     }
   }
 
-  const gog = findGogGamePath(gameId);
+  const gog = findGogGamePath(gameId, gameInfo?.name);
   if (gog) {
     logger.info(`[detect] ${gameId} found via GOG (${gog.source})`);
     return { gamePath: gog.gamePath, prefixPath: null, source: "gog" };

@@ -64,31 +64,25 @@ function detectCommonPaths(gameId: string): string | null {
   return null;
 }
 
-export function findGogGamePath(gameId: string): { gamePath: string; source: "heroic" | "manual" } | null {
-  const gameNameMap: Record<string, string[]> = {
-    skyrim_se: ["Skyrim Special Edition", "Skyrim SE", "Skyrim Anniversary Edition"],
-    skyrim: ["Skyrim", "Skyrim Classic"],
-    skyrim_vr: ["Skyrim VR"],
-    fallout4: ["Fallout 4"],
-    fallout4_vr: ["Fallout 4 VR"],
-    fallout3: ["Fallout 3"],
-    falloutnv: ["Fallout New Vegas"],
-    oblivion: ["Oblivion"],
-    oblivion_remastered: ["Oblivion Remastered"],
-    enderal: ["Enderal"],
-    enderal_se: ["Enderal Special Edition"],
-    morrowind: ["Morrowind"],
-    starfield: ["Starfield"],
-  };
-
-  const names = gameNameMap[gameId];
-  if (!names) return null;
-
+export function findGogGamePath(gameId: string, gameName?: string): { gamePath: string; source: "heroic" | "manual" } | null {
   const heroicGames = detectThroughHeroic();
-  for (const gog of heroicGames) {
-    const title = gog.appTitle.toLowerCase();
-    if (names.some(n => title.includes(n.toLowerCase()))) {
-      return { gamePath: gog.installPath, source: "heroic" };
+
+  if (gameName) {
+    const lowerName = gameName.toLowerCase();
+    const keywords = lowerName.split(/[\s:]+/).filter(w => w.length > 3);
+
+    for (const gog of heroicGames) {
+      const title = gog.appTitle.toLowerCase();
+      if (title.includes(lowerName) || keywords.some(k => title.includes(k))) {
+        return { gamePath: gog.installPath, source: "heroic" };
+      }
+    }
+  } else {
+    for (const gog of heroicGames) {
+      const title = gog.appTitle.toLowerCase();
+      if (title.includes(gameId.replace(/_/g, " ").toLowerCase())) {
+        return { gamePath: gog.installPath, source: "heroic" };
+      }
     }
   }
 
