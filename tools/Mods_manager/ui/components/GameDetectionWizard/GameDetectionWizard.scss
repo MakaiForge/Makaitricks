@@ -117,3 +117,27 @@
 .detection-wizard__game-item--selected .detection-wizard__game-status--found {
   color: #fff;
 }
+
+.detection-wizard__debug {
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+
+  summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary, #888);
+  }
+}
+
+.detection-wizard__debug-pre {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 8px 0 0;
+  color: #aaa;
+}

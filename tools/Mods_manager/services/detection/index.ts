@@ -15,19 +15,23 @@ export interface DetectionResult {
 
 export function detectGame(gameId: string): DetectionResult {
   const gameInfo = gameDllCatalog.getGame(gameId);
+  logger.info(`[detect] Starting detection for ${gameId}. gameInfo: ${gameInfo ? gameInfo.name : "NOT FOUND"}`);
 
   if (gameInfo?.steamIds?.length) {
     for (const steamId of gameInfo.steamIds) {
+      logger.info(`[detect] Trying Steam AppID ${steamId}...`);
       const steam = findSteamAppPath(steamId);
       if (steam) {
         const prefixPath = steamCompatDataPath(steam.libraryPath, steamId);
-        logger.info(`[detect] ${gameId} found via Steam AppID ${steamId}`);
+        logger.info(`[detect] ${gameId} found via Steam AppID ${steamId} at ${steam.gamePath}`);
         return { gamePath: steam.gamePath, prefixPath, source: "steam", steamAppId: steamId };
       }
+      logger.info(`[detect] Steam AppID ${steamId} not found`);
     }
   }
 
   if (!gameInfo?.steamIds?.length) {
+    logger.info(`[detect] No steamIds, trying fallback with gameId "${gameId}"`);
     const steam = findSteamAppPath(gameId);
     if (steam) {
       logger.info(`[detect] ${gameId} found via Steam (fallback ID)`);
@@ -35,6 +39,7 @@ export function detectGame(gameId: string): DetectionResult {
     }
   }
 
+  logger.info(`[detect] Trying GOG for ${gameId}...`);
   const gog = findGogGamePath(gameId, gameInfo?.name);
   if (gog) {
     logger.info(`[detect] ${gameId} found via GOG (${gog.source})`);
@@ -42,13 +47,15 @@ export function detectGame(gameId: string): DetectionResult {
   }
 
   if (gameInfo?.detectExe) {
+    logger.info(`[detect] Trying manual scan for ${gameId} (exe: ${gameInfo.detectExe})`);
     const manual = detectManual(gameInfo.detectExe, gameInfo.detectExeAlts);
     if (manual) {
-      logger.info(`[detect] ${gameId} found via manual scan`);
+      logger.info(`[detect] ${gameId} found via manual scan at ${manual}`);
       return { gamePath: manual, prefixPath: null, source: "manual" };
     }
   }
 
+  logger.info(`[detect] ${gameId} not found via any method`);
   return { gamePath: "", prefixPath: null, source: null };
 }
 

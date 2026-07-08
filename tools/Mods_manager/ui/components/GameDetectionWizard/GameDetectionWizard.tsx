@@ -23,24 +23,36 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
   const [chosenGameId, setChosenGameId] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const [debugLog, setDebugLog] = useState<string[]>([]);
+
+  const log = useCallback((msg: string) => {
+    setDebugLog(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${msg}`]);
+  }, []);
 
   const startDetection = useCallback(async (targetGameId?: string) => {
     setStep("detecting");
     setError(null);
     setDetected([]);
+    setDebugLog([]);
+    log(`Iniciando detecção. targetGameId: ${targetGameId || "todos"}`);
     try {
       const catalogResult = await window.electron.getGameDllCatalog();
       if (!catalogResult.ok || !catalogResult.data?.games) {
         setError("Catálogo de jogos não disponível");
+        log("ERRO: catálogo não disponível");
         return;
       }
       const games = catalogResult.data.games;
-      const found: DetectionAttempt[] = [];
+      log(`Catálogo carregado: ${games.length} jogos`);
       const scanTarget = targetGameId
         ? games.filter((g: any) => g.gameId === targetGameId)
         : games;
+      log(`Alvo da varredura: ${scanTarget.length} jogos (${scanTarget.map((g: any) => g.gameId).join(", ")})`);
+      const found: DetectionAttempt[] = [];
       for (const game of scanTarget) {
+        log(`Verificando ${game.gameId}...`);
         const path = await window.electron.modDetectGamePath(game.gameId);
+        log(`${game.gameId} → ${path ? "ENCONTRADO: " + path : "NÃO ENCONTRADO"}`);
         found.push({
           gameId: game.gameId,
           name: game.name,
@@ -53,10 +65,11 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       if (firstFound) setChosenGameId(firstFound.gameId);
       setStep("result");
     } catch (e: any) {
+      log(`ERRO: ${e.message || e}`);
       setError(e.message || "Erro na detecção");
       setStep("result");
     }
-  }, []);
+  }, [log]);
 
   useEffect(() => {
     if (!open) return;
@@ -85,7 +98,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
 
   const handleConfirm = async (gameId: string) => {
     const game = detected.find((g) => g.gameId === gameId);
-    if (!game) return;
+    if (!game || !game.found || !game.source) return;
     const path = await window.electron.modDetectGamePath(gameId);
     if (path) {
       onGameDetected(gameId, path);
@@ -142,6 +155,12 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
                 Configurar Selecionado
               </Button>
             </div>
+            {debugLog.length > 0 && (
+              <details className="detection-wizard__debug">
+                <summary>Log de depuração ({debugLog.length} linhas)</summary>
+                <pre className="detection-wizard__debug-pre">{debugLog.join("\n")}</pre>
+              </details>
+            )}
           </div>
         )}
 
