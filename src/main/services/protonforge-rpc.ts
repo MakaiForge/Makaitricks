@@ -8,47 +8,33 @@ let LOG_FILE = "";
 
 function getLogFile(): string {
   if (LOG_FILE) return LOG_FILE;
-
-  const candidates = [
-    // app.isPackaged, usar userData
-    path.join(app.getPath("userData"), "protonforge-api.log"),
-  ];
-
-  if (!app.isPackaged) {
-    // Dev: parent do out/main/ é a raiz do projeto
-    const devRoot = path.dirname(path.dirname(__dirname));
-    candidates.push(
-      path.join(devRoot, "tools", "python-rpc", "protonforge-api", "log.txt")
-    );
-  }
-
-  for (const c of candidates) {
-    try {
-      const dir = path.dirname(c);
-      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-      fs.accessSync(dir, fs.constants.W_OK);
-      LOG_FILE = c;
-      console.log("[ProtonForgeRPC] log file:", LOG_FILE);
-      return LOG_FILE;
-    } catch { continue; }
-  }
-
-  // Último recurso: CWD
-  LOG_FILE = path.resolve("protonforge-api.log");
+  LOG_FILE = "/tmp/protonforge-api.log";
   return LOG_FILE;
+}
+
+/** Retorna o path do log na pasta da API (pode falhar). */
+function getApiLogPath(): string {
+  try {
+    return path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api", "log.txt");
+  } catch {
+    return "";
+  }
 }
 
 function log(...args: unknown[]) {
   const ts = new Date().toLocaleString("pt-BR");
   const line = `[${ts}] ${args.map(a => String(a)).join(" ")}`;
   console.log("[ProtonForgeRPC]", line);
-  try {
-    const f = getLogFile();
-    const dir = path.dirname(f);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.appendFileSync(f, line + "\n");
-  } catch (e) {
-    console.error("[ProtonForgeRPC] log write failed:", e);
+  const f = getLogFile();
+  try { fs.appendFileSync(f, line + "\n"); } catch {}
+  // Também tenta escrever na pasta da API
+  const api = getApiLogPath();
+  if (api && api !== f) {
+    try {
+      const dir = path.dirname(api);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.appendFileSync(api, line + "\n");
+    } catch {}
   }
 }
 
@@ -221,6 +207,21 @@ export class ProtonForgeRPC {
     } catch (err) {
       log("init", "FAILED", String(err));
       console.error("[ProtonForgeRPC] init() — failed:", err);
+    }
+  }
+
+  /** Copies log.txt do /tmp para o diretório da API. */
+  static copyLogToApiDir(): void {
+    const src = "/tmp/protonforge-api.log";
+    if (!fs.existsSync(src)) return;
+    try {
+      const dst = path.join(app.getAppPath(), "tools", "python-rpc", "protonforge-api", "log.txt");
+      const dir = path.dirname(dst);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.cpSync(src, dst, { force: true });
+      console.log("[ProtonForgeRPC] log copied to", dst);
+    } catch (e) {
+      console.error("[ProtonForgeRPC] copy log failed:", e);
     }
   }
 
