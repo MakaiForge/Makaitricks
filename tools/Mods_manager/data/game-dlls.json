@@ -3,6 +3,32 @@
   "_comment": "Database de DLLs, registry e dependências por jogo. Baseado no padrão Amethyst Mod Manager.",
   "games": [
     {
+      "gameId": "skyrim",
+      "name": "The Elder Scrolls V: Skyrim",
+      "steamIds": ["72850"],
+      "detectExe": "TESV.exe",
+      "detectExeAlts": ["SkyrimLauncher.exe"],
+      "nexusDomain": "skyrim",
+      "wineDllOverrides": {
+        "winmm": "native,builtin",
+        "version": "native,builtin"
+      },
+      "wineDllOverridesRange": {
+        "xaudio2_": { "start": 0, "end": 7, "mode": "native,builtin" },
+        "x3daudio1_": { "start": 0, "end": 7, "mode": "native,builtin" }
+      },
+      "autoInstallDeps": ["vcredist", "d3dcompiler_47"],
+      "winetricksComponents": [],
+      "scriptExtender": {
+        "name": "SKSE",
+        "loaderExe": "skse_loader.exe",
+        "downloadUrl": "",
+        "installPath": "."
+      },
+      "reshadeDll": "dxgi.dll",
+      "reshadeArch": 32
+    },
+    {
       "gameId": "skyrim_se",
       "name": "Skyrim Special Edition",
       "steamIds": ["489830"],
