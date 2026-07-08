@@ -35,6 +35,8 @@ export function GameConfigPanel({
   const [fixing, setFixing] = useState(false);
   const [fixResult, setFixResult] = useState<string[]>([]);
   const [installingDep, setInstallingDep] = useState<string | null>(null);
+  const [preparingPrefix, setPreparingPrefix] = useState(false);
+  const [prefixPrepResult, setPrefixPrepResult] = useState<{ ok: boolean; msg: string } | null>(null);
 
   const runHealthCheck = useCallback(async () => {
     if (!selectedGame) return;
@@ -74,6 +76,24 @@ export function GameConfigPanel({
       await runHealthCheck();
     } catch { /* ignore */ }
     setInstallingDep(null);
+  };
+
+  const handlePreparePrefix = async () => {
+    if (!selectedGame) return;
+    setPreparingPrefix(true);
+    setPrefixPrepResult(null);
+    try {
+      const result = await window.electron.createModPrefix(selectedGame);
+      if (result.ok) {
+        setPrefixPrepResult({ ok: true, msg: "Prefixo criado/configurado com sucesso!" });
+        await runHealthCheck();
+      } else {
+        setPrefixPrepResult({ ok: false, msg: result.error || "Falha ao criar prefixo" });
+      }
+    } catch (err) {
+      setPrefixPrepResult({ ok: false, msg: `Erro: ${String(err)}` });
+    }
+    setPreparingPrefix(false);
   };
 
   const handleDetect = async () => {
@@ -152,6 +172,19 @@ export function GameConfigPanel({
                 <Button onClick={handleAutoFix} disabled={fixing} theme="primary" className="mod-manager__config-fix-btn">
                   {fixing ? "Corrigindo..." : "Reparar Prefixo"}
                 </Button>
+              )}
+              <Button
+                onClick={handlePreparePrefix}
+                disabled={preparingPrefix}
+                theme="secondary"
+                className="mod-manager__config-prepare-btn"
+              >
+                {preparingPrefix ? "Preparando..." : "Preparar Prefixo"}
+              </Button>
+              {prefixPrepResult && (
+                <div className={`mod-manager__config-prepare-result ${prefixPrepResult.ok ? "--ok" : "--fail"}`}>
+                  {prefixPrepResult.ok ? "✅ " : "❌ "}{prefixPrepResult.msg}
+                </div>
               )}
               {fixResult.length > 0 && (
                 <div className="mod-manager__config-fix-result">

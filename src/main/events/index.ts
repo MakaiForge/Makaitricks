@@ -49,6 +49,7 @@ import "@mods/events/mod-eslifier";
 import "@mods/events/mod-backup";
 import "@mods/events/mod-known-games";
 import "@mods/events/mod-run-wine-tool";
+import "@mods/events/mod-prefix-rpc";
 import "@mods/play";
 import { registerChromeBrowserEvents } from "./chrome-browser";
 

@@ -1151,6 +1151,10 @@ contextBridge.exposeInMainWorld("electron", {
     ipcRenderer.invoke("prefixHealthCheck", gameId),
   prefixAutoFix: (gameId: string) =>
     ipcRenderer.invoke("prefixAutoFix", gameId),
+  createModPrefix: (gameId: string) =>
+    ipcRenderer.invoke("modCreatePrefix", gameId),
+  installGameDlls: (gameId: string, extraVerbs?: string[]) =>
+    ipcRenderer.invoke("modInstallGameDlls", gameId, extraVerbs),
   modBridgeSetContext: (ctx: { source: string; gameId: string; prefixPath: string; gamePath?: string }) =>
     ipcRenderer.invoke("modBridgeSetContext", ctx),
   modBridgeGetContext: () =>

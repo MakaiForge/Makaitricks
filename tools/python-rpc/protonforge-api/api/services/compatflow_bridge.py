@@ -9,12 +9,12 @@ o resultado alimenta o fluxo de recomendacao de Proton.
 import os
 import sys
 
-# Adiciona o diretorio raiz do projeto ao path para importar o compatflow
-_PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+# Adiciona data/install-api/ ao path para importar compatflow
+_COMPATFLOW_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), *([".."] * 5), "data", "install-api")
 )
-if _PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, _PROJECT_ROOT)
+if _COMPATFLOW_DIR not in sys.path:
+    sys.path.insert(0, _COMPATFLOW_DIR)
 
 from compatflow.core.analyzer import analyze as compatflow_analyze
 from compatflow.core.database import (
@@ -28,6 +28,7 @@ from compatflow.core.database import (
 
 
 def analyze_exe(exe_path: str) -> dict:
+
     """
     Analisa um arquivo .exe/.msi e retorna informacoes de compatibilidade.
 

@@ -933,6 +933,8 @@ declare global {
     detectGameManual: (gameId: string, selectedPath: string) => Promise<{ ok: boolean; data?: { gamePath: string; stagingDir: string; protonPrefix: string }; error?: string }>;
     prefixHealthCheck: (gameId: string) => Promise<{ ok: boolean; data?: HealthReport; error?: string }>;
     prefixAutoFix: (gameId: string) => Promise<{ ok: boolean; data?: { fixed: string[]; errors: string[] }; error?: string }>;
+    createModPrefix: (gameId: string) => Promise<{ ok: boolean; data?: { prefixPath: string; initialized: boolean; dllsInstalled: string[]; errors: string[] }; error?: string }>;
+    installGameDlls: (gameId: string, extraVerbs?: string[]) => Promise<{ ok: boolean; data?: { installed: string[]; errors: string[] }; error?: string }>;
     modBridgeSetContext: (ctx: { source: string; gameId: string; prefixPath: string; gamePath?: string }) => Promise<{ ok: boolean; data?: any }>;
     modBridgeGetContext: () => Promise<{ ok: boolean; data?: { source: string; gameId: string; prefixPath: string; gamePath?: string } }>;
     modBridgeClearContext: () => Promise<{ ok: boolean }>;
