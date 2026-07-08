@@ -7,21 +7,9 @@ o resultado alimenta o fluxo de recomendacao de Proton.
 """
 
 import os
-import sys
 
-# Adiciona data/install-api/ ao path para importar compatflow
-_COMPATFLOW_DIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), *([".."] * 5), "data", "install-api")
-)
-if _COMPATFLOW_DIR not in sys.path:
-    sys.path.insert(0, _COMPATFLOW_DIR)
-
-from compatflow.core.analyzer import analyze as compatflow_analyze
-from compatflow.core.database import (
-    check_native,
-    check_port,
-    get_game_name,
-    get_app_name,
+from .compatflow_analyzer import analyze as compatflow_analyze
+from .compatflow_analyzer.database import (
     NATIVE,
     GAME_NAMES,
 )

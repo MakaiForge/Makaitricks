@@ -7,21 +7,9 @@ o resultado alimenta o fluxo de recomendacao de Proton.
 """
 
 import os
-import sys
 
-# Adiciona o diretorio raiz do projeto ao path para importar o compatflow
-_PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "..", "..")
-)
-if _PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, _PROJECT_ROOT)
-
-from compatflow.core.analyzer import analyze as compatflow_analyze
-from compatflow.core.database import (
-    check_native,
-    check_port,
-    get_game_name,
-    get_app_name,
+from .compatflow_analyzer import analyze as compatflow_analyze
+from .compatflow_analyzer.database import (
     NATIVE,
     GAME_NAMES,
 )

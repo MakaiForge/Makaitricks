@@ -1,8 +1,3 @@
-"""
-Banco de dados de aplicativos nativos Linux e ports (Lutris).
-Contém o mapeamento completo do CompatFlow original.
-"""
-
 import os
 import json
 
@@ -10,7 +5,6 @@ CACHE_DIR = os.path.expanduser("~/.config/compatflow")
 CACHE_FILE = os.path.join(CACHE_DIR, "ports.json")
 
 NATIVE = {
-    # NAVEGADORES
     "firefox": ("Firefox", "firefox", "Navegador"),
     "chrome": ("Chrome", "google-chrome-stable", "Navegador"),
     "edge": ("Edge", "microsoft-edge-stable", "Navegador"),
@@ -23,8 +17,6 @@ NATIVE = {
     "falkon": ("Falkon", "falkon", "Navegador"),
     "epiphany": ("Epiphany", "epiphany", "Navegador GNOME"),
     "konqueror": ("Konqueror", "konqueror", "Navegador KDE"),
-
-    # COMUNICAÇÃO / MENSAGENS
     "discord": ("Discord", "discord", "Chat para gamers"),
     "telegram": ("Telegram", "telegram-desktop", "Mensagens"),
     "skype": ("Skype", "skypeforlinux", "Videochamadas"),
@@ -38,8 +30,6 @@ NATIVE = {
     "geary": ("Geary", "geary", "Email GNOME"),
     "mumble": ("Mumble", "mumble", "Voz para jogos"),
     "vesktop": ("Vesktop", "vesktop", "Discord customizado"),
-
-    # STREAMING / MUSICA / VIDEO
     "spotify": ("Spotify", "spotify", "Streaming de musica"),
     "vlc": ("VLC", "vlc", "Reprodutor de midia"),
     "mpv": ("MPV", "mpv", "Reprodutor de midia"),
@@ -54,8 +44,6 @@ NATIVE = {
     "audacious": ("Audacious", "audacious", "Player musica"),
     "clementine": ("Clementine", "clementine", "Player musica"),
     "deadbeef": ("DeaDBeeF", "deadbeef", "Player musica"),
-
-    # JOGOS / GAMING
     "steam": ("Steam", "steam", "Plataforma de jogos"),
     "epic": ("Epic Games", "heroic-games-launcher-bin", "Epic Games"),
     "gog": ("GOG Galaxy", "heroic-games-launcher-bin", "GOG"),
@@ -69,8 +57,6 @@ NATIVE = {
     "openttd": ("OpenTTD", "openttd", "Jogo simulacao"),
     "flightgear": ("FlightGear", "flightgear", "Simulador de voo"),
     "neverball": ("Neverball", "neverball", "Jogo"),
-
-    # ESCRITORIO / PRODUTIVIDADE
     "libreoffice": ("LibreOffice", "libreoffice", "Escritorio completo"),
     "onlyoffice": ("OnlyOffice", "onlyoffice-desktopeditors", "Escritorio"),
     "wps": ("WPS Office", "wps-office", "Escritorio"),
@@ -84,8 +70,6 @@ NATIVE = {
     "joplin": ("Joplin", "joplin", "Notas"),
     "zettlr": ("Zettlr", "zettlr", "Editor Markdown"),
     "marktext": ("MarkText", "marktext", "Editor Markdown"),
-
-    # EDITOR DE CODIGO / IDE
     "vscode": ("VS Code", "code", "Editor de codigo"),
     "vscodium": ("VSCodium", "vscodium", "Editor de codigo"),
     "sublime": ("Sublime Text", "sublime-text", "Editor de texto"),
@@ -108,8 +92,6 @@ NATIVE = {
     "rubymine": ("RubyMine", "rubymine", "IDE Ruby"),
     "webstorm": ("WebStorm", "webstorm", "IDE JavaScript"),
     "datagrip": ("DataGrip", "datagrip", "IDE Database"),
-
-    # DESIGN / IMAGENS / FOTOS
     "gimp": ("GIMP", "gimp", "Editor de imagens"),
     "inkscape": ("Inkscape", "inkscape", "Editor vetorial"),
     "blender": ("Blender", "blender", "3D"),
@@ -123,8 +105,6 @@ NATIVE = {
     "nomacs": ("Nomacs", "nomacs", "Visualizador"),
     "shotwell": ("Shotwell", "shotwell", "Gerenciador fotos"),
     "kolourpaint": ("KolourPaint", "kolourpaint", "Pintura KDE"),
-
-    # VIDEO / STREAMING / GRAVACAO
     "obs": ("OBS Studio", "obs-studio", "Gravacao/Streaming"),
     "kdenlive": ("Kdenlive", "kdenlive", "Editor de video"),
     "ffmpeg": ("FFmpeg", "ffmpeg", "Conversao de midia"),
@@ -141,8 +121,6 @@ NATIVE = {
     "daVinci": ("DaVinci Resolve", "davinci-resolve", "Editor profissional"),
     "davinci": ("DaVinci Resolve", "davinci-resolve", "Editor profissional"),
     "audacity": ("Audacity", "audacity", "Editor de audio"),
-
-    # REDE / INTERNET / FTP
     "filezilla": ("FileZilla", "filezilla", "FTP"),
     "cyberduck": ("Cyberduck", "cyberduck", "FTP/S3"),
     "nautilus": ("Nautilus", "nautilus", "Gerenciador GNOME"),
@@ -155,8 +133,6 @@ NATIVE = {
     "transmission": ("Transmission", "transmission-gtk", "Torrent"),
     "ktorrent": ("KTorrent", "ktorrent", "Torrent KDE"),
     "amule": ("aMule", "amule", "eDonkey"),
-
-    # DESENVOLVIMENTO / DEV TOOLS
     "git": ("Git", "git", "Controle de versao"),
     "docker": ("Docker", "docker", "Containerizacao"),
     "postman": ("Postman", "postman", "API Testing"),
@@ -186,8 +162,6 @@ NATIVE = {
     "nodejs": ("Node.js", "nodejs", "Runtime JS"),
     "npm": ("NPM", "npm", "Gerenciador pacotes JS"),
     "yarn": ("Yarn", "yarn", "Gerenciador pacotes JS"),
-
-    # SERVIDORES / BANCO DE DADOS
     "mysql": ("MySQL", "mysql", "Banco de dados"),
     "mariadb": ("MariaDB", "mariadb", "Banco de dados"),
     "postgresql": ("PostgreSQL", "postgresql", "Banco de dados"),
@@ -197,8 +171,6 @@ NATIVE = {
     "apache": ("Apache", "apache2", "Servidor web"),
     "nginx": ("Nginx", "nginx", "Servidor web"),
     "lighttpd": ("Lighttpd", "lighttpd", "Servidor web"),
-
-    # UTILITARIOS / SISTEMA
     "virtualbox": ("VirtualBox", "virtualbox", "Virtualizacao"),
     "qemu": ("QEMU", "qemu", "Virtualizacao"),
     "gnome-boxes": ("GNOME Boxes", "gnome-boxes", "Virtualizacao"),
@@ -222,22 +194,16 @@ NATIVE = {
     "nvtop": ("NVTOP", "nvtop", "Monitor GPU NVIDIA"),
     "wireshark": ("Wireshark", "wireshark", "Sniffer de rede"),
     "nmap": ("Nmap", "nmap", "Scanner de rede"),
-
-    # COMPACTADORES / ARQUIVOS
     "7zip": ("7-Zip", "p7zip-full", "Compactador"),
     "peazip": ("PeaZip", "peazip", "Compactador"),
     "ark": ("Ark", "ark", "Compactador KDE"),
     "file-roller": ("File Roller", "file-roller", "Compactador GNOME"),
     "xarchiver": ("Xarchiver", "xarchiver", "Compactador"),
     "engrampa": ("Engrampa", "engrampa", "Compactador MATE"),
-
-    # PDF / DOCUMENTOS
     "evince": ("Evince", "evince", "Leitor PDF GNOME"),
     "okular": ("Okular", "okular", "Leitor PDF KDE"),
     "zathura": ("Zathura", "zathura", "Leitor PDF minimalista"),
     "foxit": ("Foxit", "foxitreader", "Leitor PDF"),
-
-    # ACESSO REMOTO
     "anydesk": ("AnyDesk", "anydesk", "Acesso remoto"),
     "teamviewer": ("TeamViewer", "teamviewer", "Acesso remoto"),
     "parsec": ("Parsec", "parsec", "Jogar remotamente"),
@@ -249,15 +215,11 @@ NATIVE = {
     "nomachine": ("NoMachine", "nomachine", "Acesso remoto"),
     "x2go": ("X2Go", "x2goclient", "Acesso remoto"),
     "sshfs": ("SSHFS", "sshfs", "Montar remote"),
-
-    # CLOUD / STORAGE
     "dropbox": ("Dropbox", "dropbox", "Cloud storage"),
     "google-drive": ("Google Drive", "google-drive-ocamlfuse", "Cloud storage"),
     "mega": ("MEGA", "megasync", "Cloud storage"),
     "onedrive": ("OneDrive", "onedrive", "Cloud storage"),
     "rclone": ("Rclone", "rclone", "Cloud CLI"),
-
-    # VIRTUALIZACAO / EMULACAO
     "dosbox": ("DOSBox", "dosbox", "Emulador DOS"),
     "dosemu": ("DOSEMU", "dosemu", "Emulador DOS"),
     "scummvm": ("ScummVM", "scummvm", "Emulador jogos antigos"),
@@ -269,21 +231,15 @@ NATIVE = {
     "yuzu": ("Yuzu", "yuzu", "Emulador Switch"),
     "ryujinx": ("Ryujinx", "ryujinx", "Emulador Switch"),
     "xenia": ("Xenia", "xenia", "Emulador Xbox"),
-
-    # WINE / COMPATIBILIDADE
     "wine": ("Wine", "wine", "Executar Windows"),
     "winetricks": ("Winetricks", "winetricks", "Auxiliar Wine"),
     "playonlinux": ("PlayOnLinux", "playonlinux", "Jogos Windows"),
     "bottles": ("Bottles", "bottles", "Ambientes Windows"),
     "crossover": ("CrossOver", "crossover", "Windows compatibility"),
-
-    # SCREENSHOTS
     "spectacle": ("Spectacle", "spectacle", "Screenshot KDE"),
     "gnome-screenshot": (" GNOME Screenshot", "gnome-screenshot", "Screenshot GNOME"),
     "flameshot": ("Flameshot", "flameshot", "Screenshot"),
     "shutter": ("Shutter", "shutter", "Screenshot"),
-
-    # LAUNCHERS
     "krunner": ("KRunner", "krunner", "Lancador KDE"),
     "ulauncher": ("ULauncher", "ulauncher", "Lancador"),
     "albert": ("Albert", "albert", "Lancador"),
@@ -292,24 +248,17 @@ NATIVE = {
     "wofi": ("Wofi", "wofi", "Lancador Wayland"),
     "dmenu": ("dmenu", "dmenu", "Lancador"),
     "rofi": ("Rofi", "rofi", "Lancador/App launcher"),
-
-    # THEMING
     "kvantum": ("Kvantum", "kvantum", "Tema Qt"),
     "materia": ("Materia", "materia-gtk-theme", "Tema GTK"),
     "arc": ("Arc Theme", "arc-theme", "Tema GTK"),
     "oomox": ("Oomox", "oomox", "Criador de temas"),
     "lxappearance": ("LXAppearance", "lxappearance", "Aparencia LXDE"),
-
-    # FONTS
     "fonts": ("Font Manager", "font-manager", "Gerenciador de fontes"),
-
-    # CLIPBOARDS
     "clipit": ("ClipIt", "clipit", "Clipboard"),
     "diodon": ("Diodon", "diodon", "Clipboard"),
     "klipper": ("Klipper", "klipper", "Clipboard KDE"),
 }
 
-# Jogos conhecidos (mapeamento de nome de EXE para nome do jogo)
 GAME_NAMES = {
     "genshin impact": "Genshin Impact",
     "genshinimpact": "Genshin Impact",
@@ -489,7 +438,6 @@ GAME_NAMES = {
     "severed steel": "Severed Steel",
     "titanfall": "Titanfall 2",
     "tf2 single": "Titanfall 2",
-    "battlefield": "Battlefield",
     "battlebit": "BattleBit Remastered",
     "the finals": "THE FINALS",
     "xdefiant": "XDefiant",
@@ -515,7 +463,6 @@ GAME_NAMES = {
     "stalker 2": "S.T.A.L.K.E.R. 2",
     "metro": "Metro Exodus",
     "crysis": "Crysis Remastered",
-    "far cry": "Far Cry",
     "dragon age": "Dragon Age: The Veilguard",
     "dav": "Dragon Age: The Veilguard",
     "avowed": "Avowed",
@@ -525,16 +472,10 @@ GAME_NAMES = {
     "borderlands": "Borderlands",
     "tiny tina": "Tiny Tina's Wonderlands",
     "wonderlands": "Tiny Tina's Wonderlands",
-    "diablo": "Diablo",
     "torchlight": "Torchlight",
     "grim dawn": "Grim Dawn",
     "last epoch": "Last Epoch",
     "wolcen": "Wolcen",
-    "victory": "Victory",
-    "horizon": "Horizon",
-    "blade": "Blade",
-    "marvel": "Marvel",
-    "dc": "DC",
     "hokuto": "Hokuto",
     "fate": "Fate",
     "grand order": "Fate/Grand Order",
@@ -545,11 +486,9 @@ GAME_NAMES = {
     "gfl2": "Girls' Frontline 2",
     "nikke": "Goddess of Victory: Nikke",
     "snowbreak": "Snowbreak: Containment Zone",
-    "wuthering waves": "Wuthering Waves",
     "infinity nikki": "Infinity Nikki",
     "love and deepspace": "Love and Deepspace",
     "lads": "Love and Deepspace",
-    "ashes": "Ashes",
     "tower of saviors": "Tower of Saviors",
     "tos": "Tower of Saviors",
     "mu": "MU Online",
@@ -578,12 +517,10 @@ GAME_NAMES = {
     "neos": "Neos VR",
     "horizon worlds": "Horizon Worlds",
     "roblox": "Roblox",
-    "fortnite": "Fortnite",
     "pubg": "PUBG: Battlegrounds",
     "playerunknown": "PUBG: Battlegrounds",
     "warzone": "Call of Duty: Warzone",
     "wz": "Call of Duty: Warzone",
-    "apex": "Apex Legends",
     "bloodhunt": "Bloodhunt",
     "naraka": "Naraka: Bladepoint",
     "eternal return": "Eternal Return",
@@ -594,10 +531,6 @@ GAME_NAMES = {
 
 
 def get_game_name(clean_name):
-    """
-    Tenta identificar o nome real do jogo a partir do nome limpo.
-    Usa o dicionario GAME_NAMES para mapear variacoes do nome.
-    """
     for key, game in GAME_NAMES.items():
         if key in clean_name or clean_name in key:
             return game
@@ -605,7 +538,6 @@ def get_game_name(clean_name):
 
 
 def load_ports():
-    """Carrega o cache de ports (Lutris) do disco."""
     if not os.path.exists(CACHE_FILE):
         return {}
     try:
@@ -621,10 +553,6 @@ def load_ports():
 
 
 def check_native(clean_name):
-    """
-    Verifica se o nome limpo corresponde a um aplicativo nativo Linux.
-    Retorna dict com { found, app, package, desc }.
-    """
     for keyword, (app, pkg, desc) in NATIVE.items():
         keyword_lower = keyword.lower()
         clean_lower = clean_name.lower()
@@ -634,10 +562,6 @@ def check_native(clean_name):
 
 
 def check_port(clean_name):
-    """
-    Verifica se o nome limpo corresponde a um port conhecido (Lutris).
-    Retorna dict com { found, port, id }.
-    """
     ports = load_ports()
     for port_id, port in ports.items():
         keywords = port.get("keywords", [])
@@ -650,7 +574,6 @@ def check_port(clean_name):
 
 
 def get_app_name(filename):
-    """Extrai o nome limpo do aplicativo a partir do nome do arquivo."""
     name = os.path.basename(filename).lower()
     name = name.replace('.exe', '').replace('.msi', '')
     name = name.replace('setup', '').replace('installer', '').replace('install', '')

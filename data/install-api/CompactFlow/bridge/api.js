@@ -10,10 +10,10 @@ function findApiServer() {
     return process.env.PROTONFORGE_API_SERVER;
 
   const candidates = [
-    // Instalado (Electron app): resources/proton_recommended/python/server.py
-    path.join(__dirname, '..', '..', '..', 'resources', 'proton_recommended', 'python', 'server.py'),
-    // Desenvolvimento: data/install-api/proton_recommended/python/server.py
-    path.join(os.homedir(), 'Documentos', 'Makai-forger', 'data', 'install-api', 'proton_recommended', 'python', 'server.py'),
+    // Instalado (Electron app): resources/protonforge-api/server.py
+    path.join(__dirname, '..', '..', '..', 'resources', 'protonforge-api', 'server.py'),
+    // Desenvolvimento: tools/python-rpc/protonforge-api/server.py
+    path.join(os.homedir(), 'Documentos', 'Makai-forge', 'tools', 'python-rpc', 'protonforge-api', 'server.py'),
   ];
   for (const c of candidates) {
     if (fs.existsSync(c)) return c;
@@ -27,7 +27,7 @@ function findPython() {
     return process.env.VENV_PYTHON_PATH;
 
   const candidates = [
-    path.join(os.homedir(), 'Documentos', 'Makai-forger', 'tools', 'venv', 'bin', 'python3'),
+    path.join(os.homedir(), 'Documentos', 'Makai-forge', 'tools', 'venv', 'bin', 'python3'),
     path.join(__dirname, '..', '..', '..', 'resources', 'venv', 'bin', 'python3'),
     '/usr/bin/python3',
   ];
