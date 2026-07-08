@@ -43,5 +43,6 @@ scrapers/
 # Chave da API GG.deals (usuário coloca a própria)
 src/main/gg-deals-key.ts
 .chrome-profiles/
-logs/
-*.log
+
+# Diretório Data/ (mods, arquivos avulsos)
+Data/
