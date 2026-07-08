@@ -289,7 +289,7 @@ export default function ModManager() {
     } finally {
       cleanup();
     }
-  }, []);
+  }, [configPrefixPath]);
 
   const saveGlobalProton = useCallback(async (protonPath: string) => {
     await window.electron.modsStore.put("proton_binary", protonPath);
