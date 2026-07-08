@@ -21,6 +21,7 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
 
   const fs = await import("node:fs");
   const p = await import("node:path");
+  const { app } = await import("electron");
   const { getSteamLocation } = await import("@main/services/steam");
   const { setSteamGameProton, getSteamGameProton } = await import("@main/services/steam-config-vdf");
   const { ProtonRecommendationService } = await import("@provision/proton_recommended/services/proton-recommendation");
@@ -286,12 +287,51 @@ registerEvent("setupProtonEnvironment", async (_event, gameName: string, protonP
       }
     }
 
+    let appliedDllOverrides = false;
     if (gameModule?.getWineDllOverrides) {
       const overrides = gameModule.getWineDllOverrides();
       if (overrides && Object.keys(overrides).length > 0) {
         addLog(`   DLL overrides: ${Object.keys(overrides).join(", ")}`);
         applyWineDllOverrides(prefixPath, overrides);
         addLog("   ✅ DLL overrides aplicados");
+        appliedDllOverrides = true;
+      }
+    }
+
+    // Fallback: apply DLL overrides from game-dlls.json catalog
+    if (!appliedDllOverrides) {
+      try {
+        let catalogPath = p.join(app.getAppPath(), "tools", "Mods_manager", "data", "game-dlls.json");
+        if (!fs.existsSync(catalogPath)) {
+          const devPath = p.join(process.cwd(), "tools", "Mods_manager", "data", "game-dlls.json");
+          if (fs.existsSync(devPath)) catalogPath = devPath;
+        }
+        if (fs.existsSync(catalogPath)) {
+          const raw = fs.readFileSync(catalogPath, "utf-8");
+          const catalog = JSON.parse(raw);
+          const slug = gameName.toLowerCase().replace(/[\s:/\\]+/g, "-").replace(/[^a-z0-9-]/g, "");
+          const catalogEntry = catalog.games?.find(
+            (g: any) => g.gameId === slug || g.gameId === gameName || g.name?.toLowerCase() === gameNameLower
+          );
+          if (catalogEntry) {
+            const overrides: Record<string, string> = { ...catalogEntry.wineDllOverrides };
+            if (catalogEntry.wineDllOverridesRange) {
+              for (const [prefix2, range] of Object.entries(catalogEntry.wineDllOverridesRange)) {
+                for (let i = range.start; i <= range.end; i++) {
+                  overrides[`${prefix2}${i}`] = range.mode;
+                }
+              }
+            }
+            if (Object.keys(overrides).length > 0) {
+              addLog(`   DLL overrides (catálogo): ${Object.keys(overrides).join(", ")}`);
+              applyWineDllOverrides(prefixPath, overrides);
+              addLog("   ✅ DLL overrides aplicados via catálogo");
+              appliedDllOverrides = true;
+            }
+          }
+        }
+      } catch (e) {
+        addLog(`   ⚠ Erro ao ler catálogo: ${String(e).slice(0, 100)}`);
       }
     }
 
