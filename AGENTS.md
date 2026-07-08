@@ -53,16 +53,18 @@ cd /tmp/makaitricks_clean && cp [files] . && git add -A && git commit -m "msg" &
 ```
 
 ## Config
+- **Branch**: `main` (local e remote sincronizados)
+- **Git user**: `MakaiForge` / `lucasxaviergertkefrimeen@gmail.com`
 - **Token**: _configurado no AutoStartOpenCode.sh_
 - **Remote**: `https://MakaiForge:{token}@github.com/MakaiForge/Makaitricks.git`
-- **Push via**: `/tmp/makaitricks_clean` (git init fresh, copy files, commit, push)
+- **Push via**: `git push origin main` (diretamente, .gitignore limpo)
 
 ## Known Issues
 - `jet40` requires WINEARCH=win32
-- Git push may timeout (use increased timeout, 5min+)
 - 7z binary is dynamically linked (needs libstdc++)
 - RPC bitTorrent: python_rpc/main.py restaurado do bbb (funciona em dev)
-- GameConfigPanel: 6 botões serão substituídos (DLLs + registry)
+- GameConfigPanel: já reformado (Fases 0-5 concluídas)
+- Dados de jogo (mods .esp, etc.) em `Data/` — gitignorado
 
 ## User Preferences
 - Language: Portuguese (PT-BR)
