@@ -6,6 +6,7 @@ interface GameDetectionWizardProps {
   open: boolean;
   onClose: () => void;
   onGameDetected: (gameId: string, gamePath: string) => void;
+  selectedGameId?: string;
 }
 
 type WizardStep = "detecting" | "result" | "saved";
@@ -17,7 +18,7 @@ interface DetectionAttempt {
   found: boolean;
 }
 
-export function GameDetectionWizard({ open, onClose, onGameDetected }: GameDetectionWizardProps) {
+export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGameId }: GameDetectionWizardProps) {
   const [step, setStep] = useState<WizardStep>("detecting");
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
   const [selectedGameId, setSelectedGameId] = useState<string>("");
@@ -34,7 +35,10 @@ export function GameDetectionWizard({ open, onClose, onGameDetected }: GameDetec
       }
       const games = catalogResult.data.games;
       const found: DetectionAttempt[] = [];
-      for (const game of games) {
+      const scanTarget = selectedGameId
+        ? games.filter((g: any) => g.gameId === selectedGameId)
+        : games;
+      for (const game of scanTarget) {
         const path = await window.electron.modDetectGamePath(game.gameId);
         found.push({
           gameId: game.gameId,
@@ -51,7 +55,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected }: GameDetec
       setError(e.message || "Erro na detecção");
       setStep("result");
     }
-  }, []);
+  }, [selectedGameId]);
 
   useEffect(() => {
     if (open) startDetection();

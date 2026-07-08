@@ -481,6 +481,7 @@ export default function ModManager() {
             open={showDetectionWizard}
             onClose={() => setShowDetectionWizard(false)}
             onGameDetected={handleDetectionWizardGame}
+            selectedGameId={selectedGame || undefined}
           />
           <div className="mod-manager__main" ref={containerRef}>
             <div className="mod-manager__left">
