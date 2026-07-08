@@ -36,7 +36,7 @@ def cmd_create_prefix(args: list[str]) -> None:
 
 
 def cmd_install_winetricks(args: list[str]) -> None:
-    from prefix.winetricks import install_recommended_dlls
+    from prefix.makaitricks import install_recommended_dlls
 
     prefix_path = args[0]
     proton_path = args[1]

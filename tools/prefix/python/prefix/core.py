@@ -10,7 +10,7 @@ import stat
 import subprocess
 from pathlib import Path
 
-from .winetricks import install_recommended_dlls
+from .makaitricks import install_recommended_dlls
 
 DEFAULT_PREFIX_BASE = os.path.expanduser("~/games/proton-forger")
 

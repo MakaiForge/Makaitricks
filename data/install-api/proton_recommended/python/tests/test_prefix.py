@@ -14,7 +14,7 @@ from api.services.prefix.core import (
     _ensure_proton_valid,
     _is_prefix_initialized,
 )
-from api.services.prefix.winetricks import check_dll_installed
+from prefix.makaitricks import check_dll_installed
 
 
 def test_resolve_prefix_path_default():

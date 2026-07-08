@@ -45,7 +45,7 @@ from .core import (
     clean_prefix,
 )
 
-from .winetricks import (
+from .makaitricks import (
     install_recommended_dlls,
     run_winetricks,
     run_winetricks_verbs,

@@ -1,9 +1,11 @@
 """
-Winetricks/DLL management for Wine prefixes.
+Makaitricks/DLL management for Wine prefixes.
 
-Unified from:
-  - tools/python-rpc/protonforge-api/api/services/prefix/winetricks.py
-  - data/install-api/proton_recommended/python/api/services/prefix/winetricks.py
+Unified module at tools/prefix/python/prefix/makaitricks.py.
+
+Re-exported by:
+  - tools/python-rpc/protonforge-api/api/services/prefix/
+  - data/install-api/proton_recommended/python/api/services/prefix/
 """
 
 import os
