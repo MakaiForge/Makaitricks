@@ -23,6 +23,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
   const [chosenGameId, setChosenGameId] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const [infoMsg, setInfoMsg] = useState<string | null>(null);
 
   const startDetection = useCallback(async (targetGameId?: string) => {
     setStep("detecting");
@@ -63,6 +64,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
     setChosenGameId("");
     setDetected([]);
     setError(null);
+    setInfoMsg(null);
     startDetection(initialGameId);
   }, [open, initialGameId, startDetection]);
 
@@ -96,6 +98,15 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
   const foundCount = detected.filter((g) => g.found).length;
   const alreadyFound = foundCount > 0 && detected.find((g) => g.found && g.gameId === initialGameId);
 
+  const handleRetry = () => {
+    if (alreadyFound) {
+      setInfoMsg("Jogo já encontrado! Selecione abaixo e clique em Configurar Selecionado.");
+      setTimeout(() => setInfoMsg(null), 3000);
+    } else {
+      startDetection(initialGameId);
+    }
+  };
+
   return (
     <div className={`detection-wizard-overlay ${open ? "detection-wizard-overlay--open" : ""}`} onClick={onClose}>
       <div className="detection-wizard" onClick={(e) => e.stopPropagation()}>
@@ -111,6 +122,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
           <div className="detection-wizard__step">
             <h2>Jogos Detectados</h2>
             {error && <p className="detection-wizard__error">⚠️ {error}</p>}
+            {infoMsg && <p className="detection-wizard__info">💡 {infoMsg}</p>}
             {foundCount > 0 ? (
               <p>{foundCount} jogo(s) encontrado(s) automaticamente.</p>
             ) : (
@@ -134,9 +146,7 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
             </div>
             <div className="detection-wizard__actions">
               <Button onClick={handleSelectManual}>Selecionar Manualmente</Button>
-              <Button disabled={!alreadyFound} onClick={() => startDetection(initialGameId)}>
-                Buscar Novamente
-              </Button>
+              <Button onClick={handleRetry}>Buscar Novamente</Button>
               <Button
                 theme="primary"
                 disabled={!chosenGameId || !detected.find((g) => g.gameId === chosenGameId)?.found}
