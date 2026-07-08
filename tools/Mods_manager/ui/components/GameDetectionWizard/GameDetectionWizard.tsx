@@ -18,15 +18,16 @@ interface DetectionAttempt {
   found: boolean;
 }
 
-export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGameId }: GameDetectionWizardProps) {
+export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGameId: initialGameId }: GameDetectionWizardProps) {
   const [step, setStep] = useState<WizardStep>("detecting");
   const [detected, setDetected] = useState<DetectionAttempt[]>([]);
-  const [selectedGameId, setSelectedGameId] = useState<string>("");
+  const [chosenGameId, setChosenGameId] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
-  const startDetection = useCallback(async () => {
+  const startDetection = useCallback(async (targetGameId?: string) => {
     setStep("detecting");
     setError(null);
+    setDetected([]);
     try {
       const catalogResult = await window.electron.getGameDllCatalog();
       if (!catalogResult.ok || !catalogResult.data?.games) {
@@ -35,8 +36,8 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       }
       const games = catalogResult.data.games;
       const found: DetectionAttempt[] = [];
-      const scanTarget = selectedGameId
-        ? games.filter((g: any) => g.gameId === selectedGameId)
+      const scanTarget = targetGameId
+        ? games.filter((g: any) => g.gameId === targetGameId)
         : games;
       for (const game of scanTarget) {
         const path = await window.electron.modDetectGamePath(game.gameId);
@@ -49,17 +50,21 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
       }
       setDetected(found);
       const firstFound = found.find((g) => g.found);
-      if (firstFound) setSelectedGameId(firstFound.gameId);
+      if (firstFound) setChosenGameId(firstFound.gameId);
       setStep("result");
     } catch (e: any) {
       setError(e.message || "Erro na detecção");
       setStep("result");
     }
-  }, [selectedGameId]);
+  }, []);
 
   useEffect(() => {
-    if (open) startDetection();
-  }, [open, startDetection]);
+    if (!open) return;
+    setChosenGameId("");
+    setDetected([]);
+    setError(null);
+    startDetection(initialGameId);
+  }, [open, initialGameId, startDetection]);
 
   const handleSelectManual = async () => {
     const res = await window.electron.showOpenDialog({ properties: ["openDirectory"] });
@@ -114,8 +119,8 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
               {detected.map((g) => (
                 <div
                   key={g.gameId}
-                  className={`detection-wizard__game-item ${g.found ? "detection-wizard__game-item--found" : ""} ${selectedGameId === g.gameId ? "detection-wizard__game-item--selected" : ""}`}
-                  onClick={() => g.found && setSelectedGameId(g.gameId)}
+                  className={`detection-wizard__game-item ${g.found ? "detection-wizard__game-item--found" : ""} ${chosenGameId === g.gameId ? "detection-wizard__game-item--selected" : ""}`}
+                  onClick={() => g.found && setChosenGameId(g.gameId)}
                 >
                   <span className="detection-wizard__game-name">{g.name}</span>
                   {g.found ? (
@@ -128,11 +133,11 @@ export function GameDetectionWizard({ open, onClose, onGameDetected, selectedGam
             </div>
             <div className="detection-wizard__actions">
               <Button onClick={handleSelectManual}>Selecionar Manualmente</Button>
-              <Button onClick={startDetection}>Buscar Novamente</Button>
+              <Button onClick={() => startDetection(initialGameId)}>Buscar Novamente</Button>
               <Button
                 theme="primary"
-                disabled={!selectedGameId || !detected.find((g) => g.gameId === selectedGameId)?.found}
-                onClick={() => handleConfirm(selectedGameId)}
+                disabled={!chosenGameId || !detected.find((g) => g.gameId === chosenGameId)?.found}
+                onClick={() => handleConfirm(chosenGameId)}
               >
                 Configurar Selecionado
               </Button>
